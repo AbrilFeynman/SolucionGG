@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FEE55250-7EB9-473C-9668-D7CCA5BE4CF3}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GGGC.UI.Infrastructure</RootNamespace>
+    <AssemblyName>GGGC.UI.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InfragisticsWPF4.Controls.Menus.XamDataTree.v13.1, Version=13.1.20131.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="InfragisticsWPF4.DataManager.v13.1, Version=13.1.20131.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="InfragisticsWPF4.OutlookBar.v13.1, Version=13.1.20131.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="InfragisticsWPF4.Ribbon.v13.1, Version=13.1.20131.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="InfragisticsWPF4.v13.1, Version=13.1.20131.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Prism, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Prism\v4.1\WPF\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Prism\v4.1\WPF\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\Commands.cs">
+      <Link>Commands.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\Events.cs">
+      <Link>Events.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\INavigationItem.cs">
+      <Link>INavigationItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\IOutlookBarGroup.cs">
+      <Link>IOutlookBarGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\IRibbonTabItem.cs">
+      <Link>IRibbonTabItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\IViewBase.cs">
+      <Link>IViewBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\IViewModel.cs">
+      <Link>IViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\Markup\StaticExtension.cs">
+      <Link>Markup\StaticExtension.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\NavigationAwareViewModelBase.cs">
+      <Link>NavigationAwareViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\NavigationItem.cs">
+      <Link>NavigationItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\Prism\ModuleBase.cs">
+      <Link>Prism\ModuleBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\Prism\UnityContainerExtensions.cs">
+      <Link>Prism\UnityContainerExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\Prism\XamDataTreeCommandBehavior.cs">
+      <Link>Prism\XamDataTreeCommandBehavior.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\Prism\XamDataTreeItemSelected.cs">
+      <Link>Prism\XamDataTreeItemSelected.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\Prism\XamOutlookBarRegionAdapter.cs">
+      <Link>Prism\XamOutlookBarRegionAdapter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\Prism\XamRibbonRegionAdapter.cs">
+      <Link>Prism\XamRibbonRegionAdapter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\Prism\XamRibbonRegionBehavior.cs">
+      <Link>Prism\XamRibbonRegionBehavior.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\RegionNames.cs">
+      <Link>RegionNames.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\RibbonTabAttribute.cs">
+      <Link>RibbonTabAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\RibbonTabItem.cs">
+      <Link>RibbonTabItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\ViewBase.cs">
+      <Link>ViewBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SL\GGGC.Infrastructure.SL\ViewModelBase.cs">
+      <Link>ViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

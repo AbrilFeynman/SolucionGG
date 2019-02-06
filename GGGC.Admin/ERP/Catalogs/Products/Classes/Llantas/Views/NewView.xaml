@@ -1,0 +1,263 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Navigation"
+             xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+             xmlns:telerik1="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:ViewModels="clr-namespace:GGGC.Admin.ERP.Catalogs.Products.Classes.Llantas.ViewModels"
+
+             x:Class="GGGC.Admin.ERP.Catalogs.Products.Classes.Llantas.Views.NewView"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="300">
+
+
+    <UserControl.Resources>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="5,10" />
+            <Setter Property="Height" Value="20" />
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <DockPanel LastChildFill="True">
+                            <Border Background="SteelBlue" DockPanel.Dock="right" Margin="5,0,0,0" 
+                                Width="200" Height="20" CornerRadius="5"
+                                ToolTip="{Binding ElementName=customAdorner, 
+                                          Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                                <TextBlock Text="{Binding [0].ErrorContent}" VerticalAlignment="center" HorizontalAlignment="center" 
+                                   FontWeight="Bold" Foreground="white" />
+                            </Border>
+                            <AdornedElementPlaceholder Name="customAdorner" VerticalAlignment="Center" >
+                                <Border BorderBrush="red" BorderThickness="1" />
+                            </AdornedElementPlaceholder>
+                        </DockPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0,2,40,2" />
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <DockPanel LastChildFill="True">
+                            <Border Background="OrangeRed" DockPanel.Dock="right" Margin="5,0,0,0" 
+                                Width="20" Height="20" CornerRadius="5"
+                                ToolTip="{Binding ElementName=customAdorner, 
+                                          Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                                <TextBlock Text="!" VerticalAlignment="center" HorizontalAlignment="center" 
+                                   FontWeight="Bold" Foreground="white" />
+                            </Border>
+                            <AdornedElementPlaceholder Name="customAdorner" VerticalAlignment="Center" >
+                                <Border BorderBrush="red" BorderThickness="1" />
+                            </AdornedElementPlaceholder>
+                        </DockPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type telerik:RadComboBox}">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0,2,40,2" />
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <DockPanel LastChildFill="True">
+                            <Border Background="SteelBlue" DockPanel.Dock="right" Margin="5,0,0,0" 
+                                Width="200" Height="20" CornerRadius="5"
+                                ToolTip="{Binding ElementName=customAdorner, 
+                                          Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                                <TextBlock Text="{Binding [0].ErrorContent}" VerticalAlignment="center" HorizontalAlignment="center" 
+                                   FontWeight="Bold" Foreground="white" />
+                            </Border>
+                            <AdornedElementPlaceholder Name="customAdorner" VerticalAlignment="Center" >
+                                <Border BorderBrush="red" BorderThickness="1" />
+                            </AdornedElementPlaceholder>
+                        </DockPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <controls:RadTabControl x:Name="radTabControl" BackgroundVisibility="Hidden" Grid.ColumnSpan="2" Margin="0,0" Grid.RowSpan="7" FontFamily="Myriad Pro Light" FontSize="10">
+            <controls:RadTabItem Header="Datos Generales">
+                <Grid  x:Name="grdStudentData">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.CommandBindings>
+                        <CommandBinding Command="New" CanExecute="Confirm_CanExecute" Executed="Confirm_Executed" />
+                    </Grid.CommandBindings>
+
+                    <!-- Last Name -->
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Producto ID" Margin="5,12,5,5" Height="12" />
+                    <TextBox x:Name="txtID" Grid.Row="1" Grid.Column="1"  Margin="5,5" HorizontalAlignment="Left" Width="112"  VerticalAlignment="Bottom"  IsReadOnly="True" Focusable="False" AcceptsReturn="True" CharacterCasing="Upper" FontWeight="Bold" FontSize="14" Background="#FFE4E8C1" TextAlignment="Center"  />
+
+                    <TextBlock Grid.Row="2" Text="Código" Margin="5,10" />
+                    <telerik1:RadWatermarkTextBox x:Name="txtCodigo" Grid.Row="2" Grid.Column="1"  Margin="5,5" WatermarkContent="Código Manual (Base 1)" Width="450" HorizontalAlignment="Left" KeyDown="txtCodigo_KeyDown" CharacterCasing="Upper" MaxLength="15" MaxLines="1"  Validation.Error="Validation_Error" Text="{Binding UpdateSourceTrigger=PropertyChanged, Path=Codigo, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" />
+
+                    <TextBlock Grid.Row="3" Text="Sufijo" Margin="5,10" />
+                    <telerik1:RadWatermarkTextBox x:Name="txtSufijo" Grid.Row="3" Grid.Column="1"  Margin="5,5" WatermarkContent="LL, CAM, CORB, ETC" Width="450" HorizontalAlignment="Left" KeyDown="txtCodigo_KeyDown" CharacterCasing="Upper" MaxLength="15" MaxLines="1"  Validation.Error="Validation_Error" Text="{Binding UpdateSourceTrigger=PropertyChanged, Path=Codigo, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" />
+
+
+                    <TextBlock Grid.Row="4" Text="Descripción" Margin="5,10" />
+                    <TextBox x:Name="txtDescripcion" Grid.Row="4" Grid.Column="1"  Margin="5,5" Width="450" Background="Transparent"   KeyDown="txtDescripcion_KeyDown" CharacterCasing="Upper" HorizontalAlignment="Left" Validation.Error="Validation_Error" Text="{Binding UpdateSourceTrigger=PropertyChanged, Path=Descripcion, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" />
+
+
+                    <TextBlock Grid.Row="5" Text="Prefijo" Margin="5,10" />
+                    <telerik1:RadWatermarkTextBox x:Name="txtPrefijo" Grid.Row="5" Grid.Column="1"  Margin="5,5" WatermarkContent="**PROM, LIQUIDACION, ECT." Width="450" HorizontalAlignment="Left" KeyDown="txtCodigo_KeyDown" CharacterCasing="Upper" MaxLength="15" MaxLines="1"  Validation.Error="Validation_Error" Text="{Binding UpdateSourceTrigger=PropertyChanged, Path=Codigo, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" />
+
+
+                    <!-- Age -->
+                    <TextBlock Grid.Row="6" Text="Línea:" Margin="5,9"/>
+                    <telerik:RadComboBox x:Name="cboLine" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="6" Grid.RowSpan="2" VerticalAlignment="Top" Width="450" KeyDown="cboLine_KeyDown" SelectionChanged="cboLine_SelectionChanged" Validation.Error="Validation_Error" Text="{Binding UpdateSourceTrigger=PropertyChanged, Path=Linea, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" >
+
+                    </telerik:RadComboBox>
+
+                    <!-- Last Name -->
+                    <TextBlock Grid.Row="7" Text="Marca" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboMarca" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="7" Grid.RowSpan="2" VerticalAlignment="Top" Width="450" KeyDown="cboMarca_KeyDown" SelectionChanged="cboMarca_SelectionChanged">
+                    </telerik:RadComboBox>
+
+                    <!-- Last Name -->
+                    <TextBlock Grid.Row="8" Text="Impuesto" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboImpuesto" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="8" Grid.RowSpan="2" VerticalAlignment="Top" Width="450" KeyDown="cboImpuesto_KeyDown">
+                    </telerik:RadComboBox>
+
+                    <!-- Last Name -->
+                    <TextBlock Grid.Row="9" Text="Unidad" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboUnidad" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="9" Grid.RowSpan="2" VerticalAlignment="Top" Width="450" KeyDown="cboUnidad_KeyDown">
+                    </telerik:RadComboBox>
+
+                    <TextBlock Grid.Row="10" Text="Moneda" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboMoneda" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="10" Grid.RowSpan="2" VerticalAlignment="Top" Width="450" KeyDown="cboUnidad_KeyDown">
+                    </telerik:RadComboBox>
+
+                    <TextBlock Grid.Row="11" Text="Material" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboMaterial" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="11" Grid.RowSpan="2" VerticalAlignment="Top" Width="450" KeyDown="cboUnidad_KeyDown">
+                    </telerik:RadComboBox>
+
+
+                    <TextBlock Grid.Row="12" Text="Estatus" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboEstatus" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="12" Grid.RowSpan="2" VerticalAlignment="Top" Width="450">
+                    </telerik:RadComboBox>
+
+                    <TextBlock Grid.Row="13" Text="Observaciones" Margin="5,10" />
+                    <telerik1:RadWatermarkTextBox x:Name="txtObservaciones" Grid.Row="13" Grid.Column="1"  Margin="5,5" WatermarkContent="Observaciones Internas solo para consulta, No se imprira" Width="250" HorizontalAlignment="Left" KeyDown="txtCodigo_KeyDown" CharacterCasing="Upper" MaxLength="15" MaxLines="1"  Validation.Error="Validation_Error" Text="{Binding UpdateSourceTrigger=PropertyChanged, Path=Codigo, ValidatesOnDataErrors=true, NotifyOnValidationError=true}" />
+
+
+                    <Button Content="Guardar"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Command="New" Margin="0,0,0,-30" Width="69" Height="20" Grid.Row="13"/>
+
+
+                </Grid>
+
+
+            </controls:RadTabItem>
+
+            <controls:RadTabItem Header="Datos Específicos">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </controls:RadTabItem>
+
+
+            <controls:RadTabItem Header="Anexos">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+
+                    </Grid.RowDefinitions>
+
+                </Grid>
+            </controls:RadTabItem>
+
+        </controls:RadTabControl>
+
+
+
+
+
+        <Button x:Name="btnGuardar" Content="Guardar" Grid.Column="1" HorizontalAlignment="Left" Margin="5,10" Grid.Row="8" VerticalAlignment="Top" Width="75" Height="32" Visibility="Hidden"  />
+
+
+
+        <TextBlock x:Name="lblEstatus" Grid.Column="1" Grid.Row="8" Text="" Margin="85,9,90,9" Background="White" FontSize="12" FontWeight="Bold" />
+
+
+
+
+
+        <!-- Last Updated -->
+        <!--<TextBlock Grid.Row="3" Text="Last Updated:" Margin="5" />
+        <TextBlock Grid.Row="3" Grid.Column="1" Margin="5" Text="{Binding ModelPerson.LastUpdated}" />-->
+
+        <!-- Save Button -->
+        <!--<Button Grid.Row="4" Grid.ColumnSpan="2" Content="Save" Margin="10" Command="{Binding SavePersonCommand}" />-->
+    </Grid>
+
+</UserControl>

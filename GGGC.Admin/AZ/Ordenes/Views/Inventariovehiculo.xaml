@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="GGGC.Admin.AZ.Ordenes.Views.Inventariovehiculo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GGGC.Admin.AZ.Ordenes.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="806.667">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="163*" />
+            <RowDefinition Height="437*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"  Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="EXTERIORES" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,5,5,0"/>
+                <CheckBox Grid.Column="0" Grid.Row="1"  Margin="5,5,5,5" Content="UNIDAD DE LUCES"/>
+                <CheckBox Grid.Column="0" Grid.Row="2"  Margin="5,5,5,5" Content="ANTENA"/>
+                <CheckBox Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="ESPEJO LATERAL"/>
+                <CheckBox Grid.Column="0" Grid.Row="4"  Margin="5,5,5,5" Content="CRISTALES"/>
+                <CheckBox Grid.Column="0" Grid.Row="5"  Margin="5,5,5,5" Content="TAPAS"/>
+                <CheckBox Grid.Column="1" Grid.Row="1"  Margin="5,5,5,5" Content="MOLDEDURAS"/>
+                <CheckBox Grid.Column="1" Grid.Row="2"  Margin="5,5,5,5" Content="COMPLETAS"/>
+                <CheckBox Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="TAPON DE GASOLINA"/>
+                <CheckBox Grid.Column="1" Grid.Row="4"  Margin="5,5,5,5" Content="CARROSERIA SIN GOLPES"/>
+                <CheckBox Grid.Column="1" Grid.Row="5"  Margin="5,5,5,5" Content="LIMPIA PARABRISAS"/>
+
+            </Grid>
+
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Content="INTERIORES" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,5,5,0"/>
+
+                <CheckBox Grid.Column="0" Grid.Row="1"  Margin="5,5,5,5" Content="INSTRUMENTOS DE TABLERO"/>
+                <CheckBox Grid.Column="0" Grid.Row="2"  Margin="5,5,5,5" Content="ESTERO"/>
+                <CheckBox Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="BOCINAS"/>
+                <CheckBox Grid.Column="0" Grid.Row="4"  Margin="5,5,5,5" Content="ENCENDEDOR"/>
+                <CheckBox Grid.Column="0" Grid.Row="5"  Margin="5,5,5,5" Content="ESPEJO RETROVISOR"/>
+                <CheckBox Grid.Column="1" Grid.Row="1"  Margin="5,5,5,5" Content="CINTURONES"/>
+                <CheckBox Grid.Column="1" Grid.Row="2"  Margin="5,5,5,5" Content="MANIJAS DE INTERIORES"/>
+                <CheckBox Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="TAPETES"/>
+                <CheckBox Grid.Column="1" Grid.Row="4"  Margin="5,5,5,5" Content="VESTIDURAS"/>
+
+            </Grid>
+
+
+
+        </Grid>
+    </Grid>
+</UserControl>

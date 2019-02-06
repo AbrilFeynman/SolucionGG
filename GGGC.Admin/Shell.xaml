@@ -1,0 +1,583 @@
+﻿<metro:MetroWindow
+	   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	   xmlns:v="clr-namespace:GGGC.Admin.Views"
+	   xmlns:telerikDocking="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Docking" 
+	   xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+	xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+	  xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+  xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"      
+	 xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+	   xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+	   xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+	 xmlns:views="clr-namespace:GGGC.Admin.Modals.Views"
+	   xmlns:wpfsl="http://schemas.softarcs.com/wpfsmartlibrary"
+	   x:Class="GGGC.Admin.Shell">
+	   <!--Title="BIG" MinWidth="1024" MinHeight="700" SnapsToDevicePixels="True"  FontSize="8"  TextOptions.TextFormattingMode="Display" RenderOptions.ClearTypeHint="Enabled" TextOptions.TextRenderingMode="Auto"  Background="Red" WindowStartupLocation="CenterScreen" WindowState="Maximized" ShowTitleBar="True" TitlebarHeight="45" FontFamily="Arial" TitleForeground="White" Closing="MetroWindow_Closing_1" BorderThickness="1" ResizeMode="CanResizeWithGrip" WindowTransitionsEnabled="False"   DataContext="{Binding}" Loaded="MetroWindow_Loaded_1"  GlowBrush="{DynamicResource AccentColorBrush}"   SaveWindowPosition="False" WindowTitleBrush="#FF343536"--> 
+
+	<!--<metro:MetroWindow.WindowCommands>
+		<metro:WindowCommands>
+			--><!--<Button x:Name="btnBloquear" Content="Bloquear" Click="btnBloquear_Click_1" IsEnabled="False" />--><!--
+		   Icon="Resources/Images/App/BackGrounds/big.png"
+		</metro:WindowCommands>
+	</metro:MetroWindow.WindowCommands>-->
+
+	<!--<Window.Resources>
+		<DataTemplate x:Key="TabItemTemplate">
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+				<TextBlock Text="{Binding Header}" />
+				<Button Command="{Binding RemoveItemCommand}"
+					   
+						Margin="10,0,0,0"
+						ToolTipService.ToolTip="Remove item" />
+			  
+			</StackPanel>
+		</DataTemplate>
+	</Window.Resources>-->
+
+
+	<!--<controls:MetroWindow.Flyouts>
+		<controls:FlyoutsControl>
+			<controls:Flyout
+				Position="Right" x:Name="fConfig"
+				AreAnimationsEnabled="True"
+			  Width="350"
+			   
+				Header="Actualizar Contraseña"
+				Theme="Light"
+				IsModal="True"
+				IsOpen="{Binding IsSettingsFlyoutOpen, Mode=TwoWay}" IsOpenChanged="fConfig_IsOpenChanged">
+				<views:SettingsView
+					DataContext="{Binding SettingsViewModel}"></views:SettingsView>
+			</controls:Flyout>
+
+			<controls:Flyout Position="Bottom"
+							 CloseButtonVisibility="Collapsed"
+							 TitleVisibility="Collapsed"
+							 Name="miflyout"
+							 IsPinned="False"
+							 Height="75">
+				<TextBlock VerticalAlignment="Center"
+						   Text="This is an AppBar" />
+			</controls:Flyout>
+		</controls:FlyoutsControl>
+	</controls:MetroWindow.Flyouts>
+	
+	<controls:MetroWindow.RightWindowCommands>
+		<controls:WindowCommands>
+			<Button Command="{Binding Settings}" FontSize="12" Click="ShowSettings" > Configuracion </Button>
+			
+		</controls:WindowCommands>
+	</controls:MetroWindow.RightWindowCommands>-->
+
+   
+	<!--<ContentControl x:Name="Controls" Margin="5,5" Style="{StaticResource ShadowContainerStyle_2}">-->   
+	<!--<DockPanel  DockPanel.Dock="Top" Height="100" Visibility="Visible" Background="#FFDCEAF5">-->
+	<!--</DockPanel>-->
+	<!--<DockPanel LastChildFill="True">
+			<igOutlookBar:XamOutlookBar prism:RegionManager.RegionName="OutlookBarGroupRegion" DockPanel.Dock="Left" Width="200" SelectedGroupChanged="XamOutlookBar_SelectedGroupChanged" Theme="Office2010Blue" />
+			<ContentControl prism:RegionManager.RegionName="ContentRegion" Margin="1,3,3,3" />
+		</DockPanel>-->
+	<!--<DockPanel LastChildFill="True" Background="WhiteSmoke">
+		<igOutlookBar:XamOutlookBar prism:RegionManager.RegionName="OutlookBarGroupRegion" DockPanel.Dock="Left" Width="200" SelectedGroupChanged="XamOutlookBar_SelectedGroupChanged" Theme="Office2k7Blue" />
+		<ContentControl prism:RegionManager.RegionName="ContentRegion" Background="Teal"  />
+	</DockPanel>-->
+    <DockPanel LastChildFill="True" HorizontalAlignment="Stretch" x:Name="DockMain" VerticalAlignment="Stretch" Background="#FF343536">  <!--whitesmoke-->
+
+		<!--<Border x:Name="border" Background="Red" BorderThickness="5"  Margin="5">
+		</Border>-->
+		<!--"#FF1277CD"  #FFDCEAF5-->
+		<DockPanel  DockPanel.Dock="Top" Height="2" Visibility="Hidden" Background="Pink">
+			<!--SteelBlue-->
+			<!--RIBBON     Background="LightGray" Foreground="DimGray"  --> 
+		</DockPanel>
+		<DockPanel x:Name="dpBottom" LastChildFill="False"  DockPanel.Dock="Bottom"    Height="0" Background="Brown"  >
+
+			<StatusBar x:Name="sbGG" DockPanel.Dock="Bottom" Background="#FF343536"   >
+				<StatusBarItem x:Name="sbiUser" HorizontalAlignment="Left" >uuuuuuuuuuuusss</StatusBarItem>
+				<Separator Style="{StaticResource MetroStatusBarSeparator}"></Separator>
+				<StatusBarItem x:Name="sbiUserName" HorizontalAlignment="Center" >sss</StatusBarItem>
+				<Separator Style="{StaticResource MetroStatusBarSeparator}"></Separator>
+				<StatusBarItem x:Name="sbiDate" HorizontalAlignment="Center" >ddd</StatusBarItem>
+				<Separator Style="{StaticResource MetroStatusBarSeparator}"></Separator>
+				<StatusBarItem x:Name="sbiDays" HorizontalAlignment="Center" >ddd</StatusBarItem>
+				<Separator Style="{StaticResource MetroStatusBarSeparator}"></Separator>
+				<StatusBarItem x:Name="sbiVersion" HorizontalContentAlignment="Center" >ffff</StatusBarItem>
+				<Separator Style="{StaticResource MetroStatusBarSeparator}"></Separator>
+				<StatusBarItem x:Name="sbiIP" HorizontalContentAlignment="Right" >ffff</StatusBarItem>
+				<!--<Grid>
+
+					<controls:WindowButtonCommands Panel.ZIndex="1"
+								 HorizontalAlignment="Right"
+								 VerticalAlignment="Top"
+								 Height="{Binding TitlebarHeight, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}}" />
+
+				</Grid>-->
+
+
+			</StatusBar>
+
+
+
+			<!--<StatusBar x:Name="sbGG" Height="15" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Width="40" Background="LightGray"  HorizontalAlignment="Left" #FF1A37B6  />-->
+		</DockPanel>
+
+		<DockPanel x:Name="dpMain" LastChildFill="True" Background="#FFF1F1F1" Visibility="Hidden">
+			<telerik:RadTreeView x:Name="tvGG"  IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" Width="150"  >
+				<telerik:RadTreeView.ItemTemplate>
+					<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+						<TextBlock Text="{Binding Name}"  />
+					</HierarchicalDataTemplate>
+				</telerik:RadTreeView.ItemTemplate>
+				<telerik:RadTreeView.ItemContainerStyle>
+					<Style TargetType="telerik:RadTreeViewItem" BasedOn="{StaticResource RadTreeViewItemStyle}">
+						<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+						<Setter Property="IsEnabled" Value="{Binding IsEnabled, Mode=TwoWay}" />
+						<Setter Property="Visibility" Value="{Binding Visibility, Mode=TwoWay}" />
+						<Setter Property="DefaultImageSrc" Value="{Binding ImagePath}" />
+
+					</Style>
+				</telerik:RadTreeView.ItemContainerStyle>
+			</telerik:RadTreeView>
+
+
+			<!--<telerik:RadOutlookBar x:Name="robMain" Width="185" HorizontalAlignment="Left" HorizontalContentAlignment="Left" MinimizedWidth="40" FontSize="12" FontWeight="Bold" MinimizedButtonContent="Grupo Guadiana GC" ActiveItemsCount="15"  Margin="0,1,0,-1"  MinimizedAreaVisibility="Collapsed" telerik:StyleManager.Theme="Summer" >-->                          
+				
+				
+				<!--<telerik:RadOutlookBarItem Header="  Inicio" Icon="Resources/Images/Menus/OutlookBar/imgHome.png" Height="34" FontWeight="Bold" Foreground="Black" FontSize="10" >
+					<telerik:RadTreeView x:Name="tvHome"  IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged"  >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}"  />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+				
+				<telerik:RadOutlookBarItem x:Name="rbiGg" Header="  Grupo Guadiana GC" Icon="Resources/Images/Menus/ICONO24.ico" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" >
+					<telerik:RadTreeView x:Name="tvGG"  IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged"  >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}"  />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+								<Setter Property="IsEnabled" Value="{Binding IsEnabled, Mode=TwoWay}" />
+								<Setter Property="Visibility" Value="{Binding Visibility, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+			
+				</telerik:RadOutlookBarItem>-->
+
+
+				<!--<telerik:RadOutlookBarItem x:Name="rbiEkt" Header="  Ektelesis" Icon="Resources/Images/Menus/OutlookBar/imgEkte.ico" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" >
+					<telerik:RadTreeView x:Name="tvEktelesis"  IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}"  />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+				<telerik:RadOutlookBarItem x:Name="rbiBF" Header="  Buen Fin" Icon="Resources/Images/Menus/OutlookBar/bf48.ico" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" >
+					<telerik:RadTreeView x:Name="tvBF"  IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" Visibility="Hidden" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}"  />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+
+				<telerik:RadOutlookBarItem x:Name="rbiLRG" Header="  LRG - Llantas y Rines" Icon="Resources/Images/Menus/OutlookBar/lrg.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" >
+					<telerik:RadTreeView x:Name="tvLRG"  IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}"  />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+				<telerik:RadOutlookBarItem x:Name="rbiCLT" Header="  CLT - Centro Llantero" Icon="Resources/Images/Menus/OutlookBar/clt.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" >
+					<telerik:RadTreeView x:Name="tvCLT"  IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}"  />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+				<telerik:RadOutlookBarItem x:Name="rbiCXC" Header="  Crédito y Cobranza" Icon="Resources/Images/Menus/OutlookBar/imgCredito.png"  Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" >
+					<telerik:RadTreeView x:Name="tvCxC" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}"  />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+
+
+
+				<telerik:RadOutlookBarItem x:Name="rbiCat" Header="  Catálogos" Icon="Resources/Images/Menus/OutlookBar/imgCatalogos.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" >
+					<telerik:RadTreeView x:Name="tvCatalogos"  IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged"  >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}"  />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>-->
+				
+				
+				<!--eKTELESIS-->
+
+				
+
+
+				<!--eKTELESIS-->
+
+				<!--<telerik:RadOutlookBarItem x:Name="rbiInventario" Header="  Inventario" Icon="Resources/Images/Menus/OutlookBar/imgInventario.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" >
+					<telerik:RadTreeView x:Name="tvInventario"  IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged">
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}"  />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+				<telerik:RadOutlookBarItem x:Name="rbiCompras" Header="  Compras" Icon="Resources/Images/Menus/OutlookBar/imgCompras.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" >
+					<telerik:RadTreeView x:Name="tvEktelesis3" Width="240" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}" Width="200" />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>-->
+
+
+			   
+
+
+				<!--<telerik:RadOutlookBarItem x:Name="rbiSales" Header="  Ventas" Icon="Resources/Images/Menus/imgSales.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" IsEnabled="True" >
+					<telerik:RadTreeView x:Name="tvSales" Width="240" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}" Width="200" />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+			
+
+				<telerik:RadOutlookBarItem x:Name="rbiAuditoria" Header="  Auditoria" Icon="Resources/Images/Menus/OutlookBar/imgAuditoria.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" Visibility="Visible" IsEnabled="True" >
+					<telerik:RadTreeView x:Name="tvAuditoria" Width="240" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}" Width="200" />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+				<telerik:RadOutlookBarItem x:Name="rbiMantenimiento" Header="  Mantenimiento" Icon="Resources/Images/Menus/OutlookBar/imgMantenimiento.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" Visibility="Visible" IsEnabled="True" >
+					<telerik:RadTreeView x:Name="tvMto" Width="240" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}" Width="200" />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>-->
+
+				<!--<telerik:RadOutlookBarItem x:Name="rbiPatrimonio" Header="  P. Patrimonial" Icon="Resources/Images/Menus/OutlookBar/imgPatrimonio.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" Visibility="Visible" IsEnabled="True" >
+					<telerik:RadTreeView x:Name="tvPatrimonio" Width="240" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}" Width="200" />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+				<telerik:RadOutlookBarItem x:Name="rbiDH" Header=" Desarrollo Humano" Icon="Resources/Images/Menus/OutlookBar/imgDesarrolloHumano.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" Visibility="Visible" IsEnabled="True" >
+					<telerik:RadTreeView x:Name="tvDH" Width="240" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}" Width="200" />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>-->
+
+				<!--<telerik:RadOutlookBarItem x:Name="rbiSistemas" Header=" Sistemas" Icon="Resources/Images/Menus/OutlookBar/imgSistemas.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" Visibility="Visible" IsEnabled="True" >
+					<telerik:RadTreeView x:Name="tvSistemas" Width="240" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}" Width="200" />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+				<telerik:RadOutlookBarItem x:Name="rbiProcesos" Header=" Procesos Operativos" Icon="Resources/Images/Menus/OutlookBar/imgProcesos.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" Visibility="Visible" IsEnabled="True" >
+					<telerik:RadTreeView x:Name="tvProcesos" Width="240" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}" Width="200" />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>-->
+
+				<!--<telerik:RadOutlookBarItem x:Name="rbiConta" Header=" Contabilidad" Icon="Resources/Images/Menus/OutlookBar/imgConta.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" Visibility="Visible" IsEnabled="True" >
+					<telerik:RadTreeView x:Name="tvConta" Width="240" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}" Width="200" />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+
+				<telerik:RadOutlookBarItem x:Name="rbiComer" Header=" Comercialización" Icon="Resources/Images/Menus/OutlookBar/imgComercializacion.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" Visibility="Visible" IsEnabled="True" >
+					<telerik:RadTreeView x:Name="tvComer" Width="240" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}" Width="200" />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>
+
+				<telerik:RadOutlookBarItem x:Name="rbiSucursales" Header=" Sucursales" Icon="Resources/Images/Menus/OutlookBar/imgSucursales.png" Height="34" FontWeight="Bold" Foreground="#FF1A37B6" FontSize="10" Visibility="Visible" IsEnabled="True" >
+					<telerik:RadTreeView x:Name="tvSucursales" Width="240" IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged" >
+						<telerik:RadTreeView.ItemTemplate>
+							<HierarchicalDataTemplate ItemsSource="{Binding Items}">
+								<TextBlock Text="{Binding Name}" Width="200" />
+							</HierarchicalDataTemplate>
+						</telerik:RadTreeView.ItemTemplate>
+						<telerik:RadTreeView.ItemContainerStyle>
+							<Style TargetType="telerik:RadTreeViewItem">
+								<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+							</Style>
+						</telerik:RadTreeView.ItemContainerStyle>
+					</telerik:RadTreeView>
+				</telerik:RadOutlookBarItem>-->
+
+
+
+
+
+
+
+			<!--</telerik:RadOutlookBar>-->
+
+
+			<syncfusion:TabControlExt  x:Name="containerOK" Background="#FFF1F1F1" ShowTabListContextMenu="True" CloseMode="Delete" DisplayMemberPath="Header"  CloseButtonType="Individual" syncfusion:SkinStorage.VisualStyle="Metro"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0 10 0 0" TabStripPlacement="Top" EnableLabelEdit="False" SelectedItemFontWeight="Bold" OnCloseButtonClick="containerOK_OnCloseButtonClick" FontSize="10" FontFamily="Calibri" Visibility="Hidden"    />
+
+
+			<!--<TabControl  x:Name="containerOK" Background="DeepPink"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0 10 0 0" TabStripPlacement="Top"  Style="{StaticResource StandardTabControl}" ItemsSource="{Binding Tabs}" ItemTemplate="{StaticResource TabItemTemplate}" />-->
+
+			<!--<ContentControl x:Name="container2" Background="DeepPink" Content="" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch"    />-->
+
+		</DockPanel>
+
+		<Grid x:Name="LayoutRoot" Background="LightBlue" >
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			  <RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<Image Source="Resources\Images\App\GG-transparente.png" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill"  Grid.Column="2" Grid.Row="1" />
+
+			<!--<Label Grid.Row="0" Grid.Column="0" Content="GGGC1" Background="{StaticResource BlueTileBrush}" />-->
+			<Label x:Name="lblDayLong" Grid.Row="0" Grid.Column="2" FontFamily="/GGGC.Admin;component/Resources/Fonts/Kardia/#Kardia-Fat ☞" Content="Miercoless" HorizontalContentAlignment="Right" Foreground="White" VerticalAlignment="Bottom" FontStretch="Normal"  FontWeight="ExtraBold" Margin="10,10,10,8" FontSize="25" />
+			<Label x:Name="lblDayNumber" Grid.Row="0" Grid.Column="2"  FontFamily="/GGGC.Admin;component/Resources/Fonts/Kardia/#Kardia-Fat ☞" Content="25" HorizontalContentAlignment="Right" Foreground="White" VerticalAlignment="Bottom" FontStretch="Normal" FontWeight="ExtraBold" Margin="10,3,-8,12" FontSize="111"  />
+			<Label x:Name="lblMonth"  FontFamily="/GGGC.Admin;component/Resources/Fonts/Kardia/#Kardia-FatRunner ☞" Grid.Column="2" Content="AGOSTO" Foreground="White" FontStretch="Normal" FontWeight="ExtraBold" Margin="0,-6,1,112" FontSize="30" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"  />
+
+			<!--<metro:Tile Title="Hello!" 
+					TiltFactor="2"
+					Width="100" Height="100" 
+					Count="0">
+			</metro:Tile>
+
+			<metro:Tile x:Name="tlDay" Title="Hello! world" 
+					TiltFactor="3"
+					Width="200" Height="100" 
+					Count="ddd" Grid.Row="0" Grid.Column="1" Background="red" FontSize="30" >
+			</metro:Tile>-->
+			<!--<Label Grid.Row="0" Grid.Column="2" Content="GGGC3" Background="{StaticResource BlueTileBrush}" />
+			<Label Grid.Row="1" Grid.Column="0" Content="GGGC4" Background="{StaticResource BlueTileBrush}" />
+			<Label Grid.Row="1" Grid.Column="1" Content="GGGC5" Background="{StaticResource BlueTileBrush}" />
+			<Label Grid.Row="1" Grid.Column="2" Content="GGGC6" Background="{StaticResource BlueTileBrush}" />-->
+			
+			<Button x:Name="btnLock" Grid.Row="2" Grid.Column="1" Content="Bloquear" Click="btnLock_Click" Visibility="Hidden" />
+
+			<!--~~~~~~~~~  Demo 1 (english labels and commanding "full mvvm - no code behind needed")  ~~~~~~~~~-->
+			
+			
+			<wpfsl:SmartLoginOverlay x:Name="SmartLoginOverlayControl"
+										 Grid.ColumnSpan="6" AdditionalSystemInfo="" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" Command="{Binding SubmitCommand}" FullSpan="On" IsUserOptionAvailable="True" Password="{Binding Password}" UserImageSource="{Binding UserImageSource}" UserName="{Binding UserName}" Grid.RowSpan="5" IsVisibleChanged="SmartLoginOverlayControl_IsVisibleChanged" Visibility="Hidden" >
+				<wpfsl:SmartLoginOverlay.Background>
+					<ImageBrush ImageSource="/GGGC.Admin;component/Sign/Images/bgMain.jpg" Stretch="UniformToFill"/>
+				</wpfsl:SmartLoginOverlay.Background>
+
+			</wpfsl:SmartLoginOverlay>
+			
+			
+			
+
+			<!--**** Try also setting the Background Property to this : Background="#FF182067"    ****-->
+
+			<Label x:Name="lblDerechos" Grid.ColumnSpan="3" FontSize="10"
+				 HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="Black"
+				 Content="Copyright © 2014 Grupo Guadiana GC Todos los derechos reservados." Margin="9,0,43,5" Grid.Row="4" FontWeight="Bold" Grid.Column="0" />
+
+			<Label x:Name="lblVersion" Grid.ColumnSpan="3" FontSize="11"
+				 HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="Black"
+				 Content="Versión 1.0.0 beta" Margin="121,0,106,20" Grid.Row="4" FontFamily="Arial" FontWeight="Bold" Grid.Column="0"  />
+
+			<Label x:Name="lblFecha" FontSize="10"
+				 HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="LightGray"
+				 Content="" Margin="1,0,141,0" Grid.Row="0" FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="0.5,-0.455" Grid.Column="3"  />
+
+			<!--<Image x:Name="imgTittle" Source="Resources\Images\App\GG-tipografía-transparente.png" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="None"   Grid.ColumnSpan="5" Visibility="Visible" />-->
+
+			<!--<Image x:Name="imgciclo" Source="Resources\Images\dh\ciclo.png" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="None"   Grid.ColumnSpan="1" Grid.RowSpan="3"  />-->
+
+			<!--<Label x:Name="lblTitulo" Grid.ColumnSpan="5" FontSize="70"
+				 HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White"
+				 Content="GRUPO GUADIANA GC " Margin="41,0,58,50" Grid.Row="0" FontFamily="Arial" FontWeight="Thin" Grid.Column="0"  />-->
+		</Grid>
+
+		<!--<ScrollViewer>-->
+		<!--</ScrollViewer>-->
+		<!--"#FFE6DC14"-->
+		<!--<ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch">-->
+		<!--<StackPanel x:Name="spCentral" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFF2EBC0" CanHorizontallyScroll="True" CanVerticallyScroll="True" Orientation="Horizontal" Width="471">
+			<ContentControl prism:RegionManager.RegionName="
+	Region" Margin="1,3,3,3" Width="200" Background="#FF777C17" 
+		/>
+		</StackPanel>-->
+		<!--<DockPanel LastChildFill="True"  Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFF2EBC0" Width="407" />-->
+	</DockPanel>
+	<!--</ContentControl>-->
+	<!--</Border>-->
+
+	<!--<i:Interaction.Behaviors>
+		<behaviours:BorderlessWindowBehavior AllowsTransparency="False" EnableDWMDropShadow="True"/>
+		<behaviours:GlowWindowBehavior/>
+		
+	</i:Interaction.Behaviors>-->
+
+
+</metro:MetroWindow>

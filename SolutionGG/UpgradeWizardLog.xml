@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\GGGC.Admin.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\App.config" />
+  <event action="Analyze" type="Success" name="Report1.resx" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\AZ\Ordenes\Views\Report1.resx" />
+  <event action="Analyze" type="Success" name="RptOrden.resx" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\AZ\Ordenes\Views\RptOrden.resx" />
+  <event action="Analyze" type="Success" name="RptIngresos.resx" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\AZ\OtrosIngresos\Views\RptIngresos.resx" />
+  <event action="Analyze" type="Success" name="RptPagare.resx" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\AZ\PagareArellantas\RptPagare.resx" />
+  <event action="Analyze" type="Success" name="RptPagare.resx" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\AZ\Pagares\RptPagare.resx" />
+  <event action="Analyze" type="Success" name="RptPagareI.resx" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\AZ\Pagares\RptPagareI.resx" />
+  <event action="Analyze" type="Success" name="RptRemision.resx" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\AZ\Remisiones\Views\RptRemision.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\packages.config" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="Report1.resx" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\Report1.resx" />
+  <event action="Analyze" type="Success" name="GGGC.Admin" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\GGGC.Admin.csproj" />
+  <event action="Analyze" type="Success" name="SolutionGG" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\SolutionGG\SolutionGG.sln" />
+  <event action="Backup" type="Success" name="GGGC.Admin" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\GGGC.Admin.csproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\GGGC.Admin.csproj" />
+  <event action="Upgrade" type="Success" name="GGGC.Admin" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\GGGC.Admin\GGGC.Admin.csproj" />
+  <event action="Upgrade" type="Success" name="SolutionGG" path="C:\Users\sistemas\Desktop\rs2018\Development\SlnGG-31-10\SolutionGG\SolutionGG.sln" />
+</log>

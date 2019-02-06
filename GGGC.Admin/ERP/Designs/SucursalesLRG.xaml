@@ -1,0 +1,141 @@
+﻿<UserControl x:Class="GGGC.Admin.ERP.Designs.SucursalesLRG"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <ContentControl x:Name="Controls" Margin="3,3" Style="{StaticResource ShadowContainerStyle_2}">
+        <Grid Grid.Row="2" Grid.Column="0" Background="White" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <ContentPresenter Grid.Row="0" Style="{StaticResource CurrentExampleHeaderStyle}" Height="30" />
+            <DockPanel Name="mainPanel" VerticalAlignment="Center" Margin="0 -10" >
+
+                <TextBlock Margin="15 0 0 0" Text="Sucursales Llantas y Rines" DockPanel.Dock="Left" Foreground="White" FontSize="14.667" FontFamily="Myriad Pro Light" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                <Border Name="btnClose"   BorderThickness="1"  DockPanel.Dock="Right" Height="20" 
+                MouseLeftButtonDown="btnClose_MouseLeftButtonDown"
+                ToolTip="Close">
+                    <Image Source="/Resources\Images\App\XBlack.png"   />
+                </Border>
+
+                <Label Content="" DockPanel.Dock="Bottom"  />
+
+            </DockPanel>
+
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="*" />
+
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TabControl Grid.Row="2" Grid.Column="1" Margin="2"  >
+                    <TabItem Header="Durango" >
+
+                        <Grid x:Name="LayoutRoot" Background="White" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                        </Grid>
+
+
+                    </TabItem>
+
+                    <TabItem Header="Gómez Palacio" >
+
+                        <Grid x:Name="LayoutRoot2" Background="White" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                        </Grid>
+                      
+
+
+                    </TabItem>
+
+                    <TabItem Header="Torreón" >
+                        <Grid x:Name="LayoutRoot3" Background="White" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                        </Grid>
+
+
+
+                    </TabItem>
+
+                    <TabItem Header="Chihuahua" >
+                        <Grid x:Name="LayoutRoot4" Background="White" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                        </Grid>
+
+
+
+                    </TabItem>
+
+                </TabControl>
+
+
+
+
+            </Grid>
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+
+    </ContentControl>
+</UserControl>

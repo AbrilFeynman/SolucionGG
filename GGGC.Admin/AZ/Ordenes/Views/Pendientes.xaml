@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="GGGC.Admin.AZ.Ordenes.Views.Pendientes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GGGC.Admin.AZ.Ordenes.Views"
+             mc:Ignorable="d" 
+            d:DesignHeight="600" d:DesignWidth="806.667">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- note you only need bring in these extra resource dictionaries when using non-default styles, so only bring them into your controls where the default style is not what you want -->
+                <ResourceDictionary Source="/GGGC.Admin;component/AZ/Ordenes/Themes/MaterialDesignTheme.Slider.xaml" />
+                <ResourceDictionary Source="/GGGC.Admin;component/AZ/Ordenes/Themes/MaterialDesignColor.DeepPurple.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Background="White" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*" />
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"  Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="ACCESORIOS" VerticalContentAlignment="Bottom"  FontWeight="Bold" Grid.Column="0" Grid.Row="0" Margin="5,5,5,5"/>
+                <Label Content="GASOLINA" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"  FontWeight="Bold" Grid.Column="1" Grid.Row="0" />
+                <CheckBox x:Name="chkgato" Grid.Column="0" Grid.Row="1"  Margin="5,5,5,5" Content="GATO"/>
+                <CheckBox x:Name="chkmaneral" Grid.Column="0" Grid.Row="2"  Margin="5,5,5,5" Content="MANERAL DEL GATO"/>
+                <CheckBox x:Name="chkllave" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="LLAVE DE RUEDA"/>
+                <CheckBox x:Name="chktaponaceite" Grid.Column="1" Grid.Row="1"  Margin="5,5,5,5" Content="TAPON DE ACEITE"/>
+                <CheckBox x:Name="chktaponradiador"  Grid.Column="1" Grid.Row="2"  Margin="5,5,5,5" Content="TAPON DE RADIADOR"/>
+                <CheckBox x:Name="chkvarilla" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="VARILLA DE ACEITE"/>
+            </Grid>
+
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <CheckBox x:Name="chkestuche" Grid.Column="0" Grid.Row="1"  Margin="5,5,5,5" Content="ESTUCHE DE HERRAMIENTAS"/>
+                <CheckBox x:Name="chktriangulo" Grid.Column="0" Grid.Row="2"  Margin="5,5,5,5" Content="TRIANGULO DE SEGURIDAD"/>
+                <CheckBox x:Name="chkllrefa" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="LLANTA DE REFACCIÓN"/>
+                <CheckBox x:Name="chkfiltroaire" Grid.Column="1" Grid.Row="1"  Margin="5,5,5,5" Content="FILTRO DE AIRE"/>
+                <CheckBox x:Name="chkllbateri" Grid.Column="1" Grid.Row="2"  Margin="5,5,5,5" Content="BATERIA (MCA)"/>
+                <CheckBox x:Name="chkextinguidor" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="EXTINGUIDOR"/>
+                <Slider Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" Grid.ColumnSpan="2"
+                        VerticalContentAlignment="Center"  TickPlacement="Both"  Margin="2,0,1,107"
+                        Minimum="0" Maximum="10" Ticks="0, 2.5,5, 7.5,10" IsSnapToTickEnabled="True" 
+                        Style="{StaticResource MaterialDesignDiscreteSlider}" ToolTip="MaterialDesignDiscreteSlider" 
+                        Height="94" Width="400" Grid.RowSpan="2"  >
+
+                </Slider>
+            </Grid>
+
+
+
+        </Grid>
+    </Grid>
+</UserControl>

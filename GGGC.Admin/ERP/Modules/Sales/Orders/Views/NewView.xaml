@@ -1,0 +1,133 @@
+﻿<core:UserControlViewBase x:Class="GGGC.Admin.ERP.Modules.Sales.Orders.Views.NewView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Navigation"
+             xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+             xmlns:controls3="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
+             xmlns:core="http://www.grupoguadianagc.com/Core"
+             xmlns:commands="clr-namespace:GGGC.Admin.Support.Commands"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <core:UserControlViewBase.Resources>
+        <!-- Allows a KeyBinding to be associated with a command defined in the View Model  -->
+        <commands:CommandReference x:Key="ExitCommandReference" Command="{Binding ExitCommand}" />
+    </core:UserControlViewBase.Resources>
+
+    <core:UserControlViewBase.InputBindings>
+        <KeyBinding Key="X" Modifiers="Control" Command="{StaticResource ExitCommandReference}" />
+    </core:UserControlViewBase.InputBindings>
+    
+    
+    <Grid Background="White">
+
+
+        <Grid.Resources>
+            <Style TargetType="{x:Type telerik:RadDatePicker}">
+                <Style.Triggers>
+                    <Trigger Property="Validation.HasError" Value="true">
+                        <Setter Property="ToolTip"
+        Value="{Binding RelativeSource={RelativeSource Self},
+               Path=(Validation.Errors)[0].ErrorContent}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+        
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <controls:RadTabControl x:Name="radTabControl" BackgroundVisibility="Collapsed" Grid.ColumnSpan="2" Margin="0,0" Grid.RowSpan="7" FontFamily="Myriad Pro Light" FontSize="10" BorderThickness="1,1,1,0" BorderBrush="#FF848484" AllTabsEqualHeight="False">
+            <controls:RadTabItem Header="Datos Generales" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+               
+                    <TextBlock Grid.Row="2" Text="Folio" Margin="5,10" />
+                    <TextBox x:Name="txtFolio" Grid.Row="2" Grid.Column="1"   Style="{StaticResource StyleError}" Margin="5,5,100,5" Background="Transparent"   CharacterCasing="Upper" Text="{Binding Path=Folio, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"  />
+
+                 
+
+                    <TextBlock Grid.Row="3" Text="Folio Factura" Margin="5,10" />
+                    <TextBox x:Name="txtDescripcion" Grid.Row="3" Grid.Column="1"  Margin="5,5" Background="Transparent"  Text="" KeyDown="txtDescripcion_KeyDown" CharacterCasing="Upper"  />
+
+
+                    <!-- Age -->
+                    <TextBlock Grid.Row="4" Text="Fecha Factura:" Margin="5,9"/>
+                    <telerik:RadDatePicker x:Name="dtFecha" Grid.Column="1" HorizontalAlignment="Left" Margin="5"  Grid.Row="4" Grid.RowSpan="2" VerticalAlignment="Top"   SelectedDate="{Binding Path=Fecha,  Mode=TwoWay, TargetNullValue={x:Static System:DateTime.Now}, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" >
+
+                    </telerik:RadDatePicker>
+
+                    <!-- Last Name -->
+                    <TextBlock Grid.Row="5" Text="Fecha de Recepción" Margin="5,9" />
+                    <telerik:RadDateTimePicker x:Name="cboMarca" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="5" Grid.RowSpan="2" VerticalAlignment="Top"  KeyDown="cboMarca_KeyDown" SelectionChanged="cboMarca_SelectionChanged">
+                    </telerik:RadDateTimePicker>
+
+                    <!-- Last Name -->
+                    <TextBlock Grid.Row="6" Text="Impuesto" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboImpuesto" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="6" Grid.RowSpan="2" VerticalAlignment="Top" Width="250" KeyDown="cboImpuesto_KeyDown">
+                    </telerik:RadComboBox>
+
+                    <!-- Last Name -->
+                    <TextBlock Grid.Row="7" Text="Unidad M" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboUnidad" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="7" Grid.RowSpan="2" VerticalAlignment="Top" Width="250" KeyDown="cboUnidad_KeyDown">
+                    </telerik:RadComboBox>
+
+                    <TextBlock Grid.Row="8" Text="Estatus" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboEstatus" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="8" Grid.RowSpan="2" VerticalAlignment="Top" Width="250">
+                    </telerik:RadComboBox>
+
+
+                </Grid>
+            </controls:RadTabItem>
+
+          
+
+        </controls:RadTabControl>
+
+
+
+
+
+       
+
+        <TextBlock x:Name="lblEstatus" Grid.Column="1" Grid.Row="8" Text="" Margin="85,9,192,9" Background="White" FontSize="12" FontWeight="Bold" />
+
+        <Button Grid.Row="8" Grid.Column="1" Command="{Binding Path=SaveCommand}" Content="_Guardar" 
+						  HorizontalAlignment="Right" Margin="4,2" MinWidth="60" IsEnabled="{Binding Path=AllPropertiesValid}"/>
+
+    </Grid>
+</core:UserControlViewBase>

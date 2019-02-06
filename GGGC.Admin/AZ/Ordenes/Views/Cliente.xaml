@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="GGGC.Admin.AZ.Ordenes.Views.Cliente"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+             xmlns:local="clr-namespace:GGGC.Admin.AZ.Ordenes.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="806.667">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*" />
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="White" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="182*"/>
+                <ColumnDefinition Width="625*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="52*"/>
+                    <RowDefinition Height="102*"/>
+                    <RowDefinition Height="242*"/>
+                    <RowDefinition Height="83*"/>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="36*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="38*"/>
+                    <ColumnDefinition Width="53*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="FOLIO" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Margin="10,0,20,0" Width="46"/>
+                <Label Content="# CLIENTE" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                <Label Content="RFC" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBox x:Name="Folioo" BorderBrush="#C1C1C1" Grid.Column="1" Grid.Row="1" Margin="5,5,5,0"/>
+                <TextBox BorderBrush="#C1C1C1" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,0"/>
+                <TextBox BorderBrush="#C1C1C1" Grid.Column="1" Grid.Row="4" Margin="5,5,5,0"/>
+            </Grid>
+            <Grid Grid.Column="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="61*" />
+                    <RowDefinition Height="39*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150*"/>
+                        <ColumnDefinition Width="54*"/>
+                        <ColumnDefinition Width="168*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="193*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="23*"/>
+                        <RowDefinition Height="45*"/>
+                        <RowDefinition Height="45*"/>
+                        <RowDefinition Height="48*"/>
+                        <RowDefinition Height="22*"/>
+                    </Grid.RowDefinitions>
+                    <telerik:RadDateTimePicker  Grid.Row="1" Margin="5,5,5,-2"/>
+                    <telerik:RadDateTimePicker  Grid.Row="2" Margin="5,5,5,-2"/>
+                    <telerik:RadDateTimePicker  Grid.Row="3" Margin="5,5,5,-2"/>
+                    <ComboBox x:Name="Marca"  IsEditable="True" IsReadOnly="True" Text="Marca" SelectionChanged="Marca_SelectionChanged" Grid.Row="1" Grid.Column="2" Margin="5,5,5,-2"/>
+                    <ComboBox x:Name="Modelo"  IsEditable="True" IsReadOnly="True" Text="Modelo" Grid.Row="2" Grid.Column="2" Margin="5,5,5,-2"/>
+                    <ComboBox x:Name="Ano"  IsEditable="True" IsReadOnly="True" Text="Año" Grid.Row="3" Grid.Column="2" Margin="5,5,5,-2"/>
+                    <ComboBox x:Name="Placas"  IsEditable="True" IsReadOnly="True" Text="Placas" Grid.Row="1" Grid.Column="4" Margin="5,5,5,-2"/>
+                    <ComboBox x:Name="Kilometraje"  IsEditable="True" IsReadOnly="True" Text="Kilometraje" Grid.Row="2" Grid.Column="4" Margin="5,5,5,-2"/>
+                </Grid>
+                <Grid Grid.Row="1" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <telerik:RadWatermarkTextBox Margin="5,5,5,5"  WatermarkContent="Observaciones Internas"/>
+                    <telerik:RadWatermarkTextBox Grid.Row="1" Margin="5,5,5,5"  WatermarkContent="Observaciones Cliente"/>
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+</UserControl>

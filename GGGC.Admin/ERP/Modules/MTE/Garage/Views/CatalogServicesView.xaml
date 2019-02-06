@@ -1,0 +1,160 @@
+﻿<core:UserControlViewBase x:Class="GGGC.Admin.ERP.Modules.MTE.Garage.Views.CatalogServicesView"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:core="http://www.grupoguadianagc.com/Core"
+            xmlns:conv="clr-namespace:GGGC.Admin.Support"
+            xmlns:local="clr-namespace:GGGC.Admin.ERP.Modules.MTE.Garage.Support"  
+            xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+           xmlns:System="clr-namespace:System;assembly=mscorlib"
+            xmlns:mtbusy="clr-namespace:GGGC.Admin.MultiThreadedBusyIndicator"                                     
+            mc:Ignorable="d" 
+            d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <conv:ViewModelNullToVisibilityConverter x:Key="viewModelNullToVisibilityConverter" />
+        <local:TicketDepartmentConverter x:Key="ticketDepartmentConverter" />
+        <local:GarageBrandConverter x:Key="garageBrandConverter" />
+        <local:PriorityStyleSelector x:Key="PriorityStyle" />
+        <local:StatusStyleSelector x:Key="StatusStyle" />
+        <local:TicketStatusConverter x:Key="ticketStatusConverter" />
+        <local:PriorityStyleSelector x:Key="priorityStyle">
+            <local:PriorityStyleSelector.AltaStyle>
+                <Style TargetType="telerik:GridViewCell">
+                    <Setter Property="Background" Value="Crimson"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                </Style>
+            </local:PriorityStyleSelector.AltaStyle>
+            <local:PriorityStyleSelector.MediaStyle>
+                <Style TargetType="telerik:GridViewCell">
+                    <Setter Property="Background" Value="Gold" />
+                    <Setter Property="Foreground" Value="White"/>
+
+                    <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                </Style>
+            </local:PriorityStyleSelector.MediaStyle>
+
+            <local:PriorityStyleSelector.BajaStyle>
+                <Style TargetType="telerik:GridViewCell">
+                    <Setter Property="Background" Value="Green" />
+                    <Setter Property="Foreground" Value="White"/>
+
+                    <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <!--<Setter Property="BorderBrush" Value="Red" />
+                    <Setter Property="BorderThickness" Value="10"/>
+                    <Setter Property="Background" Value="Blue" />-->
+                </Style>
+            </local:PriorityStyleSelector.BajaStyle>
+        </local:PriorityStyleSelector>
+
+        <local:StatusStyleSelector x:Key="statusStyle">
+            <local:StatusStyleSelector.StatusStyle>
+                <Style TargetType="telerik:GridViewCell">
+                    <Setter Property="Background" Value="SlateGray"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+
+
+                </Style>
+            </local:StatusStyleSelector.StatusStyle>
+
+        </local:StatusStyleSelector>
+
+
+    </UserControl.Resources>
+
+
+    <!--<telerik:RadBusyIndicator x:Name="BusyIndicator" Width="100" IsBusy="{Binding EntitySetIsLoading}" IsIndeterminate="True">
+
+    </telerik:RadBusyIndicator>-->
+
+    <Grid  >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="38"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition  />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Border Grid.Column="1" CornerRadius="4" Margin="3" BorderBrush="SteelBlue" BorderThickness="3" Background="Yellow"
+                Visibility="Visible">
+                    <Button Content="Nuevo Servicio" Command="{Binding NewObjectCommand}"  IsEnabled="{Binding ButtonNewIsEnabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+                </Border>
+
+            </StackPanel>
+
+
+            <Grid Grid.Row="2" Grid.Column="1">
+
+                <Border CornerRadius="2" BorderThickness="2" BorderBrush="DimGray">
+                    <telerik:RadGridView x:Name="rgv" Grid.Row="1" telerik:StyleManager.Theme="Windows8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ShowGroupPanel="False" ColumnWidth="*" CanUserDeleteRows="False" CanUserInsertRows="False" 
+                             ItemsSource="{Binding Servicios}"  CanUserReorderColumns="False" CanUserSelect="True" AutoGenerateColumns="False"
+                             CanUserSortGroups="False" ClipboardCopyMode="None" ClipboardPasteMode="None" GridLinesVisibility="None" 
+                             SnapsToDevicePixels="True" GroupRenderMode="Flat" FrozenColumnsSplitterVisibility="Hidden" IsFilteringAllowed="True"
+                             DragElementAction="None" CanUserFreezeColumns="False" RowIndicatorVisibility="Hidden" IsReadOnly="True" SelectionUnit="FullRow"
+                             RowHeight="40" BorderBrush="White" ShowColumnFooters="True"  Visibility="Visible" IsBusy="{Binding EntitySetIsLoading}" FontFamily="Gotham Medium" Foreground="Black" FontWeight="ExtraBold" >
+
+
+                        <telerik:RadGridView.Columns>
+
+                            <telerik:GridViewDataColumn DataMemberBinding="{Binding EntityKey}" Header="Servicio ID" Width="65" />
+                            <!--<telerik:GridViewDataColumn DataMemberBinding="{Binding OrderDate}" Header="Fecha" DataFormatString="{} {0:dd-MMM-yyyy HH:mm}"  Width="140" />
+                            <telerik:GridViewDataColumn DataMemberBinding="{Binding BrandID}" Header="Marca" CellStyleSelector="{StaticResource priorityStyle}" />
+                            <telerik:GridViewDataColumn DataMemberBinding="{Binding DepartmentID, Converter={StaticResource ticketDepartmentConverter}}" Header="Departamento" />
+                            <telerik:GridViewDataColumn DataMemberBinding="{Binding Subject, ValidatesOnDataErrors=False}" Header="Asunto" />-->
+                            <telerik:GridViewDataColumn DataMemberBinding="{Binding CodeID}" Header="Código" />
+                            <telerik:GridViewDataColumn DataMemberBinding="{Binding Description}" Header="Descripción" />
+
+
+
+                            
+                            <telerik:GridViewDataColumn DataMemberBinding="{Binding BrandID, Converter={StaticResource garageBrandConverter}}" Header="Marca"  />
+
+
+
+
+
+
+
+
+
+                        </telerik:RadGridView.Columns>
+
+
+                    </telerik:RadGridView>
+
+                </Border>
+
+            </Grid>
+
+            <telerik:RadDataPager x:Name="radDataPager"   telerik:StyleManager.Theme="Windows8" Grid.Row="3"
+                          Source="{Binding Items, ElementName=rgv}"
+                          PageSize="15" NumericButtonCount="5" DisplayMode="All" />
+
+        </Grid>
+
+        <Border Grid.Column="1" CornerRadius="4" Margin="10" BorderBrush="DarkSlateGray" BorderThickness="3" 
+                Visibility="{Binding CurrentObjectViewModel, Converter={StaticResource viewModelNullToVisibilityConverter}}">
+            <ContentControl Content="{Binding CurrentObjectViewModel}" />
+        </Border>
+
+
+    </Grid>
+
+
+
+
+
+</core:UserControlViewBase>

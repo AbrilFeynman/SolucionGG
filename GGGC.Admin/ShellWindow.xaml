@@ -1,0 +1,142 @@
+﻿<metro:MetroWindow  x:Class="GGGC.Admin.ShellWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+                    xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
+        xmlns:navigation="clr-namespace:Telerik.Windows.Controls.Navigation;assembly=Telerik.Windows.Controls.Navigation"
+        xmlns:local="clr-namespace:GGGC.Admin"
+      
+        xmlns:viewModels="clr-namespace:GGGC.Admin.ViewModels"
+       
+     
+      
+        MinWidth="1024" MinHeight="820"
+        Width="1024" Height="820"
+        WindowState="Maximized">
+    <Grid x:Name="Layout"  >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--<Border Height="49" Grid.RowSpan="2" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="OrangeRed" />
+        <Border Height="50" Grid.RowSpan="2" Grid.ColumnSpan="2" VerticalAlignment="Top" BorderBrush="HotPink" BorderThickness="0 0 0 1" Opacity="0.5" />-->
+
+        <Border Height="49" Grid.RowSpan="2" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="{telerik:GreenResource ResourceKey=MainBrush}" />
+        <Border Height="50" Grid.RowSpan="2" Grid.ColumnSpan="2" VerticalAlignment="Top" BorderBrush="{telerik:GreenResource ResourceKey=BasicBrush}" BorderThickness="0 0 0 1" Opacity="0.5" />
+
+
+
+        <StackPanel Grid.Row="0" Grid.Column="1" >
+            <TextBlock Text="{Binding CurrentViewModel}" FontSize="24" Margin="0 8 0 0" Foreground="{telerik:GreenResource ResourceKey=AccentHighBrush}" Style="{StaticResource DefaultTextBlockStyle}" />
+        </StackPanel>
+
+        <Grid Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Margin="0 50 0 0">
+            <telerik:RadBreadcrumb  ItemsSource="{Binding NavigationTree}" 
+                                    HistorySize="0" IsHistoryEnabled="False" IsTextModeEnabled="False"
+                                    CurrentItem="{Binding NavigationTreeSelectedItem, Mode=TwoWay}"
+                                    HierarchicalItemsSource="ChildNodes"
+                                    HierarchicalMemberPath="Name"
+                                    HeaderMemberPath="Name"
+                                    TextModePath="Name"
+                                    Height="34">
+                <telerik:RadBreadcrumb.Header>
+                    <local:NavigationNode x:Name="Home" />
+                </telerik:RadBreadcrumb.Header>
+            </telerik:RadBreadcrumb>
+
+        </Grid>
+        <telerik:RadExpander x:Name="LeftNavigationExpander"
+                             Grid.Column="0" Grid.RowSpan="2" Grid.Row="0" 
+                             Margin="0 50 0 0"
+                             ExpandDirection="Left" 
+                             IsExpanded="True"
+                             HeaderButtonStyle="{StaticResource ArrowHeaderButtonStyle}"
+                            >
+
+
+            <telerik:RadTreeView x:Name="tvGG"  IsVirtualizing="True" telerik:TextSearch.TextPath="Name" SelectionChanged="radTreeViewCatalogs_SelectionChanged"  Margin="10 32 0 0">
+                <telerik:RadTreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Items}">
+                        <TextBlock Text="{Binding Name}"  />
+                    </HierarchicalDataTemplate>
+                </telerik:RadTreeView.ItemTemplate>
+                <telerik:RadTreeView.ItemContainerStyle>
+                    <Style TargetType="telerik:RadTreeViewItem"  BasedOn="{StaticResource RadTreeViewItemStyle}" >
+                        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                        <Setter Property="IsEnabled" Value="{Binding IsEnabled, Mode=TwoWay}" />
+                        <Setter Property="Visibility" Value="{Binding Visibility, Mode=TwoWay}" />
+                        <Setter Property="DefaultImageSrc" Value="{Binding ImagePath}" />
+
+                    </Style>
+                </telerik:RadTreeView.ItemContainerStyle>
+            </telerik:RadTreeView>
+        </telerik:RadExpander>
+
+        <!--<telerik:RadTreeView x:Name="LeftNavigationTreeView" 
+                                 ItemsSource="{Binding NavigationTree}"
+                                 IsExpandOnSingleClickEnabled="True"
+                                 SelectedItem="{Binding NavigationTreeSelectedItem, Mode=TwoWay}"
+                                 PreviewSelectionChanged="OnTreeViewPreviewSelectionChanged"
+                                 Margin="10 32 0 0">
+                <telerik:RadTreeView.ItemContainerStyle>
+                    <Style TargetType="telerik:RadTreeViewItem" BasedOn="{StaticResource RadTreeViewItemStyle}">
+                        <Setter Property="Header" Value="{Binding Name}" />
+                        <Setter Property="ItemsSource" Value="{Binding ChildNodes}" />
+                        <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                        <Setter Property="DefaultImageSrc" Value="{Binding ImagePath}" />
+                    </Style>
+                </telerik:RadTreeView.ItemContainerStyle>
+            </telerik:RadTreeView>-->
+
+
+
+           
+        <!--<telerik:RadBusyIndicator  Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"  DisplayAfter="0" BusyContent="Cargando...">
+BasedOn="{StaticResource RadTreeViewItemStyle}
+            <syncfusion:TabControlExt  x:Name="containerOK" Background="YellowGreen" ShowTabListContextMenu="True" CloseMode="Delete" DisplayMemberPath="Header"  CloseButtonType="Individual" syncfusion:SkinStorage.VisualStyle="VS2010"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0 10 0 0" TabStripPlacement="Top" EnableLabelEdit="False" SelectedItemFontWeight="Bold" OnCloseButtonClick="containerOK_OnCloseButtonClick" FontSize="10" FontFamily="Calibri"    />
+
+            --><!--<ContentPresenter Content="views:TableView" Name="containerOK" />--><!--
+           
+        </telerik:RadBusyIndicator>-->
+
+        <telerik:RadBusyIndicator x:Name="ctrlBusy" BusyContent="Cargando...">
+            <syncfusion:TabControlExt  x:Name="containerOK" Background="YellowGreen" ShowTabListContextMenu="True" CloseMode="Delete" DisplayMemberPath="Header"  CloseButtonType="Individual" syncfusion:SkinStorage.VisualStyle="VS2010"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0 10 0 0" TabStripPlacement="Top" EnableLabelEdit="False" SelectedItemFontWeight="Bold" OnCloseButtonClick="containerOK_OnCloseButtonClick" FontSize="10" FontFamily="Calibri" Visibility="Hidden"    />
+        </telerik:RadBusyIndicator>
+
+
+
+        <!--<telerik:RadBusyIndicator DataContext="{Binding CurrentViewModel}" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" IsBusy="{Binding IsBusy}" DisplayAfter="0" BusyContent="Cargando...">
+            <ContentPresenter  Content="{Binding}" ContentTemplateSelector="{StaticResource CurrentViewTemplateSelector}"/>
+        </telerik:RadBusyIndicator>-->
+
+        <!--<syncfusion:TabControlExt  x:Name="containerOK2" Background="Brown" ShowTabListContextMenu="True" CloseMode="Delete" DisplayMemberPath="Header"  CloseButtonType="Individual" syncfusion:SkinStorage.VisualStyle="VS2010"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0 10 0 0" TabStripPlacement="Top" EnableLabelEdit="False" SelectedItemFontWeight="Bold" OnCloseButtonClick="containerOK_OnCloseButtonClick" FontSize="10" FontFamily="Calibri" Visibility="Hidden"    />-->
+
+        <!-- Shadows -->
+        <Border x:Name="ShadowVisualLeft" Width="5" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Margin="0 50 0 0">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.8 0" StartPoint="0 0">
+                    <GradientStop Color="#19000000"/>
+                    <GradientStop Color="Transparent" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Border x:Name="ShadowVisualTop" Height="5" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="0 50 0 0">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#19000000" Offset="0" />
+                    <GradientStop Color="Transparent" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <!--end Shadows -->
+    </Grid>
+</metro:MetroWindow>

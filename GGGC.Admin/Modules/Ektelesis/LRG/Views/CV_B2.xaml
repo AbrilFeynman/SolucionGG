@@ -1,0 +1,163 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.GridView"
+   xmlns:telerik1="http://schemas.telerik.com/2008/xaml/presentation" x:Class="GGGC.Admin.Modules.Ektelesis.LRG.Views.CV_B2"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Grid.Row="2" Grid.Column="0" Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel VerticalAlignment="Center" Margin="0 6"/>
+
+
+
+
+
+
+
+        <Grid x:Name="LayoutRoot" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+            <telerik1:RadCartesianChart FontWeight="Bold" FontSize="14">
+                <telerik1:RadCartesianChart.Resources>
+                    <telerik1:CategoricalAxis VerticalLocation="Bottom" x:Key="additionalHorizontalAxis" />
+                </telerik1:RadCartesianChart.Resources>
+                <telerik1:RadCartesianChart.Palette>
+                    <telerik1:ChartPalette Name="Cold">
+                        <telerik1:ChartPalette.GlobalEntries>
+                            <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF83D4F1" Stroke="{x:Null}"/>
+                            <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF4BAEDB" Stroke="{x:Null}"/>
+                            <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF288DBA" Stroke="{x:Null}"/>
+                            <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF7CCCD6" Stroke="{x:Null}"/>
+                            <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF4BADB9" Stroke="{x:Null}"/>
+                            <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF97CFE5" Stroke="{x:Null}"/>
+                            <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF63B2CF" Stroke="{x:Null}"/>
+                            <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF4593AC" Stroke="{x:Null}"/>
+                        </telerik1:ChartPalette.GlobalEntries>
+                        <telerik1:ChartPalette.SeriesEntries>
+                            <telerik1:PaletteEntryCollection SeriesFamily="Line">
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="{x:Null}" Stroke="#FF83D4F1"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="{x:Null}" Stroke="#FF4BAEDB"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="{x:Null}" Stroke="#FF288DBA"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="{x:Null}" Stroke="#FF7CCCD6"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="{x:Null}" Stroke="#FF4BADB9"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="{x:Null}" Stroke="#FF97CFE5"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="{x:Null}" Stroke="#FF63B2CF"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="{x:Null}" Stroke="#FF4593AC"/>
+                            </telerik1:PaletteEntryCollection>
+                            <telerik1:PaletteEntryCollection SeriesFamily="Ohlc">
+                                <telerik1:PaletteEntry AdditionalFill="Black" AdditionalStroke="Black" Fill="White" Stroke="Black"/>
+                            </telerik1:PaletteEntryCollection>
+                            <telerik1:PaletteEntryCollection SeriesFamily="Pie">
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF83D4F1" Stroke="White"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF4BAEDB" Stroke="White"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF288DBA" Stroke="White"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF7CCCD6" Stroke="White"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF4BADB9" Stroke="White"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF97CFE5" Stroke="White"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF63B2CF" Stroke="White"/>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Fill="#FF4593AC" Stroke="White"/>
+                            </telerik1:PaletteEntryCollection>
+                            <telerik1:PaletteEntryCollection SeriesFamily="PolarArea">
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Stroke="#FF83D4F1">
+                                    <telerik1:PaletteEntry.Fill>
+                                        <SolidColorBrush Color="#FF83D4F1" Opacity="0.45"/>
+                                    </telerik1:PaletteEntry.Fill>
+                                </telerik1:PaletteEntry>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Stroke="#FF4BAEDB">
+                                    <telerik1:PaletteEntry.Fill>
+                                        <SolidColorBrush Color="#FF4BAEDB" Opacity="0.45"/>
+                                    </telerik1:PaletteEntry.Fill>
+                                </telerik1:PaletteEntry>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Stroke="#FF288DBA">
+                                    <telerik1:PaletteEntry.Fill>
+                                        <SolidColorBrush Color="#FF288DBA" Opacity="0.45"/>
+                                    </telerik1:PaletteEntry.Fill>
+                                </telerik1:PaletteEntry>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Stroke="#FF7CCCD6">
+                                    <telerik1:PaletteEntry.Fill>
+                                        <SolidColorBrush Color="#FF7CCCD6" Opacity="0.45"/>
+                                    </telerik1:PaletteEntry.Fill>
+                                </telerik1:PaletteEntry>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Stroke="#FF4BADB9">
+                                    <telerik1:PaletteEntry.Fill>
+                                        <SolidColorBrush Color="#FF4BADB9" Opacity="0.45"/>
+                                    </telerik1:PaletteEntry.Fill>
+                                </telerik1:PaletteEntry>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Stroke="#FF97CFE5">
+                                    <telerik1:PaletteEntry.Fill>
+                                        <SolidColorBrush Color="#FF97CFE5" Opacity="0.45"/>
+                                    </telerik1:PaletteEntry.Fill>
+                                </telerik1:PaletteEntry>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Stroke="#FF63B2CF">
+                                    <telerik1:PaletteEntry.Fill>
+                                        <SolidColorBrush Color="#FF63B2CF" Opacity="0.45"/>
+                                    </telerik1:PaletteEntry.Fill>
+                                </telerik1:PaletteEntry>
+                                <telerik1:PaletteEntry AdditionalFill="{x:Null}" AdditionalStroke="{x:Null}" Stroke="#FF4593AC">
+                                    <telerik1:PaletteEntry.Fill>
+                                        <SolidColorBrush Color="#FF4593AC" Opacity="0.45"/>
+                                    </telerik1:PaletteEntry.Fill>
+                                </telerik1:PaletteEntry>
+                            </telerik1:PaletteEntryCollection>
+                        </telerik1:ChartPalette.SeriesEntries>
+                    </telerik1:ChartPalette>
+                </telerik1:RadCartesianChart.Palette>
+
+                <telerik1:RadCartesianChart.HorizontalAxis>
+                    <telerik1:CategoricalAxis VerticalLocation="Top" ElementBrush="Orange" />
+                </telerik1:RadCartesianChart.HorizontalAxis>
+
+                <telerik1:RadCartesianChart.VerticalAxis>
+                    <telerik1:LinearAxis />
+                </telerik1:RadCartesianChart.VerticalAxis>
+
+                <telerik1:RadCartesianChart.Series>
+                    <telerik1:BarSeries HorizontalAxis="{StaticResource additionalHorizontalAxis}" ShowLabels="True">
+                        <telerik1:BarSeries.DataPoints>
+                            <telerik1:CategoricalDataPoint x:Name="a01" Category="MICH" Value="30"/>
+                            <telerik1:CategoricalDataPoint x:Name="a02" Category="BFG" Value="20"/>
+                            <telerik1:CategoricalDataPoint x:Name="a03" Category="UNI" Value="15"/>
+                            <telerik1:CategoricalDataPoint x:Name="a04" Category="HANK" Value="50"/>
+                            <telerik1:CategoricalDataPoint x:Name="a05" Category="MASTERC" Value="20"/>
+                            <telerik1:CategoricalDataPoint x:Name="a06" Category="MLIST" Value="60"/>
+                            <telerik1:CategoricalDataPoint x:Name="a07" Category="TORNEL" Value="20"/>
+                            <telerik1:CategoricalDataPoint x:Name="a08" Category="PRIV" Value="15"/>
+                            <telerik1:CategoricalDataPoint x:Name="a09" Category="MULTI" Value="50"/>
+
+                        </telerik1:BarSeries.DataPoints>
+                    </telerik1:BarSeries>
+                    <telerik1:BarSeries HorizontalAxis="{StaticResource additionalHorizontalAxis}" ShowLabels="True">
+                        <telerik1:BarSeries.DataPoints>
+                            <telerik1:CategoricalDataPoint x:Name="b01" Category="MICH" Value="12"/>
+                            <telerik1:CategoricalDataPoint x:Name="b02" Category="BFG" Value="11"/>
+                            <telerik1:CategoricalDataPoint x:Name="b03" Category="UNI" Value="34"/>
+                            <telerik1:CategoricalDataPoint x:Name="b04" Category="HANK" Value="28"/>
+                            <telerik1:CategoricalDataPoint x:Name="b05" Category="MASTERC" Value="10"/>
+                            <telerik1:CategoricalDataPoint x:Name="b06" Category="MLIST" Value="60"/>
+                            <telerik1:CategoricalDataPoint x:Name="b07" Category="TORNEL" Value="70"/>
+                            <telerik1:CategoricalDataPoint x:Name="b08" Category="PRIV" Value="45"/>
+                            <telerik1:CategoricalDataPoint x:Name="b09" Category="MULTI" Value="60"/>
+                        </telerik1:BarSeries.DataPoints>
+                    </telerik1:BarSeries>
+
+                </telerik1:RadCartesianChart.Series>
+            </telerik1:RadCartesianChart>
+
+
+
+        </Grid>
+
+
+
+
+
+
+    </Grid>
+</UserControl>

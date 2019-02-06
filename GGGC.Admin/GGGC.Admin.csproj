@@ -1,0 +1,2619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B613FE76-E57D-4C45-874C-23F3FCAD23A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GGGC.Admin</RootNamespace>
+    <AssemblyName>GGGC.Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>c:\Grupo_Guadiana_GC\ERP\Publish\Updater\GGGC\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>https://biglerplgrupolguadianagc.blob.core.windows.net/erp/</UpdateUrl>
+    <ProductName>BIG</ProductName>
+    <PublisherName>Grupo Guadiana GC</PublisherName>
+    <SuiteName>ERP</SuiteName>
+    <MinimumRequiredVersion>1.0.0.70</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.html</WebPage>
+    <ApplicationRevision>71</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D0910495BD79E9BE0E15994026FB5BBF19548D30</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GGGC.Admin_6_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>big.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Soyunafirmadeprueba.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\SolutionGG\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ControlzEx">
+      <HintPath>..\SolutionGG\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Core.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Common.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Core.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Common.ServiceModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Core.Common.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Common.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Core.Common.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\SolutionGG\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\SolutionGG\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\SolutionGG\packages\FluentValidation.7.5.2\lib\net45\FluentValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GGGC.Client.Bootstrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\GGGC.Client.Bootstrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="GGGC.Client.Contracts">
+      <HintPath>Resources\GGGC.Client.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="GGGC.Client.Entities">
+      <HintPath>Resources\GGGC.Client.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="GGGC.Client.Proxies, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\GGGC.Client.Proxies.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SolutionGG\packages\MahApps.Metro.1.6.4\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.4.1.1101, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\MaterialDesignThemes.2.4.1.1101\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core">
+      <HintPath>..\SolutionGG\packages\Microsoft.Azure.KeyVault.Core.2.0.4\lib\net45\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm">
+      <HintPath>..\SolutionGG\packages\Microsoft.Data.Edm.5.8.3\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <HintPath>..\SolutionGG\packages\Microsoft.Data.OData.5.8.3\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client">
+      <HintPath>..\SolutionGG\packages\Microsoft.Data.Services.Client.5.8.3\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory">
+      <HintPath>..\SolutionGG\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.19.6\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.Platform">
+      <HintPath>..\SolutionGG\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.19.6\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceBus">
+      <HintPath>..\SolutionGG\packages\WindowsAzure.ServiceBus.4.1.10\lib\net45\Microsoft.ServiceBus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\SolutionGG\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Mobile">
+      <HintPath>..\SolutionGG\packages\WindowsAzure.MobileServices.1.3.2\lib\net45\Microsoft.WindowsAzure.Mobile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Mobile.Ext">
+      <HintPath>..\SolutionGG\packages\WindowsAzure.MobileServices.1.3.2\lib\net45\Microsoft.WindowsAzure.Mobile.Ext.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=9.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\WindowsAzure.Storage.9.3.1\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\SolutionGG\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SendGrid">
+      <HintPath>..\SolutionGG\packages\Sendgrid.9.9.0\lib\net452\SendGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SendGrid.SmtpApi">
+      <HintPath>..\SolutionGG\packages\SendGrid.SmtpApi.1.3.3\lib\SendGrid.SmtpApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>..\SolutionGG\packages\Serilog.2.7.1\lib\net45\Serilog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.Sinks.AzureTableStorage">
+      <HintPath>..\SolutionGG\packages\Serilog.Sinks.AzureTableStorage.4.0.0\lib\net45\Serilog.Sinks.AzureTableStorage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.Sinks.PeriodicBatching">
+      <HintPath>..\SolutionGG\packages\Serilog.Sinks.PeriodicBatching.2.1.0\lib\net45\Serilog.Sinks.PeriodicBatching.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=16.3451.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\Syncfusion.Compression.Base.16.3.0.21\lib\net451\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="syncfusion.core">
+      <HintPath>..\..\..\Downloads\syncfusion.core.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=16.3451.0.21, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\Syncfusion.Licensing.16.3.0.21\lib\net451\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSkinManager.WPF, Version=15.2451.0.40, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.WPF, Version=15.2451.0.40, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.WPF, Version=15.2451.0.40, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.XlsIO.Base, Version=16.3451.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\Syncfusion.XlsIO.Wpf.16.3.0.21\lib\net451\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>..\SolutionGG\packages\System.ComponentModel.Primitives.4.3.0\lib\net45\System.ComponentModel.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial">
+      <HintPath>..\SolutionGG\packages\System.Spatial.5.8.3\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\SolutionGG\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Cloud, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Cloud.Controls, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Chart, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Charting, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Data, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.DataServices50, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.DataVisualization, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Docking, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.GridView.Export">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for WPF R2 2017\Binaries\WPF40\Telerik.Windows.Controls.GridView.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Spreadsheet, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Data, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2017.2.428.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2017.2.428.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2017.2.428.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2017.2.428.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2017.2.428.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2017.2.428.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Themes.Green, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Green.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Material">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Office2013">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Office2013.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Office2016Touch">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Office2016Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Office_Black">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Office_Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Office_Blue">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Office_Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Office_Silver">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Office_Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Summer">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Summer.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Transparent">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Transparent.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Vista">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Vista.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.VisualStudio2013">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.VisualStudio2013.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Windows7">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Windows7.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Windows8">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Windows8.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Windows8Touch">
+      <HintPath>..\..\..\SSOT\BIG\Binaries\WPF\Telerik.Windows.Themes.Windows8Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2017.2.428.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="uQRCode, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\uQRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\SolutionGG\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFSmartLibraryLight35, Version=0.1.41.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Sign\ExternalDLL\WPFSmartLibraryLight35.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\WPFToolkit.3.5.50211.1\lib\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.Reporting.XpsRendering, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <Private>False</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.Wpf, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Aplicacion\Erp\Modulos\Cxc\Ncr\Views\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Clientes agregados\Agregadosview.xaml.cs">
+      <DependentUpon>Agregadosview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Compr\Articulo.cs" />
+    <Compile Include="AZ\Compr\ArticulosViewModel.cs" />
+    <Compile Include="AZ\Compr\Data.cs" />
+    <Compile Include="AZ\Compr\Views\AddCompra.xaml.cs">
+      <DependentUpon>AddCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Compr\Views\AddCompra2.xaml.cs">
+      <DependentUpon>AddCompra2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Compr\Views\AddressDialog.xaml.cs">
+      <DependentUpon>AddressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Compr\Views\Articulo.cs" />
+    <Compile Include="AZ\Compr\Views\ArticulosViewModel.cs" />
+    <Compile Include="AZ\Compr\Views\BillingInformation.cs" />
+    <Compile Include="AZ\Compr\Views\CompraDialog.xaml.cs">
+      <DependentUpon>CompraDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Compr\Views\Compraview.xaml.cs">
+      <DependentUpon>Compraview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Compr\Views\Data.cs" />
+    <Compile Include="AZ\Compr\Views\InvoiceItem.cs" />
+    <Compile Include="AZ\Compr\Views\ProductList.cs" />
+    <Compile Include="AZ\Compr\Views\ProductoDialog.xaml.cs">
+      <DependentUpon>ProductoDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Llantas\Views\Class1.cs" />
+    <Compile Include="AZ\Llantas\Views\CodeProject.xaml.cs">
+      <DependentUpon>CodeProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Llantas\Views\EstadisticasView.xaml.cs">
+      <DependentUpon>EstadisticasView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Llantas\Views\LlantasView.xaml.cs">
+      <DependentUpon>LlantasView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Llantas\Views\NewView.xaml.cs">
+      <DependentUpon>NewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Llantas\Views\QueryView.xaml.cs">
+      <DependentUpon>QueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Llantas\Views\RadGridViewSampleData.cs" />
+    <Compile Include="AZ\Llantas\Views\Test.xaml.cs">
+      <DependentUpon>Test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Llantas\Views\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Llantas\Views\UserControl2.xaml.cs">
+      <DependentUpon>UserControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ncr\Views\AddressDialog.xaml.cs">
+      <DependentUpon>AddressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ncr\Views\Assets\Class1.cs" />
+    <Compile Include="AZ\Ncr\Views\BillingInformation.cs" />
+    <Compile Include="AZ\Ncr\Views\Class1.cs" />
+    <Compile Include="AZ\Ncr\Views\EstadisticasView.xaml.cs">
+      <DependentUpon>EstadisticasView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ncr\Views\FieldDialog.xaml.cs">
+      <DependentUpon>FieldDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ncr\Views\InvoiceItem.cs" />
+    <Compile Include="AZ\Ncr\Views\NcrView.xaml.cs">
+      <DependentUpon>NcrView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ncr\Views\NewView.xaml.cs">
+      <DependentUpon>NewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ncr\Views\ProductList.cs" />
+    <Compile Include="AZ\Ncr\Views\QueryView.xaml.cs">
+      <DependentUpon>QueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ncr\Views\RadGridViewSampleData.cs" />
+    <Compile Include="AZ\Operarios\OperariosView.xaml.cs">
+      <DependentUpon>OperariosView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Operarios\PrintAndPrintPreviewModel.cs" />
+    <Compile Include="AZ\Ordenes\Views\AddOrden.xaml.cs">
+      <DependentUpon>AddOrden.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\ApiServices.cs" />
+    <Compile Include="AZ\Ordenes\Views\Articulo.cs" />
+    <Compile Include="AZ\Ordenes\Views\Cliente.xaml.cs">
+      <DependentUpon>Cliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\ClienteItem.cs" />
+    <Compile Include="AZ\Ordenes\Views\Data.cs" />
+    <Compile Include="AZ\Ordenes\Views\GlobalId.cs" />
+    <Compile Include="AZ\Ordenes\Views\Inventariovehiculo.xaml.cs">
+      <DependentUpon>Inventariovehiculo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\OrdenDialog.xaml.cs">
+      <DependentUpon>OrdenDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\OrdenesViewModel.cs" />
+    <Compile Include="AZ\Ordenes\Views\OrdenItem.cs" />
+    <Compile Include="AZ\Ordenes\Views\OrdenView.xaml.cs">
+      <DependentUpon>OrdenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\OrderCliente.xaml.cs">
+      <DependentUpon>OrderCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\Pendientes.xaml.cs">
+      <DependentUpon>Pendientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\Report1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\RptOrden.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\RptOrden.Designer.cs">
+      <DependentUpon>RptOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\TimbreFiscalDigital.cs" />
+    <Compile Include="AZ\Ordenes\Views\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\OtrosIngresos\Views\ClienteItem.cs" />
+    <Compile Include="AZ\OtrosIngresos\Views\IngresosView.xaml.cs">
+      <DependentUpon>IngresosView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\OtrosIngresos\Views\OtrosCliente.xaml.cs">
+      <DependentUpon>OtrosCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\OtrosIngresos\Views\pdfview.xaml.cs">
+      <DependentUpon>pdfview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\OtrosIngresos\Views\RptIngresos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\OtrosIngresos\Views\RptIngresos.Designer.cs">
+      <DependentUpon>RptIngresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\OtrosIngresos\Views\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\OtrosIngresos\Views\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\PagareArellantas\Conversion.cs" />
+    <Compile Include="AZ\PagareArellantas\PagareAView.xaml.cs">
+      <DependentUpon>PagareAView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\PagareArellantas\Reporte1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\PagareArellantas\Reporte1.Designer.cs">
+      <DependentUpon>Reporte1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\PagareArellantas\RptPagare.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\PagareArellantas\RptPagare.Designer.cs">
+      <DependentUpon>RptPagare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Conversion.cs" />
+    <Compile Include="AZ\Pagares\PagareView.xaml.cs">
+      <DependentUpon>PagareView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb1.Designer.cs">
+      <DependentUpon>Reportb1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb11.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb11.Designer.cs">
+      <DependentUpon>Reportb11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb12.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb12.Designer.cs">
+      <DependentUpon>Reportb12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb13.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb13.Designer.cs">
+      <DependentUpon>Reportb13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb15.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb15.Designer.cs">
+      <DependentUpon>Reportb15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb16.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb16.Designer.cs">
+      <DependentUpon>Reportb16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb17.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb17.Designer.cs">
+      <DependentUpon>Reportb17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb18.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb18.Designer.cs">
+      <DependentUpon>Reportb18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb2.Designer.cs">
+      <DependentUpon>Reportb2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb3.Designer.cs">
+      <DependentUpon>Reportb3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb4.Designer.cs">
+      <DependentUpon>Reportb4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb5.Designer.cs">
+      <DependentUpon>Reportb5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb8.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb8.Designer.cs">
+      <DependentUpon>Reportb8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb9.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\Reportb9.Designer.cs">
+      <DependentUpon>Reportb9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\RptPagare.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\RptPagare.Designer.cs">
+      <DependentUpon>RptPagare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\RptPagareI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Pagares\RptPagareI.Designer.cs">
+      <DependentUpon>RptPagareI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Pagares\VerPagare.xaml.cs">
+      <DependentUpon>VerPagare.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Plexi\Plexi.xaml.cs">
+      <DependentUpon>Plexi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Precios\PreciosView.xaml.cs">
+      <DependentUpon>PreciosView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Remisiones\Views\AddressDialog.xaml.cs">
+      <DependentUpon>AddressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Remisiones\Views\BillingInformation.cs" />
+    <Compile Include="AZ\Remisiones\Views\ClienteItem.cs" />
+    <Compile Include="AZ\Remisiones\Views\ClientePrime.xaml.cs">
+      <DependentUpon>ClientePrime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Remisiones\Views\GlobalId.cs" />
+    <Compile Include="AZ\Remisiones\Views\pdfview.xaml.cs">
+      <DependentUpon>pdfview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Remisiones\Views\ProductList.cs" />
+    <Compile Include="AZ\Remisiones\Views\ProductoDialog.xaml.cs">
+      <DependentUpon>ProductoDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Remisiones\Views\RemiCliente.xaml.cs">
+      <DependentUpon>RemiCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Remisiones\Views\RemiItem.cs" />
+    <Compile Include="AZ\Remisiones\Views\RemisionView.xaml.cs">
+      <DependentUpon>RemisionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Remisiones\Views\RptRemision.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Remisiones\Views\RptRemision.Designer.cs">
+      <DependentUpon>RptRemision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Remisiones\Views\TimbreFiscalDigital.cs" />
+    <Compile Include="AZ\Remisiones\Views\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Remisiones\Views\Userpdf.xaml.cs">
+      <DependentUpon>Userpdf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Remisiones\Views\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Servicios\Serviciosview.xaml.cs">
+      <DependentUpon>Serviciosview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\VentasGeneral\CashierStationMainWindowModel.cs" />
+    <Compile Include="AZ\VentasGeneral\VentasGral.xaml.cs">
+      <DependentUpon>VentasGral.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BooleanOrConverter.cs" />
+    <Compile Include="clsGlobalcs.cs" />
+    <Compile Include="Controls\ColorPickerDataFormDataField.cs" />
+    <Compile Include="Controls\ERPDataForm.cs" />
+    <Compile Include="Controls\NumericUpDownDataFormDataField.cs" />
+    <Compile Include="DialogService.cs" />
+    <Compile Include="ERP\Catalogs\Products\Classes\Llantas\ViewModels\ProductViewModel.cs" />
+    <Compile Include="ERP\Catalogs\Products\Classes\Llantas\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Catalogs\Products\Classes\Llantas\Views\NewView.xaml.cs">
+      <DependentUpon>NewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Catalogs\Products\Classes\Llantas\Views\Producto.cs" />
+    <Compile Include="ERP\Catalogs\Products\Classes\Llantas\Views\ProductValidator.cs" />
+    <Compile Include="ERP\Catalogs\Products\Classes\Llantas\Views\QueryView.xaml.cs">
+      <DependentUpon>QueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Catalogs\Products\Classes\Llantas\Views\Student.cs" />
+    <Compile Include="ERP\Catalogs\Products\Classes\Llantas\Views\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Catalogs\Products\Classes\Servicios\ViewModels\ProductViewModel.cs" />
+    <Compile Include="ERP\Catalogs\Products\Classes\Servicios\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Catalogs\Products\Classes\Servicios\Views\NewView.xaml.cs">
+      <DependentUpon>NewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Catalogs\Products\Classes\Servicios\Views\ProductValidator.cs" />
+    <Compile Include="ERP\Catalogs\Products\Classes\Servicios\Views\QueryView.xaml.cs">
+      <DependentUpon>QueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Designs\CambiarPassword.xaml.cs">
+      <DependentUpon>CambiarPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Designs\ExistenciasBase6.xaml.cs">
+      <DependentUpon>ExistenciasBase6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Designs\Precios.xaml.cs">
+      <DependentUpon>Precios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Designs\SucursalesCLT.xaml.cs">
+      <DependentUpon>SucursalesCLT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Designs\SucursalesLRG.xaml.cs">
+      <DependentUpon>SucursalesLRG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Designs\TicketsAdmin.xaml.cs">
+      <DependentUpon>TicketsAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Designs\TicketsUsers.xaml.cs">
+      <DependentUpon>TicketsUsers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Mobile\Compras\Views\DashBoardView.xaml.cs">
+      <DependentUpon>DashBoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Mobile\Compras\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Mobile\Compras\Views\NewView.xaml.cs">
+      <DependentUpon>NewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Mobile\Compras\Views\QueryView.xaml.cs">
+      <DependentUpon>QueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Mobile\Model\Customer.cs" />
+    <Compile Include="ERP\Mobile\Model\Llanta.cs" />
+    <Compile Include="ERP\Mobile\Model\Product.cs" />
+    <Compile Include="ERP\Mobile\ViewModels\NewProductViewModel.cs" />
+    <Compile Include="ERP\Mobile\ViewModels\ViewModelBase.cs" />
+    <Compile Include="ERP\Mobile\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Mobile\Views\TestView.xaml.cs">
+      <DependentUpon>TestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\AR\Directorio\MainViewModel.cs" />
+    <Compile Include="ERP\Modules\AR\Directorio\Person.cs" />
+    <Compile Include="ERP\Modules\AR\Directorio\Tile.xaml.cs">
+      <DependentUpon>Tile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\B20\SO\ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ERP\Modules\B20\SO\ViewModels\EditViewModel.cs" />
+    <Compile Include="ERP\Modules\B20\SO\ViewModels\MainViewModel.cs" />
+    <Compile Include="ERP\Modules\B20\SO\ViewModels\ReportsViewModel.cs" />
+    <Compile Include="ERP\Modules\B20\SO\ViewModels\StatisticsViewModel.cs" />
+    <Compile Include="ERP\Modules\B20\SO\Views\DashboardView.xaml.cs">
+      <DependentUpon>DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\B20\SO\Views\EditView.xaml.cs">
+      <DependentUpon>EditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\B20\SO\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\B20\SO\Views\ReportsView.xaml.cs">
+      <DependentUpon>ReportsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\B20\SO\Views\SoView.xaml.cs">
+      <DependentUpon>SoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\B20\SO\Views\StatisticsView.xaml.cs">
+      <DependentUpon>StatisticsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Inventory\Adjustments\Model\Adjustment.cs" />
+    <Compile Include="ERP\Modules\Inventory\Adjustments\ViewModels\DashBoardViewModel.cs" />
+    <Compile Include="ERP\Modules\Inventory\Adjustments\ViewModels\MainViewModel.cs" />
+    <Compile Include="ERP\Modules\Inventory\Adjustments\ViewModels\NewViewModel.cs" />
+    <Compile Include="ERP\Modules\Inventory\Adjustments\ViewModels\QueryViewModel.cs" />
+    <Compile Include="ERP\Modules\Inventory\Adjustments\ViewModels\ViewModelBaseTWO.cs" />
+    <Compile Include="ERP\Modules\Inventory\Adjustments\Views\AdjustmentView.xaml.cs">
+      <DependentUpon>AdjustmentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Inventory\Adjustments\Views\DashBoardView.xaml.cs">
+      <DependentUpon>DashBoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Inventory\Adjustments\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Inventory\Adjustments\Views\NewView.xaml.cs">
+      <DependentUpon>NewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Inventory\Adjustments\Views\QueryView.xaml.cs">
+      <DependentUpon>QueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Inventory\MyDataRow.cs" />
+    <Compile Include="ERP\Modules\LRG\Databooks\Views\DatabookView.xaml.cs">
+      <DependentUpon>DatabookView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\LRG\Databooks\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Purchases\MyDataRow.cs" />
+    <Compile Include="ERP\Modules\Sales\Estimates\ViewModels\DashBoardViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\Estimates\ViewModels\MainViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\Estimates\ViewModels\NewViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\Estimates\ViewModels\QueryViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\Estimates\Views\DashBoardView.xaml.cs">
+      <DependentUpon>DashBoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\Estimates\Views\EstimateView.xaml.cs">
+      <DependentUpon>EstimateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\Estimates\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\Estimates\Views\NewView.xaml.cs">
+      <DependentUpon>NewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\Estimates\Views\QueryView.xaml.cs">
+      <DependentUpon>QueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\Orders\ViewModels\DashBoardViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\Orders\ViewModels\MainViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\Orders\ViewModels\NewViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\Orders\ViewModels\QueryViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\Orders\Views\DashBoardView.xaml.cs">
+      <DependentUpon>DashBoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\Orders\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\Orders\Views\NewView.xaml.cs">
+      <DependentUpon>NewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\Orders\Views\OrderView.xaml.cs">
+      <DependentUpon>OrderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\Orders\Views\QueryView.xaml.cs">
+      <DependentUpon>QueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\WorkOrders\ViewModels\DashBoardViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\WorkOrders\ViewModels\MainViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\WorkOrders\ViewModels\NewViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\WorkOrders\ViewModels\QueryViewModel.cs" />
+    <Compile Include="ERP\Modules\Sales\WorkOrders\Views\DashBoardView.xaml.cs">
+      <DependentUpon>DashBoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\WorkOrders\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\WorkOrders\Views\NewView.xaml.cs">
+      <DependentUpon>NewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\WorkOrders\Views\QueryView.xaml.cs">
+      <DependentUpon>QueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ERP\Modules\Sales\WorkOrders\Views\WorkOrderView.xaml.cs">
+      <DependentUpon>WorkOrderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="FileCache.cs" />
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\BusinessItem.cs" />
+    <Compile Include="Menus\ItemsViewModel.cs" />
+    <Compile Include="Menus\SampleViewModel.cs" />
+    <Compile Include="Modals\Model\Contrasenia.cs" />
+    <Compile Include="Modals\Model\Product.cs" />
+    <Compile Include="Modals\Password.xaml.cs">
+      <DependentUpon>Password.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modals\ViewModels\NewPasswordViewModel.cs" />
+    <Compile Include="Modals\ViewModels\RelayCommand.cs" />
+    <Compile Include="Modals\ViewModels\SettingsViewModel.cs" />
+    <Compile Include="Modals\ViewModels\ViewModelBaseTMP.cs" />
+    <Compile Include="Modals\Views\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NavigationNode.cs" />
+    <Compile Include="Modules\Ektelesis\AUD\Views\Cancelaciones\CancelacionesView.xaml.cs">
+      <DependentUpon>CancelacionesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\AUD\Views\Cancelaciones\LRGView.xaml.cs">
+      <DependentUpon>LRGView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\BUENFIN\Vales\ConsultarVale.xaml.cs">
+      <DependentUpon>ConsultarVale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\BUENFIN\Vales\GenerarValeView.xaml.cs">
+      <DependentUpon>GenerarValeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\BUENFIN\Vales\ValesView.xaml.cs">
+      <DependentUpon>ValesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\ComoVamos.xaml.cs">
+      <DependentUpon>ComoVamos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\ComoVamosB7.xaml.cs">
+      <DependentUpon>ComoVamosB7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\ComoVamosLRG.xaml.cs">
+      <DependentUpon>ComoVamosLRG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\CV_B7.xaml.cs">
+      <DependentUpon>CV_B7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\CV_B4.xaml.cs">
+      <DependentUpon>CV_B4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\CV_B3.xaml.cs">
+      <DependentUpon>CV_B3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\CV_B2.xaml.cs">
+      <DependentUpon>CV_B2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\CV_B1.xaml.cs">
+      <DependentUpon>CV_B1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\CXC\CLTView.xaml.cs">
+      <DependentUpon>CLTView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\CXC\HistoryView.xaml.cs">
+      <DependentUpon>HistoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\CXC\LRGView.xaml.cs">
+      <DependentUpon>LRGView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\History\CLTView.xaml.cs">
+      <DependentUpon>CLTView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\History\FacturacionView.xaml.cs">
+      <DependentUpon>FacturacionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\History\HistoryView.xaml.cs">
+      <DependentUpon>HistoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\LRG\Views\History\LRGView.xaml.cs">
+      <DependentUpon>LRGView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Ektelesis\RoutedEventHelper.cs" />
+    <Compile Include="MultiThreadedBusyIndicator\BackgroundVisualHost.cs" />
+    <Compile Include="MultiThreadedBusyIndicator\BridgeControl.cs" />
+    <Compile Include="MultiThreadedBusyIndicator\BusyDecorator.cs" />
+    <Compile Include="MultiThreadedBusyIndicator\Class1.cs" />
+    <Compile Include="MultiThreadedBusyIndicator\Execute.cs" />
+    <Compile Include="MultiThreadedBusyIndicator\VisualTargetPresentationSource.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerWindow1.xaml.cs">
+      <DependentUpon>ReportViewerWindow1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Actions\CloseTabItemAction.cs" />
+    <Compile Include="Selectors\CellTemplateSelector.cs" />
+    <Compile Include="Selectors\CurrentViewTemplateSelector.cs" />
+    <Compile Include="Selectors\RowDetailsTemplateSelector.cs" />
+    <Compile Include="Selectors\TreeViewItemConteinerStyleSelector.cs" />
+    <Compile Include="SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShellDockDesign.xaml.cs">
+      <DependentUpon>ShellDockDesign.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShellWindow.xaml.cs">
+      <DependentUpon>ShellWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sign\Models\User.cs" />
+    <Compile Include="Sign\ViewModels\LoginViewModel.cs" />
+    <Compile Include="Sign\Views\MainLogin.xaml.cs">
+      <DependentUpon>MainLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\Groups.cs" />
+    <Compile Include="Support\Animations\CartesianAnimation.cs" />
+    <Compile Include="Support\Animations\ChartAnimationUtilities.cs" />
+    <Compile Include="Support\Animations\PieAnimation.cs" />
+    <Compile Include="Support\Azure\AzureUploadProvider.cs" />
+    <Compile Include="Support\Azure\AzureUploadSettings.cs" />
+    <Compile Include="Support\Azure\AzureUtilities.cs" />
+    <Compile Include="Support\Azure\BlobItem.cs" />
+    <Compile Include="Support\BooleanOrConverter.cs" />
+    <Compile Include="Support\Threading\Async.cs" />
+    <Compile Include="Support\TicketStatusConverter.cs" />
+    <Compile Include="Support\TransferenceStatusConverter.cs" />
+    <Compile Include="Support\Commands\CommandReference.cs" />
+    <Compile Include="Support\Commands\DelegateCommand.cs" />
+    <Compile Include="Support\ViewModelNullToVisibilityConverter.cs" />
+    <Compile Include="TabViewModel.cs" />
+    <Compile Include="UI\Docking\CustomDockingPanesFactory.cs" />
+    <Compile Include="UI\Docking\CustomSaveLoadLayoutHelper.cs" />
+    <Compile Include="UI\Docking\ShellDockDesignViewModel.cs" />
+    <Compile Include="UI\Docking\ViewModels\PaneViewModel.cs" />
+    <Compile Include="UI\Docking\ShellDockViewModel.cs" />
+    <Compile Include="UI\Docking\Views\ErrorList.xaml.cs">
+      <DependentUpon>ErrorList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Docking\Views\ModalWindow.xaml.cs">
+      <DependentUpon>ModalWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Docking\Views\Output.xaml.cs">
+      <DependentUpon>Output.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Docking\Views\PropertiesPane.xaml.cs">
+      <DependentUpon>PropertiesPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Docking\Views\ServerExplorer.xaml.cs">
+      <DependentUpon>ServerExplorer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Docking\Views\SolutionExplorer.xaml.cs">
+      <DependentUpon>SolutionExplorer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Docking\Views\ToolBox.xaml.cs">
+      <DependentUpon>ToolBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\PrincipalViewModel.cs" />
+    <Compile Include="ViewModels\ShellWindowViewModel.cs" />
+    <Compile Include="ViewModels\StoreCustomersViewModel.cs" />
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\Modules\GGGC.Modules.Data\AccesoDatos.cs" />
+    <Compile Include="WPF\Modules\GGGC.Modules.Data\aDatos.cs" />
+    <Compile Include="WPF\Modules\GGGC.Modules.Data\MSSQL\Datos.cs" />
+    <Compile Include="WPF\Modules\GGGC.Modules.Data\MSSQL\SQLRepository.cs" />
+    <Page Include="Aplicacion\Erp\Modulos\Cxc\Ncr\Views\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Clientes agregados\Agregadosview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Compr\Views\AddCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Compr\Views\AddCompra2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Compr\Views\AddressDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Compr\Views\CompraDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Compr\Views\Compraview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Compr\Views\ProductoDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Llantas\Views\CodeProject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Llantas\Views\EstadisticasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Llantas\Views\LlantasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Llantas\Views\NewView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Llantas\Views\QueryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Llantas\Views\Test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Llantas\Views\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Llantas\Views\UserControl2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ncr\Views\AddressDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AZ\Ncr\Views\EstadisticasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ncr\Views\FieldDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AZ\Ncr\Views\NcrView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AZ\Ncr\Views\NewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AZ\Ncr\Views\QueryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AZ\Ncr\Views\Style\Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AZ\Operarios\OperariosView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ordenes\Themes\MaterialDesignColor.DeepPurple.Primary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ordenes\Themes\MaterialDesignColor.DeepPurple.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ordenes\Themes\MaterialDesignTheme.Slider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ordenes\Views\AddOrden.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ordenes\Views\Cliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ordenes\Views\Inventariovehiculo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ordenes\Views\OrdenDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ordenes\Views\OrdenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ordenes\Views\OrderCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ordenes\Views\Pendientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ordenes\Views\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\OtrosIngresos\Views\IngresosView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\OtrosIngresos\Views\OtrosCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\OtrosIngresos\Views\pdfview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\OtrosIngresos\Views\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\OtrosIngresos\Views\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\PagareArellantas\PagareAView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Pagares\PagareView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Pagares\VerPagare.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Plexi\Plexi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Precios\PreciosView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Remisiones\Views\AddressDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Remisiones\Views\ClientePrime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Remisiones\Views\pdfview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Remisiones\Views\ProductoDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Remisiones\Views\RemiCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Remisiones\Views\RemisionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Remisiones\Views\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Remisiones\Views\Userpdf.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Remisiones\Views\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Servicios\Serviciosview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\VentasGeneral\VentasGral.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ERP\Catalogs\Products\Classes\Llantas\Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Catalogs\Products\Classes\Llantas\Views\NewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Catalogs\Products\Classes\Llantas\Views\QueryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Catalogs\Products\Classes\Llantas\Views\UserControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Catalogs\Products\Classes\Servicios\Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Catalogs\Products\Classes\Servicios\Views\NewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Catalogs\Products\Classes\Servicios\Views\QueryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Designs\CambiarPassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Designs\ExistenciasBase6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Designs\Precios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Designs\SucursalesCLT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Designs\SucursalesLRG.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Designs\TicketsAdmin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Designs\TicketsUsers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Mobile\Compras\Views\DashBoardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Mobile\Compras\Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Mobile\Compras\Views\NewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Mobile\Compras\Views\QueryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Mobile\Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Mobile\Views\TestView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\AR\Directorio\Tile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\B20\SO\Views\DashboardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\B20\SO\Views\EditView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\B20\SO\Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\B20\SO\Views\ReportsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\B20\SO\Views\SoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\B20\SO\Views\StatisticsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Inventory\Adjustments\Views\AdjustmentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Inventory\Adjustments\Views\DashBoardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Inventory\Adjustments\Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Inventory\Adjustments\Views\NewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Inventory\Adjustments\Views\QueryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\LRG\Databooks\Views\DatabookView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\LRG\Databooks\Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\Estimates\Views\DashBoardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\Estimates\Views\EstimateView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\Estimates\Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\Estimates\Views\NewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\Estimates\Views\QueryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\Orders\Views\DashBoardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\Orders\Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\Orders\Views\NewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\Orders\Views\OrderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\Orders\Views\QueryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\WorkOrders\Views\DashBoardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\WorkOrders\Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\WorkOrders\Views\NewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\WorkOrders\Views\QueryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ERP\Modules\Sales\WorkOrders\Views\WorkOrderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modals\Password.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modals\Views\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\AUD\Views\Cancelaciones\CancelacionesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\AUD\Views\Cancelaciones\LRGView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\BUENFIN\Vales\ConsultarVale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\BUENFIN\Vales\GenerarValeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\BUENFIN\Vales\ValesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\ComoVamos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\ComoVamosB7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\ComoVamosLRG.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\CV_B7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\CV_B4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\CV_B3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\CV_B2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\CV_B1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\CXC\CLTView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\CXC\HistoryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\CXC\LRGView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\History\CLTView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\History\FacturacionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\History\HistoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Ektelesis\LRG\Views\History\LRGView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MultiThreadedBusyIndicator\Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ReportViewerWindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\BreadCrumbNavigationStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ButtonStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ComboBoxStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\CommonStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataGridStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\GroupBoxStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\IconsNonShared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ListBoxStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\MenuStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ScrollBarStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\TabControlStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\TextBoxStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\WindowStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShellDockDesign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShellWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sign\ResourceDictionaries\LoginDialogRD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sign\Views\MainLogin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Themes\OfficeBlack\System.Windows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\OfficeBlack\Telerik.ReportViewer.Wpf.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\OfficeBlack\Telerik.Windows.Controls.Input.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\OfficeBlack\Telerik.Windows.Controls.Navigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\OfficeBlack\Telerik.Windows.Controls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Docking\Views\ErrorList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Docking\Views\ModalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Docking\Views\Output.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Docking\Views\PropertiesPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Docking\Views\ServerExplorer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Docking\Views\SolutionExplorer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Docking\Views\ToolBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="AZ\Ordenes\Views\Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Ordenes\Views\RptOrden.resx">
+      <DependentUpon>RptOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\OtrosIngresos\Views\RptIngresos.resx">
+      <DependentUpon>RptIngresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\PagareArellantas\Reporte1.resx">
+      <DependentUpon>Reporte1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\PagareArellantas\RptPagare.resx">
+      <DependentUpon>RptPagare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb1.resx">
+      <DependentUpon>Reportb1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb11.resx">
+      <DependentUpon>Reportb11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb12.resx">
+      <DependentUpon>Reportb12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb13.resx">
+      <DependentUpon>Reportb13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb15.resx">
+      <DependentUpon>Reportb15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb16.resx">
+      <DependentUpon>Reportb16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb17.resx">
+      <DependentUpon>Reportb17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb18.resx">
+      <DependentUpon>Reportb18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb2.resx">
+      <DependentUpon>Reportb2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb3.resx">
+      <DependentUpon>Reportb3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb4.resx">
+      <DependentUpon>Reportb4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb5.resx">
+      <DependentUpon>Reportb5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb8.resx">
+      <DependentUpon>Reportb8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\Reportb9.resx">
+      <DependentUpon>Reportb9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\RptPagare.resx">
+      <DependentUpon>RptPagare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Pagares\RptPagareI.resx">
+      <DependentUpon>RptPagareI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Remisiones\Views\RptRemision.resx">
+      <DependentUpon>RptRemision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AZ\Ncr\Views\Assets\InvoiceTemplate.xlsx" />
+    <None Include="AZ\Ncr\Views\Assets\Template.docx" />
+    <None Include="GGGC.Admin_1_TemporaryKey.pfx" />
+    <None Include="GGGC.Admin_2_TemporaryKey.pfx" />
+    <None Include="GGGC.Admin_3_TemporaryKey.pfx" />
+    <None Include="GGGC.Admin_4_TemporaryKey.pfx" />
+    <None Include="GGGC.Admin_5_TemporaryKey.pfx" />
+    <None Include="GGGC.Admin_6_TemporaryKey.pfx" />
+    <None Include="GGGC.Admin_TemporaryKey.pfx" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Support\Azure\AzureUploadProvider.BlocksSyncContext.cs" />
+    <None Include="Soyunafirmadeprueba.pfx" />
+    <Resource Include="AZ\Compr\Imagenes\Edit.png" />
+    <Resource Include="AZ\Compr\Imagenes\Edit.jpg" />
+    <Resource Include="AZ\Compr\Views\Edit.png" />
+    <Resource Include="AZ\Compr\Views\Edit.jpg" />
+    <Resource Include="AZ\Compr\Views\lp.png" />
+    <Resource Include="AZ\Remisiones\Views\Edit.jpg" />
+    <Resource Include="AZ\Remisiones\Views\lapiz.png" />
+    <Resource Include="AZ\Remisiones\Views\addblue.png" />
+    <Resource Include="AZ\Remisiones\Views\em.png" />
+    <Resource Include="AZ\Remisiones\Views\xx.png" />
+    <Resource Include="AZ\Remisiones\Views\x.png" />
+    <Resource Include="AZ\Remisiones\Views\cc.png" />
+    <Resource Include="AZ\Ordenes\Views\verde.png" />
+    <Resource Include="AZ\Remisiones\Views\verde.png" />
+    <Resource Include="AZ\Remisiones\Views\str.png" />
+    <Content Include="GGGC.Client.Proxies.dll" />
+    <Content Include="Reports\SampleReport.trdp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Assets\InvoiceTemplate.xlsx" />
+    <None Include="Resources\Assets\Template.docx" />
+    <Resource Include="Resources\Entypo.ttf" />
+    <None Include="Resources\Images\dh\reiconos.zip" />
+    <None Include="Resources\Images\dh\reiconos\__MACOSX\._reiconos" />
+    <Resource Include="SampleData\Sample.pdf" />
+    <Resource Include="Resources\Files\DataBooks\MICH\Michelin.pdf" />
+    <Resource Include="Resources\Fonts\Kardia\Kardia Fat Runner.otf" />
+    <Resource Include="Resources\Fonts\Kardia\Kardia Fat.otf" />
+    <Resource Include="Resources\Fonts\Kardia\Kardia Fit Runner.otf" />
+    <Resource Include="Resources\Fonts\Kardia\Kardia Fit.otf" />
+    <Resource Include="Resources\Fonts\Kardia\Kardia Slim Runner.otf" />
+    <Resource Include="Resources\Fonts\Kardia\Kardia Slim.otf" />
+    <Resource Include="Resources\Fonts\Kardia\Kardia Thick Runner.otf" />
+    <Resource Include="Resources\Fonts\Kardia\Kardia Thick.otf" />
+    <Resource Include="Resources\Fonts\MyriadPro-Light.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\pluralsight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\App\DemoUser1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="gggc.ico" />
+    <Resource Include="Resources\Images\App\BackGrounds\BG1.jpg" />
+    <Resource Include="Resources\Images\App\BackGrounds\suc1.png" />
+    <Resource Include="Resources\Images\App\BackGrounds\BG2.jpg" />
+    <Resource Include="Resources\Images\App\BackGrounds\BG3.jpg" />
+    <Resource Include="Resources\Images\App\BackGrounds\BG5.jpg" />
+    <Resource Include="Resources\Images\App\BackGrounds\big.png" />
+    <Resource Include="big.ico" />
+    <Resource Include="Resources\Assets\About.png" />
+    <Resource Include="Resources\Assets\Edit.jpg" />
+    <Resource Include="Resources\Assets\Edit.png" />
+    <Resource Include="Resources\Assets\Excel.png" />
+    <Resource Include="Resources\Assets\Excel_Toast.png" />
+    <Resource Include="Resources\Assets\Export.png" />
+    <Resource Include="Resources\Assets\Logo.png" />
+    <Resource Include="Resources\Assets\Northwind.jpg" />
+    <Resource Include="Resources\Assets\PDF.png" />
+    <Resource Include="Resources\Assets\PDF_Toast.png" />
+    <Resource Include="Resources\Assets\SmallLogo.png" />
+    <Resource Include="Resources\Assets\SplashScreen.png" />
+    <Resource Include="Resources\Assets\StoreLogo.png" />
+    <Resource Include="Resources\Assets\Syncfusion.PNG" />
+    <Resource Include="Resources\Assets\SyncfusionLogo.jpg" />
+    <Resource Include="Resources\Assets\syncfusion_logo.gif" />
+    <Resource Include="Resources\Assets\Word.png" />
+    <Resource Include="Resources\Assets\Word_Toast.png" />
+    <Resource Include="Resources\Assets\lrg.png" />
+    <Resource Include="Resources\Assets\entradas.png" />
+    <Resource Include="Resources\Assets\salidas.png" />
+    <Resource Include="Resources\Assets\tm.png" />
+    <Resource Include="App\Local\Data\erp\sb\xml\Temp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="AZ\Ncr\Views\Assets\About.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\Edit.jpg" />
+    <Resource Include="AZ\Ncr\Views\Assets\Edit.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\Excel.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\Excel_Toast.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\Export.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\Logo.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\Northwind.jpg" />
+    <Resource Include="AZ\Ncr\Views\Assets\PDF.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\PDF_Toast.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\ProdutsPriceList.xml" />
+    <Resource Include="AZ\Ncr\Views\Assets\SmallLogo.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\SplashScreen.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\StoreLogo.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\Syncfusion.PNG" />
+    <Resource Include="AZ\Ncr\Views\Assets\SyncfusionLogo.jpg" />
+    <Resource Include="AZ\Ncr\Views\Assets\syncfusion_logo.gif" />
+    <Resource Include="AZ\Ncr\Views\Assets\Word.png" />
+    <Resource Include="AZ\Ncr\Views\Assets\Word_Toast.png" />
+    <Resource Include="AZ\Ncr\Views\App.ico" />
+    <Resource Include="Resources\Entypo-license.txt" />
+    <Content Include="Resources\HibernatingRhinos.Profiler.Appender.dll" />
+    <Content Include="Resources\Images\App\DemoUser2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\Images\App\DemoUser3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\aim48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\GrupoGuadiana16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\GrupoGuadiana32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\ark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\GrupoGuadiana48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\kde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\gnome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\gico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\user-home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\GG32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\go-home-4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\icono16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\HOME24.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\icono24.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\it.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App\Erp\Modulos\Cxc\Ncr\Views\" />
+    <Folder Include="App\Local\Data\erp\sb\json\" />
+    <Folder Include="App\Logs\" />
+    <Folder Include="AZ\Compr\Themes\" />
+    <Folder Include="ERP\Catalogs\Products\Classes\Llantas\Rines\ViewModels\" />
+    <Folder Include="ERP\Catalogs\Products\Classes\Llantas\Rines\Views\" />
+    <Folder Include="ERP\Mobile\Ajustes\" />
+    <Folder Include="ERP\Mobile\Compras\Model\" />
+    <Folder Include="ERP\Mobile\Compras\ViewModels\" />
+    <Folder Include="ERP\Mobile\Facturas\" />
+    <Folder Include="ERP\Modules\AccountsPayable\" />
+    <Folder Include="ERP\Modules\AccountsReceivable\" />
+    <Folder Include="ERP\Modules\ARE\CXC\NCR\Models\" />
+    <Folder Include="ERP\Modules\ARE\CXC\NCR\Support\" />
+    <Folder Include="ERP\Modules\ARE\CXC\NCR\ViewModels\" />
+    <Folder Include="ERP\Modules\ARE\CXC\NCR\Views\" />
+    <Folder Include="ERP\Modules\AR\Catalogs\Llantas\" />
+    <Folder Include="ERP\Modules\B20\SO\Support\" />
+    <Folder Include="ERP\Modules\Company\Stores\" />
+    <Folder Include="ERP\Modules\GGGC\Profile\" />
+    <Folder Include="ERP\Modules\GGGC\services\" />
+    <Folder Include="ERP\Modules\Guadiana\" />
+    <Folder Include="ERP\Modules\LRG\Databooks\Support\" />
+    <Folder Include="ERP\Modules\LRG\Databooks\ViewModels\" />
+    <Folder Include="ERP\Modules\LRG\Sales\" />
+    <Folder Include="ERP\Modules\Sales\Estimates\Model\" />
+    <Folder Include="ERP\Modules\Sales\Orders\Model\" />
+    <Folder Include="ERP\Modules\Sales\WorkOrders\Model\" />
+    <Folder Include="Modules\Ektelesis\CLT\" />
+    <Folder Include="Modules\Ektelesis\CXC\Views\CondicionesDePago\" />
+    <Folder Include="Modules\Ektelesis\LRG\Views\Cancelaciones\" />
+    <Folder Include="Modules\Ektelesis\LRG\Views\FacturacionR\" />
+    <Folder Include="Modules\Ektelesis\LRG\Views\IAjustes\" />
+    <Folder Include="Modules\Ektelesis\LRG\Views\ICompras\" />
+    <Folder Include="Modules\Ektelesis\LRG\Views\ITransferencias\" />
+    <Folder Include="Modules\Ektelesis\MTO\" />
+    <Folder Include="Support\Inventory\" />
+    <Folder Include="ViewModels\Guadiana\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menus\catalogos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="InfragisticsWPF4.Controls.Menus.XamDataTree.v13.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.DataManager.v13.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.DragDrop.v13.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Editors.v13.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.OutlookBar.v13.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Ribbon.v13.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.v13.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Data.OData">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.DocIO.Base">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.OfficeChart.Base">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.Pdf.Base">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Syncfusion.Shared.Wpf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Aqua">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Breeze">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Desert">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.HighContrastBlack">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Office2007Black">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Office2007Silver">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Office2010Black">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Office2010Blue">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Office2010Silver">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Office2013Dark">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Office2013Light">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.TelerikMetro">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.TelerikMetroBlue">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.TelerikMetroTouch">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.VisualStudio2012Dark">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.VisualStudio2012Light">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Windows7">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.Themes.Windows8">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="TelerikCommon">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sign\BlueStart.ico" />
+    <Resource Include="Sign\Images\DemoUser1.png" />
+    <Resource Include="Sign\Images\DemoUser2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icono48.ico" />
+    <Resource Include="GGicon.ico" />
+    <Resource Include="Resources\Images\App\gggc_alpha.png" />
+    <Resource Include="Resources\Images\App\GG-tipografía-transparente.png" />
+    <Resource Include="Resources\Images\App\GG-transparente.png" />
+    <Resource Include="Resources\Images\Background04.jpg" />
+    <Resource Include="Resources\Images\App\Envelope.png" />
+    <Resource Include="Resources\Images\App\Minus.png" />
+    <Resource Include="Resources\Images\App\Stop.png" />
+    <Resource Include="Resources\Images\App\XBlack.png" />
+    <Resource Include="Resources\Images\Menus\anchor.ico" />
+    <Resource Include="Resources\Images\Menus\box2.png" />
+    <Resource Include="Resources\Images\Menus\shopping_cart.png" />
+    <Resource Include="Resources\Images\Menus\imgSales.png" />
+    <Resource Include="Resources\Images\Menus\imgShopping.png" />
+    <Resource Include="Resources\Images\Menus\imgInventory.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgConta.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgCredito.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgDesarrolloHumano.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgEkte.ico" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgMantenimiento.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgPatrimonio.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgSistemas.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgComercializacion.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgAuditoria.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgCatalogos.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgInventario.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgProcesos.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgSucursales.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgCompras.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\imgHome.png" />
+    <Resource Include="Resources\Images\App\Erp\Modules\Tickets\guiarapidaTickets.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\lrg.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\clt.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\bf.png" />
+    <Resource Include="Resources\Images\Menus\OutlookBar\bf48.ico" />
+    <Resource Include="Resources\Images\dh\ciclo.png" />
+    <Resource Include="Resources\Images\dh\reiconos\reiconos\Ciclo-de-la-alegría.png" />
+    <Resource Include="Resources\Images\dh\reiconos\reiconos\Ciclo-de-la-alegría2.png" />
+    <Resource Include="Resources\Images\dh\reiconos\reiconos\compartir-para-crecer.png" />
+    <Resource Include="Resources\Images\dh\reiconos\reiconos\CPC-solo.png" />
+    <Resource Include="Resources\Images\dh\reiconos\reiconos\te-queremos-bien.png" />
+    <Resource Include="Resources\Images\dh\reiconos\reiconos\TQB-solo.png" />
+    <Resource Include="Resources\Images\dh\reiconos\reiconos\VCA-solo.png" />
+    <Resource Include="Resources\Images\dh\reiconos\reiconos\VG-solo.png" />
+    <Resource Include="Resources\Images\dh\reiconos\reiconos\vivir-con-alegria.png" />
+    <Resource Include="Resources\Images\dh\reiconos\reiconos\voluntariado-guadiana.png" />
+    <Resource Include="Resources\Images\dh\reiconos\__MACOSX\reiconos\._Ciclo-de-la-alegría.png" />
+    <Resource Include="Resources\Images\dh\reiconos\__MACOSX\reiconos\._Ciclo-de-la-alegría2.png" />
+    <Resource Include="Resources\Images\dh\reiconos\__MACOSX\reiconos\._compartir-para-crecer.png" />
+    <Resource Include="Resources\Images\dh\reiconos\__MACOSX\reiconos\._CPC-solo.png" />
+    <Resource Include="Resources\Images\dh\reiconos\__MACOSX\reiconos\._te-queremos-bien.png" />
+    <Resource Include="Resources\Images\dh\reiconos\__MACOSX\reiconos\._TQB-solo.png" />
+    <Resource Include="Resources\Images\dh\reiconos\__MACOSX\reiconos\._VCA-solo.png" />
+    <Resource Include="Resources\Images\dh\reiconos\__MACOSX\reiconos\._VG-solo.png" />
+    <Resource Include="Resources\Images\dh\reiconos\__MACOSX\reiconos\._vivir-con-alegria.png" />
+    <Resource Include="Resources\Images\dh\reiconos\__MACOSX\reiconos\._voluntariado-guadiana.png" />
+    <Resource Include="Resources\Images\App\folder.png" />
+    <Resource Include="Resources\Images\folder.png" />
+    <Resource Include="Resources\Images\Docking\bullet_toggle_minus.png" />
+    <Resource Include="Resources\Images\Docking\bullet_toggle_plus.png" />
+    <Resource Include="Resources\Images\Docking\connect_to_database.png" />
+    <Resource Include="Resources\Images\Docking\connect_to_server.png" />
+    <Resource Include="Resources\Images\Docking\data.png" />
+    <Resource Include="Resources\Images\Docking\data_white.png" />
+    <Resource Include="Resources\Images\Docking\ErrorList\delete.png" />
+    <Resource Include="Resources\Images\Docking\ErrorList\information.png" />
+    <Resource Include="Resources\Images\Docking\ErrorList\warning.png" />
+    <Resource Include="Resources\Images\Docking\icon1.png" />
+    <Resource Include="Resources\Images\Docking\icon2.png" />
+    <Resource Include="Resources\Images\Docking\lightning.png" />
+    <Resource Include="Resources\Images\Docking\Output\01.png" />
+    <Resource Include="Resources\Images\Docking\Output\02.png" />
+    <Resource Include="Resources\Images\Docking\Output\03.png" />
+    <Resource Include="Resources\Images\Docking\Output\04.png" />
+    <Resource Include="Resources\Images\Docking\Output\05.png" />
+    <Resource Include="Resources\Images\Docking\Products\Big\Docking.png" />
+    <Resource Include="Resources\Images\Docking\properties_icon.png" />
+    <Resource Include="Resources\Images\Docking\refresh.png" />
+    <Resource Include="Resources\Images\Docking\server.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\database_connect.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\database_connect_white.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\event_log.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\event_log_white.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\folder.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\folder_open_white.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\folder_white.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\hristov.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\hristov_white.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\management_classes.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\management_classes_white.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\management_events.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\message_queues.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\message_queues_white.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\performance_counters.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\references.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\references_white.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\servers.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\servers_white.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\services.png" />
+    <Resource Include="Resources\Images\Docking\ServerExplorer\services_white.png" />
+    <Resource Include="Resources\Images\Docking\servers.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\assembly.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\assembly_white.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\bin.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\data.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\data_white.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\description.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\enumeration.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\enumeration_white.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\folder.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\folder_white.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\icon1.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\icon11.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\icon2.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\icon3.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\icon4.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\icon5.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\icon6.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\icon7.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\icon8.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\icon9.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\image.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\image_white.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\namespace.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\namespace_white.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\properties.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\properties_white.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\references.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\references_white.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\usercontrol.png" />
+    <Resource Include="Resources\Images\Docking\SolutionExplorer\_image.png" />
+    <Resource Include="Resources\Images\Docking\sortasc.png" />
+    <Resource Include="Resources\Images\Docking\stop_refresh.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\chartview.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\datafilter.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\dataform.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\datapager.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\imageeditor.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\map.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\pdfviewer.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\pivotgrid.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radbook_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radcontextmenu_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radcoverflow_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radcube_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radmenu_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radoutlookbar_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radpanelbar_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radribbonbar_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radribboncontextualgroupcontainer_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radribbonwindow_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radrichtextboxribbonui_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radrichtextbox_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radscheduler_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radslider_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radtabcontrol_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radtileview_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radtoolbar_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radtreelist_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radtreeview_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\radwindow_sl.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\richtextbox.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\sparklines.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\timebar.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\timeline.png" />
+    <Resource Include="Resources\Images\Docking\Toolbox\treemapandpivotmap.png" />
+    <Resource Include="Resources\Images\Docking\_data.png" />
+    <Resource Include="Resources\People\pic1.png" />
+    <Resource Include="Resources\People\pic10.png" />
+    <Resource Include="Resources\People\pic11.png" />
+    <Resource Include="Resources\People\pic12.png" />
+    <Resource Include="Resources\People\pic2.png" />
+    <Resource Include="Resources\People\pic3.png" />
+    <Resource Include="Resources\People\pic4.png" />
+    <Resource Include="Resources\People\pic5.png" />
+    <Resource Include="Resources\People\pic6.png" />
+    <Resource Include="Resources\People\pic7.png" />
+    <Resource Include="Resources\People\pic8.png" />
+    <Resource Include="Resources\People\pic9.png" />
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+    <Content Include="Sign\ExternalDLL\WPFSmartLibraryLight35.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Sign\Images\bgMain.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\SolutionGG\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\SolutionGG\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <Import Project="..\SolutionGG\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\SolutionGG\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

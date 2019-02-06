@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="GGGC.Admin.ERP.Mobile.Compras.Views.NewView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Navigation"
+             xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+             xmlns:controls3="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="WhiteSmoke">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        
+        
+        <controls:RadTabControl x:Name="radTabControl" BackgroundVisibility="Hidden" Grid.ColumnSpan="2" Margin="0,0" Grid.RowSpan="7" FontFamily="Myriad Pro Light" FontSize="10">
+            <controls:RadTabItem Header="Datos Generales">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+               
+                    <TextBlock Grid.Row="2" Text="Folio Fiscal" Margin="5,10" />
+                    <controls3:RadWatermarkTextBox x:Name="txtCodigo" Grid.Row="2" Grid.Column="1"  Margin="5,5" WatermarkContent="" Width="250" HorizontalAlignment="Left" KeyDown="txtCodigo_KeyDown" CharacterCasing="Upper" MaxLength="15" MaxLines="1" />
+
+                    <TextBlock Grid.Row="3" Text="Folio Factura" Margin="5,10" />
+                    <TextBox x:Name="txtDescripcion" Grid.Row="3" Grid.Column="1"  Margin="5,5" Background="Transparent"  Text="" KeyDown="txtDescripcion_KeyDown" CharacterCasing="Upper"  />
+
+
+                    <!-- Age -->
+                    <TextBlock Grid.Row="4" Text="Fecha Factura:" Margin="5,9"/>
+                    <telerik:RadDateTimePicker x:Name="cboLine" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="4" Grid.RowSpan="2" VerticalAlignment="Top"  KeyDown="cboLine_KeyDown" SelectionChanged="cboLine_SelectionChanged">
+
+                    </telerik:RadDateTimePicker>
+
+                    <!-- Last Name -->
+                    <TextBlock Grid.Row="5" Text="Fecha de Recepción" Margin="5,9" />
+                    <telerik:RadDateTimePicker x:Name="cboMarca" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="5" Grid.RowSpan="2" VerticalAlignment="Top"  KeyDown="cboMarca_KeyDown" SelectionChanged="cboMarca_SelectionChanged">
+                    </telerik:RadDateTimePicker>
+
+                    <!-- Last Name -->
+                    <TextBlock Grid.Row="6" Text="Impuesto" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboImpuesto" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="6" Grid.RowSpan="2" VerticalAlignment="Top" Width="250" KeyDown="cboImpuesto_KeyDown">
+                    </telerik:RadComboBox>
+
+                    <!-- Last Name -->
+                    <TextBlock Grid.Row="7" Text="Unidad M" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboUnidad" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="7" Grid.RowSpan="2" VerticalAlignment="Top" Width="250" KeyDown="cboUnidad_KeyDown">
+                    </telerik:RadComboBox>
+
+                    <TextBlock Grid.Row="8" Text="Estatus" Margin="5,9" />
+                    <telerik:RadComboBox x:Name="cboEstatus" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="8" Grid.RowSpan="2" VerticalAlignment="Top" Width="250">
+                    </telerik:RadComboBox>
+
+
+                </Grid>
+            </controls:RadTabItem>
+
+            <controls:RadTabItem Header="Datos Específicos">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </controls:RadTabItem>
+
+
+            <controls:RadTabItem Header="Anexos">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+
+                    </Grid.RowDefinitions>
+
+                </Grid>
+            </controls:RadTabItem>
+
+        </controls:RadTabControl>
+
+
+
+
+
+        <Button x:Name="btnGuardar" Content="Cancelar" Grid.Column="1" HorizontalAlignment="Right" Margin="5,10" Grid.Row="8" VerticalAlignment="Top" Width="75" Height="32"  />
+        <Button x:Name="btnGuardar2" Content="Guardar" Grid.Column="1" HorizontalAlignment="Right" Margin="85,10" Grid.Row="8" VerticalAlignment="Top" Width="75" Height="32"  />
+
+        <TextBlock x:Name="lblEstatus" Grid.Column="1" Grid.Row="8" Text="" Margin="85,9,192,9" Background="White" FontSize="12" FontWeight="Bold" />
+
+
+
+    </Grid>
+</UserControl>

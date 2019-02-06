@@ -1,0 +1,138 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:prism="http://www.codeplex.com/prism" 
+        xmlns:igRibbon="http://infragistics.com/Ribbon" xmlns:igOutlookBar="http://infragistics.com/OutlookBar"
+                      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      x:Class="GGGC.UI.Shell"
+        Title="Grupo Guadiana GC" Height="379.104" Width="414.925"
+                      WindowState="Maximized" Closing="MetroWindow_Closing_1" TitlebarHeight="20">
+
+    <Controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colours.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
+
+    </Controls:MetroWindow.Resources>
+
+
+
+
+
+    <!--<DockPanel  DockPanel.Dock="Top" Height="100" Visibility="Visible" Background="#FFDCEAF5">-->
+
+
+    <!--</DockPanel>-->
+
+    <!--<DockPanel LastChildFill="True">
+            <igOutlookBar:XamOutlookBar prism:RegionManager.RegionName="OutlookBarGroupRegion" DockPanel.Dock="Left" Width="200" SelectedGroupChanged="XamOutlookBar_SelectedGroupChanged" Theme="Office2010Blue" />
+            <ContentControl prism:RegionManager.RegionName="ContentRegion" Margin="1,3,3,3" />
+        </DockPanel>-->
+
+
+
+    <!--<DockPanel LastChildFill="True" Background="WhiteSmoke">
+        <igOutlookBar:XamOutlookBar prism:RegionManager.RegionName="OutlookBarGroupRegion" DockPanel.Dock="Left" Width="200" SelectedGroupChanged="XamOutlookBar_SelectedGroupChanged" Theme="Office2k7Blue" />
+        <ContentControl prism:RegionManager.RegionName="ContentRegion" Background="Teal"  />
+    </DockPanel>-->
+
+    <Controls:MetroWindow.WindowCommands>
+        <Controls:WindowCommands>
+            <Button Content="Configuracion" IsEnabled="False"/>
+            <Button>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Height="15" Width="20">
+                        <Rectangle.Resources>
+                            <SolidColorBrush x:Key="BlackBrush" Color="White"/>
+                        </Rectangle.Resources>
+                    </Rectangle>
+                    <TextBlock IsEnabled="False" Text="ACERCA DE..."/>
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.WindowCommands>
+
+
+
+    <DockPanel LastChildFill="True" HorizontalAlignment="Stretch" x:Name="DockMain" VerticalAlignment="Stretch">
+
+
+        <!--"#FF1277CD"  #FFDCEAF5--> 
+        <DockPanel  DockPanel.Dock="Top" Height="5" Visibility="Visible" Background="DeepSkyBlue">
+
+            <igRibbon:RibbonWindowContentHost Visibility="Hidden">
+                <igRibbon:RibbonWindowContentHost.Ribbon>
+                    <igRibbon:XamRibbon x:Name="xamRibbon1" Visibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Disabled" prism:RegionManager.RegionName="RibbonTabRegion">
+                        <igRibbon:XamRibbon.ApplicationMenu>
+                            <igRibbon:ApplicationMenu />
+                        </igRibbon:XamRibbon.ApplicationMenu>
+                        <igRibbon:XamRibbon.QuickAccessToolbar>
+                            <igRibbon:QuickAccessToolbar Visibility="Hidden" />
+                        </igRibbon:XamRibbon.QuickAccessToolbar>
+                    </igRibbon:XamRibbon>
+                </igRibbon:RibbonWindowContentHost.Ribbon>
+            </igRibbon:RibbonWindowContentHost>
+
+            <!--<igRibbon:XamRibbon Name="xamRibbon1" prism:RegionManager.RegionName="RibbonTabRegion" Visibility="Hidden">
+                <igRibbon:XamRibbon.ApplicationMenu>
+                    <igRibbon:ApplicationMenu />
+                </igRibbon:XamRibbon.ApplicationMenu>
+                <igRibbon:XamRibbon.QuickAccessToolbar>
+                    <igRibbon:QuickAccessToolbar />
+                </igRibbon:XamRibbon.QuickAccessToolbar>
+            </igRibbon:XamRibbon>-->
+        </DockPanel>
+        <DockPanel LastChildFill="True"  DockPanel.Dock="Bottom"  HorizontalAlignment="Stretch" Height="16" Background="LightGray" >
+            <ContentControl Visibility="Visible" prism:RegionManager.RegionName="StatusRegion"/>
+            <StatusBar x:Name="sbGG" Height="15" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Width="40" Background="LightGray"  HorizontalAlignment="Left"/>
+        </DockPanel>
+
+
+        <DockPanel LastChildFill="True" Background="LightSlateGray">
+            <igOutlookBar:XamOutlookBar DockPanel.Dock="Left" Width="200" SelectedGroupChanged="XamOutlookBar_SelectedGroupChanged" Theme="Office2k7Blue" prism:RegionManager.RegionName="OutlookBarGroupRegion" />
+            <ContentControl Background="Teal"  prism:RegionManager.RegionName="ContentRegion"  />
+        </DockPanel>
+
+
+
+
+
+        <!--<ScrollViewer>-->
+
+
+
+
+
+        <!--</ScrollViewer>-->
+
+        <!--"#FFE6DC14"-->
+
+
+
+
+
+
+        <!--<ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch">-->
+        <!--<StackPanel x:Name="spCentral" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFF2EBC0" CanHorizontallyScroll="True" CanVerticallyScroll="True" Orientation="Horizontal" Width="471">
+            <ContentControl prism:RegionManager.RegionName="
+    Region" Margin="1,3,3,3" Width="200" Background="#FF777C17" 
+                            />
+        </StackPanel>-->
+
+        <!--<DockPanel LastChildFill="True"  Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFF2EBC0" Width="407" />-->
+
+    </DockPanel>
+
+
+
+
+
+</Controls:MetroWindow>
