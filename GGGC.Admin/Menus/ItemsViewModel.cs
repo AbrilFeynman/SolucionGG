@@ -551,6 +551,12 @@ namespace GGGC.Admin.Menus
                     mnuGG_Orden.Items.Add(mnuGG_Modules_Nivel1_1);
                     BusinessItem mnuGG_Modules_Nivel1_5 = new BusinessItem(mnuGG) { Name = "Precios", Tag = "01117", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
                     mnuGG_Orden.Items.Add(mnuGG_Modules_Nivel1_5);
+
+
+                    BusinessItem mnuGG_Modules_Nivel1_12 = new BusinessItem(mnuGG) { Name = "OrdenMaterial", Tag = "01118", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
+                    mnuGG_Orden.Items.Add(mnuGG_Modules_Nivel1_12);
+
+
                     BusinessItem mnuGG_Modules_Nivel1_11 = new BusinessItem(mnuGG) { Name = "PL Exi", Tag = "01336", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
                     mnuGG_Orden.Items.Add(mnuGG_Modules_Nivel1_11);
                     BusinessItem mnuGG_Modules_Nivel1_6 = new BusinessItem(mnuGG) { Name = "Ventas General", Tag = "07117", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };

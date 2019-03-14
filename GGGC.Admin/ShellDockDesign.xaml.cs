@@ -481,6 +481,21 @@ namespace GGGC.Admin
                         AddDetail(uc01117, "Precios");
                     }
                     break;
+                case "01118":
+                    UserControl uc01118 = null;
+                    if (userControls.ContainsKey("01118"))
+                    {
+                        userControls.Remove("01118");
+                        uc01118 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.OrderMaterial.OrdenView", type.Namespace));
+                        userControls.Add("Precios", uc01118);
+                    }
+                    else
+                    {
+                        uc01118 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.OrderMaterial.OrdenView", type.Namespace));
+                        userControls.Add("01118", uc01118);
+                        AddDetail(uc01118, "Precios");
+                    }
+                    break;
                 case "01336":
                     UserControl uc01336 = null;
                     if (userControls.ContainsKey("01336"))

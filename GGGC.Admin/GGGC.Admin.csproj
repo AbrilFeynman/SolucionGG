@@ -158,8 +158,8 @@
     <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\SolutionGG\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
     </Reference>
-    <Reference Include="MaterialDesignThemes.Wpf, Version=2.4.1.1101, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\SolutionGG\packages\MaterialDesignThemes.2.4.1.1101\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Azure.KeyVault.Core">
       <HintPath>..\SolutionGG\packages\Microsoft.Azure.KeyVault.Core.2.0.4\lib\net45\Microsoft.Azure.KeyVault.Core.dll</HintPath>
@@ -535,6 +535,12 @@
     <Compile Include="AZ\Ordenes\Views\Report1.Designer.cs">
       <DependentUpon>Report1.cs</DependentUpon>
     </Compile>
+    <Compile Include="AZ\Ordenes\Views\Reportdef.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\Reportdef.Designer.cs">
+      <DependentUpon>Reportdef.cs</DependentUpon>
+    </Compile>
     <Compile Include="AZ\Ordenes\Views\RptOrden.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -544,6 +550,9 @@
     <Compile Include="AZ\Ordenes\Views\TimbreFiscalDigital.cs" />
     <Compile Include="AZ\Ordenes\Views\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\OrderMaterial\OrdenView.xaml.cs">
+      <DependentUpon>OrdenView.xaml</DependentUpon>
     </Compile>
     <Compile Include="AZ\OtrosIngresos\Views\ClienteItem.cs" />
     <Compile Include="AZ\OtrosIngresos\Views\IngresosView.xaml.cs">
@@ -1240,6 +1249,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AZ\OrderMaterial\OrdenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AZ\OtrosIngresos\Views\IngresosView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1770,6 +1783,9 @@
     </Compile>
     <EmbeddedResource Include="AZ\Ordenes\Views\Report1.resx">
       <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Ordenes\Views\Reportdef.resx">
+      <DependentUpon>Reportdef.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AZ\Ordenes\Views\RptOrden.resx">
       <DependentUpon>RptOrden.cs</DependentUpon>

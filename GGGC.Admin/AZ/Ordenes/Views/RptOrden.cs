@@ -18,8 +18,8 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         private System.Data.DataTable tblTabla;
         private System.Data.DataTable tblTablaDetalle;
 
-
-
+        string folio = "";
+        string fecha = "";
         public RptOrden()
         {
             try
@@ -46,7 +46,10 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 generarnombre();
                 generardetalle(tblDetalle);
                 string fecha = DateTime.Now.ToString();
-                SaveReport(this.Report, @"C:\Users\Abril\Desktop\MyReportpt.pdf");
+                DateTime date = DateTime.Now;
+              
+                string dateday = date.ToString("dd-MM-yyyy HH mm ");
+                SaveReport(this.Report, @"C:\BIG\LRG\Excel\ORD_"+folio+ "_LRG920502BG7_"+ dateday + ".pdf");
 
                 MessageBox.Show("Reporte guardado en escritorio");
             }
@@ -80,21 +83,51 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         private void generarnombre()
 
         {
+            
+            //Folio de la orden 
+            folio = tblTabla.Rows[0][0].ToString();
+            
+            textBox1.Value = tblTabla.Rows[0][0].ToString();
 
-            textBox1.Value = tblTabla.Rows[0][1].ToString();
-            double cant = Convert.ToDouble(tblTabla.Rows[0][12]);
+            double cant = Convert.ToDouble(tblTabla.Rows[0][7]);
+            //Subtotal
             textBox101.Value = "$" + cant.ToString("#,###.00", CultureInfo.InvariantCulture);
 
-            double ivis = Convert.ToDouble(tblTabla.Rows[0][12]);
+            double ivis = Convert.ToDouble(tblTabla.Rows[0][7]);
             double iva = ivis * 0.16;
+            //IVA
             textBox68.Value = "$"+iva.ToString();
 
-            double totall = Convert.ToDouble(tblTabla.Rows[0][14]);
+            double totall = Convert.ToDouble(tblTabla.Rows[0][8]);
+            //TOTAL
             textBox69.Value = "$" +totall.ToString("#,###.00", CultureInfo.InvariantCulture);
-            textBox79.Value = tblTabla.Rows[0][20].ToString();
-            int bytValorEx = Convert.ToInt32(tblTabla.Rows[0][15]);
-            int bytValorIn = Convert.ToInt32(tblTabla.Rows[0][16]);
-            int bytValorAc = Convert.ToInt32(tblTabla.Rows[0][17]);
+            //Observaciones
+            textBox79.Value = tblTabla.Rows[0][15].ToString();
+
+
+            //Cliente
+            textBox28.Value = tblTabla.Rows[0][12].ToString();
+            //Telefono
+            textBox30.Value = tblTabla.Rows[0][13].ToString();
+            //RFC
+            textBox32.Value = tblTabla.Rows[0][2].ToString();
+            //Direccion
+            textBox33.Value = tblTabla.Rows[0][14].ToString();
+
+
+            //Fecha Recepcion
+            textBox17.Value = tblTabla.Rows[0][4].ToString();
+            //Fecha de entrega
+            textBox18.Value = tblTabla.Rows[0][5].ToString();
+            //Fecha vigencia 
+            textBox5.Value = tblTabla.Rows[0][3].ToString();
+
+
+
+            //Checkbox
+            int bytValorEx = Convert.ToInt32(tblTabla.Rows[0][9]);
+            int bytValorIn = Convert.ToInt32(tblTabla.Rows[0][10]);
+            int bytValorAc = Convert.ToInt32(tblTabla.Rows[0][11]);
             pcrDespliegaExteriores(bytValorEx);
             pcrDespliegaInteriores(bytValorIn);
             pcrDespliegaAccesorios(bytValorAc);

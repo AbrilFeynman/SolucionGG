@@ -76,7 +76,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 string conect = "SERVER = gggctserver.database.windows.net; DATABASE =devArellantas; USER ID = sysadmin_gg_gc_sa_dgo_testing; PASSWORD = GRUPO.gu@di@n@.Grupo.Campos_#Staging_Test.2099";
                 SqlConnection con = new SqlConnection(conect);
 
-                string cmd = "SELECT Top 100 percent  Id_Radial as Radial ,Tipo_De_Persona as Tipo,Nombre  +' '+Apellido_Paterno+' '+Apellido_Materno as Nombre, RFC as RFC FROM Clientes_Frecuentes ";
+                string cmd = "SELECT Top 100 percent  Id_Radial as Radial ,Tipo_De_Persona as Tipo,Nombre  +' '+Apellido_Paterno+' '+Apellido_Materno as Nombre, RFC as RFC, Telefono_Personal as Telefono, Direccion  +' '+Colonia+' '+ Ciudad as Direccion FROM Clientes_Frecuentes ";
                 try { con.Open(); }
                 catch (SqlException ex) { MessageBox.Show("Revise su conexión a internet"); }
 
@@ -92,10 +92,10 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
 
 
-
+              
 
                 dataGrid2.ItemsSource = dsPubs.Tables["Clientes_Frecuentes"].DefaultView;
-
+               
 
                 con.Close();
 
@@ -158,9 +158,12 @@ namespace GGGC.Admin.AZ.Ordenes.Views
              
                 m_invoiceItemC.Numero_De_Cliente =Convert.ToInt32( row_selected["Radial"]);
                 m_invoiceItemC.RFC = row_selected["RFC"].ToString();
-             
+                m_invoiceItemC.Nombre_De_Cliente = row_selected["Nombre"].ToString();
+                m_invoiceItemC.Telefono = row_selected["Telefono"].ToString();
+                m_invoiceItemC.Telefono = row_selected["Direccion"].ToString();
 
-              
+
+
             }
 
         
@@ -209,9 +212,21 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             item_Copy.Text = ((System.Data.DataRowView)objtitem).Row.ItemArray[2].ToString();
             item_Copy1.Text = ((System.Data.DataRowView)objtitem).Row.ItemArray[3].ToString();
             m_invoiceItemC.Numero_De_Cliente = Convert.ToInt32(((System.Data.DataRowView)objtitem).Row.ItemArray[0]);
+            m_invoiceItemC.Nombre_De_Cliente = ((System.Data.DataRowView)objtitem).Row.ItemArray[2].ToString();
             m_invoiceItemC.RFC = ((System.Data.DataRowView)objtitem).Row.ItemArray[3].ToString();
-
+            m_invoiceItemC.Telefono = ((System.Data.DataRowView)objtitem).Row.ItemArray[4].ToString();
+            m_invoiceItemC.Direccion = ((System.Data.DataRowView)objtitem).Row.ItemArray[5].ToString();
             //string strigCodigo = ((System.Data.DataRowView)objtitem).Row.ItemArray[0].ToString();
+
+        }
+
+        private void dataGrid2_DataLoaded(object sender, EventArgs e)
+        {
+           //Hide las columnas que no quieras mostrar
+            dataGrid2.Columns[4].IsVisible = false;
+            dataGrid2.Columns[5].IsVisible = false;
+
+                   
 
         }
     }

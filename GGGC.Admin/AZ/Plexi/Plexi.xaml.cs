@@ -655,6 +655,7 @@ namespace GGGC.Admin.AZ.Plexi
         "dbo.Articulos.Codigo_De_Linea = dbo.Lineas.Codigo_De_Linea LEFT OUTER JOIN dbo.vtaPrecios_Lista ON dbo.Articulos.Codigo_De_Articulo = dbo.vtaPrecios_Lista.Codigo_De_Articulo  " +
         "WHERE(dbo.Articulos.Baja_Logica = 0) AND(dbo.Articulos.Marca IN('mich', 'bfg', 'unir')) AND Existencia >=0 and " +
        "(dbo.Tipo_De_Agrupacion_De_Lineas.Codigo_Tipo_De_Agrupacion_De_Lineas IN(1, 2, 3, 4))ORDER BY dbo.Articulos.Marca, dbo.Articulos.Codigo_De_Articulo  ";
+
                     break;
                 case 2:
                     return "SELECT  'hnk' + dbo.Articulos.Codigo_De_Articulo AS Codigo, dbo.Articulos.Codigo_De_Articulo as Codigo_LRG, dbo.Articulos.Marca AS Marca, dbo.Articulos.Descripcion,  " +

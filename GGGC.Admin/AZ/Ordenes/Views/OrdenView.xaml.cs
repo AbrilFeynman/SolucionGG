@@ -31,6 +31,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         const int m_columnCount = 9;
         private double m_totalDue;
         private double m_totalCant;
+        int osomaloso = 0;
         private IList<OrdenItem> m_items;
         int m_currentRowIndex = 0;
         int m_selectedIndex = -1;
@@ -41,9 +42,12 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         OrderCliente m_fieldsCliente;
         Cliente m_cliente;
         int estrella = 1;
-       // Pendientes pendientes = new Pendientes();
-      // Pendientes.
-            
+        string item_cliente = "";
+        string item_telefono = "";
+        string item_direccion = "";
+        // Pendientes pendientes = new Pendientes();
+        // Pendientes.
+
         //AddressDialog m_addressPopup;
         //BillingInformation m_billInfo;
         // ProductList m_productList;
@@ -90,27 +94,27 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         private void llenarcombos()
         {
 
-            Marca.Items.Add("Nissan");
-            Marca.Items.Add("Lambo");
-            Marca.Items.Add("Luxe");
-            Marca.Items.Add("Mattel");
+            //Marca.Items.Add("Nissan");
+            //Marca.Items.Add("Lambo");
+            //Marca.Items.Add("Luxe");
+            //Marca.Items.Add("Mattel");
 
 
-            Modelo.Items.Add("Carry");
-            Modelo.Items.Add("Tesla");
-            Modelo.Items.Add("Nigg");
-            Modelo.Items.Add("Boss");
+            //Modelo.Items.Add("Carry");
+            //Modelo.Items.Add("Tesla");
+            //Modelo.Items.Add("Nigg");
+            //Modelo.Items.Add("Boss");
 
-            Ano.Items.Add("1990");
-            Ano.Items.Add("1993");
-            Ano.Items.Add("1800");
-            Ano.Items.Add("2018");
+            //Ano.Items.Add("1990");
+            //Ano.Items.Add("1993");
+            //Ano.Items.Add("1800");
+            //Ano.Items.Add("2018");
 
 
-            Placas.Items.Add("zzz");
-            Placas.Items.Add("ttt");
-            Placas.Items.Add("aaa");
-            Placas.Items.Add("ggg");
+            //Placas.Items.Add("zzz");
+            //Placas.Items.Add("ttt");
+            //Placas.Items.Add("aaa");
+            //Placas.Items.Add("ggg");
 
 
 
@@ -130,13 +134,16 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             Random r = new Random();
             var x = r.Next(1000000, 9000000);
             string Od = x.ToString();
-
+            osomaloso = x;
             GlobalId o = new GlobalId();
             GlobalId.Identificador = Od;
             //m_productList = new ProductList();
-          //  GGGC.Admin.App.
-         // tabPendientes.
-
+            //  GGGC.Admin.App.
+            // tabPendientes.
+            //empezar los datapickers
+            DateRecepcion.SelectedDate = DateTime.Now;
+            DateEntrega.SelectedDate = DateTime.Now;
+            DateCaptura.SelectedDate = DateTime.Now;
             m_items = new List<OrdenItem>();
 
             m_border = new Border();
@@ -211,7 +218,11 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         {
 
             txtradial.Text = item.Numero_De_Cliente.ToString();
+            item_telefono = item.Telefono.ToString();
+            item_cliente = item.Nombre_De_Cliente.ToString();
             txtrfc.Text = item.RFC.ToString();
+            item_direccion = item.Direccion.ToString();
+
                
 
         }
@@ -229,13 +240,20 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         private void Delete(object sender, RoutedEventArgs e)
         {
+            if (tabla.Rows.Count == 0)
+            {
 
-            tabla.Rows[m_selectedIndex].Delete();
-            if (m_selectedIndex == -1)
-                return;
+            }
+            else
+            {
+                tabla.Rows[m_selectedIndex].Delete();
+                if (m_selectedIndex == -1)
+                    return;
 
-            RemoveItem(m_selectedIndex);
-            this.DeleteButton.IsEnabled = false;
+                RemoveItem(m_selectedIndex);
+                this.DeleteButton.IsEnabled = false;
+            }
+            
            
         }
 
@@ -401,8 +419,8 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             m_cliente = new Cliente();
             item.Marca = m_cliente.Marci;
 
-            item.Numero_De_Documento = GlobalId.Identificador;
-            
+            //item.Numero_De_Documento = GlobalId.Identificador;
+            item.Numero_De_Documento = osomaloso.ToString();
             item.Renglon = estrella;
            // item.Renglon = tabla.Rows.Count;
             tabla.Rows.Add(item.Numero_De_Documento,item.Renglon,item.Codigo, item.Descripcion, item.Cantidad, item.Preciolista, item.Nivel, item.Rate, item.Total);
@@ -595,9 +613,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             int bytValor;
             bytValor = 0;
 
-            if (chkllave.IsChecked == true)
-                bytValor = bytValor + 4096;
             if (chkmaneral.IsChecked == true)
+                bytValor = bytValor + 4096;
+            if (chkllave.IsChecked == true)
                 bytValor = bytValor + 2048;
             if (chkgato.IsChecked == true)
                 bytValor = bytValor + 1024;
@@ -617,7 +635,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 bytValor = bytValor + 8;
             if (chkllbateri.IsChecked == true)
                 bytValor = bytValor + 4;
-            if (chkextinguidor.IsChecked == true)
+            if (chkclax.IsChecked == true)
                 bytValor = bytValor + 2;
             return bytValor;
         }
@@ -630,14 +648,17 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             bytValor = 0;
 
             //QUITARELCONVERT
-            
+            if (chkemblema.IsChecked == true)
+                bytValor = bytValor + 4096;
+            if (chkcuarto.IsChecked == true)
+                bytValor = bytValor + 2048;
             if (chkparabrisa.IsChecked == true)
                 bytValor =bytValor + 1024;
             if (chkcarroseria.IsChecked == true)
                 bytValor = bytValor + 512;
             if (chktapon.IsChecked == true)
                 bytValor = bytValor + 256;
-            if (chkcompletas.IsChecked == true)
+            if (chkbocina.IsChecked == true)
                 bytValor = bytValor + 128;
             if (chkmoldeduras.IsChecked == true)
                 bytValor = bytValor + 64;
@@ -659,6 +680,13 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         {
             int bytValor;
             bytValor = 0;
+
+            if (chkbtninte.IsChecked == true)
+                bytValor = bytValor + 4096;
+            if (chkcenicero.IsChecked == true)
+                bytValor = bytValor + 2048;
+            if (chkcale.IsChecked == true)
+                bytValor = bytValor + 1024;
             if (chkvestidura.IsChecked == true)
                 bytValor = bytValor + 512;
             if (chktapetes.IsChecked == true)
@@ -673,7 +701,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 bytValor = bytValor + 16;
             if (chkbocinas.IsChecked == true)
                 bytValor = bytValor + 8;
-            if (chkesterio.IsChecked == true)
+            if (chkradio.IsChecked == true)
                 bytValor =bytValor + 4;
             if (chktablero.IsChecked == true)
                 bytValor =bytValor + 2;
@@ -683,12 +711,103 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
+            if (tabla.Rows.Count > 0 && txtradial.Text.Length > 4)
+            {
+                SaveHeader();
 
-            SaveHeader();
+                SaveDetail();
+                //Limpiar botones
+                cleanscreen();
+                MessageBox.Show("Se guardo Correctamente ");
+            }
+            else
+            {
+                MessageBox.Show("La orden de patio no debe de estar vacia.");
 
-            SaveDetail();
+            }
+            
 
         }
+
+        private void cleanscreen()
+        {
+            InvoiceGrid.Children.Clear();
+            m_items = new List<OrdenItem>();
+           
+            UpdateGrido();
+            osomaloso++;
+            m_fieldsCliente = new OrderCliente();
+            txtradial.Text = "";
+            txtrfc.Text = "";
+            DateRecepcion.SelectedDate = DateTime.Now;
+            DateEntrega.SelectedDate = DateTime.Now; 
+            DateCaptura.SelectedDate = DateTime.Now; 
+            DateRecepcionH.SelectedTime = null;
+            DateEntregaH.SelectedTime = null;
+            CapturaH.SelectedTime = null;
+            ObservacionInterna.Text = "";
+            ObservacionCliente.Text = "";
+            Marca.Text = "";
+            Modelo.Text = "";
+            Ano.Text = "";
+            Placas.Text = "";
+            Kilometraje.SelectedItem = null;
+            estrella = 1;
+            chkgato.IsChecked = false;
+            chkmaneral.IsChecked = false;
+            chkllave.IsChecked = false;
+            chktaponaceite.IsChecked = false;
+            chktaponradiador.IsChecked = false;
+            chkvarilla.IsChecked = false;
+            chkestuche.IsChecked = false;
+            chktriangulo.IsChecked = false;
+            chkllrefa.IsChecked = false;
+            chkfiltroaire.IsChecked = false;
+            chkllbateri.IsChecked = false;
+            chkclax.IsChecked = false;
+
+            chkluces.IsChecked = false;
+            chkantena.IsChecked = false;
+            chkespejo.IsChecked = false;
+            chkcristales.IsChecked = false;
+
+            chkmoldeduras.IsChecked = false;
+            chkbocina.IsChecked = false;
+            chktapon.IsChecked = false;
+            chkcarroseria.IsChecked = false;
+            chkparabrisa.IsChecked = false;
+
+            chktablero.IsChecked = false;
+            chkradio.IsChecked = false;
+            chkbocinas.IsChecked = false;
+            chkencendedor.IsChecked = false;
+            chkespejoretro.IsChecked = false;
+
+            chkcinturon.IsChecked = false;
+            chkmanijas.IsChecked = false;
+            chktapetes.IsChecked = false;
+            chkvestidura.IsChecked = false;
+            tabla.Rows.Clear();
+
+        }
+
+        private void UpdateGrido()
+        {
+            m_totalDue = 0;
+            m_totalCant = 0;
+            m_currentRowIndex = 0;
+            InvoiceGrid.Children.Clear();
+            //InvoiceGrid.RowDefinitions.RemoveAt(InvoiceGrid.RowDefinitions.Count - 1);
+            for (int i = 0; i < InvoiceGrid.RowDefinitions.Count; i++)
+                DrawBorder(i);
+            foreach (OrdenItem item in m_items)
+            {
+                AddItem(item, true);
+            }
+            UpdateTotal();
+            UpdateCantidad();
+        }
+
 
         private void SaveHeader()
         {
@@ -697,11 +816,13 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             //if (formPass != null)
 
             // tabPendientes.
+            DateTime xxx = new DateTime();
+            xxx = Convert.ToDateTime(DateRecepcion.SelectedDate);
+            var V = xxx.ToString("MM/dd/yyyy");
+            //DateTime recep = Convert.ToDateTime(DateRecepcion.DateTimeText);
+            //var V = recep.ToString("MM/dd/yyyy");
 
-            DateTime recep = Convert.ToDateTime(DateRecepcion.DateTimeText);
-            var V = recep.ToString("MM/dd/yyyy");
-             
-            
+
             string gaso = SliderGasolina.Value.ToString();
             int bytAccesorios1 = fncObtenAccesorios1();
            
@@ -715,15 +836,26 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             decimal iva = Convert.ToDecimal(Iva_Copy.Text);
             decimal supertotal = Convert.ToDecimal(TotalIva_Copy.Text);
             string observacion = ObservacionInterna.Text;
-
+            string rfc = txtrfc.Text;
+            string cliente = txtradial.Text;
             int OrderId = Convert.ToInt32( GlobalId.Identificador);
+            string fechtimenormal = DateTime.Now.ToString();
+            string frecepcion = DateRecepcion.SelectedDate.Value.ToString("yyyy-MM-dd");
+            string trecepcion = DateRecepcionH.SelectedTime.Value.ToString("hh:mm:ss");
+            string fecharecepcion = frecepcion+ "T" + trecepcion;
+            string fEntrega = DateEntrega.SelectedDate.Value.ToString("yyyy-MM-dd");
+            string tEntrega = DateEntregaH.SelectedTime.Value.ToString("hh:mm:ss");
+            string fechaEntrega = fEntrega + "T" + tEntrega;
+            string fCaptura = DateCaptura.SelectedDate.Value.ToString("yyyy-MM-dd");
+            string tCaptura = CapturaH.SelectedTime.Value.ToString("hh:mm:ss");
+            string fechaCaptura = fCaptura + "T" + tCaptura;
 
             string connectionStringer = "SERVER = gggctserver.database.windows.net; DATABASE = devArellantas; USER ID = sysadmin_gg_gc_sa_dgo_testing; PASSWORD = GRUPO.gu@di@n@.Grupo.Campos_#Staging_Test.2099 ";
             SqlConnection sqlcon = new SqlConnection(connectionStringer);
             sqlcon.Open();
 
 
-            SqlCommand agregar = new SqlCommand("INSERT INTO [dbo].[OrderHeader] ([OrderID],[CustomerID] ,[RFC],[InvoiceNumber],[Prefix],[Sufix],[DeliveryMethodID],[OrderDate],[ReceptionDate],[DueDate],[OrderQty],[Subtotal],[Tax],[Total],[ExteriorValues],[InteriorValues],[AccesoriesValues],[CompanyID],[StoreID],[Comments],[UserID],[LocalIP],[PublicIP],[SystemInfo],[UserInfo],[InsertDate],[ModifiedDate],[LastUpdate],[StatusID],[DeletedFlag])values (" + OrderId + ",'','','','','',0,getdate(),getdate(),getdate(),0, " + subtotal + " ,0 , " + supertotal+ " ," + bytExte1+ "," + bytInte1 + "," + bytAccesorios1 + ",0,0,'" + observacion + "',0,'192.168','','','',getdate(),getdate(),getdate(),0,0)", sqlcon);
+            SqlCommand agregar = new SqlCommand("INSERT INTO [dbo].[OrderHeader] ([OrderID],[CustomerID] ,[RFC],[InvoiceNumber],[Prefix],[Sufix],[DeliveryMethodID],[OrderDate],[ReceptionDate],[DueDate],[OrderQty],[Subtotal],[Tax],[Total],[ExteriorValues],[InteriorValues],[AccesoriesValues],[CompanyID],[StoreID],[Comments],[UserID],[LocalIP],[PublicIP],[SystemInfo],[UserInfo],[InsertDate],[ModifiedDate],[LastUpdate],[StatusID],[DeletedFlag])values (" +osomaloso + ",'"+cliente+"','"+rfc+"','','','',0,convert(datetime,'"+fechaCaptura+ "'),convert(datetime,'" + fecharecepcion + "'),convert(datetime,'" + fechaEntrega + "'),0, " + subtotal + " ,0 , " + supertotal+ " ," + bytExte1+ "," + bytInte1 + "," + bytAccesorios1 + ",0,0,'" + observacion + "',0,'192.168','','','',getdate(),getdate(),getdate(),0,0)", sqlcon);
 
 
             //SqlCommand agregar = new SqlCommand("Insert Into Ordenes2 values ('" + factura + "'," + bytAccesorios1 + "," + bytAccesorios2 + ")", sqlcon);
@@ -733,7 +865,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 //  Guid.NewGuid*()
                 agregar.ExecuteNonQuery();
                 sqlcon.Close();
-                MessageBox.Show("se guardo Correctamente " );
+                //MessageBox.Show("se guardo Correctamente " );
 
             }
             catch (Exception ex)
@@ -776,7 +908,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             }
 
             sqlcon.Close();
-            MessageBox.Show("se guardo Correctamente ");
+            //MessageBox.Show("se guardo Correctamente ");
 
 
         }
@@ -889,11 +1021,18 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 MessageBox.Show("ERROR DE CONEXION"+ex.Message);
             }
 
-           
-           
 
 
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM OrderHeader WHERE OrderID = " + folio + " ", sqlconn);
+
+            //SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM OrderHeader WHERE OrderID = " + folio + " ", sqlconn);
+            SqlDataAdapter adapter = new SqlDataAdapter("Select OrderHeader.OrderID, OrderHeader.CustomerID, OrderHeader.RFC, OrderHeader.OrderDate,"+
+                                                       " OrderHeader.ReceptionDate, OrderHeader.DueDate, OrderHeader.OrderQty, OrderHeader.Subtotal, OrderHeader.Total, "+
+                                                       " OrderHeader.ExteriorValues, OrderHeader.InteriorValues, OrderHeader.AccesoriesValues, Clientes_Frecuentes.Nombre + ' ' + "+
+                                                       " Clientes_Frecuentes.Apellido_Paterno + ' ' + Clientes_Frecuentes.Apellido_Materno as Nombre, "+
+                                                       " Clientes_Frecuentes.Telefono_Personal as Telefono, "+
+                                                       " Clientes_Frecuentes.Direccion + ' ' + Clientes_Frecuentes.Colonia + ' ' + Clientes_Frecuentes.Ciudad as Direccion,  OrderHeader.Comments as Observaciones From OrderHeader Inner join  Clientes_Frecuentes" +
+                                                       "  ON OrderHeader.CustomerID = Clientes_Frecuentes.Id_Radial"+
+                                                        " where OrderHeader.OrderID =  " + folio + "", sqlconn);
             DataSet dsPubs = new DataSet("Pubs");
             adapter.Fill(dsPubs, "OrderHeader");
             DataTable dtbl = new DataTable();

@@ -295,7 +295,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.2625002861022949D), Telerik.Reporting.Drawing.Unit.Inch(0.54479169845581055D));
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.2000000476837158D), Telerik.Reporting.Drawing.Unit.Inch(0.20000004768371582D));
+            this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.6652778387069702D), Telerik.Reporting.Drawing.Unit.Inch(0.20000004768371582D));
             this.textBox5.Style.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.textBox5.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox5.Style.Font.Bold = true;

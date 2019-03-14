@@ -608,7 +608,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             m_items = new List<RemiItem>();
             // vuelve a dibujar el grid
             UpdateGrid();
-
+            //limpia al cliente XD
             m_fieldsCliente = new RemiCliente();
 
 
