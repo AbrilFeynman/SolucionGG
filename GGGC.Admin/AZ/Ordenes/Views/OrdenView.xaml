@@ -52,167 +52,175 @@
 
         </ResourceDictionary>
     </UserControl.Resources>
-    <Grid x:Name="RootGrid" >
-        <Grid.RowDefinitions>
+    <TabControl>
+        <TabItem Header="NUEVO" >
+            <Grid x:Name="RootGrid" >
+                <Grid.RowDefinitions>
 
-            <RowDefinition Height="80*" />
-            <RowDefinition Height="13*" />
-            <RowDefinition Height="107*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
+                    <RowDefinition Height="80*" />
+                    <RowDefinition Height="13*" />
+                    <RowDefinition Height="107*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
 
-        </Grid.ColumnDefinitions>
-
-
-        <TabControl Grid.Row="0" Margin="0,0,0,0" >
-
-
-            <TabItem Header="Datos Generales" >
-
-                <Grid >
-                    <Grid.RowDefinitions>
+                </Grid.ColumnDefinitions>
 
 
-                        <RowDefinition Height="11*" />
-                        <RowDefinition Height="19*"/>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0" Background="White" Grid.RowSpan="2">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="151*"/>
-                            <ColumnDefinition Width="650*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0">
+                <TabControl Grid.Row="0" Margin="0,0,0,0" >
+
+
+                    <TabItem Header="Datos Generales" >
+
+                        <Grid >
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="0*"/>
-                                <RowDefinition Height="42*"/>
-                                <RowDefinition Height="44*"/>
-                                <RowDefinition Height="43*"/>
-                                <RowDefinition Height="73*"/>
-                                <RowDefinition Height="9*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="112*" />
-                                <ColumnDefinition Width="39*" />
 
-                            </Grid.ColumnDefinitions>
-                            <!--<Label Content="FOLIO" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Margin="10,0,20,0" Width="46"/>
+
+                                <RowDefinition Height="11*" />
+                                <RowDefinition Height="19*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Background="White" Grid.RowSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="151*"/>
+                                    <ColumnDefinition Width="650*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0*"/>
+                                        <RowDefinition Height="19*"/>
+                                        <RowDefinition Height="19*"/>
+                                        <RowDefinition Height="20*"/>
+                                        <RowDefinition Height="38*"/>
+                                        <RowDefinition Height="4*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="112*" />
+                                        <ColumnDefinition Width="39*" />
+
+                                    </Grid.ColumnDefinitions>
+                                    <!--<Label Content="FOLIO" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Margin="10,0,20,0" Width="46"/>
                             <Label Content="# CLIENTE" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"  />
                             <Label Content="RFC" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
 
-                            <!--<TextBox x:Name="Folioo" BorderBrush="#C1C1C1" TextChanged="Folioo_TextChanged" Grid.Column="0" Grid.Row="1" Margin="5,5,5,0"/>-->
-                            <TextBox x:Name="Folioo" TextChanged="Folioo_TextChanged"
+                                    <!--<TextBox x:Name="Folioo" BorderBrush="#C1C1C1" TextChanged="Folioo_TextChanged" Grid.Column="0" Grid.Row="1" Margin="5,5,5,0"/>-->
+                                    <TextBox x:Name="Folioo" TextChanged="Folioo_TextChanged"
                                 materialDesign:HintAssist.Hint="Folio" Grid.Row="1"
-                                Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,0,0"  />
-                            <TextBox  x:Name="txtradial" Grid.Row="2"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"   />
+                                    <TextBox  x:Name="txtradial" Grid.Row="2"
                                 materialDesign:HintAssist.Hint="Cliente F3"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
-                            <TextBox x:Name="txtrfc" Grid.Row="3"
+                                    <TextBox x:Name="txtrfc" Grid.Row="3"
                                 materialDesign:HintAssist.Hint="RFC"
-                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
-                            <!--<TextBox x:Name="txtradial" BorderBrush="#C1C1C1" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,0"/>-->
-                            <!--<TextBox x:Name="txtrfc" BorderBrush="#C1C1C1" Grid.Column="0" Grid.Row="4" Margin="5,5,5,0"/>-->
-                        </Grid>
-                        <Grid Grid.Column="1" >
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="61*" />
-                                <RowDefinition Height="39*"/>
-                            </Grid.RowDefinitions>
-                            <Grid Grid.Row="0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="123*"/>
-                                    <ColumnDefinition Width="45*"/>
-                                    <ColumnDefinition Width="123*"/>
-                                    <ColumnDefinition Width="46*"/>
-                                    <ColumnDefinition Width="123*"/>
-                                    <ColumnDefinition Width="46*"/>
-                                    <ColumnDefinition Width="144*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="0*"/>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextChanged="Txtrfc_TextChanged"  />
+                                    <!--<TextBox x:Name="txtradial" BorderBrush="#C1C1C1" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,0"/>-->
+                                    <!--<TextBox x:Name="txtrfc" BorderBrush="#C1C1C1" Grid.Column="0" Grid.Row="4" Margin="5,5,5,0"/>-->
+                                </Grid>
+                                <Grid Grid.Column="1" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="29*" />
+                                        <RowDefinition Height="21*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="123*"/>
+                                            <ColumnDefinition Width="45*"/>
+                                            <ColumnDefinition Width="123*"/>
+                                            <ColumnDefinition Width="46*"/>
+                                            <ColumnDefinition Width="123*"/>
+                                            <ColumnDefinition Width="46*"/>
+                                            <ColumnDefinition Width="144*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0*"/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
 
-                                    <RowDefinition Height="0*"/>
-                                </Grid.RowDefinitions>
+                                            <RowDefinition Height="0*"/>
+                                        </Grid.RowDefinitions>
 
-                                <DatePicker  x:Name="DateRecepcion"  Grid.Row="1"
+                                        <DatePicker  x:Name="DateRecepcion"  Grid.Row="1"
                                  materialDesign:HintAssist.Hint="Recepción"
                                  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
-                                <DatePicker  x:Name="DateEntrega"  Grid.Row="2"
+                                        <DatePicker  x:Name="DateEntrega"  Grid.Row="2"
                                  materialDesign:HintAssist.Hint="Entrega"
                                  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
-                                <DatePicker  x:Name="DateCaptura"  Grid.Row="3"
+                                        <DatePicker  x:Name="DateCaptura"  Grid.Row="3"
                                  materialDesign:HintAssist.Hint="Captura"
                                  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
-                                <materialDesign:TimePicker  x:Name="DateRecepcionH" Grid.Row="1" Grid.Column="2"
+                                        <materialDesign:TimePicker  x:Name="DateRecepcionH" Grid.Row="1" Grid.Column="2"
                                     Style="{StaticResource MaterialDesignFloatingHintTimePicker}"
-                                    materialDesign:HintAssist.Hint="Recepción" Height="25"  />
-                                <materialDesign:TimePicker  x:Name="DateEntregaH" Grid.Row="2" Grid.Column="2"
+                                    materialDesign:HintAssist.Hint="Recepción" Height="25" Margin="0,7,0,0"  />
+                                        <materialDesign:TimePicker  x:Name="DateEntregaH" Grid.Row="2" Grid.Column="2"
                                     Style="{StaticResource MaterialDesignFloatingHintTimePicker}"
-                                    materialDesign:HintAssist.Hint="Entrega" Height="25"  />
-                                <materialDesign:TimePicker  x:Name="CapturaH" Grid.Row="3" Grid.Column="2"
+                                    materialDesign:HintAssist.Hint="Entrega" Height="25" Margin="0,8,0,0"  />
+                                        <materialDesign:TimePicker  x:Name="CapturaH" Grid.Row="3" Grid.Column="2"
                                     Style="{StaticResource MaterialDesignFloatingHintTimePicker}"
-                                    materialDesign:HintAssist.Hint="Captura" Height="25"  />
+                                    materialDesign:HintAssist.Hint="Captura" Height="25" Margin="0,9,0,0"  />
 
 
-                                <!--<telerik:RadDateTimePicker  x:Name="DateRecepcion" DateTimeWatermarkContent="Fecha/Hora Recepción" Grid.Row="1" Margin="5,5,0,30" Grid.RowSpan="2"/>-->
-                                <!--<telerik:RadDateTimePicker x:Name="DateEntrega" DateTimeWatermarkContent="Fecha/Hora Entrega" Grid.Row="2" Margin="5,5,0,31" Grid.RowSpan="2"/>-->
-                                <!--<telerik:RadDateTimePicker x:Name="DateCaptura" DateTimeWatermarkContent="Fecha/Hora Captura"  Grid.Row="3" Margin="5,5,0,2"/>-->
-                                <!--<ComboBox x:Name="Marca"  IsEditable="True" IsReadOnly="True" Text="Marca"  Grid.Row="1" Grid.Column="4" Margin="5,10,5,5" Height="28"/>-->
-                                <!--<ComboBox x:Name="Modelo"  IsEditable="True" IsReadOnly="True" Text="Modelo" Grid.Row="2" Grid.Column="4" Margin="5,11,5,4" Height="28"/>-->
-                                <TextBox  x:Name="Marca" Grid.Row="1" Grid.Column="4"
+                                        <!--<telerik:RadDateTimePicker  x:Name="DateRecepcion" DateTimeWatermarkContent="Fecha/Hora Recepción" Grid.Row="1" Margin="5,5,0,30" Grid.RowSpan="2"/>-->
+                                        <!--<telerik:RadDateTimePicker x:Name="DateEntrega" DateTimeWatermarkContent="Fecha/Hora Entrega" Grid.Row="2" Margin="5,5,0,31" Grid.RowSpan="2"/>-->
+                                        <!--<telerik:RadDateTimePicker x:Name="DateCaptura" DateTimeWatermarkContent="Fecha/Hora Captura"  Grid.Row="3" Margin="5,5,0,2"/>-->
+                                        <!--<ComboBox x:Name="Marca"  IsEditable="True" IsReadOnly="True" Text="Marca"  Grid.Row="1" Grid.Column="4" Margin="5,10,5,5" Height="28"/>-->
+                                        <!--<ComboBox x:Name="Modelo"  IsEditable="True" IsReadOnly="True" Text="Modelo" Grid.Row="2" Grid.Column="4" Margin="5,11,5,4" Height="28"/>-->
+                                        <TextBox  x:Name="Marca" Grid.Row="1" Grid.Column="4"
                                 materialDesign:HintAssist.Hint="Marca"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
 
-                                <TextBox  x:Name="Modelo" Grid.Row="2" Grid.Column="4"
+                                        <TextBox  x:Name="Modelo" Grid.Row="2" Grid.Column="4"
                                 materialDesign:HintAssist.Hint="Modelo"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
 
-                                <TextBox  x:Name="Ano" Grid.Row="3" Grid.Column="4"
+                                        <TextBox  x:Name="Ano" Grid.Row="3" Grid.Column="4"
                                 materialDesign:HintAssist.Hint="Año"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
 
-                                <TextBox   Grid.Row="1" Grid.Column="6"
+                                        <TextBox   Grid.Row="1" Grid.Column="6"
                                 materialDesign:HintAssist.Hint="Placas" x:Name="Placas"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
 
-                                <!--<ComboBox x:Name="Ano"  IsEditable="True" IsReadOnly="True" Text="Año" Grid.Row="3" Grid.Column="4" Margin="5,8,5,7" Height="28"/>-->
+                                        <TextBox   Grid.Row="2" Grid.Column="6"
+                                materialDesign:HintAssist.Hint="Kilometraje" x:Name="Kilometraje"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+
+                                        <!--<ComboBox x:Name="Ano"  IsEditable="True" IsReadOnly="True" Text="Año" Grid.Row="3" Grid.Column="4" Margin="5,8,5,7" Height="28"/>-->
 
 
-                                <!--<ComboBox x:Name="Placas"  IsEditable="True" IsReadOnly="True" Text="Placas" Grid.Row="1" Grid.Column="5" Margin="5,10,5,5" Height="28"/>-->
-                                <!--<ComboBox x:Name="Kilometraje"  IsEditable="True" IsReadOnly="True" Text="Kilometraje" Grid.Row="2" Grid.Column="6" Margin="5,11,5,4" Height="28"/>-->
-                                <ComboBox
+                                        <!--<ComboBox x:Name="Placas"  IsEditable="True" IsReadOnly="True" Text="Placas" Grid.Row="1" Grid.Column="5" Margin="5,10,5,5" Height="28"/>-->
+                                        <!--<ComboBox x:Name="Kilometraje"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
+                                                  IsEditable="True" IsReadOnly="True" Text="Kilometraje" Grid.Row="2" Grid.Column="6"
+                                                  Height="29" Margin="0,3,0,6"/>-->
+                                        <!--<ComboBox
                                     x:Name="Kilometraje" Grid.Row="2" Grid.Column="6"
                                      materialDesign:HintAssist.Hint="Kilometraje"
-                                     ItemsSource="{Binding LongListToTestComboVirtualization}"
-                                     Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                                    <ComboBox.ItemsPanel>
-                                        <ItemsPanelTemplate>
-                                            <VirtualizingStackPanel />
-                                        </ItemsPanelTemplate>
-                                    </ComboBox.ItemsPanel>
-                                </ComboBox>
+                                    
+                                     Style="{StaticResource MaterialDesignFloatingHintComboBox}" FontSize="12" Height="30"  >
+                                            <ComboBox.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <VirtualizingStackPanel />
+                                                </ItemsPanelTemplate>
+                                            </ComboBox.ItemsPanel>
+                                        </ComboBox>-->
 
 
-                            </Grid>
-                            <Grid Grid.Row="1" >
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
-                                <!--<Grid.RowDefinitions>
+                                    </Grid>
+                                    <Grid Grid.Row="1" >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <!--<Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
                                 </Grid.RowDefinitions>-->
 
-                                <StackPanel>
+                                        <StackPanel>
 
-                                    <TextBox x:Name="ObservacionInterna"
+                                            <TextBox x:Name="ObservacionInterna"
                                             Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
-                                            Margin="1,10,10,0"
+                                            Margin="5,10,6,0"
                                             VerticalAlignment="Top"
                                             Height="60"
                                             AcceptsReturn="True"
@@ -220,11 +228,11 @@
                                             VerticalScrollBarVisibility="Auto"
                                             materialDesign:HintAssist.Hint="Observaciones internas"
                                             IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" />
-                                </StackPanel>
-                                <StackPanel  Grid.Column="1">
-                                    <TextBox x:Name="ObservacionCliente"
+                                        </StackPanel>
+                                        <StackPanel  Grid.Column="1">
+                                            <TextBox x:Name="ObservacionCliente"
                                             Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
-                                            Margin="10,10,5,0"
+                                            Margin="8,10,2,0"
                                             VerticalAlignment="Top"
                                             Height="60"
                                             AcceptsReturn="True"
@@ -232,202 +240,202 @@
                                             VerticalScrollBarVisibility="Auto"
                                             materialDesign:HintAssist.Hint="Observaciones cliente"
                                             IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" />
-                                </StackPanel>
-                                <!--<telerik:RadWatermarkTextBox x:Name="ObservacionInterna" Margin="5,5,5,5"  WatermarkContent="Observaciones Internas"/>
+                                        </StackPanel>
+                                        <!--<telerik:RadWatermarkTextBox x:Name="ObservacionInterna" Margin="5,5,5,5"  WatermarkContent="Observaciones Internas"/>
                                 <telerik:RadWatermarkTextBox x:Name="ObservacionCliente" Grid.Row="1" Margin="5,5,5,5"  WatermarkContent="Observaciones Cliente"/>-->
 
 
 
+                                    </Grid>
+
+                                </Grid>
+
                             </Grid>
-
                         </Grid>
 
-                    </Grid>
-                </Grid>
+                    </TabItem>
 
-            </TabItem>
+                    <TabItem Header="Accesorios" >
 
-            <TabItem Header="Accesorios" >
+                        <Grid Background="White" >
 
-                <Grid Background="White" >
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="11*" />
-                        <RowDefinition Height="19*"/>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0"  Grid.RowSpan="2">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0">
                             <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-
+                                <RowDefinition Height="11*" />
+                                <RowDefinition Height="19*"/>
                             </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Row="0"  Grid.RowSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
 
-                            <Label Content="ACCESORIOS" VerticalContentAlignment="Bottom"  FontWeight="Bold" Grid.Column="0" Grid.Row="0" Margin="5,-4,5,14"/>
-                            <Label x:Name="lblGas" Content="GASOLINA"   VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"  FontWeight="Bold" Grid.Column="1" Grid.Row="0" Margin="10,0,0,10" />
-                            <CheckBox x:Name="chkgato" Grid.Column="0" Grid.Row="1"  Margin="5,10,5,0" Content="GATO"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
 
-
-                            <CheckBox x:Name="chkmaneral" Grid.Column="0" Grid.Row="2"  Margin="5,5,5,5" Content="MANERAL DEL GATO"/>
-                            <CheckBox x:Name="chkllave" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="LLAVE DE RUEDA"/>
-                            <CheckBox x:Name="chktaponaceite" Grid.Column="1" Grid.Row="1"  Margin="5,10,5,0" Content="TAPON DE ACEITE"/>
-                            <CheckBox x:Name="chktaponradiador"  Grid.Column="1" Grid.Row="2"  Margin="5,5,5,5" Content="TAPON DE RADIADOR"/>
-                            <CheckBox x:Name="chkvarilla" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="VARILLA DE ACEITE"/>
-                        </Grid>
-
-
-                        <Grid Grid.Column="1">
-                            <Grid.RowDefinitions>
-                                <RowDefinition>
-
-                                </RowDefinition>
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Grid>
-                                <Grid.RowDefinitions>
-
-                                    <RowDefinition />
-                                    <RowDefinition />
+                                    <Label Content="ACCESORIOS" VerticalContentAlignment="Bottom"  FontWeight="Bold" Grid.Column="0" Grid.Row="0" Margin="5,-4,5,14"/>
+                                    <Label x:Name="lblGas" Content="GASOLINA"   VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"  FontWeight="Bold" Grid.Column="1" Grid.Row="0" Margin="10,0,0,10" />
+                                    <CheckBox x:Name="chkgato" Grid.Column="0" Grid.Row="1"  Margin="5,10,5,0" Content="GATO"/>
 
 
-                                </Grid.RowDefinitions>
-                                <Slider x:Name="SliderGasolina"  VerticalAlignment="Top" 
+                                    <CheckBox x:Name="chkmaneral" Grid.Column="0" Grid.Row="2"  Margin="5,5,5,5" Content="MANERAL DEL GATO"/>
+                                    <CheckBox x:Name="chkllave" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="LLAVE DE RUEDA"/>
+                                    <CheckBox x:Name="chktaponaceite" Grid.Column="1" Grid.Row="1"  Margin="5,10,5,0" Content="TAPON DE ACEITE"/>
+                                    <CheckBox x:Name="chktaponradiador"  Grid.Column="1" Grid.Row="2"  Margin="5,5,5,5" Content="TAPON DE RADIADOR"/>
+                                    <CheckBox x:Name="chkvarilla" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="VARILLA DE ACEITE"/>
+                                </Grid>
+
+
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition>
+
+                                        </RowDefinition>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+
+                                            <RowDefinition />
+                                            <RowDefinition />
+
+
+                                        </Grid.RowDefinitions>
+                                        <Slider x:Name="SliderGasolina"  VerticalAlignment="Top" 
                         VerticalContentAlignment="Top"    Width="400" 
                         Minimum="0" Maximum="10" Ticks="0, 2.5,5, 7.5,10" IsSnapToTickEnabled="True" 
                         Style="{StaticResource MaterialDesignDiscreteSlider}" ToolTip="Indique el nivel de tanque de la gasolina." Grid.RowSpan="2" Margin="0,-4,-200,-8"  />
-                                
-                            </Grid>
-                            <CheckBox x:Name="chkestuche" Grid.Column="0" Grid.Row="1"  Margin="5,11,5,51" Content="ESTUCHE DE HERRAMIENTAS" Grid.RowSpan="2" />
-                            <CheckBox x:Name="chktriangulo" Grid.Column="0" Grid.Row="2"  Margin="5,11,5,52" Content="TRIANGULO DE SEGURIDAD" Grid.RowSpan="2"/>
-                            <CheckBox x:Name="chkllrefa" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="LLANTA DE REFACCIÓN"/>
-                            <CheckBox x:Name="chkfiltroaire" Grid.Column="1" Grid.Row="1"  Margin="5,12,5,50" Content="FILTRO DE AIRE" Grid.RowSpan="2"/>
-                            <CheckBox x:Name="chkllbateri" Grid.Column="1" Grid.Row="2"  Margin="5,10,5,0" Content="BATERIA (MCA)"/>
-                            <CheckBox x:Name="chkclax" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="CLAXÓN"/>
-                            <!--<Slider x:Name="SliderGasolina" Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" Grid.ColumnSpan="2"
+
+                                    </Grid>
+                                    <CheckBox x:Name="chkestuche" Grid.Column="0" Grid.Row="1"  Margin="5,11,5,51" Content="ESTUCHE DE HERRAMIENTAS" Grid.RowSpan="2" />
+                                    <CheckBox x:Name="chktriangulo" Grid.Column="0" Grid.Row="2"  Margin="5,11,5,52" Content="TRIANGULO DE SEGURIDAD" Grid.RowSpan="2"/>
+                                    <CheckBox x:Name="chkllrefa" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="LLANTA DE REFACCIÓN"/>
+                                    <CheckBox x:Name="chkfiltroaire" Grid.Column="1" Grid.Row="1"  Margin="5,12,5,50" Content="FILTRO DE AIRE" Grid.RowSpan="2"/>
+                                    <CheckBox x:Name="chkllbateri" Grid.Column="1" Grid.Row="2"  Margin="5,10,5,0" Content="BATERIA (MCA)"/>
+                                    <CheckBox x:Name="chkclax" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="CLAXÓN"/>
+                                    <!--<Slider x:Name="SliderGasolina" Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" Grid.ColumnSpan="2"
                         VerticalContentAlignment="Center"  TickPlacement="Both"  Margin="10,-4,0,34"
                         Minimum="0" Maximum="10" Ticks="0, 2.5,5, 7.5,10" IsSnapToTickEnabled="True" 
                         Style="{StaticResource MaterialDesignDiscreteSlider}" ToolTip="MaterialDesignDiscreteSlider" 
                         Height="76" Grid.RowSpan="2"  />-->
 
-                            <!--<Slider x:Name="SliderGasolina" Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" Grid.ColumnSpan="2"
+                                    <!--<Slider x:Name="SliderGasolina" Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" Grid.ColumnSpan="2"
                         VerticalContentAlignment="Top"   
                         Minimum="0" Maximum="10" Ticks="0, 2.5,5, 7.5,10" IsSnapToTickEnabled="True" 
                         Style="{StaticResource MaterialDesignDiscreteSlider}" ToolTip="MaterialDesignDiscreteSlider" 
                          Grid.RowSpan="2" Margin="0,-28,0,48"  />-->
 
 
+                                </Grid>
+
+
+
+                            </Grid>
                         </Grid>
 
+                    </TabItem>
 
-
-                    </Grid>
-                </Grid>
-
-            </TabItem>
-
-            <TabItem Header="Datos Generales" >
-                <Grid Background="White">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="163*" />
-                        <RowDefinition Height="437*"/>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0"  Grid.RowSpan="2">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0">
+                    <TabItem Header="Datos Generales" >
+                        <Grid Background="White">
                             <Grid.RowDefinitions>
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
+                                <RowDefinition Height="163*" />
+                                <RowDefinition Height="437*"/>
                             </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Label Content="EXTERIORES" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,5,5,0"/>
+                            <Grid Grid.Row="0"  Grid.RowSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="EXTERIORES" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,0"/>
 
-                            <CheckBox x:Name="chkluces" Grid.Column="0" Grid.Row="1"  Margin="5,5,5,5" Content="UNIDAD DE LUCES"/>
-                            <CheckBox x:Name="chkcuarto" Grid.Column="0" Grid.Row="2"  Margin="5,5,5,5" Content="1/4 DE LUCES"/>
-                            <CheckBox x:Name="chkantena"   Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="ANTENA"/>
-                            <CheckBox x:Name="chkespejo" Grid.Column="0" Grid.Row="4"  Margin="5,5,5,5" Content="ESPEJO LATERAL"/>
-                            <CheckBox x:Name="chkcristales" Grid.Column="0" Grid.Row="5"  Margin="5,5,5,5" Content="CRISTALES"/>
-                            <CheckBox x:Name="chkemblema" Grid.Column="0" Grid.Row="6"  Margin="5,5,5,5" Content="EMBLEMA"/>
+                                    <CheckBox x:Name="chkluces" Grid.Column="0" Grid.Row="1"  Margin="5,5,5,5" Content="UNIDAD DE LUCES"/>
+                                    <CheckBox x:Name="chkcuarto" Grid.Column="0" Grid.Row="2"  Margin="5,5,5,5" Content="1/4 DE LUCES"/>
+                                    <CheckBox x:Name="chkantena"   Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="ANTENA"/>
+                                    <CheckBox x:Name="chkespejo" Grid.Column="0" Grid.Row="4"  Margin="5,5,5,5" Content="ESPEJO LATERAL"/>
+                                    <CheckBox x:Name="chkcristales" Grid.Column="0" Grid.Row="5"  Margin="5,5,5,5" Content="CRISTALES"/>
+                                    <CheckBox x:Name="chkemblema" Grid.Column="0" Grid.Row="6"  Margin="5,5,5,5" Content="EMBLEMA"/>
 
-                            <CheckBox x:Name="chktapas" Grid.Column="1" Grid.Row="1"  Margin="5,5,5,5" Content="TAPAS"/>
-                            <CheckBox x:Name="chkmoldeduras" Grid.Column="1" Grid.Row="2"  Margin="5,5,5,5" Content="MOLDEDURAS COMPLETAS"/>
-                            <CheckBox x:Name="chktapon" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="TAPON DE GASOLINA"/>
-                            <CheckBox x:Name="chkcarroseria" Grid.Column="1" Grid.Row="4"  Margin="5,5,5,5" Content="CARROSERIA SIN GOLPES"/>
-                            <CheckBox x:Name="chkbocina" Grid.Column="1" Grid.Row="5"  Margin="5,5,5,5" Content="BOCINA DE CLAXÓN "/>
-                            <CheckBox x:Name="chkparabrisa" Grid.Column="1" Grid.Row="6"  Margin="5,5,5,5" Content="LIMPIA PARABRISAS"/>
+                                    <CheckBox x:Name="chktapas" Grid.Column="1" Grid.Row="1"  Margin="5,5,5,5" Content="TAPAS"/>
+                                    <CheckBox x:Name="chkmoldeduras" Grid.Column="1" Grid.Row="2"  Margin="5,5,5,5" Content="MOLDEDURAS COMPLETAS"/>
+                                    <CheckBox x:Name="chktapon" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="TAPON DE GASOLINA"/>
+                                    <CheckBox x:Name="chkcarroseria" Grid.Column="1" Grid.Row="4"  Margin="5,5,5,5" Content="CARROSERIA SIN GOLPES"/>
+                                    <CheckBox x:Name="chkbocina" Grid.Column="1" Grid.Row="5"  Margin="5,5,5,5" Content="BOCINA DE CLAXÓN "/>
+                                    <CheckBox x:Name="chkparabrisa" Grid.Column="1" Grid.Row="6"  Margin="5,5,5,5" Content="LIMPIA PARABRISAS"/>
 
+                                </Grid>
+
+
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="INTERIORES" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,0"/>
+
+                                    <CheckBox x:Name="chktablero" Grid.Column="0" Grid.Row="1"  Margin="5,5,5,5" Content="INSTRUMENTOS DE TABLERO"/>
+                                    <CheckBox x:Name="chkcale" Grid.Column="0" Grid.Row="2"  Margin="5,5,5,5" Content="CALEFACCIÓN"/>
+                                    <CheckBox x:Name="chkradio" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="RADIO"/>
+                                    <CheckBox x:Name="chkbocinas" Grid.Column="0" Grid.Row="4"  Margin="5,5,5,5" Content="BOCINAS"/>
+                                    <CheckBox x:Name="chkencendedor" Grid.Column="0" Grid.Row="5"  Margin="5,5,5,5" Content="ENCENDEDOR"/>
+                                    <CheckBox x:Name="chkespejoretro" Grid.Column="0" Grid.Row="6"  Margin="5,5,5,5" Content="ESPEJO RETROVISOR"/>
+                                    <CheckBox x:Name="chkcenicero" Grid.Column="1" Grid.Row="1"  Margin="5,5,5,5" Content="CENICEROS"/>
+
+                                    <CheckBox x:Name="chkcinturon" Grid.Column="1" Grid.Row="2"  Margin="5,5,5,5" Content="CINTURONES"/>
+                                    <CheckBox x:Name="chkbtninte" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="BOTONES DE INTERIORES"/>
+
+                                    <CheckBox x:Name="chkmanijas" Grid.Column="1" Grid.Row="4"  Margin="5,5,5,5" Content="MANIJAS DE INTERIORES"/>
+                                    <CheckBox x:Name="chktapetes" Grid.Column="1" Grid.Row="5"  Margin="5,5,5,5" Content="TAPETES"/>
+                                    <CheckBox x:Name="chkvestidura" Grid.Column="1" Grid.Row="6"  Margin="5,5,5,5" Content="VESTIDURAS"/>
+
+                                </Grid>
+
+
+
+                            </Grid>
                         </Grid>
 
-
-                        <Grid Grid.Column="1">
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Label Content="INTERIORES" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,5,5,0"/>
-
-                            <CheckBox x:Name="chktablero" Grid.Column="0" Grid.Row="1"  Margin="5,5,5,5" Content="INSTRUMENTOS DE TABLERO"/>
-                            <CheckBox x:Name="chkcale" Grid.Column="0" Grid.Row="2"  Margin="5,5,5,5" Content="CALEFACCIÓN"/>
-                            <CheckBox x:Name="chkradio" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="RADIO"/>
-                            <CheckBox x:Name="chkbocinas" Grid.Column="0" Grid.Row="4"  Margin="5,5,5,5" Content="BOCINAS"/>
-                            <CheckBox x:Name="chkencendedor" Grid.Column="0" Grid.Row="5"  Margin="5,5,5,5" Content="ENCENDEDOR"/>
-                            <CheckBox x:Name="chkespejoretro" Grid.Column="0" Grid.Row="6"  Margin="5,5,5,5" Content="ESPEJO RETROVISOR"/>
-                            <CheckBox x:Name="chkcenicero" Grid.Column="1" Grid.Row="1"  Margin="5,5,5,5" Content="CENICEROS"/>
-
-                            <CheckBox x:Name="chkcinturon" Grid.Column="1" Grid.Row="2"  Margin="5,5,5,5" Content="CINTURONES"/>
-                            <CheckBox x:Name="chkbtninte" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="BOTONES DE INTERIORES"/>
-
-                            <CheckBox x:Name="chkmanijas" Grid.Column="1" Grid.Row="4"  Margin="5,5,5,5" Content="MANIJAS DE INTERIORES"/>
-                            <CheckBox x:Name="chktapetes" Grid.Column="1" Grid.Row="5"  Margin="5,5,5,5" Content="TAPETES"/>
-                            <CheckBox x:Name="chkvestidura" Grid.Column="1" Grid.Row="6"  Margin="5,5,5,5" Content="VESTIDURAS"/>
-
-                        </Grid>
+                    </TabItem>
 
 
-
-                    </Grid>
-                </Grid>
-
-            </TabItem>
-
-
-            <!--<TabItem x:Name="tabPendientes" Header="Accesorios" >
+                    <!--<TabItem x:Name="tabPendientes" Header="Accesorios" >
                 <local:Pendientes/>
             </TabItem>
 
@@ -435,163 +443,172 @@
             <TabItem Header="Inventario Vehículo" >
                 <local:Inventariovehiculo/>
             </TabItem>-->
-        </TabControl>
-        <Grid Grid.Row="1" Background="White" x:Name="botones">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button  x:Name="AddButton" Click="Add"  Content="Agregar"  Grid.Column="4"
+                </TabControl>
+                <Grid Grid.Row="1" Background="White" x:Name="botones">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+
+
+                    </Grid.ColumnDefinitions>
+                    <Button  x:Name="AddButton" Click="Add"  Content="Agregar"  Grid.Column="0"
                 Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                Width="100"
-                     Height="28"
-                     Margin="0,3,0,3"
-                ToolTip="Agregue articulos a la orden de patio.">
-
-            </Button>
+                  Height="29" Width="87" VerticalAlignment="Center"
+                ToolTip="Agregue articulos a la orden de patio." />
 
 
-            <Button  x:Name="DeleteButton" Content="Eliminar"  Click="Delete"  Grid.Column="5"
+                    <Button  x:Name="DeleteButton" Content="Eliminar"  Click="Delete"  Grid.Column="1"
                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                              Height="29" Width="87"
+                             VerticalAlignment="Center"  HorizontalAlignment="Left"
                          BorderBrush="#d91e18"
                          Background="#d91e18"
-                          Margin="0,3,0,3"
-                     Height="28"
-                Width="100"
-                ToolTip="Seleccione el articulo que desea eliminar.">
+                ToolTip="Seleccione el articulo que desea eliminar."/>
 
-            </Button>
+                </Grid>
+                <Grid Grid.Row="2" Background="White" x:Name="contentgrid" >
 
-        </Grid>
-        <Grid Grid.Row="2" Background="White" x:Name="contentgrid" >
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="41*"/>
-                <RowDefinition Height="132*"/>
-                <RowDefinition Height="101*"/>
-                <RowDefinition Height="47*"/>
-            </Grid.RowDefinitions>
-
-            <Grid x:Name="encabezado" Grid.Row="0"  Background="#B3D1E8" >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="82*"/>
-                    <ColumnDefinition Width="235*"/>
-                    <ColumnDefinition Width="90*"/>
-                    <ColumnDefinition Width="117*"/>
-                    <ColumnDefinition Width="60*"/>
-                    <ColumnDefinition Width="107*"/>
-                    <ColumnDefinition Width="116*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Codigo" TextAlignment="Left"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="26" Margin="4,12,10,8" />
-                <TextBlock Grid.Column="1" Text="Descripción" TextAlignment="Left"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="26" Margin="0,12,0,8"/>
-                <TextBlock Grid.Column="2" Text="Cantidad" TextAlignment="Center" HorizontalAlignment="Stretch"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="0,12,0,4"/>
-                <TextBlock Grid.Column="3" Text="Precio de Lista" TextAlignment="Center" HorizontalAlignment="Right" VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="2,12,0,4"/>
-                <TextBlock Grid.Column="4" Text="Nivel" TextAlignment="Center"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="2,12,11,4"/>
-                <TextBlock Grid.Column="5" Text="Precio de Venta" TextAlignment="Center"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="32" Margin="6,12,5,2" RenderTransformOrigin="0.5,0.5">
-                    <TextBlock.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="0.533"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </TextBlock.RenderTransform>
-                </TextBlock>
-                <TextBlock Grid.Column="6" Text="Precio Extendido" TextAlignment="Center"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="9,13,0,3" />
-
-            </Grid>
-            <ScrollViewer Grid.Row="1" Height="{Binding InvoiceGrid.ActualHeight}" VerticalScrollBarVisibility="Auto" BorderBrush="AliceBlue">
-                <Grid x:Name="InvoiceGrid"  MouseLeftButtonDown="InvoiceGrid_MouseLeftButtonDown">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="30" />
-                        <RowDefinition Height="30"/>
-                        <RowDefinition Height="30"/>
-                        <RowDefinition Height="30"/>
-
-
+                        <RowDefinition Height="39*"/>
+                        <RowDefinition Height="137*"/>
+                        <RowDefinition Height="84*"/>
+                        <RowDefinition Height="45*"/>
                     </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="82*"/>
-                        <ColumnDefinition Width="246*"/>
-                        <ColumnDefinition Width="74*"/>
-                        <ColumnDefinition Width="126*"/>
-                        <ColumnDefinition Width="53*"/>
-                        <ColumnDefinition Width="105*"/>
-                        <ColumnDefinition Width="119*"/>
-                    </Grid.ColumnDefinitions>
-                    <Rectangle Grid.Row="0" Height="1"  StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
-                    <Rectangle Grid.Row="1" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
-                    <Rectangle Grid.Row="2" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
-                    <Rectangle Grid.Row="3" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
+
+                    <Grid x:Name="encabezado" Grid.Row="0"  Background="#B3D1E8" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="82*"/>
+                            <ColumnDefinition Width="235*"/>
+                            <ColumnDefinition Width="90*"/>
+                            <ColumnDefinition Width="117*"/>
+                            <ColumnDefinition Width="60*"/>
+                            <ColumnDefinition Width="107*"/>
+                            <ColumnDefinition Width="116*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="Codigo" TextAlignment="Left"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="26" Margin="4,12,10,8" />
+                        <TextBlock Grid.Column="1" Text="Descripción" TextAlignment="Left"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="26" Margin="0,12,0,8"/>
+                        <TextBlock Grid.Column="2" Text="Cantidad" TextAlignment="Center" HorizontalAlignment="Stretch"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="0,12,0,4"/>
+                        <TextBlock Grid.Column="3" Text="Precio de Lista" TextAlignment="Center" HorizontalAlignment="Right" VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="2,12,0,4"/>
+                        <TextBlock Grid.Column="4" Text="Nivel" TextAlignment="Center"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="2,12,11,4"/>
+                        <TextBlock Grid.Column="5" Text="Precio de Venta" TextAlignment="Center"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="32" Margin="6,12,5,2" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.533"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <TextBlock Grid.Column="6" Text="Precio Extendido" TextAlignment="Center"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="9,13,0,3" />
+
+                    </Grid>
+                    <ScrollViewer Grid.Row="1" Height="{Binding InvoiceGrid.ActualHeight}" VerticalScrollBarVisibility="Auto" BorderBrush="AliceBlue">
+                        <Grid x:Name="InvoiceGrid"  MouseLeftButtonDown="InvoiceGrid_MouseLeftButtonDown">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="82*"/>
+                                <ColumnDefinition Width="246*"/>
+                                <ColumnDefinition Width="74*"/>
+                                <ColumnDefinition Width="126*"/>
+                                <ColumnDefinition Width="53*"/>
+                                <ColumnDefinition Width="105*"/>
+                                <ColumnDefinition Width="119*"/>
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Grid.Row="0" Height="1"  StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
+                            <Rectangle Grid.Row="1" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
+                            <Rectangle Grid.Row="2" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
+                            <Rectangle Grid.Row="3" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
+
+                        </Grid>
+
+                    </ScrollViewer>
+                    <Grid Grid.Row="2" x:Name="resumen" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="4" x:Name="TotalesLabels">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="7*"/>
+                                <RowDefinition Height="26*"/>
+                                <RowDefinition Height="26*"/>
+                                <RowDefinition Height="26*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Subtotal" FontSize="14" HorizontalAlignment="Right" Width="66" Margin="0,4,0,0" Grid.RowSpan="2" />
+                            <Label Content="IVA" Grid.Row="2" FontSize="14" HorizontalAlignment="Right" Width="32"/>
+                            <Label Content="Total" Grid.Row="3" FontSize="14" HorizontalAlignment="Right" Width="46" Margin="0,0,-2,0"/>
+                        </Grid>
+
+                        <Grid Grid.Column="5" x:Name="Totales">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="26*"/>
+                                <RowDefinition Height="28"/>
+                                <RowDefinition Height="27*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="1"  x:Name="TotalAmount" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="20"  Width="90" Margin="22,0,22,26" Grid.RowSpan="2" />
+                            <TextBlock Grid.Row="2" x:Name="Iva" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="22" Width="90"  />
+                            <TextBlock Grid.Row="3" x:Name="TotalIva" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="23"  Width="90" />
+                            <TextBlock Grid.Row="2" x:Name="Iva_Copy" Text="00.00" Visibility="Hidden" FontSize="16"  Foreground="#404435"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="22" Margin="-180,8,224,26" Width="90" Grid.RowSpan="2"/>
+                            <TextBlock Grid.Row="3" x:Name="TotalIva_Copy" Visibility="Hidden" Text="00.00" FontSize="16"  Foreground="#404435"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="26" Margin="-210,1,254,0" Width="90"/>
+                        </Grid>
+
+
+                    </Grid>
+                    <Grid Grid.Row="3" x:Name="Botones">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <!--<Button Grid.Column="0" Style="{StaticResource ExportButtonStyle}" FontWeight="Normal"  Width="110" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="AddButton" Click="Add"  Content="Agregar"  FontSize="16" Margin="10,0,0,0" />-->
+                        <!--<Button Grid.Column="1" Style="{StaticResource DeleteItemButton}"  Click="Delete"  FontWeight="Normal" IsEnabled="False"  Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="DeleteButton" Content="Eliminar"  FontSize="16" />-->
+                        <Button Grid.Column="4"  Style="{StaticResource MaterialDesignRaisedDarkButton}" FontWeight="Normal"  Width="110" Height="35" HorizontalAlignment="Left" VerticalAlignment="Center"  x:Name="Save" Click="Save_Click" Content="Guardar"  FontSize="16" Margin="10,0,0,0" />
+
+                        <Button Grid.Column="5"  Style="{StaticResource MaterialDesignRaisedDarkButton}" FontWeight="Normal"  Width="110" Height="35" HorizontalAlignment="Left" VerticalAlignment="Center"  x:Name="Exportar" Click="Exportar_Click"  Content="Exportar"  FontSize="16" Margin="10,0,0,0" />
+
+                    </Grid>
+
 
                 </Grid>
 
-            </ScrollViewer>
-            <Grid Grid.Row="2" x:Name="resumen" >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="4" x:Name="TotalesLabels">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="16*"/>
-                        <RowDefinition Height="27*"/>
-                        <RowDefinition Height="27*"/>
-                        <RowDefinition Height="31*"/>
-                    </Grid.RowDefinitions>
-                    <Label Content="Subtotal" Grid.Row="1" FontSize="15" HorizontalAlignment="Right" Width="66"/>
-                    <Label Content="IVA" Grid.Row="2" FontSize="15" HorizontalAlignment="Right" Width="32"/>
-                    <Label Content="Total" Grid.Row="3" FontSize="15" HorizontalAlignment="Right" Width="46" Margin="0,0,-2,0"/>
-                </Grid>
-
-                <Grid Grid.Column="5" x:Name="Totales">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="19*"/>
-                        <RowDefinition Height="29*"/>
-                        <RowDefinition Height="27"/>
-                        <RowDefinition Height="26*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock x:Name="TotalAmount" Text="00.00" FontSize="16"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="25" Margin="22,0,23,0" Width="90" Grid.Row="1"/>
-                    <TextBlock Grid.Row="2" x:Name="Iva" Text="00.00" FontSize="16"  Foreground="#404435"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="22" Margin="22,1,23,4" Width="90"/>
-                    <TextBlock Grid.Row="3" x:Name="TotalIva" Text="00.00" FontSize="16"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="23" Margin="22,0,23,2" Width="90"/>
-                    <TextBlock Grid.Row="2" x:Name="Iva_Copy" Text="00.00" Visibility="Hidden" FontSize="16"  Foreground="#404435"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="22" Margin="-179,4,224,1" Width="90"/>
-                    <TextBlock Grid.Row="2" x:Name="TotalIva_Copy" Visibility="Hidden" Text="00.00" FontSize="16"  Foreground="#404435"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="26" Margin="-209,22,254,5" Width="90" Grid.RowSpan="2"/>
-                </Grid>
-
 
             </Grid>
-            <Grid Grid.Row="3" x:Name="Botones">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-
-                <!--<Button Grid.Column="0" Style="{StaticResource ExportButtonStyle}" FontWeight="Normal"  Width="110" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="AddButton" Click="Add"  Content="Agregar"  FontSize="16" Margin="10,0,0,0" />-->
-                <!--<Button Grid.Column="1" Style="{StaticResource DeleteItemButton}"  Click="Delete"  FontWeight="Normal" IsEnabled="False"  Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="DeleteButton" Content="Eliminar"  FontSize="16" />-->
-                <Button Grid.Column="4"  Style="{StaticResource MaterialDesignRaisedDarkButton}" FontWeight="Normal"  Width="110" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="Save" Click="Save_Click" Content="Guardar"  FontSize="16" Margin="10,0,0,0" />
-
-                <Button Grid.Column="5"  Style="{StaticResource MaterialDesignRaisedDarkButton}" FontWeight="Normal"  Width="110" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="Exportar" Click="Exportar_Click"  Content="Exportar"  FontSize="16" Margin="10,0,0,0" />
+        </TabItem>
+        <TabItem Header="CONSULTA" >
+            <Grid Background="#1dd1a1">
 
             </Grid>
+        </TabItem>
+        <TabItem Header="ESTADISTICAS" >
+            <Grid Background="#54a0ff">
 
+            </Grid>
+        </TabItem>
+    </TabControl>
 
-        </Grid>
-
-
-    </Grid>
 
 </UserControl>

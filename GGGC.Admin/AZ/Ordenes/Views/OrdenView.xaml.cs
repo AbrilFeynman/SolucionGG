@@ -118,10 +118,10 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
 
 
-           Kilometraje.Items.Add("100+");
-           Kilometraje.Items.Add("1000+");
-            Kilometraje.Items.Add("10000+");
-           Kilometraje.Items.Add("100000+");
+           //Kilometraje.Items.Add("100+");
+           //Kilometraje.Items.Add("1000+");
+           // Kilometraje.Items.Add("10000+");
+           //Kilometraje.Items.Add("100000+");
 
         }
 
@@ -751,7 +751,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             Modelo.Text = "";
             Ano.Text = "";
             Placas.Text = "";
-            Kilometraje.SelectedItem = null;
+            Kilometraje.Text = "";
             estrella = 1;
             chkgato.IsChecked = false;
             chkmaneral.IsChecked = false;
@@ -1071,8 +1071,10 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             return dtbl;
         }
 
+        private void Txtrfc_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-
+        }
     }
 
 
