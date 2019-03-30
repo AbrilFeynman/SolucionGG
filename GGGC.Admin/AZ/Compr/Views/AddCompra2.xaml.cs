@@ -560,12 +560,7 @@ namespace GGGC.Admin.AZ.Compr.Views
             Grid.SetRow(rect, rowIndex);
             InvoiceGrid.Children.Add(rect);
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="rowIndex"></param>
-        /// <param name="columnIndex"></param>
-        /// <param name="value"></param>
+ 
         private void SetCell(int rowIndex, int columnIndex, string value)
         {
             if ( columnIndex == 4 || columnIndex == 5 || columnIndex == 6 || columnIndex == 7 || columnIndex == 8)
@@ -585,7 +580,7 @@ namespace GGGC.Admin.AZ.Compr.Views
                 TextBlock textBlockDollor = null;
                 textBlockDollor = new TextBlock();
                 textBlockDollor.Text = "$";
-                textBlockDollor.FontSize = 14;
+                textBlockDollor.FontSize = 13;
                 textBlockDollor.FontFamily = new FontFamily("Segoe UI");
                 textBlockDollor.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
                 //textBlockDollor.Foreground = new SolidColorBrush(Colors.Black);
@@ -602,15 +597,15 @@ namespace GGGC.Admin.AZ.Compr.Views
                 TextBlock textBlock = null;
                 textBlock = new TextBlock();
                 textBlock.Text = value.Trim('$');
-                textBlock.FontSize = 14;
+                textBlock.FontSize = 13;
                 textBlock.FontFamily = new FontFamily("Segoe UI");
                 textBlock.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
                 //HorizontalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F"
                 if (columnIndex == 0 )
-                    textBlock.Padding = new Thickness(10, 0, 0, 0);
+                    textBlock.Padding = new Thickness(0, 0, 0, 0);
                
                 else
-                    textBlock.Padding = new Thickness(0, 0, 15, 0);
+                    textBlock.Padding = new Thickness(0, 0, 0, 0);
                 //textBlock.Foreground = new SolidColorBrush(Colors.Black);
                 textBlock.HorizontalAlignment = System.Windows.HorizontalAlignment.Right;
                 textBlock.VerticalAlignment = System.Windows.VerticalAlignment.Center;
@@ -630,14 +625,14 @@ namespace GGGC.Admin.AZ.Compr.Views
                 TextBlock textBlock = null;
                 textBlock = new TextBlock();
                 textBlock.Text = value.Trim('$');
-                textBlock.FontSize = 14;
+                textBlock.FontSize = 13;
                 textBlock.FontFamily = new FontFamily("Segoe UI");
                 textBlock.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
                 //HorizontalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F"
                 if (columnIndex == 0)
-                    textBlock.Padding = new Thickness(10, 0, 0, 0);
+                    textBlock.Padding = new Thickness(0, 0, 0, 0);
                 else
-                    textBlock.Padding = new Thickness(0, 0, 15, 0);
+                    textBlock.Padding = new Thickness(0, 0, 0, 0);
                 //textBlock.Foreground = new SolidColorBrush(Colors.Black);
                 textBlock.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
                 textBlock.VerticalAlignment = System.Windows.VerticalAlignment.Center;

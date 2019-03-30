@@ -789,7 +789,7 @@
     <value>&lt;strong&gt;Folio Fiscal:&lt;/strong&gt; &lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 9pt"&gt;{0}&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;strong&gt;Fecha de Certificación del CFDI:&lt;/strong&gt; {1}&lt;br /&gt;&lt;strong&gt;Fecha de&amp;nbsp;Emisión del CFDI:&lt;/strong&gt; {2}&lt;br /&gt;&lt;strong&gt;No. de Serie del Certificado del SAT:&lt;/strong&gt; {3}</value>
   </data>
   <metadata name="$this.Zoom" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>1.5</value>
+    <value>0.6666667</value>
   </metadata>
   <metadata name="$this.ShowSnapGrid" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

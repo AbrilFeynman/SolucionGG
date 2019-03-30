@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
-namespace GGGC.Admin.AZ.Ordenes.Views
+namespace GGGC.Admin.AZ.Compras
 {
-   public class OrdenItem : INotifyPropertyChanged
+   public class CompraItem
     {
         private string _Numero_De_Documento;
         private string _codigo;
@@ -18,7 +18,6 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         private double _rate;
         private double _iva;
         private int _renglon;
-        private int _empleado;
         private string _nivel;
         private double _total;
         public event PropertyChangedEventHandler PropertyChanged;
@@ -59,7 +58,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             }
         }
 
-        public string Marca 
+        public string Marca
         {
             get
             {
@@ -127,22 +126,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             set
             {
                 _renglon = value;
-                
-            }
-        }
-        public int Empleado
-        {
-            get
-            {
-                return _empleado;
-            }
-            set
-            {
-                _empleado = value;
 
             }
         }
-
         public double Total
         {
             get
@@ -170,7 +156,8 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         void UpdateTotalAmount()
         {
-            Total = (_cantidad * _rate );
+            Total = (_cantidad * _rate);
         }
+
     }
 }

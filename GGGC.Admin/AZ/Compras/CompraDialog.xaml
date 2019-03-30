@@ -1,13 +1,15 @@
-﻿<Window x:Class="GGGC.Admin.AZ.Ordenes.Views.OrdenDialog"
-        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+﻿<Window x:Class="GGGC.Admin.AZ.Compras.CompraDialog"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:Controls="http://schemas.syncfusion.com/wpf"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:Controls="http://schemas.syncfusion.com/wpf"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GGGC.Admin.AZ.Ordenes.Views"
+        xmlns:local="clr-namespace:GGGC.Admin.AZ.Compras"
+       
         mc:Ignorable="d"
         Title="OrdenDialog"  Height="450" Width="619" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+
     <Grid   Background="#F7F7F7" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="32*" />
@@ -92,7 +94,7 @@
 
             </telerik:RadGridView>
             <Label Content="IVA" Visibility="Hidden" Foreground="#666666" FontSize="17" VerticalAlignment="Center" Margin="297,-16,241,92" Height="30" Grid.ColumnSpan="2" />
-            <Label Content="Total" Foreground="#666666" FontSize="17" VerticalAlignment="Center" Margin="129,-16,63,92" Height="30" Grid.Column="1" />
+            <Label Content="Total" Foreground="#666666" FontSize="17" VerticalAlignment="Center" Margin="121,-16,71,92" Height="30" Grid.Column="1" />
         </Grid>
         <Grid Grid.Row="7" Margin="0,6,0,26" Grid.RowSpan="3">
             <Grid>
@@ -137,18 +139,12 @@
 
             </Grid>
         </Grid>
-        <Label Content="Nivel" Foreground="#666666" FontSize="17" VerticalAlignment="Center" Margin="4,0,534,2" Height="30" Grid.Row="4" />
-
-        <Label Content="No. Rampa" Foreground="#666666" FontSize="17" VerticalAlignment="Center" Margin="270,0,231,2" Height="30" Grid.Row="4" />
-        <Controls:UpDown NumberDecimalDigits="0" x:Name="Empleado" ValueChanged="quantity_ValueChanged"    MinValue="1" Grid.Row="4" Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" FontSize="15" Width="80" Margin="384,0,0,0" >
-
-        </Controls:UpDown>
-
+        <Label Content="Nivel" Foreground="#666666" FontSize="17" VerticalAlignment="Center" Margin="8,0,530,2" Height="30" Grid.Row="4" />
         <Controls:DoubleTextBox FontSize="15" Visibility="Hidden" IsReadOnly="True" TextAlignment="Right" BorderBrush="#C1C1C1" Name="rate" Height="30" Margin="349,2,160,0" Grid.Row="4"/>
         <!--<local:AddCompra HorizontalAlignment="Left" Height="100" Margin="222,10,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="100"/>-->
-        <Label FontSize="15" TabIndex="0" x:Name="Total"  BorderBrush="#C1C1C1" Height="28" VerticalAlignment="Center" Margin="522,2,4,2"  Grid.Row="4" />
-        <telerik:RadComboBox x:Name="radComboNivel" FontSize="16" SelectionChanged="nivel_SelectioChanged" HorizontalAlignment="Left" DisplayMemberPath="Nivel_De_Precios" Height="25" Margin="61,5,0,0" Grid.Row="4" VerticalAlignment="Top" Width="95"/>
-        <TextBox x:Name="precioCodigo" HorizontalAlignment="Left" IsReadOnly="True" Height="25" Margin="159,5,0,0" Grid.Row="4" TextWrapping="Wrap"  FontSize="15" VerticalAlignment="Top" Width="107"/>
+        <Label FontSize="15" TabIndex="0" x:Name="Total"  BorderBrush="#C1C1C1" Height="28" VerticalAlignment="Center" Margin="514,2,12,2"  Grid.Row="4" />
+        <telerik:RadComboBox x:Name="radComboNivel" FontSize="16" SelectionChanged="nivel_SelectioChanged" HorizontalAlignment="Left" DisplayMemberPath="Nivel_De_Precios" Height="25" Margin="63,5,0,0" Grid.Row="4" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="precioCodigo" HorizontalAlignment="Left" IsReadOnly="True" Height="25" Margin="172,5,0,0" Grid.Row="4" TextWrapping="Wrap"  FontSize="15" VerticalAlignment="Top" Width="107"/>
 
     </Grid>
 </Window>

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Controls;
+using System.Threading.Tasks;
+
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -14,29 +15,29 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace GGGC.Admin.AZ.Ordenes.Views
+namespace GGGC.Admin.AZ.Compras
 {
     /// <summary>
-    /// Interaction logic for OrdenDialog.xaml
+    /// Interaction logic for CompraDialog.xaml
     /// </summary>
-    public sealed partial class OrdenDialog : Window
+    public partial class CompraDialog : Window
     {
+
         public event EventHandler CloseRequested;
         //public event EventHandler CloseLlamada;
         bool onInit;
         public event EventHandler UpdateRequested;
-        OrdenItem m_invoiceItem;
+        CompraItem m_invoiceItem;
 
         //DataTable dt = new DataTable();
-        
 
-
-        public OrdenDialog()
-            : this(null, "Add Fields")
+        public CompraDialog()
+             : this(null, "Add Fields")
         {
             
         }
-        public OrdenDialog(OrdenItem newItem, string title)
+
+        public CompraDialog(CompraItem newItem, string title)
         {
             InitializeComponent();
 
@@ -46,15 +47,15 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
             if (newItem == null)
             {
-               
+                //Cantidad.Value = GetQuantityAsInt();
                 rate.Value = 0.00;
                 //prueba usando datacontext
                 //InvoiceItem newItem;
-                newItem = new OrdenItem();
+                newItem = new CompraItem();
             }
 
             item.Text = newItem.Codigo;
-            
+
             item_Copy.Text = newItem.Descripcion;
             // newItem.Cantidad = GetQuantityAsInt();
             //newItem.Cantidad = 2;
@@ -63,10 +64,11 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             rate.Value = 00.00;
             m_invoiceItem = newItem;
             Cantidad.Value = newItem.Cantidad;
-            Empleado.Value = newItem.Empleado;
 
-           
-            
+
+            //Cantidad.Value = 2;
+            // rate.Value = 80.00;
+
 
             if (newItem.Cantidad == 0)
             {
@@ -75,34 +77,24 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 CalculateTax();
                 UpdateTotalAmount();
             }
-
-
-            if (newItem.Empleado == 0)
-            {
-                
-                this.Empleado.Value = 1;
-               
-            }
             //newItem.Codigo = item.Text;
             //
             // newItem.Descripcion = item_Copy.Text;
-
+            // newItem.Cantidad = (double)Cantidad.Value;
             // newItem.Rate = (double)rate.Value;
             // m_invoiceItem = newItem;
             this.DataContext = m_invoiceItem;
             //// llenargrid();
 
-
         }
 
-        
 
         DataTable dtbl = new DataTable();
 
 
         private void llenargrid()
         {
-              try
+            try
             {
 
                 string conect = "SERVER = gggctserver.database.windows.net; DATABASE = rdbms_GGGC_Public_TESTING; USER ID = abril; PASSWORD = gggc.2017";
@@ -111,7 +103,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 string cmd = "Select Top 100 percent dbo.LLantas.Codigo_De_Articulo AS Codigo, dbo.LLantas.Descripcion, dbo.LLantas.Ancho, dbo.LLantas.Serie, dbo.LLantas.Rin, dbo.LLantas.Descripcion +' '+dbo.LLantas.Ancho+' '+dbo.LLantas.Codigo_De_Articulo AS NombreCompleto, dbo.LLantas.Descripcion +' '+dbo.LLantas.Ancho +' '+CONVERT (varchar(50), dbo.LLAntas.Serie)+' '+CONVERT (varchar(50), dbo.LLantas.Rin) AS Llanta from LLantas ";
                 try { con.Open(); }
                 catch (SqlException ex) { MessageBox.Show("Revise su conexión a internet"); }
-                
+
                 SqlDataAdapter sda = new SqlDataAdapter(cmd, conect);
 
                 DataSet dsPubs = new DataSet("Pubs");
@@ -152,9 +144,8 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         private void updtButton_Click(object sender, RoutedEventArgs e)
         {
-            m_invoiceItem.Empleado = Convert.ToInt16(Empleado.Value);
 
-            if (string.IsNullOrWhiteSpace(item_Copy.Text) || string.IsNullOrWhiteSpace(radComboNivel.Text) )
+            if (string.IsNullOrWhiteSpace(item_Copy.Text) || string.IsNullOrWhiteSpace(radComboNivel.Text))
             {
 
                 if (string.IsNullOrWhiteSpace(item_Copy.Text))
@@ -168,7 +159,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             }
             else
             {
-               
+
                 FieldsUpdateEventArgs args = new FieldsUpdateEventArgs();
                 args.UpdatedFields = m_invoiceItem;
 
@@ -204,13 +195,14 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 //newItem.Codigo= row_selected["Codigo"].ToString();
                 m_invoiceItem.Codigo = row_selected["Codigo"].ToString();
                 m_invoiceItem.Descripcion = row_selected["Llanta"].ToString();
-               
+                //m_invoiceItem.Cantidad =(double)Cantidad.Value;
+                // m_invoiceItem.Cantidad = (double)Cantidad.Value;
 
                 item.Text = row_selected["Codigo"].ToString();
                 item_Copy.Text = row_selected["Llanta"].ToString();
             }
 
-           // rate.Value = 80;
+            // rate.Value = 80;
             //rate_Iva.Text = "15";
         }
 
@@ -225,7 +217,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             DataView DV = new DataView(dtbl);
             DV.RowFilter = string.Format("NombreCompleto LIKE '%{0}%'", item.Text);
             dataGrid1.ItemsSource = DV;
-           // llenarcombobox(item.Text);
+            // llenarcombobox(item.Text);
             if (string.IsNullOrWhiteSpace(item.Text))
             {
                 item_Copy.Text = "";
@@ -233,7 +225,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 precioCodigo.Text = "";
             }
 
-           // llenarcombobox(item.Text);
+            // llenarcombobox(item.Text);
         }
 
 
@@ -251,7 +243,8 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                     int quantityValue = GetQuantityAsInt();
                     CalculateTax();
                     UpdateTotalAmount();
-                   
+                    //m_invoiceItem.Cantidad =(double)Cantidad.Value;
+                    //newItem.Cantidad = (double)Cantidad.Value;
                     //rate.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 0, 64, 81));
                     //  CalculateTax();
 
@@ -269,13 +262,13 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             double currentRate = (double)Cantidad.Value;
 
             int currentQuantity = GetQuantityAsInt();
-            double precio =  m_invoiceItem.Rate;
-            double totall = currentQuantity* precio;
+            double precio = m_invoiceItem.Rate;
+            double totall = currentQuantity * precio;
             m_invoiceItem.Total = totall;
-            
-          
+
+
             Total.Content = "$" + totall.ToString();
-          
+            //m_invoiceItem.Cantidad = (double)Cantidad.Value;
 
 
         }
@@ -289,10 +282,11 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             item_Copy.Text = ((System.Data.DataRowView)cour).Row.ItemArray[6].ToString();
             m_invoiceItem.Codigo = ((System.Data.DataRowView)cour).Row.ItemArray[0].ToString();
             m_invoiceItem.Descripcion = ((System.Data.DataRowView)cour).Row.ItemArray[6].ToString();
-        
+            // m_invoiceItem.Cantidad = (double)Cantidad.Value;
+            // rate.Value = 3080;
             string strigCodigo = ((System.Data.DataRowView)cour).Row.ItemArray[0].ToString();
 
-           llenarcombobox(strigCodigo);
+            llenarcombobox(strigCodigo);
         }
 
         private void llenarcombobox(string codigo)
@@ -300,12 +294,14 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
             // xaxaxa var hat = codigo;
 
-              try
+            try
             {
 
                 string conect = "SERVER = gggctserver.database.windows.net; DATABASE = rdbms_GGGC_Public_TESTING; USER ID = abril; PASSWORD = gggc.2017";
                 SqlConnection con = new SqlConnection(conect);
-                try { con.Open();
+                try
+                {
+                    con.Open();
 
                     string cmd = " SELECT Codigo_De_Articulo,Nivel_De_Precios,Precio FROM Precios where Codigo_De_Articulo = '" + codigo + "' ";
 
@@ -341,7 +337,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                     MessageBox.Show("Revise su conexión a internet");
                 }
 
-                
+
 
             }
             catch (InvalidCastException e)
@@ -361,11 +357,8 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 m_invoiceItem.Rate = Convert.ToDouble(((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString());
                 m_invoiceItem.Nivel = ((System.Data.DataRowView)objPrecio).Row.ItemArray[1].ToString();
                 // m_invoiceItem.Preciolista = 
-                rate.Value = Convert.ToDouble( precioactual);
-                double preciodelnivel = Convert.ToDouble(precioactual);
-                double quantity =Convert.ToDouble(Cantidad.Value);
-                double meactualizo = preciodelnivel * quantity;
-                Total.Content = meactualizo;
+                rate.Value = Convert.ToDouble(precioactual);
+                Total.Content = precioactual;
             }
             else
             {
@@ -450,16 +443,12 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
 
 
-
-
-
-
     }
 
     public class FieldsUpdateEventArgs : EventArgs
     {
-        private OrdenItem m_invoiceItem;
-        public OrdenItem UpdatedFields
+        private CompraItem m_invoiceItem;
+        public CompraItem UpdatedFields
         {
             get
             {
@@ -471,4 +460,6 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             }
         }
     }
+
+
 }

@@ -526,6 +526,22 @@ namespace GGGC.Admin
                         AddDetail(uc04444, "Pagares Arellantas");
                     }
                     break;
+                case "011788":
+                    UserControl uc011788 = null;
+                    if (userControls.ContainsKey("011788"))
+                    {
+                        userControls.Remove("011788");
+                        uc011788 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Compras.ComprasView", type.Namespace));
+                        userControls.Add("Compras", uc011788);
+                    }
+                    else
+                    {
+                        uc011788 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Compras.ComprasView", type.Namespace));
+                        userControls.Add("011788", uc011788);
+                        AddDetail(uc011788, "Compras");
+                    }
+                    break;
+
                 case "0665":
                     UserControl uc0665 = null;
                     if (userControls.ContainsKey("0665"))
@@ -569,6 +585,21 @@ namespace GGGC.Admin
                         uc07117 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.VentasGeneral.VentasGral", type.Namespace));
                         userControls.Add("07117", uc07117);
                         AddDetail(uc07117, "Ventas General");
+                    }
+                    break;
+                case "071173":
+                    UserControl uc071173 = null;
+                    if (userControls.ContainsKey("071173"))
+                    {
+                        userControls.Remove("071173");
+                        uc071173 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.PagareCentro.PagareCView", type.Namespace));
+                        userControls.Add("Pagares centro", uc071173);
+                    }
+                    else
+                    {
+                        uc071173 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.PagareCentro.PagareCView", type.Namespace));
+                        userControls.Add("071173", uc071173);
+                        AddDetail(uc071173, "Pagares centro");
                     }
                     break;
                 case "08117":

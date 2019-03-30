@@ -102,25 +102,34 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             //TOTAL
             textBox69.Value = "$" +totall.ToString("#,###.00", CultureInfo.InvariantCulture);
             //Observaciones
-            textBox79.Value = tblTabla.Rows[0][15].ToString();
+            Observaciones.Value = tblTabla.Rows[0][20].ToString();
 
 
             //Cliente
-            textBox28.Value = tblTabla.Rows[0][12].ToString();
+            textBox7.Value = tblTabla.Rows[0][12].ToString();
             //Telefono
-            textBox30.Value = tblTabla.Rows[0][13].ToString();
+            textBox21.Value = tblTabla.Rows[0][13].ToString();
             //RFC
-            textBox32.Value = tblTabla.Rows[0][2].ToString();
+            textBox20.Value = tblTabla.Rows[0][2].ToString();
             //Direccion
-            textBox33.Value = tblTabla.Rows[0][14].ToString();
-
+            textBox19.Value = tblTabla.Rows[0][19].ToString();
+            //marca
+            textBox24.Value = tblTabla.Rows[0][14].ToString().ToUpper();
+            //modelo
+            textBox25.Value = tblTabla.Rows[0][15].ToString().ToUpper();
+            //año
+            textBox26.Value = tblTabla.Rows[0][16].ToString().ToUpper();
+            //placas
+            textBox27.Value = tblTabla.Rows[0][17].ToString().ToUpper();
+            //km
+            textBox28.Value = tblTabla.Rows[0][18].ToString().ToUpper();
 
             //Fecha Recepcion
-            textBox17.Value = tblTabla.Rows[0][4].ToString();
+            textBox22.Value = tblTabla.Rows[0][4].ToString();
             //Fecha de entrega
-            textBox18.Value = tblTabla.Rows[0][5].ToString();
+          //  textBox18.Value = tblTabla.Rows[0][5].ToString();
             //Fecha vigencia 
-            textBox5.Value = tblTabla.Rows[0][3].ToString();
+           // textBox5.Value = tblTabla.Rows[0][3].ToString();
 
 
 
@@ -128,38 +137,82 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             int bytValorEx = Convert.ToInt32(tblTabla.Rows[0][9]);
             int bytValorIn = Convert.ToInt32(tblTabla.Rows[0][10]);
             int bytValorAc = Convert.ToInt32(tblTabla.Rows[0][11]);
+            int bytpendientes = Convert.ToInt32(tblTabla.Rows[0][22]);
             pcrDespliegaExteriores(bytValorEx);
             pcrDespliegaInteriores(bytValorIn);
             pcrDespliegaAccesorios(bytValorAc);
+            pcrDespliegaPendientes(bytpendientes);
+            gasolina();
+
         }
 
+
+        private void gasolina()
+        {
+            double tanque = Convert.ToDouble(tblTabla.Rows[0][21]);
+            if (tanque == 0.0)
+            {
+
+            }
+            else if (tanque == 2.5)
+            {
+               
+                textBox49.Style.BackgroundColor = Color.DarkBlue;
+                //textBox49.Style.LineColor = Color.White;
+                textBox49.Style.Color = Color.White;
+               // textBox49.Style.BorderColor.c = Color.Yellow;
+            }
+            else if (tanque == 5.0)
+            {
+                textBox50.Style.BackgroundColor = Color.DarkBlue;
+                textBox50.Style.Color = Color.White;
+            }
+            else if (tanque == 7.5)
+            {
+                textBox51.Style.BackgroundColor = Color.DarkBlue;
+                textBox51.Style.Color = Color.White;
+            }
+            else if (tanque ==10.0)
+            {
+                textBox52.Style.BackgroundColor = Color.DarkBlue;
+                textBox52.Style.Color = Color.White;
+
+            }
+
+
+        }
 
 
         private void pcrDespliegaExteriores(int bytValor)
             {
-        
+            
+
             if (bytValor != 0)
             {
+                if ((bytValor & 4096) == 4096)
+                    chkemblema.Value = true;
+                if ((bytValor & 2048) == 2048)
+                    chkcuartoluces.Value = true;
                 if ((bytValor & 1024) == 1024)
-                    chkparabrisas.Value = true;
+                    checklimpiaparabrisas.Value = true;
                 if ((bytValor & 512) == 512)
                     chkcarroseria.Value = true;
                 if ((bytValor & 256) == 256)
-                    chktgasolina.Value = true;
+                    chktapongasolina.Value = true;
                 if ((bytValor & 128) == 128)
-                    chkcompletas.Value = true;
+                    checkbocinaclaxon.Value = true;
                 if ((bytValor & 64) == 64)
-                    chkmoldeduras.Value = true;
+                   chkmoldaduras.Value = true;
                 if ((bytValor & 32) == 32)
                     chktapas.Value = true;
                 if ((bytValor & 16) == 16)
                     chkcristales.Value = true;
                 if ((bytValor & 8) == 8)
-                    chkespejo.Value = true;
+                    chkespejolateral.Value = true;
                 if ((bytValor & 4) == 4)
                     chkantena.Value = true;
                 if ((bytValor & 2) == 2)
-                    chkluces.Value = true;
+                    chkunidadluces.Value = true;
 
             }
 
@@ -169,27 +222,69 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         private void pcrDespliegaInteriores(int bytValor)
         {
-
+         
             if (bytValor != 0)
             {
+                if ((bytValor & 4096) == 4096)
+                    chkbotonesinteriores.Value = true;
+                if ((bytValor & 2048) == 2048)
+                    chkcenicero.Value = true;
+                if ((bytValor & 1024) == 1024)
+                    chkcalefaccion.Value = true;
                 if ((bytValor & 512) == 512)
-                    chkvestiduras.Value = true;
+                    checkvestiduras.Value = true;
                 if ((bytValor & 256) == 256)
-                    chktapetes.Value = true;
+                   checktapetes.Value = true;
                 if ((bytValor & 128) == 128)
-                    chkmanijas.Value = true;
+                    checkmanijasinterior.Value = true;
                 if ((bytValor & 64) == 64)
-                    chkcinturon.Value = true;
+                    chkcinturones.Value = true;
                 if ((bytValor & 32) == 32)
-                    chkespejoretro.Value = true;
+                    chkespejoretrovisor.Value = true;
                 if ((bytValor & 16) == 16)
                     chkencendedor.Value = true;
                 if ((bytValor & 8) == 8)
                     chkbocinas.Value = true;
                 if ((bytValor & 4) == 4)
-                    chkestereo.Value = true;
+                    chkradio.Value = true;
                 if ((bytValor & 2) == 2)
-                    chktablero.Value = true;
+                    chkinstrumentostablero.Value = true;
+
+            }
+
+
+
+        }
+
+        private void pcrDespliegaAccesorios(int bytValor)
+        {
+
+            if (bytValor != 0)
+            {
+                if ((bytValor & 4096) == 4096)
+                    checkmaneralgato.Value = true;
+                if ((bytValor & 2048) == 2048)
+                    checkllaverueda.Value = true;
+                if ((bytValor & 1024) == 1024)
+                    checkgato.Value = true;
+                if ((bytValor & 512) == 512)
+                    checktaponradiador.Value = true;
+                if ((bytValor & 256) == 256)
+                    checktaponaceite.Value = true;
+                if ((bytValor & 128) == 128)
+                    checkvarillaaceite.Value = true;
+                if ((bytValor & 64) == 64)
+                    checkestucheherramientas.Value = true;
+                if ((bytValor & 32) == 32)
+                    checktrianguloseg.Value = true;
+                if ((bytValor & 16) == 16)
+                    checkllantarefaccion.Value = true;
+                if ((bytValor & 8) == 8)
+                    checkfiltroaire.Value = true;
+                if ((bytValor & 4) == 4)
+                    checkbateriamca.Value = true;
+                if ((bytValor & 2) == 2)
+                    checkclaxon.Value = true;
 
             }
 
@@ -199,35 +294,27 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
 
 
-        private void pcrDespliegaAccesorios(int bytValor)
+        private void pcrDespliegaPendientes(int bytValor)
         {
-
+          
             if (bytValor != 0)
             {
-                if ((bytValor & 4096) == 4096)
-                    chkrueda.Value = true;
-                if ((bytValor & 2048) == 2048)
-                    chkmaneralgato.Value = true;
-                if ((bytValor & 1024) == 1024)
-                    chkgato.Value = true;
-                if ((bytValor & 512) == 512)
-                    chktaponradiador.Value = true;
-                if ((bytValor & 256) == 256)
-                    chktaponaceite.Value = true;
+               
+                   
                 if ((bytValor & 128) == 128)
-                    chkvarilla.Value = true;
+                    pcambioaceite.Value = true;
                 if ((bytValor & 64) == 64)
-                    chkestuche.Value = true;
+                   pfrenos.Value = true;
                 if ((bytValor & 32) == 32)
-                    chktriangulo.Value = true;
+                    psuspen.Value = true;
                 if ((bytValor & 16) == 16)
-                    chkllrefa.Value = true;
+                    pamorti.Value = true;
                 if ((bytValor & 8) == 8)
-                    chkfiltrodeaire.Value = true;
+                    pbalanceo.Value = true;
                 if ((bytValor & 4) == 4)
-                    chkbateri.Value = true;
+                    palineacion.Value = true;
                 if ((bytValor & 2) == 2)
-                    chkextinguidor.Value = true;
+                    pllantas.Value = true;
 
             }
 

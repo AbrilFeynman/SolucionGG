@@ -161,9 +161,13 @@
 
                                 </Grid>
                             </Grid>
+                            
+                            
+                            
+                            
 
                             
-                            <!--Grid parael header de la tabla-->
+                            <!--Grid para el header de la tabla-->
                             <Grid Grid.Row="1" x:Name="InvoiceGridHeader" Background="#B3D1E8" Grid.RowSpan="2">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="37" />
@@ -209,7 +213,7 @@
                                 </StackPanel>-->
                             </Grid>
                             <!--Tabla que contiene datos-->
-                            <ScrollViewer x:Name="GridScrollViewer" Grid.Row="3" Height="{Binding InvoiceGrid.ActualHeight}" VerticalScrollBarVisibility="Auto" BorderBrush="AliceBlue">
+                            <ScrollViewer x:Name="GridScrollViewer" Grid.Row="3" Height="{Binding InvoiceGrid.ActualHeight}" VerticalScrollBarVisibility="Auto" BorderBrush="AliceBlue" Grid.RowSpan="2">
                                 <Grid x:Name="InvoiceGrid"   MouseLeftButtonDown="InvoiceGrid_MouseLeftButtonDown">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="30" />
@@ -241,6 +245,13 @@
 
                                 </Grid>
                             </ScrollViewer>
+                            
+                            
+                           
+                            
+                            
+                            
+                            
                             <!--Grid para la suma de cantidad y precios-->
                             <Grid x:Name="Events" Grid.Row="5">
                                 <Grid.ColumnDefinitions>
