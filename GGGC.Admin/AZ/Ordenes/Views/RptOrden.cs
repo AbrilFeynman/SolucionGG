@@ -9,6 +9,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
     using Telerik.Reporting;
     using Telerik.Reporting.Drawing;
     using Telerik.Reporting.Processing;
+    using Microsoft.WindowsAzure.Storage;
 
     /// <summary>
     /// Summary description for RptOrden.
@@ -49,14 +50,33 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 DateTime date = DateTime.Now;
               
                 string dateday = date.ToString("dd-MM-yyyy HH mm ");
-                SaveReport(this.Report, @"C:\BIG\LRG\Excel\ORD_"+folio+ "_LRG920502BG7_"+ dateday + ".pdf");
-
-                MessageBox.Show("Reporte guardado en escritorio");
+                //SaveReport(this.Report, @"C:\BIG\LRG\Excel\ORD_"+folio+ "_LRG920502BG7_"+ dateday + ".pdf");
+                string camino = @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + folio + ".pdf";
+                SaveReport(this.Report, @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + folio + ".pdf");
+                UploadBlob(camino, folio);
+                // MessageBox.Show("Reporte guardado en escritorio");
             }
             catch (Exception ex)
             {
                 throw new Exception("Error" + ex.Message);
             }
+
+        }
+
+
+        private async void UploadBlob(string strPath, string fileName)
+        {
+            var account = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=gggcbig;AccountKey=CQBHPdnT3EFKPxLLKcm7sWSyx6/l90Xj1FJ9q8ia69pHLRRFnahEdfLXCOGDfc+7PzE+Ck/rniwJ+OHQh+i00Q==;EndpointSuffix=core.windows.net");
+            var client = account.CreateCloudBlobClient();
+            var container = client.GetContainerReference("erp");
+            var blob = container.GetBlockBlobReference(fileName);
+
+            using (FileStream fileStream = new FileStream(strPath, FileMode.Open))
+            {
+                await blob.UploadFromStreamAsync(fileStream);
+
+            }
+
 
         }
 
@@ -127,7 +147,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             //Fecha Recepcion
             textBox22.Value = tblTabla.Rows[0][4].ToString();
             //Fecha de entrega
-          //  textBox18.Value = tblTabla.Rows[0][5].ToString();
+            textBox23.Value = tblTabla.Rows[0][5].ToString();
             //Fecha vigencia 
            // textBox5.Value = tblTabla.Rows[0][3].ToString();
 

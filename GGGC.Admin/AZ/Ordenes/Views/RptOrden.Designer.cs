@@ -92,6 +92,13 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             this.textBox38 = new Telerik.Reporting.TextBox();
             this.textBox46 = new Telerik.Reporting.TextBox();
             this.textBox35 = new Telerik.Reporting.TextBox();
+            this.pllantas = new Telerik.Reporting.CheckBox();
+            this.palineacion = new Telerik.Reporting.CheckBox();
+            this.pbalanceo = new Telerik.Reporting.CheckBox();
+            this.pamorti = new Telerik.Reporting.CheckBox();
+            this.psuspen = new Telerik.Reporting.CheckBox();
+            this.pfrenos = new Telerik.Reporting.CheckBox();
+            this.pcambioaceite = new Telerik.Reporting.CheckBox();
             this.pictureBox3 = new Telerik.Reporting.PictureBox();
             this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
             this.textBox70 = new Telerik.Reporting.TextBox();
@@ -146,13 +153,6 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             this.textBox53 = new Telerik.Reporting.TextBox();
             this.textBox54 = new Telerik.Reporting.TextBox();
             this.textBox55 = new Telerik.Reporting.TextBox();
-            this.pllantas = new Telerik.Reporting.CheckBox();
-            this.palineacion = new Telerik.Reporting.CheckBox();
-            this.pbalanceo = new Telerik.Reporting.CheckBox();
-            this.pamorti = new Telerik.Reporting.CheckBox();
-            this.psuspen = new Telerik.Reporting.CheckBox();
-            this.pfrenos = new Telerik.Reporting.CheckBox();
-            this.pcambioaceite = new Telerik.Reporting.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // textBox89
@@ -569,7 +569,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.textBox23.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.91837215423584D), Telerik.Reporting.Drawing.Unit.Cm(4.1729588508605957D));
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.6641666889190674D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.1227779388427734D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
             this.textBox23.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox23.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox23.Style.Color = System.Drawing.Color.Black;
@@ -747,9 +747,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.0233633518218994D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(5.5772724151611328D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.5827013254165649D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.4339501857757568D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.3649994134902954D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.5827012062072754D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.4339500665664673D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.3649992942810059D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.085209846496582D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.0533325672149658D)));
             this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D)));
@@ -937,7 +937,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // table2
             // 
             this.table2.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.51593798398971558D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.51593804359436035D)));
             this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
             this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
             this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
@@ -946,7 +946,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
             this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.63229167461395264D)));
             this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.314791738986969D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.31479176878929138D)));
             this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
             this.table2.Body.SetCellContent(9, 0, this.textBox48);
             this.table2.Body.SetCellContent(10, 0, this.textBox38);
@@ -963,18 +963,18 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             tableGroup9.ReportItem = this.textBox47;
             this.table2.ColumnGroups.Add(tableGroup9);
             this.table2.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
-            this.textBox35,
-            this.textBox46,
-            this.textBox48,
-            this.textBox38,
-            this.textBox47,
             this.pllantas,
             this.palineacion,
             this.pbalanceo,
             this.pamorti,
             this.psuspen,
             this.pfrenos,
-            this.pcambioaceite});
+            this.pcambioaceite,
+            this.textBox35,
+            this.textBox46,
+            this.textBox48,
+            this.textBox38,
+            this.textBox47});
             this.table2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.37041664123535156D), Telerik.Reporting.Drawing.Unit.Cm(0.078817054629325867D));
             this.table2.Name = "table2";
             tableGroup11.Name = "group5";
@@ -1047,6 +1047,117 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             this.textBox35.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
             this.textBox35.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox35.StyleName = "";
+            // 
+            // pllantas
+            // 
+            this.pllantas.FalseValue = "False";
+            this.pllantas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.2863011360168457D), Telerik.Reporting.Drawing.Unit.Inch(0.59612149000167847D));
+            this.pllantas.Name = "pllantas";
+            this.pllantas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.51593798398971558D));
+            this.pllantas.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
+            this.pllantas.Style.Color = System.Drawing.Color.DarkBlue;
+            this.pllantas.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
+            this.pllantas.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.pllantas.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.pllantas.StyleName = "";
+            this.pllantas.Text = "LLANTAS";
+            this.pllantas.TrueValue = "= True";
+            this.pllantas.Value = "False";
+            // 
+            // palineacion
+            // 
+            this.palineacion.FalseValue = "False";
+            this.palineacion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.0390787124633789D), Telerik.Reporting.Drawing.Unit.Inch(0.59889942407608032D));
+            this.palineacion.Name = "palineacion";
+            this.palineacion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.palineacion.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
+            this.palineacion.Style.Color = System.Drawing.Color.DarkBlue;
+            this.palineacion.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
+            this.palineacion.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.palineacion.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.palineacion.StyleName = "";
+            this.palineacion.Text = "ALINEACIÓN";
+            this.palineacion.TrueValue = "= True";
+            this.palineacion.Value = "False";
+            // 
+            // pbalanceo
+            // 
+            this.pbalanceo.FalseValue = "False";
+            this.pbalanceo.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.9071344137191773D), Telerik.Reporting.Drawing.Unit.Inch(0.56417721509933472D));
+            this.pbalanceo.Name = "pbalanceo";
+            this.pbalanceo.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.pbalanceo.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
+            this.pbalanceo.Style.Color = System.Drawing.Color.DarkBlue;
+            this.pbalanceo.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
+            this.pbalanceo.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.pbalanceo.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.pbalanceo.StyleName = "";
+            this.pbalanceo.Text = "BALANCEO";
+            this.pbalanceo.TrueValue = "= True";
+            this.pbalanceo.Value = "False";
+            // 
+            // pamorti
+            // 
+            this.pamorti.FalseValue = "False";
+            this.pamorti.Name = "pamorti";
+            this.pamorti.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.pamorti.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
+            this.pamorti.Style.Color = System.Drawing.Color.DarkBlue;
+            this.pamorti.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
+            this.pamorti.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.pamorti.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.pamorti.StyleName = "";
+            this.pamorti.Text = "AMORTIGUADORES";
+            this.pamorti.TrueValue = "= True";
+            this.pamorti.Value = "False";
+            // 
+            // psuspen
+            // 
+            this.psuspen.FalseValue = "False";
+            this.psuspen.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.0182452201843262D), Telerik.Reporting.Drawing.Unit.Inch(0.65445494651794434D));
+            this.psuspen.Name = "psuspen";
+            this.psuspen.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.psuspen.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
+            this.psuspen.Style.Color = System.Drawing.Color.DarkBlue;
+            this.psuspen.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
+            this.psuspen.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.psuspen.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.psuspen.StyleName = "";
+            this.psuspen.Text = "SUSPENCIÓN";
+            this.psuspen.TrueValue = "= True";
+            this.psuspen.Value = "False";
+            // 
+            // pfrenos
+            // 
+            this.pfrenos.FalseValue = "False";
+            this.pfrenos.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.5501899719238281D), Telerik.Reporting.Drawing.Unit.Inch(0.88084369897842407D));
+            this.pfrenos.Name = "pfrenos";
+            this.pfrenos.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.pfrenos.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
+            this.pfrenos.Style.Color = System.Drawing.Color.DarkBlue;
+            this.pfrenos.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
+            this.pfrenos.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.pfrenos.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.pfrenos.StyleName = "";
+            this.pfrenos.Text = "FRENOS";
+            this.pfrenos.TrueValue = "= True";
+            this.pfrenos.Value = "False";
+            // 
+            // pcambioaceite
+            // 
+            this.pcambioaceite.FalseValue = "False";
+            this.pcambioaceite.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.2849118709564209D), Telerik.Reporting.Drawing.Unit.Inch(1.2336218357086182D));
+            this.pcambioaceite.Name = "pcambioaceite";
+            this.pcambioaceite.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.pcambioaceite.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
+            this.pcambioaceite.Style.Color = System.Drawing.Color.DarkBlue;
+            this.pcambioaceite.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
+            this.pcambioaceite.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.pcambioaceite.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.pcambioaceite.StyleName = "";
+            this.pcambioaceite.Text = "CAMBIO DE ACEITE";
+            this.pcambioaceite.TrueValue = "= True";
+            this.pcambioaceite.Value = "False";
             // 
             // pictureBox3
             // 
@@ -1827,117 +1938,6 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             this.textBox55.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox55.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox55.Value = "";
-            // 
-            // pllantas
-            // 
-            this.pllantas.FalseValue = "False";
-            this.pllantas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.2863011360168457D), Telerik.Reporting.Drawing.Unit.Inch(0.59612149000167847D));
-            this.pllantas.Name = "pllantas";
-            this.pllantas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.51593798398971558D));
-            this.pllantas.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
-            this.pllantas.Style.Color = System.Drawing.Color.DarkBlue;
-            this.pllantas.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
-            this.pllantas.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.pllantas.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.pllantas.StyleName = "";
-            this.pllantas.Text = "LLANTAS";
-            this.pllantas.TrueValue = "= True";
-            this.pllantas.Value = "False";
-            // 
-            // palineacion
-            // 
-            this.palineacion.FalseValue = "False";
-            this.palineacion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.0390787124633789D), Telerik.Reporting.Drawing.Unit.Inch(0.59889942407608032D));
-            this.palineacion.Name = "palineacion";
-            this.palineacion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
-            this.palineacion.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
-            this.palineacion.Style.Color = System.Drawing.Color.DarkBlue;
-            this.palineacion.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
-            this.palineacion.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.palineacion.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.palineacion.StyleName = "";
-            this.palineacion.Text = "ALINEACIÓN";
-            this.palineacion.TrueValue = "= True";
-            this.palineacion.Value = "False";
-            // 
-            // pbalanceo
-            // 
-            this.pbalanceo.FalseValue = "False";
-            this.pbalanceo.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.9071344137191773D), Telerik.Reporting.Drawing.Unit.Inch(0.56417721509933472D));
-            this.pbalanceo.Name = "pbalanceo";
-            this.pbalanceo.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
-            this.pbalanceo.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
-            this.pbalanceo.Style.Color = System.Drawing.Color.DarkBlue;
-            this.pbalanceo.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
-            this.pbalanceo.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.pbalanceo.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.pbalanceo.StyleName = "";
-            this.pbalanceo.Text = "BALANCEO";
-            this.pbalanceo.TrueValue = "= True";
-            this.pbalanceo.Value = "False";
-            // 
-            // pamorti
-            // 
-            this.pamorti.FalseValue = "False";
-            this.pamorti.Name = "pamorti";
-            this.pamorti.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
-            this.pamorti.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
-            this.pamorti.Style.Color = System.Drawing.Color.DarkBlue;
-            this.pamorti.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
-            this.pamorti.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.pamorti.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.pamorti.StyleName = "";
-            this.pamorti.Text = "AMORTIGUADORES";
-            this.pamorti.TrueValue = "= True";
-            this.pamorti.Value = "False";
-            // 
-            // psuspen
-            // 
-            this.psuspen.FalseValue = "False";
-            this.psuspen.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.0182452201843262D), Telerik.Reporting.Drawing.Unit.Inch(0.65445494651794434D));
-            this.psuspen.Name = "psuspen";
-            this.psuspen.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
-            this.psuspen.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
-            this.psuspen.Style.Color = System.Drawing.Color.DarkBlue;
-            this.psuspen.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
-            this.psuspen.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.psuspen.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.psuspen.StyleName = "";
-            this.psuspen.Text = "SUSPENCIÓN";
-            this.psuspen.TrueValue = "= True";
-            this.psuspen.Value = "False";
-            // 
-            // pfrenos
-            // 
-            this.pfrenos.FalseValue = "False";
-            this.pfrenos.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.5501899719238281D), Telerik.Reporting.Drawing.Unit.Inch(0.88084369897842407D));
-            this.pfrenos.Name = "pfrenos";
-            this.pfrenos.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
-            this.pfrenos.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
-            this.pfrenos.Style.Color = System.Drawing.Color.DarkBlue;
-            this.pfrenos.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
-            this.pfrenos.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.pfrenos.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.pfrenos.StyleName = "";
-            this.pfrenos.Text = "FRENOS";
-            this.pfrenos.TrueValue = "= True";
-            this.pfrenos.Value = "False";
-            // 
-            // pcambioaceite
-            // 
-            this.pcambioaceite.FalseValue = "False";
-            this.pcambioaceite.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.2849118709564209D), Telerik.Reporting.Drawing.Unit.Inch(1.2336218357086182D));
-            this.pcambioaceite.Name = "pcambioaceite";
-            this.pcambioaceite.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
-            this.pcambioaceite.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
-            this.pcambioaceite.Style.Color = System.Drawing.Color.DarkBlue;
-            this.pcambioaceite.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
-            this.pcambioaceite.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.pcambioaceite.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.pcambioaceite.StyleName = "";
-            this.pcambioaceite.Text = "CAMBIO DE ACEITE";
-            this.pcambioaceite.TrueValue = "= True";
-            this.pcambioaceite.Value = "False";
             // 
             // RptOrden
             // 

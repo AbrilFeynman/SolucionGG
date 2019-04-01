@@ -669,7 +669,44 @@
             </Grid>
         </TabItem>
         <TabItem Header="CONSULTA" >
-            <Grid Background="#1dd1a1">
+            <Grid Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="54*"/>
+                    <RowDefinition Height="515*"/>
+                </Grid.RowDefinitions>
+                <DatePicker x:Name="dtinicial" Width="240" Visibility="Hidden" SelectedDateFormat="Long" Height="24" FontSize="14" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Fecha Inicial" Margin="33,21,0,9" />
+                <DatePicker x:Name="dtfinal" Width="238" Visibility="Hidden" SelectedDateFormat="Long" FontSize="14" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Fecha Final" Margin="308,21,0,9" />
+                <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Visibility="Hidden" Content="Exportar" x:Name="Exportaro"   HorizontalAlignment="Left" Width="120" Margin="609,18,0,4" />
+                <telerik:RadGridView x:Name="InvoiceOrder" Grid.Row="1"  ShowGroupPanel="True"  ShowColumnHeaders="True" Width="Auto"  AutoGenerateColumns="False"  IsReadOnly="True"  Margin="0,10" 
+                                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ColumnWidth="*" CanUserDeleteRows="False" CanUserInsertRows="False" 
+                             ItemsSource="{Binding Clientes}"  CanUserReorderColumns="False" CanUserSelect="True" 
+                             CanUserSortGroups="False" ClipboardCopyMode="None" ClipboardPasteMode="None" GridLinesVisibility="None" 
+                             SnapsToDevicePixels="True" GroupRenderMode="Flat" FrozenColumnsSplitterVisibility="Hidden" IsFilteringAllowed="True"
+                             DragElementAction="None" CanUserFreezeColumns="False" SelectionUnit="FullRow"
+                             RowHeight="40"  ShowColumnFooters="True"  Visibility="Visible" IsBusy="{Binding EntitySetIsLoading}"  FilteringMode="Popup" 
+                             AlternationCount="2" AlternateRowBackground="#FFFFE8BA" RowStyle="{StaticResource AlternateRowColor}" RowIndicatorVisibility="Collapsed"  
+                             
+                                         >
+
+
+                    <telerik:RadGridView.Columns>
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding OrderID}" Header="Folio" Width="0.16*" UniqueName="CodiID" />
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding CustomerID}"  Width="0.16*" Header="Numero Cliente" UniqueName="ProductDescription" />
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding Nombre}" Header="Nombre" Width="0.16*" UniqueName="Qty" />
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding RFC}" Header="RFC" Width="0.16*" UniqueName="UnitPrice" />
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding OrderDate}" Header="Fecha Orden" Width="0.16*" UniqueName="LineTotal" />
+                        <telerik:GridViewDataColumn Header="Imprimir" Width="0.16*" UniqueName="LineTotal" >
+                            <telerik:GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <telerik:RadButton Style="{StaticResource MaterialDesignRaisedDarkButton}"   Content="Imprimir"   
+                                       Click="RadButton_Click"  />
+                                </DataTemplate>
+                            </telerik:GridViewColumn.CellTemplate>
+                        </telerik:GridViewDataColumn>
+
+                    </telerik:RadGridView.Columns>
+                </telerik:RadGridView>
+
 
             </Grid>
         </TabItem>

@@ -602,6 +602,23 @@ namespace GGGC.Admin
                         AddDetail(uc071173, "Pagares centro");
                     }
                     break;
+                case "0711739":
+                    UserControl uc0711739 = null;
+                    if (userControls.ContainsKey("0711739"))
+                    {
+                        userControls.Remove("0711739");
+                        uc0711739 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Remisiones.RemisionView", type.Namespace));
+                        userControls.Add("Remisiones", uc0711739);
+                    }
+                    else
+                    {
+                        uc0711739 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Remisiones.RemisionView", type.Namespace));
+                        userControls.Add("0711739", uc0711739);
+                        AddDetail(uc0711739, "Remisiones");
+                    }
+                    break;
+
+
                 case "08117":
                     UserControl uc08117 = null;
                     if (userControls.ContainsKey("08117"))

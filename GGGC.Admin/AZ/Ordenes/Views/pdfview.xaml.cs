@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,24 +11,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Telerik.Windows.Documents.Fixed;
-using System.IO;
 
 namespace GGGC.Admin.AZ.Ordenes.Views
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for pdfview.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class pdfview : Window
     {
-        public UserControl1(string folio)
+        public pdfview(string folio)
         {
             InitializeComponent();
+            
             LoadPdfFromUri(folio);
         }
-
 
 
         private void btnClose_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -137,8 +136,10 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             //Stream str = App.GetResourceStream(new System.Uri("GGGC.Admin;component/SampleData/Sample.pdf", System.UriKind.Relative)).Stream;
             //this.pdfViewer.DocumentSource = new PdfDocumentSource(str);
             //pdfViewer.Commands.
-
-            this.pdfViewer.DocumentSource = new PdfDocumentSource(new Uri(@"C:\Ektelesis.Net\CFDI\DATOS\OUT\" + folio + ".pdf"));
+            //try {
+            this.pdfViewer.DocumentSource = new PdfDocumentSource(new Uri(@"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + folio + ".pdf"));
+            //}
+            //catch (Exception x){this.pdfViewer.childre  }
 
             //  this.pdfViewer.ScaleFactor = 0.5;// (this.pdfViewer.ActualWidth + this.pdfViewer.VerticalScrollBar.Width) / this.pdfViewer.CurrentPage.ActualWidth;
 
@@ -163,6 +164,25 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         {
             //MessageBox.Show("Unloaded");
         }
+
+
+
+
+        private void button_Click_1(string folio)
+        {
+
+            //Userpdf user = new Userpdf(folio);
+            //grids.Children.Clear();
+            //grids.Children.Add(user);
+            UserControl1 user = new UserControl1(folio);
+
+        }
+
+
+
+
+
+
 
     }
 }

@@ -409,7 +409,7 @@
                             Enabled
                         </CheckBox>
                         <TextBox x:Name="ObservacionCliente"
-    Style="{StaticResource MaterialDesignTextAreaTextBox}"
+    
     Margin="0,0,10,0"
     VerticalAlignment="Top"
     Height="61"

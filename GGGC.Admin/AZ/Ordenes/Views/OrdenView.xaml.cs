@@ -18,6 +18,9 @@ using System.Data.SqlClient;
 using System.Threading;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using Telerik.Windows.Controls;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace GGGC.Admin.AZ.Ordenes.Views
 {
@@ -46,6 +49,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         string item_cliente = "";
         string item_telefono = "";
         string item_direccion = "";
+        string m_numerodefolio = "";
         // Pendientes pendientes = new Pendientes();
         // Pendientes.
 
@@ -138,6 +142,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             var x = r.Next(1000000, 9000000);
             string Od = x.ToString();
             osomaloso = x;
+
             GlobalId o = new GlobalId();
             GlobalId.Identificador = Od;
             //m_productList = new ProductList();
@@ -161,6 +166,62 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             tabla.Columns.Add("PrecioExtendido", typeof(string));
             tabla.Columns.Add("Empleado",typeof(int));
 
+
+            llenarConsulta();
+
+        }
+
+
+
+
+        private void llenarConsulta()
+        {
+            try
+            {
+
+                string conect = "SERVER = gggctserver.database.windows.net; DATABASE =devArellantas; USER ID = sysadmin_gg_gc_sa_dgo_testing; PASSWORD = GRUPO.gu@di@n@.Grupo.Campos_#Staging_Test.2099";
+                SqlConnection con = new SqlConnection(conect);
+
+                string cmd = "Select OrderHeader.OrderID, OrderHeader.CustomerID, OrderHeader.RFC, OrderHeader.OrderDate," +
+                                                      " Clientes_Frecuentes.Nombre + ' ' + " +
+                                                       " Clientes_Frecuentes.Apellido_Paterno + ' ' + Clientes_Frecuentes.Apellido_Materno as Nombre, " +
+                                                       " Clientes_Frecuentes.Direccion + ' ' + Clientes_Frecuentes.Colonia + ' ' + Clientes_Frecuentes.Ciudad as Direccion " +
+                                                       " From OrderHeader Inner join  Clientes_Frecuentes" +
+                                                       "  ON OrderHeader.CustomerID = Clientes_Frecuentes.Id_Radial order by OrderHeader.OrderDate desc";
+                                                       
+
+
+                con.Open();
+
+                DataTable dtbl = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd, conect);
+
+                DataSet dsPubs = new DataSet("Pubs");
+
+                sda.Fill(dsPubs, "OrderHeader");
+
+                dtbl = dsPubs.Tables["OrderHeader"];
+
+                InvoiceOrder.ItemsSource = dsPubs.Tables["OrderHeader"].DefaultView;
+                //dataGrid2.Columns[0].IsVisible = false;
+
+                con.Close();
+            }
+
+            catch (SqlException ex)
+            {
+
+                RadWindow radWindow = new RadWindow();
+                RadWindow.Alert(new DialogParameters()
+                {
+                    Content = "Revise su conexón a internet.",
+                    Header = "BIG",
+
+                    DialogStartupLocation = WindowStartupLocation.CenterOwner
+                    // IconContent = "";
+                });
+            }
+
         }
 
         private void Add(object sender, RoutedEventArgs e)
@@ -178,6 +239,60 @@ namespace GGGC.Admin.AZ.Ordenes.Views
            // lblGas.
            //chk
         }
+
+        private void RadButton_Click(object sender, RoutedEventArgs e)
+
+        {
+
+
+            var objtitem = InvoiceOrder.SelectedItem;
+            string oso = ((System.Data.DataRowView)objtitem).Row.ItemArray[0].ToString();
+       
+            descargar(oso);
+           
+            pdfview formu = new pdfview(oso);
+            formu.ShowDialog();
+
+        }
+
+
+        private void descargar(string folio)
+        {
+
+            try
+            {
+
+                var account = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=gggcbig;AccountKey=CQBHPdnT3EFKPxLLKcm7sWSyx6/l90Xj1FJ9q8ia69pHLRRFnahEdfLXCOGDfc+7PzE+Ck/rniwJ+OHQh+i00Q==;EndpointSuffix=core.windows.net");
+                //var storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnection"));
+                var myClient = account.CreateCloudBlobClient();
+                var container = myClient.GetContainerReference("erp");
+                container.CreateIfNotExists(BlobContainerPublicAccessType.Blob);
+
+                //lines modified
+                var blockBlob = container.GetBlockBlobReference(folio);
+                string documento = @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + folio + ".pdf";
+                using (var fileStream = System.IO.File.OpenWrite(documento))
+                {
+                    blockBlob.DownloadToStream(fileStream);
+                }
+
+
+
+
+
+            }
+            catch (Exception E)
+            { //MessageBox.Show("Revise su conexión"); 
+
+            }
+
+
+
+        }
+
+
+
+
 
         private void M_producto_CloseRequested(object sender, EventArgs e)
         {
@@ -757,7 +872,10 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                         DateRecepcionH.SelectedTime = DateTime.Now;
                         CapturaH.SelectedTime = DateTime.Now;
                         DateEntregaH.SelectedTime = DateTime.Now;
-                        MessageBox.Show("Se guardo Correctamente ");
+                        string oso = m_numerodefolio;
+                        llenarConsulta();
+                        Window1 form = new Window1(oso);
+                        form.ShowDialog();
                     }
                     else
                     {
@@ -938,7 +1056,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             var V = xxx.ToString("MM/dd/yyyy");
             //DateTime recep = Convert.ToDateTime(DateRecepcion.DateTimeText);
             //var V = recep.ToString("MM/dd/yyyy");
-
+            m_numerodefolio = osomaloso.ToString();
 
             string gaso = SliderGasolina.Value.ToString();
             int bytAccesorios1 = fncObtenAccesorios1();

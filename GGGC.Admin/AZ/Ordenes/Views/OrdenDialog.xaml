@@ -139,8 +139,8 @@
         </Grid>
         <Label Content="Nivel" Foreground="#666666" FontSize="17" VerticalAlignment="Center" Margin="4,0,534,2" Height="30" Grid.Row="4" />
 
-        <Label Content="No. Rampa" Foreground="#666666" FontSize="17" VerticalAlignment="Center" Margin="270,0,231,2" Height="30" Grid.Row="4" />
-        <Controls:UpDown NumberDecimalDigits="0" x:Name="Empleado" ValueChanged="quantity_ValueChanged"    MinValue="1" Grid.Row="4" Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" FontSize="15" Width="80" Margin="384,0,0,0" >
+        <Label Content="No. Rampa" Foreground="#666666" FontSize="17" Visibility="Hidden" VerticalAlignment="Center" Margin="270,0,231,2" Height="30" Grid.Row="4" />
+        <Controls:UpDown NumberDecimalDigits="0" x:Name="Empleado" Visibility="Hidden" ValueChanged="quantity_ValueChanged"    MinValue="1" Grid.Row="4" Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" FontSize="15" Width="80" Margin="384,0,0,0" >
 
         </Controls:UpDown>
 

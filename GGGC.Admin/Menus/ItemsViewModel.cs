@@ -570,6 +570,9 @@ namespace GGGC.Admin.Menus
                     BusinessItem mnuGG_Modules_Nivel1_13 = new BusinessItem(mnuGG) { Name = "PagareCentro", Tag = "071173", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
                     mnuGG_Orden.Items.Add(mnuGG_Modules_Nivel1_13);
 
+                    BusinessItem mnuGG_Modules_Nivel1_14 = new BusinessItem(mnuGG) { Name = "Remisiones", Tag = "0711739", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
+                    mnuGG_Orden.Items.Add(mnuGG_Modules_Nivel1_14);
+
                     BusinessItem mnuGG_Modules_Nivel1_7 = new BusinessItem(mnuGG) { Name = "Clientes Agregados", Tag = "08117", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
                     mnuGG_Orden.Items.Add(mnuGG_Modules_Nivel1_7);
                     BusinessItem mnuGG_Modules_Nivel1_8 = new BusinessItem(mnuGG) { Name = "Servicios", Tag = "9991", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };

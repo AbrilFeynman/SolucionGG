@@ -517,48 +517,93 @@ namespace GGGC.Admin.AZ.Compras
                 //amountGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength( new double(),GridUnitType.Auto)});
 
                 //Dollar
-                TextBlock textBlockDollor = null;
-                textBlockDollor = new TextBlock();
-                textBlockDollor.Text = "$";
-                textBlockDollor.FontSize = 13;
-                textBlockDollor.FontFamily = new FontFamily("Segoe UI");
-                textBlockDollor.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
-                //textBlockDollor.Foreground = new SolidColorBrush(Colors.Black);
-                textBlockDollor.HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch;
-                textBlockDollor.VerticalAlignment = System.Windows.VerticalAlignment.Center;
-                textBlockDollor.TextAlignment = TextAlignment.Right;
-                if (columnIndex == 2)
-                    Grid.SetColumn(textBlockDollor, 1);
-                else
-                    Grid.SetColumn(textBlockDollor, 0);
-                Grid.SetRow(textBlockDollor, 0);
-                amountGrid.Children.Add(textBlockDollor);
-                //Data
                 TextBlock textBlock = null;
                 textBlock = new TextBlock();
-                textBlock.Text = value.Trim('$');
+                textBlock.Text = "$" + value;
+
                 textBlock.FontSize = 13;
                 textBlock.FontFamily = new FontFamily("Segoe UI");
                 textBlock.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
                 //HorizontalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F"
                 if (columnIndex == 0)
                     textBlock.Padding = new Thickness(0, 0, 0, 0);
-
                 else
                     textBlock.Padding = new Thickness(0, 0, 0, 0);
                 //textBlock.Foreground = new SolidColorBrush(Colors.Black);
                 textBlock.HorizontalAlignment = System.Windows.HorizontalAlignment.Right;
                 textBlock.VerticalAlignment = System.Windows.VerticalAlignment.Center;
 
-                if (columnIndex > 0)
-                    textBlock.TextAlignment = TextAlignment.Right;
-                if (columnIndex == 2)
-                    Grid.SetColumn(textBlock, 2);
-                else
-                    Grid.SetColumn(textBlock, 1);
-                Grid.SetRow(textBlock, 0);
-                amountGrid.Children.Add(textBlock);
+
+                textBlock.TextAlignment = TextAlignment.Right;
+
+                SetCell(rowIndex, columnIndex, textBlock);
+
+
+                //TextBlock textBlockDollor = null;
+                //textBlockDollor = new TextBlock();
+                //textBlockDollor.Text = "$";
+                //textBlockDollor.FontSize = 13;
+                //textBlockDollor.FontFamily = new FontFamily("Segoe UI");
+                //textBlockDollor.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
+                ////textBlockDollor.Foreground = new SolidColorBrush(Colors.Black);
+                //textBlockDollor.HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch;
+                //textBlockDollor.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+                //textBlockDollor.TextAlignment = TextAlignment.Right;
+                //if (columnIndex == 2)
+                //    Grid.SetColumn(textBlockDollor, 1);
+                //else
+                //    Grid.SetColumn(textBlockDollor, 0);
+                //Grid.SetRow(textBlockDollor, 0);
+                //amountGrid.Children.Add(textBlockDollor);
+                ////Data
+                //TextBlock textBlock = null;
+                //textBlock = new TextBlock();
+                //textBlock.Text = value.Trim('$');
+                //textBlock.FontSize = 13;
+                //textBlock.FontFamily = new FontFamily("Segoe UI");
+                //textBlock.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
+                ////HorizontalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F"
+                //if (columnIndex == 0)
+                //    textBlock.Padding = new Thickness(0, 0, 0, 0);
+
+                //else
+                //    textBlock.Padding = new Thickness(0, 0, 0, 0);
+                ////textBlock.Foreground = new SolidColorBrush(Colors.Black);
+                //textBlock.HorizontalAlignment = System.Windows.HorizontalAlignment.Right;
+                //textBlock.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+
+                //if (columnIndex > 0)
+                //    textBlock.TextAlignment = TextAlignment.Right;
+                //if (columnIndex == 2)
+                //    Grid.SetColumn(textBlock, 2);
+                //else
+                //    Grid.SetColumn(textBlock, 1);
+                //Grid.SetRow(textBlock, 0);
+                //amountGrid.Children.Add(textBlock);
             }
+            //else if (columnIndex == 4)
+            //{
+            //    TextBlock textBlock = null;
+            //    textBlock = new TextBlock();
+            //    textBlock.Text = "$" +value;
+
+            //    textBlock.FontSize = 13;
+            //    textBlock.FontFamily = new FontFamily("Segoe UI");
+            //    textBlock.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
+            //    //HorizontalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F"
+            //    if (columnIndex == 0)
+            //        textBlock.Padding = new Thickness(0, 0, 0, 0);
+            //    else
+            //        textBlock.Padding = new Thickness(0, 0, 0, 0);
+            //    //textBlock.Foreground = new SolidColorBrush(Colors.Black);
+            //    textBlock.HorizontalAlignment = System.Windows.HorizontalAlignment.Right;
+            //    textBlock.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+
+
+            //   textBlock.TextAlignment = TextAlignment.Right;
+
+            //    SetCell(rowIndex, columnIndex, textBlock);
+            //}
             else
             {
                 //Data

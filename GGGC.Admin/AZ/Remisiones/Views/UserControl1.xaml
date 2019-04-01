@@ -10,6 +10,8 @@
              
              mc:Ignorable="d" 
              Unloaded="UserControl_Unloaded" Width="825" Height="600"  >
+    
+    
     <UserControl.Resources>
 
         <telerik:IconSources x:Key="IconPaths" LightBasePath="/Telerik.Windows.Controls.FixedDocumentViewers;component/Images/Modern/"

@@ -79,9 +79,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
                 string fecha = DateTime.Now.ToString();
                 generarCBB(tbl);
                 string folio = m_nombre;
-            string camino = @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + folio + ".pdf";
+                string camino = @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + folio + ".pdf";
                 SaveReport(this.Report, @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + folio + ".pdf");
-                 UploadBlob(camino,folio);
+                UploadBlob(camino,folio);
             //MessageBox.Show("Reporte guardado en escritorio");
 
 
