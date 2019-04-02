@@ -918,6 +918,20 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         }
 
+        private void GasoValidationTextBoxx(object sender, TextCompositionEventArgs e)
+        {
+
+            //ONLY NUMBERS
+
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+
+
+
+
+        }
+
+
         private void RampaValidationTextBoxx(object sender, TextCompositionEventArgs e)
         {
 
@@ -1345,6 +1359,20 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         private void Txtrfc_TextChanged(object sender, TextChangedEventArgs e)
         {
+
+        }
+
+        private void Litros_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Litros.Text.Length > 0)
+            {
+                osopointter.Value = Convert.ToDouble(Litros.Text);
+            }
+            else
+            {
+                osopointter.Value = 0;
+            }
+           
 
         }
     }

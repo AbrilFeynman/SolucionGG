@@ -2,9 +2,12 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+           
+             xmlns:syncfusion ="clr-namespace:Syncfusion.UI.Xaml.Gauges;assembly=Syncfusion.SfGauge.Wpf"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:tabData="clr-namespace:GGGC.Admin.AZ.Ordenes.Views"
+             xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
              xmlns:local="clr-namespace:GGGC.Admin.AZ.Ordenes.Views"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="806.667" KeyDown="Window_KeyDown"
@@ -153,7 +156,7 @@
                                                                     Is24Hours="True"
                                                                     Grid.Row="1" Grid.Column="2"
                                     Style="{StaticResource MaterialDesignFloatingHintTimePicker}"
-                                    materialDesign:HintAssist.Hint="Recepción" Height="25" Margin="0,0,0,7" VerticalAlignment="Bottom"  />
+                                    materialDesign:HintAssist.Hint="Recepción" Height="25" Margin="0,0,0,5" VerticalAlignment="Bottom"  />
                                         <materialDesign:TimePicker  x:Name="DateEntregaH" Grid.Row="2" Grid.Column="2"
                                     Style="{StaticResource MaterialDesignFloatingHintTimePicker}"
                                     materialDesign:HintAssist.Hint="Entrega" Height="25" Margin="0,8,0,0"  />
@@ -470,36 +473,91 @@
                                     <CheckBox x:Name="pllantas" Grid.Column="0" Grid.Row="1"  Margin="5,5,5,5" Content="LLANTAS"/>
                                     <CheckBox x:Name="palineacion" Grid.Column="0" Grid.Row="2"  Margin="5,5,5,5" Content="ALINEACIÓN"/>
                                     <CheckBox x:Name="pbalanceo"   Grid.Column="0" Grid.Row="3"  Margin="5,5,5,5" Content="BALANCEO"/>
-                                    
+
                                     <CheckBox x:Name="pamortiguadores" Grid.Column="1" Grid.Row="1"  Margin="5,5,5,5" Content="AMORTIGUADORES"/>
                                     <CheckBox x:Name="psuspension" Grid.Column="1" Grid.Row="2"  Margin="5,5,5,5" Content="SUSPENSIÓN"/>
                                     <CheckBox x:Name="pfrenos" Grid.Column="1" Grid.Row="3"  Margin="5,5,5,5" Content="FRENOS"/>
-                                  
+                                    <CheckBox x:Name="pcambioaceite" Grid.Column="0" Grid.Row="4"  Margin="5,5,5,5" Content="CAMBIO DE ACEITE"/>
+
                                 </Grid>
 
 
                                 <Grid Grid.Column="1">
                                     <Grid.RowDefinitions>
-                                        <RowDefinition/>
-                                        <RowDefinition />
-                                        <RowDefinition />
-                                        <RowDefinition />
-                                        <RowDefinition />
-                                        <RowDefinition />
-                                        <RowDefinition />
+                                        <RowDefinition Height="40*"/>
+                                        <RowDefinition Height="23*" />
+                                        <RowDefinition Height="137*" />
+
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
-                                    
-                                    <CheckBox x:Name="pcambioaceite" Grid.Column="0" Grid.Row="1"  Margin="5,5,5,5" Content="CAMBIO DE ACEITE"/>
-                                   
+
+
+                                    <TextBox  x:Name="Litros" Grid.Row="0" Grid.Column="0" TextChanged="Litros_TextChanged"
+                                materialDesign:HintAssist.Hint="Porcentaje Gasolina"   PreviewTextInput="GasoValidationTextBoxx"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="120" HorizontalAlignment="Right"  />
+
+
+                                    <!--<controls:RadialGauge x:Name="RadialGaugeControl" Column="1" Value="70" Minimum="0" 
+	                                        Maximum="180" TickSpacing="20" ScaleWidth="26" Unit="Units" TickBrush="Gainsboro"
+	                                        ScaleTickBrush="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+	                                        NeedleWidth="5" TickLength="18">        
+                                    </controls:RadialGauge>-->
+                                    <!--<telerik:RadRadialGauge Name="radialGauge"   Grid.Row="2"
+                                        Width="100" 
+                                        Height="100">
+                                        <telerik:RadialScale Name="scale" 
+                                            Min="1" 
+                                            Max="11">   
+                                            <telerik:RadialScale.Indicators>
+                                                <telerik:Needle Name="needle"  />
+                                                <telerik:Pinpoint />
+                                            </telerik:RadialScale.Indicators>
+                                        </telerik:RadialScale>
+                                    </telerik:RadRadialGauge>-->
+
+                                    <syncfusion:SfCircularGauge Grid.Column="1"   Grid.RowSpan="3" >
+
+                                        <syncfusion:SfCircularGauge.Scales >
+                                            <syncfusion:CircularScale StartValue="0"  TickShape="Rectangle" RimStroke="LightGray" LabelStroke="Transparent" 
+                                                                      TickStrokeThickness="3" TickLength="13" SmallTickStroke="Transparent"
+                                                                      RangePosition="Custom" RangeOffset="0.14"
+                                                                      TickPosition="Outside" FontSize="9" TickStroke="LightGray"
+                                                                      EndValue="100" Interval="25" StartAngle="208"  SweepAngle="124"
+                                                                      RimStrokeThickness="7"  
+                                                                      RadiusFactor="1" Margin="0,0,0,-1">
+
+                                                <syncfusion:CircularScale.Ranges>
+
+                                                    <syncfusion:CircularRange StartValue="0" EndValue="50" Stroke="Red" StrokeThickness="8"/>
+                                                    <syncfusion:CircularRange StartValue="50" EndValue="100" Stroke="Green"  StrokeThickness="8"/>
+                                                </syncfusion:CircularScale.Ranges>
+
+                                                <syncfusion:CircularScale.Pointers>
+                                                    <syncfusion:CircularPointer x:Name="osopointter"
+                                                        PointerType="NeedlePointer"  NeedlePointerType="Triangle" Value="60"
+                                                                                PointerCapStroke="LightGray" NeedlePointerStroke="LightGray" NeedlePointerStrokeThickness="10"/>
+
+
+
+
+                                                </syncfusion:CircularScale.Pointers>
+
+                                            </syncfusion:CircularScale>
+                                        </syncfusion:SfCircularGauge.Scales>
+
+                                    </syncfusion:SfCircularGauge>
+
+
+
                                 </Grid>
 
 
 
                             </Grid>
+
                         </Grid>
 
                     </TabItem>

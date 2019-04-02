@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GGGC.Admin.AZ.Compr.Views"
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="GGGC.Admin.AZ.Compr.Views.AddCompra2"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="806.667">

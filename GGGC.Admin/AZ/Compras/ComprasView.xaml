@@ -161,12 +161,9 @@
                                     </Grid.RowDefinitions>
 
 
-                                    <TextBox  x:Name="txtdesc" Grid.Row="1" Grid.Column="1" PreviewTextInput="NumberValidationTextBox"
-                                materialDesign:HintAssist.Hint="Descuento aplicado a la factura"
-                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                                  
 
-
-                                    <TextBox  x:Name="txtradial" Grid.Row="2" Grid.Column="1"
+                                    <TextBox  x:Name="txtradial" Grid.Row="1" Grid.Column="1"
                                 materialDesign:HintAssist.Hint="Número de Proveedor F3"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
 
@@ -174,7 +171,7 @@
                                  materialDesign:HintAssist.Hint="Fecha de Recepción de Mercancía"
                                  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
-                                    <ComboBox Grid.Column="3" Grid.Row="3"
+                                    <ComboBox Grid.Column="3" Grid.Row="3" Width="190" HorizontalAlignment="Left"
                                           materialDesign:HintAssist.Hint="IVA aplicado al documento %"
                                           Style="{StaticResource MaterialDesignFloatingHintComboBox}"  >
                                         <ComboBoxItem>
@@ -217,7 +214,7 @@
                                     <!--<ComboBox x:Name="Marca"  IsEditable="True" IsReadOnly="True" Text="Marca"  Grid.Row="1" Grid.Column="4" Margin="5,10,5,5" Height="28"/>-->
                                     <!--<ComboBox x:Name="Modelo"  IsEditable="True" IsReadOnly="True" Text="Modelo" Grid.Row="2" Grid.Column="4" Margin="5,11,5,4" Height="28"/>-->
 
-                                    <TextBox   Grid.Row="2" Grid.Column="3"
+                                    <TextBox   Grid.Row="2" Grid.Column="1"
                                 materialDesign:HintAssist.Hint="Nombre" x:Name="txtNombre"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
 

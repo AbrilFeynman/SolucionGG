@@ -250,8 +250,14 @@
     <Reference Include="syncfusion.core">
       <HintPath>..\..\..\Downloads\syncfusion.core.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Licensing, Version=16.3451.0.21, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>..\SolutionGG\packages\Syncfusion.Licensing.16.3.0.21\lib\net451\Syncfusion.Licensing.dll</HintPath>
+    <Reference Include="Syncfusion.Licensing, Version=17.1451.0.38, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\Syncfusion.Licensing.17.1.0.38\lib\net451\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGauge.WPF, Version=17.1451.0.38, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\Syncfusion.SfGauge.WPF.17.1.0.38\lib\net451\Syncfusion.SfGauge.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfShared.WPF, Version=17.1451.0.38, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\SolutionGG\packages\Syncfusion.SfShared.WPF.17.1.0.38\lib\net451\Syncfusion.SfShared.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfSkinManager.WPF, Version=15.2451.0.40, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Shared.WPF, Version=15.2451.0.40, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
