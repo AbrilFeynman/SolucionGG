@@ -12,14 +12,16 @@ namespace GGGC.Admin.AZ.Compras
         private string _Numero_De_Documento;
         private string _codigo;
         private string _descripcion;
-        private string _marca;
-        private double _preciolista;
+        private string _unidad;
+        private double _preciouni;
         private double _cantidad;
-        private double _rate;
-        private double _iva;
+        private double _precioextend;
+        private double _precioextendsindesc;
+        private double _preciocdesc;
+
         private int _renglon;
-        private string _nivel;
-        private double _total;
+        private string _descuento;
+    
         public event PropertyChangedEventHandler PropertyChanged;
 
 
@@ -58,26 +60,26 @@ namespace GGGC.Admin.AZ.Compras
             }
         }
 
-        public string Marca
+        public string Unidad
         {
             get
             {
-                return _marca;
+                return _unidad;
             }
             set
             {
-                _marca = value;
+                _unidad = value;
             }
         }
-        public string Nivel
+        public string Descuento
         {
             get
             {
-                return _nivel;
+                return _descuento;
             }
             set
             {
-                _nivel = value;
+                _descuento = value;
             }
         }
         public double Cantidad
@@ -90,31 +92,43 @@ namespace GGGC.Admin.AZ.Compras
             {
 
                 _cantidad = value;
-                UpdateTotalAmount();
+              
             }
         }
-        public double Rate
+        public double Preciouni
         {
             get
             {
-                return _rate;
+                return _preciouni;
             }
             set
             {
-                _rate = value;
-                UpdateTotalAmount();
+                _preciouni = value;
+               
             }
         }
-        public double Iva
+        public double Precioextend
         {
             get
             {
-                return _iva;
+                return _precioextend;
             }
             set
             {
-                _iva = value;
-                UpdateTotalAmount();
+                _precioextend = value;
+               
+            }
+        }
+        public double Precioextendsindesc
+        {
+            get
+            {
+                return _precioextendsindesc;
+            }
+            set
+            {
+                _precioextendsindesc = value;
+
             }
         }
         public int Renglon
@@ -129,35 +143,22 @@ namespace GGGC.Admin.AZ.Compras
 
             }
         }
-        public double Total
+     
+
+
+        public double Preciocdesc
         {
             get
             {
-                return _total;
+                return _preciocdesc;
             }
             set
             {
-                _total = value;
+                _preciocdesc = value;
             }
         }
 
-
-        public double Preciolista
-        {
-            get
-            {
-                return _preciolista;
-            }
-            set
-            {
-                _preciolista = value;
-            }
-        }
-
-        void UpdateTotalAmount()
-        {
-            Total = (_cantidad * _rate);
-        }
+     
 
     }
 }

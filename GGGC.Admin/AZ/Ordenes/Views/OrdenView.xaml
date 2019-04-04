@@ -109,9 +109,9 @@
                                 materialDesign:HintAssist.Hint="Folio" Grid.Row="1"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"   />
                                     <TextBox  x:Name="txtradial" Grid.Row="2"
-                                materialDesign:HintAssist.Hint="Cliente F3"
+                                materialDesign:HintAssist.Hint="Cliente F3" IsReadOnly="True"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
-                                    <TextBox x:Name="txtrfc" Grid.Row="3"
+                                    <TextBox x:Name="txtrfc" Grid.Row="3" IsReadOnly="True"
                                 materialDesign:HintAssist.Hint="RFC"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextChanged="Txtrfc_TextChanged"  />
                                     <!--<TextBox x:Name="txtradial" BorderBrush="#C1C1C1" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,0"/>-->

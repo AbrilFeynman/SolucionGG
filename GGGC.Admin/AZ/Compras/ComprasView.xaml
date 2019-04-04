@@ -124,7 +124,7 @@
                                 materialDesign:HintAssist.Hint="Folio" Grid.Row="0"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"   />
 
-                                <DatePicker  x:Name="DateRecepcion"  Grid.Row="1" 
+                                <DatePicker  x:Name="DateFactura"  Grid.Row="1" 
                                  materialDesign:HintAssist.Hint="Fecha Factura"
                                  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
@@ -132,7 +132,7 @@
                                 <TextBox  x:Name="CantidadA" Grid.Row="2"  PreviewTextInput="NumberValidationTextBoxx"
                                 materialDesign:HintAssist.Hint="Cantidad Control De Articulos"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
-                                <TextBox  x:Name="Modelo" Grid.Row="3" 
+                                <TextBox  x:Name="Ordenserv" Grid.Row="3" 
                                 materialDesign:HintAssist.Hint="No. Orden de Servicio"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
                                 <!--<TextBox x:Name="txtradial" BorderBrush="#C1C1C1" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,0"/>-->
@@ -161,17 +161,17 @@
                                     </Grid.RowDefinitions>
 
 
-                                  
+
 
                                     <TextBox  x:Name="txtradial" Grid.Row="1" Grid.Column="1"
-                                materialDesign:HintAssist.Hint="Número de Proveedor F3"
+                                materialDesign:HintAssist.Hint="Número de Proveedor F3" IsReadOnly="True"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
 
-                                    <DatePicker  x:Name="DateEntrega"  Grid.Row="0" Grid.Column="1"
+                                    <DatePicker  x:Name="DateRecepcion"  Grid.Row="0" Grid.Column="1"
                                  materialDesign:HintAssist.Hint="Fecha de Recepción de Mercancía"
                                  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
-                                    <ComboBox Grid.Column="3" Grid.Row="3" Width="190" HorizontalAlignment="Left"
+                                    <ComboBox Grid.Column="3" Grid.Row="3" Width="190" HorizontalAlignment="Left" x:Name="Ivaa"
                                           materialDesign:HintAssist.Hint="IVA aplicado al documento %"
                                           Style="{StaticResource MaterialDesignFloatingHintComboBox}"  >
                                         <ComboBoxItem>
@@ -214,7 +214,7 @@
                                     <!--<ComboBox x:Name="Marca"  IsEditable="True" IsReadOnly="True" Text="Marca"  Grid.Row="1" Grid.Column="4" Margin="5,10,5,5" Height="28"/>-->
                                     <!--<ComboBox x:Name="Modelo"  IsEditable="True" IsReadOnly="True" Text="Modelo" Grid.Row="2" Grid.Column="4" Margin="5,11,5,4" Height="28"/>-->
 
-                                    <TextBox   Grid.Row="2" Grid.Column="1"
+                                    <TextBox   Grid.Row="2" Grid.Column="1" IsReadOnly="True"
                                 materialDesign:HintAssist.Hint="Nombre" x:Name="txtNombre"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
 
@@ -645,12 +645,12 @@
 
                     <Grid Grid.Row="2" x:Name="resumen" >
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="134*"/>
+                            <ColumnDefinition Width="133*"/>
+                            <ColumnDefinition Width="133*"/>
+                            <ColumnDefinition Width="17*"/>
+                            <ColumnDefinition Width="250*"/>
+                            <ColumnDefinition Width="134*"/>
 
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="4" x:Name="TotalesLabels">
@@ -660,9 +660,9 @@
                                 <RowDefinition Height="26*"/>
                                 <RowDefinition Height="26*"/>
                             </Grid.RowDefinitions>
-                            <Label Content="Subtotal" FontSize="14" HorizontalAlignment="Right" Width="66" Margin="0,4,0,0" Grid.RowSpan="2" />
-                            <Label Content="IVA" Grid.Row="2" FontSize="14" HorizontalAlignment="Right" Width="32"/>
-                            <Label Content="Total" Grid.Row="3" FontSize="14" HorizontalAlignment="Right" Width="46" Margin="0,0,-2,0"/>
+                            <Label Content="Cantidad Total de Articulos" FontSize="14" HorizontalAlignment="Right" Width="180" Margin="0,4,0,0.918" Grid.RowSpan="2" />
+                            <Label Content="Precio Extendido Total(sin descuento)" Grid.Row="2" FontSize="14" HorizontalAlignment="Right" Width="250"/>
+                            <Label Content="Precio Extendido Total(con descuento)" Grid.Row="3" FontSize="14" HorizontalAlignment="Right" Width="252" Margin="0,0,-2,0"/>
                         </Grid>
 
                         <Grid Grid.Column="5" x:Name="Totales">
@@ -677,6 +677,9 @@
                             <TextBlock Grid.Row="3" x:Name="TotalIva" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="23" TextAlignment="Right"  Width="90" />
                             <TextBlock Grid.Row="2" x:Name="Iva_Copy" Text="00.00" Visibility="Hidden" FontSize="16"  Foreground="#404435"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="22" Margin="-180,8,224,26" Width="90" Grid.RowSpan="2"/>
                             <TextBlock Grid.Row="3" x:Name="TotalIva_Copy" Visibility="Hidden" Text="00.00" FontSize="16"  Foreground="#404435"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="26" Margin="-210,1,254,0" Width="90"/>
+                            <TextBlock Grid.Row="1"  x:Name="TotalAmount_Copy" Visibility="Hidden" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" TextAlignment="Right" Height="20"  Width="90" Margin="-352,0,396,26" Grid.RowSpan="2" />
+                            <TextBlock Grid.Row="2" x:Name="Iva_Copy1" Visibility="Hidden" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="22" TextAlignment="Right" Width="90"  Margin="-363,0,407,4"  />
+                            <TextBlock Grid.Row="2" x:Name="TotalIva_Copy1" Visibility="Hidden" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="23" TextAlignment="Right"  Width="90" Margin="-377,0,421,8" Grid.RowSpan="2" />
                         </Grid>
 
 
@@ -694,9 +697,7 @@
 
                         <!--<Button Grid.Column="0" Style="{StaticResource ExportButtonStyle}" FontWeight="Normal"  Width="110" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="AddButton" Click="Add"  Content="Agregar"  FontSize="16" Margin="10,0,0,0" />-->
                         <!--<Button Grid.Column="1" Style="{StaticResource DeleteItemButton}"  Click="Delete"  FontWeight="Normal" IsEnabled="False"  Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="DeleteButton" Content="Eliminar"  FontSize="16" />-->
-                        <Button Grid.Column="4"  Style="{StaticResource MaterialDesignRaisedDarkButton}" FontWeight="Normal"  Width="92" Height="29" HorizontalAlignment="Left" VerticalAlignment="Center"  x:Name="Save" Click="Save_Click" Content="Guardar"  FontSize="16" Margin="10,0,0,0" />
-
-                        <Button Grid.Column="5"  Style="{StaticResource MaterialDesignRaisedDarkButton}" FontWeight="Normal"  Width="92" Height="29" HorizontalAlignment="Left" VerticalAlignment="Center"  x:Name="Exportar" Click="Exportar_Click"  Content="Exportar"  FontSize="16" Margin="10,0,0,0" />
+                        <Button Grid.Column="5"  Style="{StaticResource MaterialDesignRaisedDarkButton}" FontWeight="Normal"  Width="92" Height="29" HorizontalAlignment="Left" VerticalAlignment="Center"  x:Name="Save" Click="Save_Click" Content="Guardar"  FontSize="16" Margin="10,0,0,0" />
 
                     </Grid>
 

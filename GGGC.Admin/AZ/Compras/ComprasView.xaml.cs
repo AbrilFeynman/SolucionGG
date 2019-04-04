@@ -30,6 +30,7 @@ namespace GGGC.Admin.AZ.Compras
         #region Fields
         const int m_columnCount = 9;
         private double m_totalDue;
+        private double m_totalsind;
         private double m_totalCant;
         int osomaloso = 0;
         private IList<CompraItem> m_items;
@@ -43,6 +44,7 @@ namespace GGGC.Admin.AZ.Compras
         //  Cliente m_cliente;
         int estrella = 1;
         string item_cliente = "";
+        string descuento = "0";
         string item_nombre = "";
         string item_direccion = "";
         // Pendientes pendientes = new Pendientes();
@@ -54,9 +56,7 @@ namespace GGGC.Admin.AZ.Compras
         CompraDialog m_producto;
         #endregion
         #region Properties
-        /// <summary>
-        /// 
-        /// </summary>
+     
         public double TotalDue
         {
             get
@@ -64,6 +64,15 @@ namespace GGGC.Admin.AZ.Compras
                 return m_totalDue;
             }
         }
+
+        public double Totalsind
+        {
+            get
+            {
+                return m_totalsind;
+            }
+        }
+
 
         public double TotalCant
         {
@@ -98,7 +107,7 @@ namespace GGGC.Admin.AZ.Compras
 
 
             Random r = new Random();
-            var x = r.Next(1000000, 9000000);
+            var x = r.Next(1000000, 7000000);
             string Od = x.ToString();
             osomaloso = x;
             GlobalId o = new GlobalId();
@@ -107,21 +116,22 @@ namespace GGGC.Admin.AZ.Compras
             //  GGGC.Admin.App.
             // tabPendientes.
             //empezar los datapickers
+            DateFactura.SelectedDate = DateTime.Now;
             DateRecepcion.SelectedDate = DateTime.Now;
-            DateEntrega.SelectedDate = DateTime.Now;
 
             m_items = new List<CompraItem>();
 
             m_border = new Border();
-            tabla.Columns.Add("Id", typeof(string));
+            tabla.Columns.Add("Numero_De_Documento", typeof(string));
             tabla.Columns.Add("Renglon", typeof(int));
             tabla.Columns.Add("Codigo", typeof(string));
             tabla.Columns.Add("Descripcion", typeof(string));
+            tabla.Columns.Add("Unidad", typeof(string));
             tabla.Columns.Add("Cantidad", typeof(string));
-            tabla.Columns.Add("Preciolista", typeof(string));
-            tabla.Columns.Add("Nivel", typeof(string));
-            tabla.Columns.Add("Precioventa", typeof(string));
-            tabla.Columns.Add("PrecioExtendido", typeof(string));
+            tabla.Columns.Add("Precio_Unitario_Sin_Descuento", typeof(string));
+            tabla.Columns.Add("Descuento ", typeof(string));
+            tabla.Columns.Add("Precio_Unitario_Con_Descuento", typeof(string));
+            tabla.Columns.Add("Precio_Extendido_Con_Descuento", typeof(string));
 
         }
 
@@ -447,24 +457,27 @@ namespace GGGC.Admin.AZ.Compras
 
             SetCell(rowIndex, 0, item.Codigo.ToString());
             SetCell(rowIndex, 1, item.Descripcion.ToString());
-            SetCell(rowIndex, 2, item.Cantidad.ToString());
+            SetCell(rowIndex, 2, item.Unidad.ToString());
             SetCell(rowIndex, 3, item.Cantidad.ToString());
-            SetCell(rowIndex, 4, item.Total.ToString("#,###.00", CultureInfo.InvariantCulture));
-            SetCell(rowIndex, 5,   item.Rate.ToString("#,###.00", CultureInfo.InvariantCulture));
-            SetCell(rowIndex, 6,  item.Iva.ToString("#,###.00", CultureInfo.InvariantCulture));
-            SetCell(rowIndex, 7,  item.Total.ToString("#,###.00", CultureInfo.InvariantCulture));
-            SetCell(rowIndex, 8, item.Iva.ToString("#,###.00", CultureInfo.InvariantCulture));
+            SetCell(rowIndex, 4, item.Preciouni.ToString("#,###.00", CultureInfo.InvariantCulture));
+            SetCell(rowIndex, 5,   item.Descuento.ToString());
+            SetCell(rowIndex, 6,  item.Descuento.ToString());
+            SetCell(rowIndex, 7,  item.Preciocdesc.ToString("#,###.00", CultureInfo.InvariantCulture));
+            SetCell(rowIndex, 8, item.Precioextend.ToString("#,###.00", CultureInfo.InvariantCulture));
             //SetCell(rowIndex, 7, "$" + item.Total.ToString("#,###.00", CultureInfo.InvariantCulture));
             //SetCell(rowIndex, 8, "$" + item.Iva.ToString("#,###.00", CultureInfo.InvariantCulture));
 
             //<Rectangle Grid.Row="0" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="5" 
             //StrokeDashArray="4,4" Stroke="#FFCECECE"></Rectangle>
 
-            m_totalDue += Convert.ToDouble(item.Total);
+            m_totalDue += Convert.ToDouble(item.Precioextend);
+            m_totalsind += Convert.ToDouble(item.Precioextendsindesc);
             m_totalCant += Convert.ToDouble(item.Cantidad);
+
             m_currentRowIndex++;
             m_selectedIndex = m_items.Count;
             UpdateTotal();
+            UpdateTotalsind();
             UpdateCantidad();
 
 
@@ -478,8 +491,9 @@ namespace GGGC.Admin.AZ.Compras
             //item.Numero_De_Documento = GlobalId.Identificador;
             item.Numero_De_Documento = osomaloso.ToString();
             item.Renglon = estrella;
+            descuento = item.Descuento;
             // item.Renglon = tabla.Rows.Count;
-            tabla.Rows.Add(item.Numero_De_Documento, item.Renglon, item.Codigo, item.Descripcion, item.Cantidad, item.Preciolista, item.Nivel, item.Rate, item.Total);
+            tabla.Rows.Add(item.Numero_De_Documento, item.Renglon, item.Codigo, item.Descripcion, item.Unidad, item.Cantidad, item.Preciouni, item.Descuento, item.Preciocdesc, item.Precioextend);
             estrella = estrella + 1;
         }
 
@@ -558,13 +572,17 @@ namespace GGGC.Admin.AZ.Compras
                 ////Data
                 //TextBlock textBlock = null;
                 //textBlock = new TextBlock();
-                //textBlock.Text = value.Trim('$');
+                //
                 //textBlock.FontSize = 13;
                 //textBlock.FontFamily = new FontFamily("Segoe UI");
                 //textBlock.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
                 ////HorizontalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F"
-                //if (columnIndex == 0)
-                //    textBlock.Padding = new Thickness(0, 0, 0, 0);
+                if (columnIndex == 5 || columnIndex == 6)
+                {
+                    textBlock.Text = value.Trim('$');
+
+                }
+                    
 
                 //else
                 //    textBlock.Padding = new Thickness(0, 0, 0, 0);
@@ -744,6 +762,7 @@ namespace GGGC.Admin.AZ.Compras
         {
             m_totalDue = 0;
             m_totalCant = 0;
+            m_totalsind = 0;
             m_currentRowIndex = 0;
             InvoiceGrid.Children.Clear();
             //InvoiceGrid.RowDefinitions.RemoveAt(InvoiceGrid.RowDefinitions.Count - 1);
@@ -755,125 +774,37 @@ namespace GGGC.Admin.AZ.Compras
             }
             UpdateTotal();
             UpdateCantidad();
+            UpdateTotalsind();
         }
 
         void UpdateTotal()
         {
-            this.TotalAmount.Text = "$" + TotalDue.ToString("#,###.00", CultureInfo.InvariantCulture);
-            double totalisimo = TotalDue;
-            double ttoal = totalisimo * 1.16;
-            double ivas = totalisimo * 0.16;
-            TotalIva.Text = "$" + ttoal.ToString("#,###.00", CultureInfo.InvariantCulture);
-            TotalIva_Copy.Text = ttoal.ToString();
-            Iva.Text = "$" + ivas.ToString("#,###.00", CultureInfo.InvariantCulture);
-            Iva_Copy.Text = ivas.ToString();
+            this.TotalIva.Text = "$" + TotalDue.ToString("#,###.00", CultureInfo.InvariantCulture);
+            this.TotalIva_Copy1.Text =  TotalDue.ToString();
+
+
+        }
+        void UpdateTotalsind()
+        {
+            this.Iva.Text = "$" + Totalsind.ToString("#,###.00", CultureInfo.InvariantCulture);
+            this.Iva_Copy1.Text = Totalsind.ToString();
+
+
+
         }
 
         void UpdateCantidad()
         {
-            // this.TotalCantidad.Text = TotalCant.ToString();
+          this.TotalAmount.Text = TotalCant.ToString();
+          this.TotalAmount_Copy.Text = TotalCant.ToString();
         }
 
 
-        //public int fncObtenAccesorios1()
-        //{
-        //    int bytValor;
-        //    bytValor = 0;
-
-        //    if (chkmaneral.IsChecked == true)
-        //        bytValor = bytValor + 4096;
-        //    if (chkllave.IsChecked == true)
-        //        bytValor = bytValor + 2048;
-        //    if (chkgato.IsChecked == true)
-        //        bytValor = bytValor + 1024;
-        //    if (chktaponradiador.IsChecked == true)
-        //        bytValor = bytValor + 512;
-        //    if (chktaponaceite.IsChecked == true)
-        //        bytValor = bytValor + 256;
-        //    if (chkvarilla.IsChecked == true)
-        //        bytValor = bytValor + 128;
-        //    if (chkestuche.IsChecked == true)
-        //        bytValor = bytValor + 64;
-        //    if (chktriangulo.IsChecked == true)
-        //        bytValor = bytValor + 32;
-        //    if (chkllrefa.IsChecked == true)
-        //        bytValor = bytValor + 16;
-        //    if (chkfiltroaire.IsChecked == true)
-        //        bytValor = bytValor + 8;
-        //    if (chkllbateri.IsChecked == true)
-        //        bytValor = bytValor + 4;
-        //    if (chkclax.IsChecked == true)
-        //        bytValor = bytValor + 2;
-        //    return bytValor;
-        //}
+        
 
 
+        
 
-        //public int fncObtenExteriores1()
-        //{
-        //    int bytValor;
-        //    bytValor = 0;
-
-        //    //QUITARELCONVERT
-        //    if (chkemblema.IsChecked == true)
-        //        bytValor = bytValor + 4096;
-        //    if (chkcuarto.IsChecked == true)
-        //        bytValor = bytValor + 2048;
-        //    if (chkparabrisa.IsChecked == true)
-        //        bytValor = bytValor + 1024;
-        //    if (chkcarroseria.IsChecked == true)
-        //        bytValor = bytValor + 512;
-        //    if (chktapon.IsChecked == true)
-        //        bytValor = bytValor + 256;
-        //    if (chkbocina.IsChecked == true)
-        //        bytValor = bytValor + 128;
-        //    if (chkmoldeduras.IsChecked == true)
-        //        bytValor = bytValor + 64;
-        //    if (chktapas.IsChecked == true)
-        //        bytValor = bytValor + 32;
-        //    if (chkcristales.IsChecked == true)
-        //        bytValor = bytValor + 16;
-        //    if (chkespejo.IsChecked == true)
-        //        bytValor = bytValor + 8;
-        //    if (chkantena.IsChecked == true)
-        //        bytValor = bytValor + 4;
-        //    if (chkluces.IsChecked == true)
-        //        bytValor = bytValor + 2;
-        //    return bytValor;
-        //}
-
-
-        //public int fncObtenInteriores1()
-        //{
-        //    int bytValor;
-        //    bytValor = 0;
-
-        //    if (chkbtninte.IsChecked == true)
-        //        bytValor = bytValor + 4096;
-        //    if (chkcenicero.IsChecked == true)
-        //        bytValor = bytValor + 2048;
-        //    if (chkcale.IsChecked == true)
-        //        bytValor = bytValor + 1024;
-        //    if (chkvestidura.IsChecked == true)
-        //        bytValor = bytValor + 512;
-        //    if (chktapetes.IsChecked == true)
-        //        bytValor = bytValor + 256;
-        //    if (chkmanijas.IsChecked == true)
-        //        bytValor = bytValor + 128;
-        //    if (chkcinturon.IsChecked == true)
-        //        bytValor = bytValor + 64;
-        //    if (chkespejoretro.IsChecked == true)
-        //        bytValor = bytValor + 32;
-        //    if (chkencendedor.IsChecked == true)
-        //        bytValor = bytValor + 16;
-        //    if (chkbocinas.IsChecked == true)
-        //        bytValor = bytValor + 8;
-        //    if (chkradio.IsChecked == true)
-        //        bytValor = bytValor + 4;
-        //    if (chktablero.IsChecked == true)
-        //        bytValor = bytValor + 2;
-        //    return bytValor;
-        //}
 
 
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -907,19 +838,18 @@ namespace GGGC.Admin.AZ.Compras
             m_fieldsCliente = new CompraProveedor();
             txtradial.Text = "";
             txtNombre.Text = "";
+            DateFactura.SelectedDate = DateTime.Now;
             DateRecepcion.SelectedDate = DateTime.Now;
-            DateEntrega.SelectedDate = DateTime.Now;
-           
-           
-           
-            Modelo.Text = "";
-            
+            Folioo.Text = "";
+            CantidadA.Text = "";
+            Ordenserv.Text = "";
+            txtradial.Text = "";
+            txtNombre.Text = "";
+            combodias.SelectedItem = null;
+            Ivaa.SelectedItem = null;
+
             estrella = 1;
-            
 
-            
-
-            
             tabla.Rows.Clear();
 
         }
@@ -928,6 +858,7 @@ namespace GGGC.Admin.AZ.Compras
         {
             m_totalDue = 0;
             m_totalCant = 0;
+            m_totalsind = 0;
             m_currentRowIndex = 0;
             InvoiceGrid.Children.Clear();
             //InvoiceGrid.RowDefinitions.RemoveAt(InvoiceGrid.RowDefinitions.Count - 1);
@@ -939,54 +870,68 @@ namespace GGGC.Admin.AZ.Compras
             }
             UpdateTotal();
             UpdateCantidad();
+            UpdateTotalsind();
         }
 
 
         private void SaveHeader()
         {
 
-            //IFormPass formPass = this.Owner as IFormPass;
-            //if (formPass != null)
-
-            // tabPendientes.
             DateTime xxx = new DateTime();
-            xxx = Convert.ToDateTime(DateRecepcion.SelectedDate);
+            xxx = Convert.ToDateTime(DateFactura.SelectedDate);
             var V = xxx.ToString("MM/dd/yyyy");
-            //DateTime recep = Convert.ToDateTime(DateRecepcion.DateTimeText);
-            //var V = recep.ToString("MM/dd/yyyy");
-
-
-         
-
+            string canti = TotalAmount_Copy.Text;
             string factura = Folioo.Text;
-
-            decimal subtotal = Convert.ToDecimal(TotalDue);
-            decimal iva = Convert.ToDecimal(Iva_Copy.Text);
-            decimal supertotal = Convert.ToDecimal(TotalIva_Copy.Text);
-          
-            
+            string proveedor = "";
+            proveedor = txtradial.Text;
+            double costototal = 0.00;
+            costototal = Convert.ToDouble(TotalIva_Copy1.Text);
             string cliente = txtradial.Text;
-            int OrderId = Convert.ToInt32(GlobalId.Identificador);
+            int Iva = 0;
+            if (combodias.SelectedItem ==null)
+            {
+                Iva = 0;
+            }
+            else
+            {
+                Iva = Convert.ToInt32(Ivaa.SelectionBoxItem);
+            }
+            
+            string Orden = "";
+            Orden = Ordenserv.Text;
+            int cond = 0;
+            var objDias = combodias.SelectedItem;
+            if (combodias.SelectedItem == null)
+            {
+                cond = 0;
+            }
+            else
+            {
+             
+                cond = Convert.ToInt16(((System.Data.DataRowView)objDias).Row.ItemArray[1].ToString());
+            }
+            
+           
+            int OrderId = osomaloso;
             string fechtimenormal = DateTime.Now.ToString();
-            string frecepcion = DateRecepcion.SelectedDate.Value.ToString("yyyy-MM-dd");
-          
-           
-            string fEntrega = DateEntrega.SelectedDate.Value.ToString("yyyy-MM-dd");
-            
-           
-           
-            
+            string frecepcion = DateFactura.SelectedDate.Value.ToString("yyyy-MM-dd");
+
+            string fEntrega = DateRecepcion.SelectedDate.Value.ToString("yyyy-MM-dd");
 
             string connectionStringer = "SERVER = gggctserver.database.windows.net; DATABASE = devArellantas; USER ID = sysadmin_gg_gc_sa_dgo_testing; PASSWORD = GRUPO.gu@di@n@.Grupo.Campos_#Staging_Test.2099 ";
             SqlConnection sqlcon = new SqlConnection(connectionStringer);
             sqlcon.Open();
 
 
-            SqlCommand agregar = new SqlCommand("INSERT INTO [dbo].[OrderHeader] ([OrderID],[CustomerID] ,[RFC],[InvoiceNumber],[Prefix],[Sufix],[DeliveryMethodID],[OrderDate],[ReceptionDate],[DueDate],[OrderQty],[Subtotal],[Tax],[Total],[ExteriorValues],[InteriorValues],[AccesoriesValues],[CompanyID],[StoreID],[Comments],[UserID],[LocalIP],[PublicIP],[SystemInfo],[UserInfo],[InsertDate],[ModifiedDate],[LastUpdate],[StatusID],[DeletedFlag])values (" + osomaloso + ",'" + cliente + "','','','',0,0, " + subtotal + " ,0 , " + supertotal + " ,0,0,'192.168','','','',getdate(),getdate(),getdate(),0,0)", sqlcon);
+            SqlCommand agregar = new SqlCommand("INSERT INTO [dbo].[Compras_Y_Devoluciones] ([Numero_De_Documento],[Folio_De_Factura],[Fecha_De_Factura],[Cantidad_Total_De_Articulos], " +
+                "[Fecha_De_Recepcion],[Descuento_Aplicado_A_La_Factura],[Codigo_De_Proveedor],[Costo_Total],[Iva_Aplicado_Al_Documento], " +
+                "[Estatus_De_Compra],[Estatus_De_Documento],[Orden_De_Servicio],[Numero_Corto_De_Sucursal],  [Condiciones_De_Pago], " +
+                "[Fecha_De_Vencimiento],[Estatus_De_Replicacion],[Fecha_Y_Hora_De_Ultima_Actualizacion]) VALUES " +
+                " (" + OrderId + ",'" + factura + "','"+V+"'," + canti + ",'" + V + "','" + descuento + "','" + proveedor + "'," +
+                "  "+costototal+","+Iva+",1,1,'"+Orden+"',4,"+cond+",GETDATE(),1,GETDATE())", sqlcon);
 
 
-            //SqlCommand agregar = new SqlCommand("Insert Into Ordenes2 values ('" + factura + "'," + bytAccesorios1 + "," + bytAccesorios2 + ")", sqlcon);
-
+           
             try
             {
                 //  Guid.NewGuid*()
@@ -1012,16 +957,22 @@ namespace GGGC.Admin.AZ.Compras
             foreach (DataRow Registro in tabla.Rows)
             {
 
-                string codigo = Registro[2].ToString();
+               
                 int id = Convert.ToInt32(Registro[0]);
                 int renglon = Convert.ToInt32(Registro[1]);
+                string codigo = Registro[2].ToString();
                 string descripcion = Registro[3].ToString();
-                int cantidad = Convert.ToInt32(Registro[4]);
-                decimal precioventa = Convert.ToDecimal(Registro[07]);
-                decimal preciototal = Convert.ToDecimal(Registro[08]);
+                string unidad = Registro[4].ToString();
+                int cantidad = Convert.ToInt32(Registro[5]);
+                decimal precunisind = Convert.ToDecimal(Registro[06]);
+                string descuento = Registro[07].ToString();
+                decimal precunicond = Convert.ToDecimal(Registro[08]);
+                decimal precextcond = Convert.ToDecimal(Registro[09]);
+
                 try
                 {
-                    string consulta = "INSERT INTO [dbo].[OrderDetail] ([OrderID],[OrderDetailID],[ProductID],[CodeID],[ProductDescription],[UnitID],[Qty] ,[UnitPrice], [ModifiedDate],[LastUpdate]) VALUES(" + id + "," + renglon + ",100,'" + codigo + "','" + descripcion + "',2," + cantidad + "," + precioventa + ",GETDATE(),GETDATE())";
+                    string consulta = "INSERT INTO [dbo].[Compras_Y_Devoluciones_Detalle] ([Numero_De_Documento],[Renglon],[Codigo_De_Articulo],[Descripcion],[Unidad] ,[Cantidad],[Precio_Unitario_Sin_Descuento] ,[Descuento],[Precio_Unitario_Con_Descuento],[Precio_Extendido_Con_Descuento]) VALUES " +
+                        "(" + id + "," + renglon + ",'"+codigo+"','" + descripcion+ "','" + unidad + "'," + cantidad + "," + precunisind + ",'"+descuento+"',"+ precunicond + ","+ precextcond + ")";
                     SqlCommand agregar = new SqlCommand(consulta, sqlcon);
                     agregar.ExecuteNonQuery();
 

@@ -71,7 +71,7 @@
                 <TextBox FontSize="15" TabIndex="0" x:Name="item_Copy" IsReadOnly="True" BorderBrush="#C1C1C1" Grid.Column="2" Height="30" VerticalAlignment="Center" Margin="148,-19,118,5" TextChanged="textFactura_TextChanged" Grid.ColumnSpan="2" />
 
             </Grid>
-            <Controls:UpDown NumberDecimalDigits="0" x:Name="Cantidad" ValueChanged="quantity_ValueChanged"    MinValue="1" Grid.Column="4" Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left" Margin="118,-41,0,0" VerticalAlignment="Top" Height="32" FontSize="15" Width="80" Grid.ColumnSpan="2">
+            <Controls:UpDown NumberDecimalDigits="0" x:Name="Cantidad" ValueChanged="quantity_ValueChanged"    MinValue="0" Grid.Column="4" Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left" Margin="118,-41,0,0" VerticalAlignment="Top" Height="32" FontSize="15" Width="80" Grid.ColumnSpan="2">
 
             </Controls:UpDown>
 
@@ -139,12 +139,14 @@
 
             </Grid>
         </Grid>
-        <Label Content="Nivel" Foreground="#666666" FontSize="17" VerticalAlignment="Center" Margin="8,0,530,2" Height="30" Grid.Row="4" />
+        <Label Content="Precio Unitario" Foreground="#666666" FontSize="17" VerticalAlignment="Center" Margin="8,0,490,2" Height="30" Grid.Row="4" />
         <Controls:DoubleTextBox FontSize="15" Visibility="Hidden" IsReadOnly="True" TextAlignment="Right" BorderBrush="#C1C1C1" Name="rate" Height="30" Margin="349,2,160,0" Grid.Row="4"/>
         <!--<local:AddCompra HorizontalAlignment="Left" Height="100" Margin="222,10,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="100"/>-->
         <Label FontSize="15" TabIndex="0" x:Name="Total"  BorderBrush="#C1C1C1" Height="28" VerticalAlignment="Center" Margin="514,2,12,2"  Grid.Row="4" />
-        <telerik:RadComboBox x:Name="radComboNivel" FontSize="16" SelectionChanged="nivel_SelectioChanged" HorizontalAlignment="Left" DisplayMemberPath="Nivel_De_Precios" Height="25" Margin="63,5,0,0" Grid.Row="4" VerticalAlignment="Top" Width="95"/>
-        <TextBox x:Name="precioCodigo" HorizontalAlignment="Left" IsReadOnly="True" Height="25" Margin="172,5,0,0" Grid.Row="4" TextWrapping="Wrap"  FontSize="15" VerticalAlignment="Top" Width="107"/>
+        <TextBox x:Name="radComboPrecio" PreviewTextInput="PrecioValidation" TextChanged="RadComboPrecio_TextChanged" FontSize="16"  HorizontalAlignment="Left"  Height="25" Margin="134,5,0,0" Grid.Row="4" VerticalAlignment="Top" Width="95"/>
+        <Label Content="Descuento %" Foreground="#666666" FontSize="17" VerticalAlignment="Center" Margin="233,0,265,2" Height="30" Grid.Row="4" />
+        <TextBox x:Name="txtdesc" FontSize="16" PreviewTextInput="DescuentoValidation"  TextChanged="Txtdesc_TextChanged"  HorizontalAlignment="Left"  Height="25" Margin="349,5,0,0" Grid.Row="4" VerticalAlignment="Top" Width="95"/>
+
 
     </Grid>
 </Window>

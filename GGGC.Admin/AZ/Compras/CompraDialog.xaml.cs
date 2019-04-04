@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace GGGC.Admin.AZ.Compras
 {
@@ -28,7 +29,13 @@ namespace GGGC.Admin.AZ.Compras
         bool onInit;
         public event EventHandler UpdateRequested;
         CompraItem m_invoiceItem;
-
+        double precio_uni = 0.00;
+        double desc_uni = 0.00;
+        double total_uni = 0.00;
+        int cant_uni = 0;
+        string descuento = "0";
+        double precio_uni_desc = 0.00;
+        double extendidosindesc = 0.00;
         //DataTable dt = new DataTable();
 
         public CompraDialog()
@@ -141,24 +148,80 @@ namespace GGGC.Admin.AZ.Compras
 
         }
 
+        private void PrecioValidation(object sender, TextCompositionEventArgs e)
+        {
+
+            //ONLY DECIMAL
+            Regex regex = new Regex("^[.][0-9]+$|^[0-9]*[.]{0,1}[0-9]*$");
+            e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+
+
+        }
+
+        private void DescuentoValidation(object sender, TextCompositionEventArgs e)
+        {
+
+            //ONLY DECIMAL
+            Regex regex = new Regex("^[.][0-9]+$|^[0-9]*[.]{0,1}[0-9]*$");
+            e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+
+
+        }
+
+        double precdes()
+        {
+            double masha = 0.00;
+
+            if (total_uni > 0)
+            {
+                
+                double porcentage = 100 - Convert.ToDouble(descuento);
+                double safari = porcentage / 100;
+                masha = precio_uni * safari;
+                masha = Math.Round(masha, 2);
+
+
+            }
+            else
+            {
+                masha = 0.00;
+            }
+          
+
+            return masha;
+        }
 
         private void updtButton_Click(object sender, RoutedEventArgs e)
         {
+            // m_invoiceItem.Empleado = Convert.ToInt16(Empleado.Value);
+           // precio_uni_desc = precdes();
+          
 
-            if (string.IsNullOrWhiteSpace(item_Copy.Text) || string.IsNullOrWhiteSpace(radComboNivel.Text))
+            if (string.IsNullOrWhiteSpace(item_Copy.Text) || string.IsNullOrWhiteSpace(radComboPrecio.Text))
             {
 
                 if (string.IsNullOrWhiteSpace(item_Copy.Text))
                 { System.Windows.MessageBox.Show("Debe de seleccionar un articulo, tap twice ", "Error al actualizar"); }
 
 
-                if (string.IsNullOrWhiteSpace(radComboNivel.Text))
-                { System.Windows.MessageBox.Show("Debe de seleccionar un nivel del articulo", "Error al actualizar"); }
+                if (string.IsNullOrWhiteSpace(radComboPrecio.Text))
+                { System.Windows.MessageBox.Show("Debe de indicar el valor del articulo", "Error al actualizar"); }
 
 
             }
             else
             {
+
+                precio_uni_desc = precdes();
+                m_invoiceItem.Preciocdesc = precio_uni_desc;
+                m_invoiceItem.Precioextend = Convert.ToDouble(Total.Content);
+                m_invoiceItem.Descuento = descuento;
+                m_invoiceItem.Cantidad = cant_uni;
+                m_invoiceItem.Unidad = "PZA";
+                m_invoiceItem.Codigo = item.Text;
+                m_invoiceItem.Descripcion = item_Copy.Text;
+                m_invoiceItem.Preciouni = precio_uni;
+                m_invoiceItem.Precioextendsindesc = extendidosindesc;
 
                 FieldsUpdateEventArgs args = new FieldsUpdateEventArgs();
                 args.UpdatedFields = m_invoiceItem;
@@ -176,10 +239,10 @@ namespace GGGC.Admin.AZ.Compras
 
             int quantityValue = GetQuantityAsInt();
             double rateValue = (double)rate.Value;
-            double calculatedTax = m_invoiceItem.Iva;
-            double taxedAmount = (quantityValue * rateValue) + calculatedTax;
+            //double calculatedTax = m_invoiceItem.Iva;
+          //  double taxedAmount = (quantityValue * rateValue) + calculatedTax;
             //m_invoiceItem.Rate = taxedAmount;
-            this.Total.Content = "$" + taxedAmount.ToString();
+           // this.Total.Content = "$" + taxedAmount.ToString();
         }
 
 
@@ -221,8 +284,8 @@ namespace GGGC.Admin.AZ.Compras
             if (string.IsNullOrWhiteSpace(item.Text))
             {
                 item_Copy.Text = "";
-                radComboNivel.ItemsSource = null;
-                precioCodigo.Text = "";
+                radComboPrecio.Text= "";
+                //precioCodigo.Text = "";
             }
 
             // llenarcombobox(item.Text);
@@ -232,24 +295,15 @@ namespace GGGC.Admin.AZ.Compras
         private void quantity_ValueChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
 
+            cant_uni =Convert.ToInt16(Cantidad.Value);
 
-            if (onInit)
-                return;
-            if (rate != null)
-            {
+            total_uni = (cant_uni * precio_uni) - (cant_uni * precio_uni * desc_uni);
+            total_uni= Math.Round(total_uni, 2);
+            extendidosindesc = (cant_uni * precio_uni);
+            Total.Content = total_uni.ToString();
+            
 
-                double value = (double)rate.Value;
-                {
-                    int quantityValue = GetQuantityAsInt();
-                    CalculateTax();
-                    UpdateTotalAmount();
-                    //m_invoiceItem.Cantidad =(double)Cantidad.Value;
-                    //newItem.Cantidad = (double)Cantidad.Value;
-                    //rate.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 0, 64, 81));
-                    //  CalculateTax();
-
-                }
-            }
+           
         }
 
         public int GetQuantityAsInt()
@@ -262,12 +316,12 @@ namespace GGGC.Admin.AZ.Compras
             double currentRate = (double)Cantidad.Value;
 
             int currentQuantity = GetQuantityAsInt();
-            double precio = m_invoiceItem.Rate;
-            double totall = currentQuantity * precio;
-            m_invoiceItem.Total = totall;
+            //double precio = m_invoiceItem.Rate;
+            //double totall = currentQuantity * precio;
+            //m_invoiceItem.Total = totall;
 
 
-            Total.Content = "$" + totall.ToString();
+            //Total.Content = "$" + totall.ToString();
             //m_invoiceItem.Cantidad = (double)Cantidad.Value;
 
 
@@ -286,7 +340,7 @@ namespace GGGC.Admin.AZ.Compras
             // rate.Value = 3080;
             string strigCodigo = ((System.Data.DataRowView)cour).Row.ItemArray[0].ToString();
 
-            llenarcombobox(strigCodigo);
+           
         }
 
         private void llenarcombobox(string codigo)
@@ -312,14 +366,14 @@ namespace GGGC.Admin.AZ.Compras
                     sda.Fill(dsPubs, "Precios");
                     DataTable dtblg = new DataTable();
                     dtblg = dsPubs.Tables["Precios"];
-                    radComboNivel.ItemsSource = dsPubs.Tables["Precios"].DefaultView;
+                    //radComboNivel.ItemsSource = dsPubs.Tables["Precios"].DefaultView;
                     var oso = dsPubs.Tables["Precios"].DefaultView;
 
 
                     try
                     {
                         string apollo = dtblg.Rows[0][2].ToString();
-                        m_invoiceItem.Preciolista = Convert.ToDouble(apollo);
+                       // m_invoiceItem.Preciolista = Convert.ToDouble(apollo);
                     }
                     catch
                     {
@@ -346,26 +400,27 @@ namespace GGGC.Admin.AZ.Compras
             }
         }
 
-        private void nivel_SelectioChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var objPrecio = radComboNivel.SelectedItem;
-            //((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString();
-            if (objPrecio != null)
-            {
-                precioCodigo.Text = ((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString();
-                string precioactual = ((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString();
-                m_invoiceItem.Rate = Convert.ToDouble(((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString());
-                m_invoiceItem.Nivel = ((System.Data.DataRowView)objPrecio).Row.ItemArray[1].ToString();
-                // m_invoiceItem.Preciolista = 
-                rate.Value = Convert.ToDouble(precioactual);
-                Total.Content = precioactual;
-            }
-            else
-            {
-                precioCodigo.Text = "";
-            }
-            //m_invoiceItem.Nivel = row_selected["Codigo"].ToString();
-        }
+        //AQUI ASIGNO VARIAS PROPIEDADES DEL OBJETO ARTICULO
+        //private void nivel_SelectioChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    var objPrecio = radComboNivel.SelectedItem;
+        //    //((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString();
+        //    if (objPrecio != null)
+        //    {
+        //        precioCodigo.Text = ((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString();
+        //        string precioactual = ((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString();
+        //        m_invoiceItem.Rate = Convert.ToDouble(((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString());
+        //        m_invoiceItem.Nivel = ((System.Data.DataRowView)objPrecio).Row.ItemArray[1].ToString();
+        //        // m_invoiceItem.Preciolista = 
+        //        rate.Value = Convert.ToDouble(precioactual);
+        //        Total.Content = precioactual;
+        //    }
+        //    else
+        //    {
+        //        precioCodigo.Text = "";
+        //    }
+        //    //m_invoiceItem.Nivel = row_selected["Codigo"].ToString();
+        //}
 
         private void texboxx_Loaded(object sender, RoutedEventArgs e)
         {
@@ -394,6 +449,50 @@ namespace GGGC.Admin.AZ.Compras
         private void comboBox_Copy_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void RadComboPrecio_TextChanged(object sender, TextChangedEventArgs e)
+       {
+            if (radComboPrecio.Text.Length > 0)
+            {
+                precio_uni = Convert.ToDouble(radComboPrecio.Text);
+
+                total_uni = (cant_uni * precio_uni) - (cant_uni * precio_uni * desc_uni);
+                extendidosindesc = (cant_uni * precio_uni);
+                total_uni = Math.Round(total_uni, 2);
+                Total.Content = total_uni.ToString();
+            }
+            else
+            {
+                precio_uni = 0;
+                Total.Content = "0.00";
+            }
+            
+
+        }
+
+        private void Txtdesc_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtdesc.Text.Length > 0)
+            {
+                double porciento = Convert.ToDouble(txtdesc.Text) / 100;
+                descuento = txtdesc.Text;
+                desc_uni = porciento;
+                total_uni = (cant_uni * precio_uni) - (cant_uni * precio_uni * desc_uni);
+                extendidosindesc = (cant_uni * precio_uni);
+                total_uni = Math.Round(total_uni, 2);
+                Total.Content = total_uni.ToString();
+            }
+            else
+            {
+                desc_uni = 0;
+                total_uni = (cant_uni * precio_uni) - (cant_uni * precio_uni * desc_uni);
+                total_uni = Math.Round(total_uni, 2);
+                extendidosindesc = (cant_uni * precio_uni);
+                Total.Content = total_uni.ToString();
+
+            }
+            
         }
 
         //public Dialog(InvoiceItem newItem, string title, int productIndex)
