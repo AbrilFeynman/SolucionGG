@@ -423,6 +423,13 @@
     <Compile Include="Aplicacion\Erp\Modulos\Cxc\Ncr\Views\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AZ\Ajustes\AjusteDialog.xaml.cs">
+      <DependentUpon>AjusteDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Ajustes\AjusteItem.cs" />
+    <Compile Include="AZ\Ajustes\AjustesView.xaml.cs">
+      <DependentUpon>AjustesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AZ\Clientes agregados\Agregadosview.xaml.cs">
       <DependentUpon>Agregadosview.xaml</DependentUpon>
     </Compile>
@@ -776,6 +783,13 @@
     </Compile>
     <Compile Include="AZ\Servicios\Serviciosview.xaml.cs">
       <DependentUpon>Serviciosview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Transferencias\TransferenciaDialog.xaml.cs">
+      <DependentUpon>TransferenciaDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Transferencias\TransferenciaItem.cs" />
+    <Compile Include="AZ\Transferencias\TransferenciasView.xaml.cs">
+      <DependentUpon>TransferenciasView.xaml</DependentUpon>
     </Compile>
     <Compile Include="AZ\VentasGeneral\CashierStationMainWindowModel.cs" />
     <Compile Include="AZ\VentasGeneral\VentasGral.xaml.cs">
@@ -1147,6 +1161,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AZ\Ajustes\AjusteDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Ajustes\AjustesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AZ\Clientes agregados\Agregadosview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1388,6 +1410,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AZ\Servicios\Serviciosview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Transferencias\TransferenciaDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AZ\Transferencias\TransferenciasView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

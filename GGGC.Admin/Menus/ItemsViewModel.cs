@@ -550,6 +550,10 @@ namespace GGGC.Admin.Menus
 
                     BusinessItem mnuGG_Modules_TableroNivel1_1 = new BusinessItem(mnuGG) { Name = "Compras", Tag = "011788", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
                     mnuGG_Tablero.Items.Add(mnuGG_Modules_TableroNivel1_1);
+                    BusinessItem mnuGG_Modules_TableroNivel1_2 = new BusinessItem(mnuGG) { Name = "Ajustes", Tag = "04422", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
+                    mnuGG_Tablero.Items.Add(mnuGG_Modules_TableroNivel1_2);
+                    BusinessItem mnuGG_Modules_TableroNivel1_3 = new BusinessItem(mnuGG) { Name = "Transferencias", Tag = "04423", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
+                    mnuGG_Tablero.Items.Add(mnuGG_Modules_TableroNivel1_3);
 
 
                     BusinessItem mnuGG_Modules_Nivel1_1 = new BusinessItem(mnuGG) { Name = "OrdenPatio", Tag = "0117", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
@@ -581,7 +585,8 @@ namespace GGGC.Admin.Menus
                     mnuGG_Orden.Items.Add(mnuGG_Modules_Nivel1_9);
                     BusinessItem mnuGG_Modules_Nivel1_10 = new BusinessItem(mnuGG) { Name = "PagareArellantas", Tag = "04444", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
                     mnuGG_Orden.Items.Add(mnuGG_Modules_Nivel1_10);
-                   
+               
+
                     BusinessItem mnuGG_Modules_Nivel1_2 = new BusinessItem(mnuGG) { Name = "Remision", Tag = "0119", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
                     mnuGG_Remision.Items.Add(mnuGG_Modules_Nivel1_2);
                     BusinessItem mnuGG_Modules_Nivel1_3 = new BusinessItem(mnuGG) { Name = "Otros Ingresos", Tag = "0888", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };

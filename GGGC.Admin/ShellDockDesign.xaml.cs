@@ -526,6 +526,37 @@ namespace GGGC.Admin
                         AddDetail(uc04444, "Pagares Arellantas");
                     }
                     break;
+
+                case "04422":
+                    UserControl uc04422 = null;
+                    if (userControls.ContainsKey("04422"))
+                    {
+                        userControls.Remove("04422");
+                        uc04422 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Ajustes.AjustesView", type.Namespace));
+                        userControls.Add("Ajustes Almacen", uc04422);
+                    }
+                    else
+                    {
+                        uc04422 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Ajustes.AjustesView", type.Namespace));
+                        userControls.Add("04422", uc04422);
+                        AddDetail(uc04422, "Ajustes Almacen");
+                    }
+                    break;
+                case "04423":
+                    UserControl uc04423 = null;
+                    if (userControls.ContainsKey("04423"))
+                    {
+                        userControls.Remove("04423");
+                        uc04423 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Transferencias.TransferenciasView", type.Namespace));
+                        userControls.Add("Transferencias", uc04423);
+                    }
+                    else
+                    {
+                        uc04423 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Transferencias.TransferenciasView", type.Namespace));
+                        userControls.Add("04423", uc04423);
+                        AddDetail(uc04423, "Transferencias");
+                    }
+                    break;
                 case "011788":
                     UserControl uc011788 = null;
                     if (userControls.ContainsKey("011788"))

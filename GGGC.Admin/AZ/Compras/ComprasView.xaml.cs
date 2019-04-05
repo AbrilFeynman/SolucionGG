@@ -20,9 +20,7 @@ using System.Text.RegularExpressions;
 
 namespace GGGC.Admin.AZ.Compras
 {
-    /// <summary>
-    /// Interaction logic for ComprasView.xaml
-    /// </summary>
+   
     public partial class ComprasView : UserControl
     {
 
@@ -41,18 +39,13 @@ namespace GGGC.Admin.AZ.Compras
         Border m_border;
         CompraDialog m_fieldsPopup;
         CompraProveedor m_fieldsCliente;
-        //  Cliente m_cliente;
+        
         int estrella = 1;
         string item_cliente = "";
         string descuento = "0";
         string item_nombre = "";
         string item_direccion = "";
-        // Pendientes pendientes = new Pendientes();
-        // Pendientes.
-
-        //AddressDialog m_addressPopup;
-        //BillingInformation m_billInfo;
-        // ProductList m_productList;
+       
         CompraDialog m_producto;
         #endregion
         #region Properties
@@ -82,10 +75,7 @@ namespace GGGC.Admin.AZ.Compras
             }
         }
 
-        //private void OnKeyDownHandler(object sender, KeyEventArgs e)
-        //{
-        //   
-        //}
+        
         #endregion
         public ComprasView()
         {
@@ -809,7 +799,7 @@ namespace GGGC.Admin.AZ.Compras
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            if (tabla.Rows.Count > 0 && txtradial.Text.Length > 4)
+            if (tabla.Rows.Count > 0 && txtradial.Text.Length > 4 && Folioo.Text.Length >2)
             {
                 SaveHeader();
 
@@ -910,8 +900,13 @@ namespace GGGC.Admin.AZ.Compras
              
                 cond = Convert.ToInt16(((System.Data.DataRowView)objDias).Row.ItemArray[1].ToString());
             }
-            
-           
+
+            DateTime Vencimiento =Convert.ToDateTime(DateFactura.SelectedDate);
+            Vencimiento = Vencimiento.AddDays(cond);
+            string strVencimiento = fncFechaDeVencimiento(Vencimiento).ToString("MM/dd/yyyy");
+
+
+
             int OrderId = osomaloso;
             string fechtimenormal = DateTime.Now.ToString();
             string frecepcion = DateFactura.SelectedDate.Value.ToString("yyyy-MM-dd");
@@ -928,7 +923,7 @@ namespace GGGC.Admin.AZ.Compras
                 "[Estatus_De_Compra],[Estatus_De_Documento],[Orden_De_Servicio],[Numero_Corto_De_Sucursal],  [Condiciones_De_Pago], " +
                 "[Fecha_De_Vencimiento],[Estatus_De_Replicacion],[Fecha_Y_Hora_De_Ultima_Actualizacion]) VALUES " +
                 " (" + OrderId + ",'" + factura + "','"+V+"'," + canti + ",'" + V + "','" + descuento + "','" + proveedor + "'," +
-                "  "+costototal+","+Iva+",1,1,'"+Orden+"',4,"+cond+",GETDATE(),1,GETDATE())", sqlcon);
+                "  "+costototal+","+Iva+",1,1,'"+Orden+"',4,"+cond+",'"+ strVencimiento+ "',1,GETDATE())", sqlcon);
 
 
            
@@ -945,6 +940,26 @@ namespace GGGC.Admin.AZ.Compras
                 MessageBox.Show("error al cargar " + ex.ToString());
             }
 
+        }
+
+
+
+        private DateTime fncFechaDeVencimiento(DateTime dteFechaDeVencimiento)
+        {
+            DateTime dteFechaDeVencimientoss  ;
+            if (this.Folioo.Text != "")
+            {
+
+
+                if (dteFechaDeVencimiento.DayOfWeek == DayOfWeek.Saturday)
+                    dteFechaDeVencimiento = dteFechaDeVencimiento.AddDays(2);
+
+                if (dteFechaDeVencimiento.DayOfWeek == DayOfWeek.Sunday)
+                    dteFechaDeVencimiento = dteFechaDeVencimiento.AddDays(1);
+
+                dteFechaDeVencimientoss = dteFechaDeVencimiento;
+            }
+            return dteFechaDeVencimiento;
         }
 
         private void SaveDetail()

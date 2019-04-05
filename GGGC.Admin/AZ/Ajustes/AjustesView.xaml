@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="GGGC.Admin.AZ.Compras.ComprasView"
+﻿<UserControl x:Class="GGGC.Admin.AZ.Ajustes.AjustesView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:GGGC.Admin.AZ.Compras"
+             xmlns:local="clr-namespace:GGGC.Admin.AZ.Ajustes"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="806.667" KeyDown="Window_KeyDown"
                xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -77,17 +77,9 @@
                         </Grid.ColumnDefinitions>
 
 
-                        <materialDesign:Card Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" Height="18" Width="125">
-                            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}"
-                                       
-                                       FontSize="15" >Datos Adicionales</TextBlock>
-                        </materialDesign:Card>
 
-                        <materialDesign:Card Grid.Column="0" VerticalAlignment="Center" HorizontalContentAlignment="Left" Height="18"   >
-                            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}"
-                                       
-                                       FontSize="15" >Factura del Proveedor</TextBlock>
-                        </materialDesign:Card>
+
+
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.RowDefinitions>
@@ -121,19 +113,17 @@
 
                                 <!--<TextBox x:Name="Folioo" BorderBrush="#C1C1C1" TextChanged="Folioo_TextChanged" Grid.Column="0" Grid.Row="1" Margin="5,5,5,0"/>-->
                                 <TextBox x:Name="Folioo" TextChanged="Folioo_TextChanged"
-                                materialDesign:HintAssist.Hint="Folio" Grid.Row="0"
+                                materialDesign:HintAssist.Hint="Código de ajuste" Grid.Row="0"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"   />
-
-                                <DatePicker  x:Name="DateFactura"  Grid.Row="1" 
-                                 materialDesign:HintAssist.Hint="Fecha Factura"
+                                <TextBox x:Name="NuevoCod" TextChanged="Folioo_TextChanged"
+                                materialDesign:HintAssist.Hint="Nuevo ódigo de ajuste" Grid.Row="1"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"   />
+                                <DatePicker  x:Name="DateAjuste"  Grid.Row="3" Grid.Column="0"
+                                 materialDesign:HintAssist.Hint="Fecha de ajuste"
                                  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
-
 
                                 <TextBox  x:Name="CantidadA" Grid.Row="2"  PreviewTextInput="NumberValidationTextBoxx"
                                 materialDesign:HintAssist.Hint="Cantidad Control De Articulos"
-                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
-                                <TextBox  x:Name="Ordenserv" Grid.Row="3" 
-                                materialDesign:HintAssist.Hint="No. Orden de Servicio"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
                                 <!--<TextBox x:Name="txtradial" BorderBrush="#C1C1C1" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,0"/>-->
                                 <!--<TextBox x:Name="txtrfc" BorderBrush="#C1C1C1" Grid.Column="0" Grid.Row="4" Margin="5,5,5,0"/>-->
@@ -145,97 +135,38 @@
                                 </Grid.RowDefinitions>
                                 <Grid Grid.Row="0">
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="16*" />
+                                        <ColumnDefinition Width="558*" />
                                         <ColumnDefinition Width="17*"/>
-                                        <ColumnDefinition Width="214*"/>
-                                        <ColumnDefinition Width="10*"/>
-                                        <ColumnDefinition Width="350"/>
+
 
                                     </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
 
-                                        <RowDefinition Height="10*"/>
-                                        <RowDefinition Height="10*"/>
-                                        <RowDefinition Height="10*"/>
-                                        <RowDefinition Height="10*"/>
-                                        <RowDefinition Height="9*"/>
+                                        <RowDefinition Height="34*" />
+
+                                        <RowDefinition Height="121*" />
+
+                                        <RowDefinition Height="41*"/>
                                     </Grid.RowDefinitions>
 
-
-
-
-                                    <TextBox  x:Name="txtradial" Grid.Row="1" Grid.Column="1"
-                                materialDesign:HintAssist.Hint="Número de Proveedor F3" IsReadOnly="True"
-                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
-
-                                    <DatePicker  x:Name="DateRecepcion"  Grid.Row="0" Grid.Column="1"
-                                 materialDesign:HintAssist.Hint="Fecha de Recepción de Mercancía"
-                                 Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
-
-                                    <ComboBox Grid.Column="3" Grid.Row="3" Width="190" HorizontalAlignment="Left" x:Name="Ivaa"
-                                          materialDesign:HintAssist.Hint="IVA aplicado al documento %"
-                                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"  >
-                                        <ComboBoxItem>
-                                            0
-                                        </ComboBoxItem>
-                                        <ComboBoxItem>
-                                            11
-                                        </ComboBoxItem>
-                                        <ComboBoxItem>
-                                            16
-                                        </ComboBoxItem>
-
-                                    </ComboBox>
+                                    <StackPanel  Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" Height="60">
+                                        <TextBox x:Name="ObservacionCliente"
+                                            Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
+                                          
+                                            Height="60"
+                                            AcceptsReturn="True"
+                                            TextWrapping="Wrap"
+                                            VerticalScrollBarVisibility="Auto"
+                                            materialDesign:HintAssist.Hint="Observaciones cliente"
+                                            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" />
+                                    </StackPanel>
 
 
 
 
-                                    <Grid Grid.Column="1" Grid.Row="3" >
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="67*"/>
-                                            <ColumnDefinition Width="40*"/>
 
 
-                                        </Grid.ColumnDefinitions>
-                                        <Label  Height="25" VerticalAlignment="Bottom" VerticalContentAlignment="Bottom"
-                                                >Condiciones de Pago</Label>
-
-                                        <ComboBox Grid.Column="1" x:Name="combodias" DisplayMemberPath="Condicion_De_Compra"
-                                          materialDesign:HintAssist.Hint="Días"  
-                                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"   >
-
-                                        </ComboBox>
-
-                                    </Grid  >
-
-
-                                    <!--<telerik:RadDateTimePicker  x:Name="DateRecepcion" DateTimeWatermarkContent="Fecha/Hora Recepción" Grid.Row="1" Margin="5,5,0,30" Grid.RowSpan="2"/>-->
-                                    <!--<telerik:RadDateTimePicker x:Name="DateEntrega" DateTimeWatermarkContent="Fecha/Hora Entrega" Grid.Row="2" Margin="5,5,0,31" Grid.RowSpan="2"/>-->
-                                    <!--<telerik:RadDateTimePicker x:Name="DateCaptura" DateTimeWatermarkContent="Fecha/Hora Captura"  Grid.Row="3" Margin="5,5,0,2"/>-->
-                                    <!--<ComboBox x:Name="Marca"  IsEditable="True" IsReadOnly="True" Text="Marca"  Grid.Row="1" Grid.Column="4" Margin="5,10,5,5" Height="28"/>-->
-                                    <!--<ComboBox x:Name="Modelo"  IsEditable="True" IsReadOnly="True" Text="Modelo" Grid.Row="2" Grid.Column="4" Margin="5,11,5,4" Height="28"/>-->
-
-                                    <TextBox   Grid.Row="2" Grid.Column="1" IsReadOnly="True"
-                                materialDesign:HintAssist.Hint="Nombre" x:Name="txtNombre"
-                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
-
-                                    <!--<ComboBox x:Name="Ano"  IsEditable="True" IsReadOnly="True" Text="Año" Grid.Row="3" Grid.Column="4" Margin="5,8,5,7" Height="28"/>-->
-
-
-                                    <!--<ComboBox x:Name="Placas"  IsEditable="True" IsReadOnly="True" Text="Placas" Grid.Row="1" Grid.Column="5" Margin="5,10,5,5" Height="28"/>-->
-                                    <!--<ComboBox x:Name="Kilometraje"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
-                                                  IsEditable="True" IsReadOnly="True" Text="Kilometraje" Grid.Row="2" Grid.Column="6"
-                                                  Height="29" Margin="0,3,0,6"/>-->
-                                    <!--<ComboBox
-                                    x:Name="Kilometraje" Grid.Row="2" Grid.Column="6"
-                                     materialDesign:HintAssist.Hint="Kilometraje"
-                                    
-                                     Style="{StaticResource MaterialDesignFloatingHintComboBox}" FontSize="12" Height="30"  >
-                                            <ComboBox.ItemsPanel>
-                                                <ItemsPanelTemplate>
-                                                    <VirtualizingStackPanel />
-                                                </ItemsPanelTemplate>
-                                            </ComboBox.ItemsPanel>
-                                        </ComboBox>-->
 
 
                                 </Grid>
@@ -470,8 +401,8 @@
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="39*"/>
-                        <RowDefinition Height="137*"/>
-                        <RowDefinition Height="84*"/>
+                        <RowDefinition Height="156*"/>
+                        <RowDefinition Height="65*"/>
                         <RowDefinition Height="45*"/>
                     </Grid.RowDefinitions>
 
@@ -484,42 +415,18 @@
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="75*"   />
-                            <ColumnDefinition Width="197*"/>
-                            <ColumnDefinition Width="38*"/>
-                            <ColumnDefinition Width="41"/>
-                            <ColumnDefinition Width="102*"/>
-                            <ColumnDefinition Width="86*"/>
-                            <ColumnDefinition Width="77*"/>
-                            <ColumnDefinition Width="95*"/>
-                            <ColumnDefinition Width="90*"/>
+                            <ColumnDefinition Width="134*" />
+                            <ColumnDefinition Width="487*"/>
+                            <ColumnDefinition Width="85*"/>
+                            <ColumnDefinition Width="95"/>
+
 
                         </Grid.ColumnDefinitions>
                         <TextBlock   x:Name="ConceptoE" Text="Codigo"  TextAlignment="Left"  VerticalAlignment="Center"  FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Height="20" Margin="2,10,17,8" Padding="5,0,0,0" />
                         <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Descripcion" Text="Descripcion"  TextAlignment="Left"  VerticalAlignment="Center"  FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Height="18" Margin="2,10,53,10" />
                         <TextBlock Grid.Row="0" Grid.Column="2" x:Name="UM" Text="U/M"  TextAlignment="Center" VerticalAlignment="Center"  FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Height="18" Margin="0,10" />
-                        <TextBlock Grid.Row="0" Grid.Column="3" x:Name="Cantidad" Text="Cant."  TextAlignment="Right"  VerticalAlignment="Center"  FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Height="18" Margin="0,10,1,10" />
-                        <TextBlock Grid.Row="0" Grid.Column="4" x:Name="PC" Text="P. Unit Sin Desc."  TextAlignment="Right"  VerticalAlignment="Center"  FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Height="18" Margin="2,10,0,10" />
-                        <TextBlock Grid.Row="0" Grid.Column="5" x:Name="desc" Text="%Desc."  TextAlignment="Center"  VerticalAlignment="Center"  FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Height="18" Margin="14,10,6,10" />
-                        <TextBlock Grid.Row="0" Grid.Column="6" x:Name="desct" Text="%Desc.Total"  TextAlignment="Right"  VerticalAlignment="Center"  FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Height="18" Margin="0,10" />
-                        <TextBlock Grid.Row="0" Grid.Column="7" x:Name="pdesc" Text="P.Unit.C.Desc."  TextAlignment="Right"  VerticalAlignment="Center"  FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Height="18" Margin="5,10" />
-                        <TextBlock Grid.Row="0" Grid.Column="8" x:Name="pxdesc" Text="P.Ext.C.Desc."  TextAlignment="Right"  VerticalAlignment="Center"  FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Height="18" Margin="1,10,2,10" />
+                        <TextBlock Grid.Row="0" Grid.Column="3" x:Name="Cantidad" Text="Cantidad"  TextAlignment="Center"  VerticalAlignment="Center"  FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Height="18" Margin="0,10,1,10" />
 
-                        <!--<StackPanel Background="#B3D1E8" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2">
-                                    <Grid Height="40">
-                                        <TextBlock Padding="10,0,0,0"  x:Name="ConceptoE" Text="Codigo" HorizontalAlignment="Stretch" TextAlignment="Left" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Margin="-3,10,3,10"/>
-                                    </Grid>
-                               
-                                <StackPanel Background="#B3D1E8" Grid.Column="8" Grid.RowSpan="2">
-                                    <Grid Height="40" Margin="0,0,39,0">
-                                        <TextBlock Padding="10,0,0,0"  x:Name="Cantifdad" Text="P.Unit.C.Desc." HorizontalAlignment="Stretch" TextAlignment="Left" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Margin="-6,10,-34,10"/>
-                                    </Grid>
-                                </StackPanel>
-                                <StackPanel Background="#B3D1E8" Grid.Column="9" Grid.RowSpan="2">
-                                    <Grid Height="40" Margin="0,0,39,0">
-                                        <TextBlock Padding="10,0,0,0"  x:Name="Cangtifdad" Text="P.Ext.C.Desc." HorizontalAlignment="Stretch" TextAlignment="Left" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F" FontSize="14" Margin="-6,10,-34,10"/>
-                                    </Grid>
-                                </StackPanel>-->
                     </Grid>
                     <!--Tabla que contiene datos-->
                     <ScrollViewer x:Name="GridScrollViewer" Grid.Row="1" Height="{Binding InvoiceGrid.ActualHeight}" VerticalScrollBarVisibility="Auto" BorderBrush="AliceBlue" >
@@ -534,23 +441,19 @@
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions >
 
-                                <ColumnDefinition Width="67*" />
-                                <ColumnDefinition Width="218*"/>
-                                <ColumnDefinition Width="38*"/>
-                                <ColumnDefinition Width="45*"  />
-                                <ColumnDefinition Width="82*"/>
-                                <ColumnDefinition Width="80*"/>
-                                <ColumnDefinition Width="83*"/>
+                                <ColumnDefinition Width="104*" />
+                                <ColumnDefinition Width="542*"/>
                                 <ColumnDefinition Width="81*"/>
-                                <ColumnDefinition Width="90*"/>
+                                <ColumnDefinition Width="74*"  />
+
 
                             </Grid.ColumnDefinitions>
-                            <Rectangle Grid.Row="0" Height="1"  StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="9"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
-                            <Rectangle Grid.Row="1" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="9"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
-                            <Rectangle Grid.Row="2" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="9"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
-                            <Rectangle Grid.Row="3" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="9"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
-                            <Rectangle Grid.Row="4" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="9"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
-                            <Rectangle Grid.Row="4" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="9"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
+                            <Rectangle Grid.Row="0" Height="1"  StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="4"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
+                            <Rectangle Grid.Row="1" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="4"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
+                            <Rectangle Grid.Row="2" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="4"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
+                            <Rectangle Grid.Row="3" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="4"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
+                            <Rectangle Grid.Row="4" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="4"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
+                            <Rectangle Grid.Row="4" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="4"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
 
                         </Grid>
                     </ScrollViewer>
@@ -655,31 +558,27 @@
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="4" x:Name="TotalesLabels">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="7*"/>
-                                <RowDefinition Height="26*"/>
-                                <RowDefinition Height="26*"/>
-                                <RowDefinition Height="26*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="31*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="20*"/>
                             </Grid.RowDefinitions>
-                            <Label Content="Cantidad Total de Articulos" FontSize="14" HorizontalAlignment="Right" Width="180" Margin="0,4,0,0.918" Grid.RowSpan="2" />
-                            <Label Content="Precio Extendido Total(sin descuento)" Grid.Row="2" FontSize="14" HorizontalAlignment="Right" Width="250"/>
-                            <Label Content="Precio Extendido Total(con descuento)" Grid.Row="3" FontSize="14" HorizontalAlignment="Right" Width="252" Margin="0,0,-2,0"/>
+                            <Label Content="Cantidad Total de Articulos" FontSize="14" HorizontalAlignment="Right" Width="180" Margin="0,4,0,1" Grid.RowSpan="2" />
                         </Grid>
 
                         <Grid Grid.Column="5" x:Name="Totales">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="2*"/>
-                                <RowDefinition Height="26*"/>
-                                <RowDefinition Height="28"/>
-                                <RowDefinition Height="27*"/>
+                                <RowDefinition/>
+                                <RowDefinition Height="34*"/>
+                                <RowDefinition Height="12"/>
+                                <RowDefinition Height="18*"/>
                             </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="1"  x:Name="TotalAmount" Text="0" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" TextAlignment="Right" Height="20"  Width="90" Margin="22,0,22,26" Grid.RowSpan="2" />
-                            <TextBlock Grid.Row="2" x:Name="Iva" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="22" TextAlignment="Right" Width="90"  />
-                            <TextBlock Grid.Row="3" x:Name="TotalIva" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="23" TextAlignment="Right"  Width="90" />
-                            <TextBlock Grid.Row="2" x:Name="Iva_Copy" Text="00.00" Visibility="Hidden" FontSize="16"  Foreground="#404435"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="22" Margin="-180,8,224,26" Width="90" Grid.RowSpan="2"/>
-                            <TextBlock Grid.Row="3" x:Name="TotalIva_Copy" Visibility="Hidden" Text="00.00" FontSize="16"  Foreground="#404435"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="26" Margin="-210,1,254,0" Width="90"/>
-                            <TextBlock Grid.Row="1"  x:Name="TotalAmount_Copy" Visibility="Hidden" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" TextAlignment="Right" Height="20"  Width="90" Margin="-352,0,396,26" Grid.RowSpan="2" />
-                            <TextBlock Grid.Row="2" x:Name="Iva_Copy1" Visibility="Hidden" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="22" TextAlignment="Right" Width="90"  Margin="-363,0,407,4"  />
-                            <TextBlock Grid.Row="2" x:Name="TotalIva_Copy1" Visibility="Hidden" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="23" TextAlignment="Right"  Width="90" Margin="-377,0,421,8" Grid.RowSpan="2" />
+                            <TextBlock Grid.Row="1"  x:Name="TotalAmount" Text="0" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" TextAlignment="Right" Height="20"  Width="90" Margin="22,0,22,7" />
+                            <TextBlock Grid.Row="1" x:Name="Iva_Copy" Text="00.00" Visibility="Hidden" FontSize="16"  Foreground="#404435"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="22" Margin="-180,27,224,15" Width="90" Grid.RowSpan="3"/>
+                            <TextBlock Grid.Row="2" x:Name="TotalIva_Copy" Visibility="Hidden" Text="00.00" FontSize="16"  Foreground="#404435"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="26" Margin="-210,10,254,-6" Width="90" Grid.RowSpan="2"/>
+                            <TextBlock Grid.Row="1"  x:Name="TotalAmount_Copy" Visibility="Hidden" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" TextAlignment="Right" Height="20"  Width="90" Margin="-352,0,396,11" />
+                            <TextBlock Grid.Row="1" x:Name="Iva_Copy1" Visibility="Hidden" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="22" TextAlignment="Right" Width="90"  Margin="-363,0,407,4" Grid.RowSpan="2"  />
+                            <TextBlock Grid.Row="1" x:Name="TotalIva_Copy1" Visibility="Hidden" Text="$ 00.00" FontSize="15"  Foreground="#404435"  VerticalAlignment="Bottom"  HorizontalAlignment="Center" Height="23" TextAlignment="Right"  Width="90" Margin="-377,0,421,8" Grid.RowSpan="3" />
                         </Grid>
 
 
