@@ -454,7 +454,7 @@
                     <Button  x:Name="AddButton" Click="Add"  Content="Agregar"  Grid.Column="0"
                 Style="{StaticResource MaterialDesignRaisedDarkButton}"
                   Height="29" Width="87" VerticalAlignment="Center"
-                ToolTip="Agregue articulos a la orden de patio." />
+                ToolTip="Agregue articulos a la compra." />
 
 
                     <Button  x:Name="DeleteButton" Content="Eliminar"  Click="Delete"  Grid.Column="1"

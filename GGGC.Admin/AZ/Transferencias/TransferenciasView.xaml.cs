@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Globalization;
+using Telerik.Windows.Controls;
 
 namespace GGGC.Admin.AZ.Transferencias
 {
@@ -85,7 +86,7 @@ namespace GGGC.Admin.AZ.Transferencias
             var x = r.Next(1000000, 7000000);
             string Od = x.ToString();
             osomaloso = x;
-            DateAjuste.SelectedDate = DateTime.Now;
+            DateFactura.SelectedDate = DateTime.Now;
 
             m_items = new List<TransferenciaItem>();
 
@@ -96,6 +97,7 @@ namespace GGGC.Admin.AZ.Transferencias
             tabla.Columns.Add("Descripcion", typeof(string));
             tabla.Columns.Add("Unidad", typeof(string));
             tabla.Columns.Add("Cantidad", typeof(string));
+            CargarSucursal();
 
 
         }
@@ -146,6 +148,16 @@ namespace GGGC.Admin.AZ.Transferencias
 
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+
+            //ONLY DECIMAL
+            Regex regex = new Regex("^[.][0-9]+$|^[0-9]*[.]{0,1}[0-9]*$");
+            e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+
+
+        }
+
+        private void CNumberValidation(object sender, TextCompositionEventArgs e)
         {
 
             //ONLY DECIMAL
@@ -528,9 +540,9 @@ namespace GGGC.Admin.AZ.Transferencias
 
             UpdateGrido();
             osomaloso++;
-            ObservacionCliente.Text = "";
-            DateAjuste.SelectedDate = DateTime.Now;
-            NuevoCod.Text = "";
+
+            DateFactura.SelectedDate = DateTime.Now;
+
             Folioo.Text = "";
             CantidadA.Text = "";
 
@@ -568,10 +580,10 @@ namespace GGGC.Admin.AZ.Transferencias
 
             string codajuste = Folioo.Text;
             int OrderId = osomaloso;
-            DateTime fecha = Convert.ToDateTime(DateAjuste.SelectedDate);
+            DateTime fecha = Convert.ToDateTime(DateFactura.SelectedDate);
             string fechax = fecha.ToString("MM/dd/yyyy");
             string cantarti = TotalAmount.Text;
-            string observaciones = ObservacionCliente.Text;
+
 
 
             string connectionStringer = "SERVER = gggctserver.database.windows.net; DATABASE = devArellantas; USER ID = sysadmin_gg_gc_sa_dgo_testing; PASSWORD = GRUPO.gu@di@n@.Grupo.Campos_#Staging_Test.2099 ";
@@ -583,7 +595,7 @@ namespace GGGC.Admin.AZ.Transferencias
                 "[Fecha_De_Ajuste],[Cantidad_Total_De_Articulos] ,[Observaciones]  ,[Estatus_De_Documento],[Numero_Corto_De_Sucursal]," +
                 "[Estatus_De_Replicacion],[Fecha_Y_Hora_De_Ultima_Actualizacion])" +
                 " VALUES " +
-                " (" + osomaloso + ",'" + codajuste + "','" + fechax + "'," + cantarti + ",'" + observaciones + "',1,4," +
+                " (" + osomaloso + ",'" + codajuste + "','" + fechax + "'," + cantarti + ",1,4," +
                 "  1,GETDATE())", sqlcon);
 
 
@@ -603,6 +615,52 @@ namespace GGGC.Admin.AZ.Transferencias
 
         }
 
+        private void CargarSucursal()
+        {
+            try
+            {
+
+                string conect = "SERVER = gggctserver.database.windows.net; DATABASE = b4Migration; USER ID = sysadmin_gg_gc_sa_dgo_testing; PASSWORD = GRUPO.gu@di@n@.Grupo.Campos_#Staging_Test.2099";
+                SqlConnection con = new SqlConnection(conect);
+                try
+                {
+                    con.Open();
+
+                    string cmd = "SELECT [Codigo_De_Sucursal]+' ' +'-'+' '+[Descripcion] as Nombre ,[Numero_Corto_De_Sucursal] FROM [dbo].[Sucursales] order by  Nombre desc";
+                    //" SELECT Codigo_De_Articulo,Nivel_De_Precios,Precio FROM Precios where Codigo_De_Articulo = '" + codigo + "' ";
+
+
+
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd, conect);
+                    DataSet dsPubs = new DataSet("Pubs");
+                    sda.Fill(dsPubs, "Sucursales");
+                    DataTable dtblg = new DataTable();
+                    dtblg = dsPubs.Tables["Sucursales"];
+                    combodias.ItemsSource = dsPubs.Tables["Sucursales"].DefaultView;
+                    var oso = dsPubs.Tables["Sucursales"].DefaultView;
+
+
+
+                    con.Close();
+
+                }
+
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Revise su conexión a internet");
+                }
+
+
+
+            }
+            catch (InvalidCastException e)
+            {
+                MessageBox.Show("No se pudo llenar los campos" + e.ToString());
+            }
+
+
+
+        }
 
 
 
@@ -714,8 +772,149 @@ namespace GGGC.Admin.AZ.Transferencias
         {
 
         }
+        private void NumberValidation(object sender, TextCompositionEventArgs e)
+        {
+
+            //ONLY NUMBERS
+
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+
+
+
+
+        }
+
+
+        private void Ordenserv_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(empleadoTransf.Text))
+            {
+                empleadoTransf.Text = "";
+            }
+            else
+            {
+                cargarEmpleado();
+
+            }
+        }
+
+        public void cargarEmpleado()
+
+        {
+
+            try
+            {
+
+
+                string connectionStringer = "SERVER = gggctserver.database.windows.net; DATABASE = b4Migration; USER ID = sysadmin_gg_gc_sa_dgo_testing; PASSWORD = GRUPO.gu@di@n@.Grupo.Campos_#Staging_Test.2099 ";
+          
+
+                SqlConnection cn = new SqlConnection(connectionStringer); ;
+                SqlCommand cmd;
+                SqlDataReader dr;
+
+
+               
+                cn.Open();
+                string id = this.empleadoTransf.Text;
+
+                cmd = new SqlCommand("SELECT [Codigo_De_Empleado],[Nombre] + ' ' +[Apellido_Paterno]+' '+[Apellido_Materno] as Nombre FROM [dbo].[Empleados] where Codigo_De_Empleado= "+id+" and Baja_Logica = 0", cn);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+
+                {
+                    txtEmpleadoNombre.Text = dr["Nombre"].ToString();
+
+                }
+                else
+                {
+                    txtEmpleadoNombre.Text = " ";
+                }
+            }
+
+            catch (Exception l)
+            {
+                RadWindow radWindow = new RadWindow();
+                RadWindow.Alert(new DialogParameters()
+                {
+                    Content = "Revise su conexión a internet.",
+                    Header = "BIG",
+
+                    DialogStartupLocation = WindowStartupLocation.CenterOwner
+                    // IconContent = "";
+                });
+
+            }
+        }
+
+        private void TxtChofer_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtChofer.Text))
+            {
+                txtChofer.Text = "";
+            }
+            else
+            {
+                cargarChofer();
+
+            }
+        }
+        public void cargarChofer()
+
+        {
+
+            try
+            {
+
+
+                string connectionStringer = "SERVER = gggctserver.database.windows.net; DATABASE = b4Migration; USER ID = sysadmin_gg_gc_sa_dgo_testing; PASSWORD = GRUPO.gu@di@n@.Grupo.Campos_#Staging_Test.2099 ";
+
+
+                SqlConnection cn = new SqlConnection(connectionStringer); ;
+                SqlCommand cmd;
+                SqlDataReader dr;
+
+
+
+                cn.Open();
+                string id = this.txtChofer.Text;
+
+                cmd = new SqlCommand("SELECT [Codigo_De_Empleado],[Nombre] + ' ' +[Apellido_Paterno]+' '+[Apellido_Materno] as Nombre FROM [dbo].[Empleados] where Codigo_De_Empleado= " + id + " and Baja_Logica = 0", cn);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+
+                {
+                    txtChoferNombre.Text = dr["Nombre"].ToString();
+
+                }
+                else
+                {
+                    txtChoferNombre.Text = " ";
+                }
+            }
+
+            catch (Exception l)
+            {
+                RadWindow radWindow = new RadWindow();
+                RadWindow.Alert(new DialogParameters()
+                {
+                    Content = "Revise su conexión a internet.",
+                    Header = "BIG",
+
+                    DialogStartupLocation = WindowStartupLocation.CenterOwner
+                    // IconContent = "";
+                });
+
+            }
+        }
+
+
 
 
 
     }
+
 }
+
+

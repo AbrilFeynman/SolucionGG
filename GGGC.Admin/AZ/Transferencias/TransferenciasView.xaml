@@ -72,14 +72,22 @@
                     <!--<TabItem Header="Datos Generales" >-->
                     <Grid>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="37*"/>
                             <ColumnDefinition Width="52*"/>
-                            <ColumnDefinition Width="215*"/>
                         </Grid.ColumnDefinitions>
 
 
+                        <materialDesign:Card Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" Width="200" Height="18"  >
+                            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}"
+                                       
+                                       FontSize="15" >Datos del Transporte</TextBlock>
+                        </materialDesign:Card>
 
-
-
+                        <materialDesign:Card Grid.Column="0" VerticalAlignment="Center" HorizontalContentAlignment="Left" Height="18"  Width="200" >
+                            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}"
+                                       
+                                       FontSize="15" >Datos de la Transferencia</TextBlock>
+                        </materialDesign:Card>
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.RowDefinitions>
@@ -90,8 +98,8 @@
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0" Background="White" Grid.RowSpan="2">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="70*"/>
-                                <ColumnDefinition Width="197*"/>
+                                <ColumnDefinition Width="112*"/>
+                                <ColumnDefinition Width="155*"/>
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Column="0">
                                 <Grid.RowDefinitions>
@@ -103,7 +111,7 @@
                                     <RowDefinition Height="39*"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="61*" />
+                                    <ColumnDefinition Width="107*" />
                                     <ColumnDefinition Width="5*" />
 
                                 </Grid.ColumnDefinitions>
@@ -112,19 +120,49 @@
                             <Label Content="RFC" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
 
                                 <!--<TextBox x:Name="Folioo" BorderBrush="#C1C1C1" TextChanged="Folioo_TextChanged" Grid.Column="0" Grid.Row="1" Margin="5,5,5,0"/>-->
-                                <TextBox x:Name="Folioo" TextChanged="Folioo_TextChanged"
-                                materialDesign:HintAssist.Hint="Código de ajuste" Grid.Row="0"
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox x:Name="Folioo" TextChanged="Folioo_TextChanged" Margin="0,0,5,0"
+                                materialDesign:HintAssist.Hint="Folio" Grid.Column="0" 
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"   />
-                                <TextBox x:Name="NuevoCod" TextChanged="Folioo_TextChanged"
-                                materialDesign:HintAssist.Hint="Nuevo ódigo de ajuste" Grid.Row="1"
-                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"   />
-                                <DatePicker  x:Name="DateAjuste"  Grid.Row="3" Grid.Column="0"
-                                 materialDesign:HintAssist.Hint="Fecha de ajuste"
-                                 Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
-                                <TextBox  x:Name="CantidadA" Grid.Row="2"  PreviewTextInput="NumberValidationTextBoxx"
-                                materialDesign:HintAssist.Hint="Cantidad Control De Articulos"
+                                    <DatePicker  x:Name="DateFactura"  Grid.Column="1" 
+                                 materialDesign:HintAssist.Hint="Fecha Factura"
+                                 Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                                </Grid>
+
+                                <ComboBox Grid.Column="0" Grid.Row="2" x:Name="combodias" DisplayMemberPath="Nombre"
+                                          materialDesign:HintAssist.Hint="A sucursal"  
+                                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"   >
+
+                                </ComboBox>
+
+
+                                <TextBox  x:Name="CantidadA" Grid.Row="1"  PreviewTextInput="NumberValidationTextBoxx"
+                                materialDesign:HintAssist.Hint="De Sucursal" Text="B4- FRANCISCO VILLA 1"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+
+                                <Grid Grid.Row="3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="185*"/>
+                                        <ColumnDefinition Width="136*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBox  x:Name="empleadoTransf" Grid.Column="1"   PreviewTextInput="NumberValidation"
+                                materialDesign:HintAssist.Hint="# Emp." TextChanged="Ordenserv_TextChanged"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                    
+                                    <Label  Height="25" VerticalAlignment="Bottom" VerticalContentAlignment="Bottom"
+                                            HorizontalContentAlignment="Left"    >Empleado que transfiere</Label>
+
+                                </Grid>
+
+
+
+
                                 <!--<TextBox x:Name="txtradial" BorderBrush="#C1C1C1" Grid.Column="0" Grid.Row="3"  Margin="5,5,5,0"/>-->
                                 <!--<TextBox x:Name="txtrfc" BorderBrush="#C1C1C1" Grid.Column="0" Grid.Row="4" Margin="5,5,5,0"/>-->
                             </Grid>
@@ -135,38 +173,75 @@
                                 </Grid.RowDefinitions>
                                 <Grid Grid.Row="0">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="16*" />
-                                        <ColumnDefinition Width="558*" />
-                                        <ColumnDefinition Width="17*"/>
-
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="37*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="289"/>
 
                                     </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
 
-                                        <RowDefinition Height="34*" />
-
-                                        <RowDefinition Height="121*" />
-
-                                        <RowDefinition Height="41*"/>
+                                        <RowDefinition Height="10*"/>
+                                        <RowDefinition Height="10*"/>
+                                        <RowDefinition Height="10*"/>
+                                        <RowDefinition Height="10*"/>
+                                        <RowDefinition Height="9*"/>
                                     </Grid.RowDefinitions>
 
-                                    <StackPanel  Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" Height="60">
-                                        <TextBox x:Name="ObservacionCliente"
-                                            Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
-                                          
-                                            Height="60"
-                                            AcceptsReturn="True"
-                                            TextWrapping="Wrap"
-                                            VerticalScrollBarVisibility="Auto"
-                                            materialDesign:HintAssist.Hint="Observaciones cliente"
-                                            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" />
-                                    </StackPanel>
+
+
+
+                                    <TextBox  x:Name="txtradial" Grid.Row="0" Grid.Column="1"
+                                materialDesign:HintAssist.Hint="Número de Unidad"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
 
 
 
 
 
 
+
+                                    <!--<telerik:RadDateTimePicker  x:Name="DateRecepcion" DateTimeWatermarkContent="Fecha/Hora Recepción" Grid.Row="1" Margin="5,5,0,30" Grid.RowSpan="2"/>-->
+                                    <!--<telerik:RadDateTimePicker x:Name="DateEntrega" DateTimeWatermarkContent="Fecha/Hora Entrega" Grid.Row="2" Margin="5,5,0,31" Grid.RowSpan="2"/>-->
+                                    <!--<telerik:RadDateTimePicker x:Name="DateCaptura" DateTimeWatermarkContent="Fecha/Hora Captura"  Grid.Row="3" Margin="5,5,0,2"/>-->
+                                    <!--<ComboBox x:Name="Marca"  IsEditable="True" IsReadOnly="True" Text="Marca"  Grid.Row="1" Grid.Column="4" Margin="5,10,5,5" Height="28"/>-->
+                                    <!--<ComboBox x:Name="Modelo"  IsEditable="True" IsReadOnly="True" Text="Modelo" Grid.Row="2" Grid.Column="4" Margin="5,11,5,4" Height="28"/>-->
+
+                                    <TextBox   Grid.Row="1" Grid.Column="1" 
+                                materialDesign:HintAssist.Hint="Placas" x:Name="txtNombre"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+
+                                    <TextBox   Grid.Row="2" Grid.Column="1" TextChanged="TxtChofer_TextChanged" PreviewTextInput="CNumberValidation"
+                                materialDesign:HintAssist.Hint="Chofer" x:Name="txtChofer"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                                    
+                                    <TextBox   Grid.Row="2" Grid.Column="3" IsReadOnly="True"
+                                materialDesign:HintAssist.Hint="Nombre" x:Name="txtChoferNombre"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                                    <TextBox HorizontalAlignment="Left"  Grid.Row="3" Grid.Column="1" IsReadOnly="True" Grid.ColumnSpan="3"
+                                materialDesign:HintAssist.Hint="Nombre" x:Name="txtEmpleadoNombre" Width="300"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+
+
+
+                                    <!--<ComboBox x:Name="Ano"  IsEditable="True" IsReadOnly="True" Text="Año" Grid.Row="3" Grid.Column="4" Margin="5,8,5,7" Height="28"/>-->
+
+
+                                    <!--<ComboBox x:Name="Placas"  IsEditable="True" IsReadOnly="True" Text="Placas" Grid.Row="1" Grid.Column="5" Margin="5,10,5,5" Height="28"/>-->
+                                    <!--<ComboBox x:Name="Kilometraje"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
+                                                  IsEditable="True" IsReadOnly="True" Text="Kilometraje" Grid.Row="2" Grid.Column="6"
+                                                  Height="29" Margin="0,3,0,6"/>-->
+                                    <!--<ComboBox
+                                    x:Name="Kilometraje" Grid.Row="2" Grid.Column="6"
+                                     materialDesign:HintAssist.Hint="Kilometraje"
+                                    
+                                     Style="{StaticResource MaterialDesignFloatingHintComboBox}" FontSize="12" Height="30"  >
+                                            <ComboBox.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <VirtualizingStackPanel />
+                                                </ItemsPanelTemplate>
+                                            </ComboBox.ItemsPanel>
+                                        </ComboBox>-->
 
 
                                 </Grid>
@@ -385,7 +460,7 @@
                     <Button  x:Name="AddButton" Click="Add"  Content="Agregar"  Grid.Column="0"
                 Style="{StaticResource MaterialDesignRaisedDarkButton}"
                   Height="29" Width="87" VerticalAlignment="Center"
-                ToolTip="Agregue articulos a la orden de patio." />
+                ToolTip="Agregue articulos a la transferencia." />
 
 
                     <Button  x:Name="DeleteButton" Content="Eliminar"  Click="Delete"  Grid.Column="1"
