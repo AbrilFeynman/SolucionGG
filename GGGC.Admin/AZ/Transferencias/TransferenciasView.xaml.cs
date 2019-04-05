@@ -514,7 +514,7 @@ namespace GGGC.Admin.AZ.Transferencias
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            if (tabla.Rows.Count > 0 && Folioo.Text.Length > 0)
+            if (tabla.Rows.Count > 0 && Folioo.Text.Length > 0 && comboDestino.SelectedIndex > -1)
             {
                 SaveHeader();
 
@@ -544,9 +544,15 @@ namespace GGGC.Admin.AZ.Transferencias
             DateFactura.SelectedDate = DateTime.Now;
 
             Folioo.Text = "";
-            CantidadA.Text = "";
+            comboDestino.SelectedItem = null;
+            txtradial.Text = "";
+            txtNombre.Text = "";
+            txtChofer.Text = "";
+            empleadoTransf.Text = "";
+            txtEmpleadoNombre.Text = "";
+            txtChoferNombre.Text = "";
 
-            estrella = 1;
+             estrella = 1;
 
             tabla.Rows.Clear();
 
@@ -578,25 +584,58 @@ namespace GGGC.Admin.AZ.Transferencias
 
             string canti = TotalAmount_Copy.Text;
 
-            string codajuste = Folioo.Text;
+           
             int OrderId = osomaloso;
             DateTime fecha = Convert.ToDateTime(DateFactura.SelectedDate);
             string fechax = fecha.ToString("MM/dd/yyyy");
             string cantarti = TotalAmount.Text;
+            string folio = Folioo.Text;
+            var objDias = comboDestino.SelectedItem;
+            string destino = ((System.Data.DataRowView)objDias).Row.ItemArray[1].ToString();
+            string numerounidad = "";
+            if (String.IsNullOrEmpty(txtradial.Text))
+            {
+               
+                numerounidad = "";
+            }
+            else
+            {
+                numerounidad = txtradial.Text;
+            }
 
+            string placas = "";
+            if (String.IsNullOrEmpty(txtNombre.Text))
+            {
+             
+                placas = "";
+            }
+            else
+            {
+                placas = txtNombre.Text;
+            }
 
+            string chofer = "";
+            if (String.IsNullOrEmpty(txtChofer.Text))
+            {
+                chofer = "";
+            }
+            else
+            {
+               
+                chofer = txtChofer.Text;
+            }
 
             string connectionStringer = "SERVER = gggctserver.database.windows.net; DATABASE = devArellantas; USER ID = sysadmin_gg_gc_sa_dgo_testing; PASSWORD = GRUPO.gu@di@n@.Grupo.Campos_#Staging_Test.2099 ";
             SqlConnection sqlcon = new SqlConnection(connectionStringer);
             sqlcon.Open();
 
 
-            SqlCommand agregar = new SqlCommand("INSERT INTO [dbo].[Ajustes_De_Almacen] ([Numero_De_Documento],[Codigo_De_Ajuste]," +
-                "[Fecha_De_Ajuste],[Cantidad_Total_De_Articulos] ,[Observaciones]  ,[Estatus_De_Documento],[Numero_Corto_De_Sucursal]," +
-                "[Estatus_De_Replicacion],[Fecha_Y_Hora_De_Ultima_Actualizacion])" +
+            SqlCommand agregar = new SqlCommand("INSERT INTO [dbo].[Transferencias]([Numero_De_Documento],[Folio_De_Transferencia] ,[Fecha]," +
+                "[Codigo_De_Sucursal_Origen],[Codigo_De_Sucursal_Destino],[Cantidad_Total],[Numero_De_Unidad]," +
+                "[Placas],[Chofer],[Estatus_Del_Documento],[Numero_Corto_De_Sucursal],[Estatus_De_Replicacion],[Fecha_Y_Hora_De_Ultima_Actualizacion])" +
                 " VALUES " +
-                " (" + osomaloso + ",'" + codajuste + "','" + fechax + "'," + cantarti + ",1,4," +
-                "  1,GETDATE())", sqlcon);
+                " (" + osomaloso + ",'" + folio + "','" + fechax + "','B4','"+destino+"',"+cantarti+",'"+numerounidad+"'," +
+                "  '"+placas+"','"+chofer+"',1,4,1,GETDATE())", sqlcon);
 
 
 
@@ -626,7 +665,7 @@ namespace GGGC.Admin.AZ.Transferencias
                 {
                     con.Open();
 
-                    string cmd = "SELECT [Codigo_De_Sucursal]+' ' +'-'+' '+[Descripcion] as Nombre ,[Numero_Corto_De_Sucursal] FROM [dbo].[Sucursales] order by  Nombre desc";
+                    string cmd = "SELECT [Codigo_De_Sucursal]+' ' +'-'+' '+[Descripcion] as Nombre ,[Codigo_De_Sucursal] FROM [dbo].[Sucursales] order by  Nombre desc";
                     //" SELECT Codigo_De_Articulo,Nivel_De_Precios,Precio FROM Precios where Codigo_De_Articulo = '" + codigo + "' ";
 
 
@@ -636,7 +675,7 @@ namespace GGGC.Admin.AZ.Transferencias
                     sda.Fill(dsPubs, "Sucursales");
                     DataTable dtblg = new DataTable();
                     dtblg = dsPubs.Tables["Sucursales"];
-                    combodias.ItemsSource = dsPubs.Tables["Sucursales"].DefaultView;
+                    comboDestino.ItemsSource = dsPubs.Tables["Sucursales"].DefaultView;
                     var oso = dsPubs.Tables["Sucursales"].DefaultView;
 
 
@@ -685,7 +724,7 @@ namespace GGGC.Admin.AZ.Transferencias
 
                 try
                 {
-                    string consulta = "INSERT INTO [dbo].[Compras_Y_Devoluciones_Detalle] ([Numero_De_Documento],[Renglon],[Codigo_De_Articulo],[Descripcion],[Unidad] ,[Cantidad]) VALUES " +
+                    string consulta = "INSERT INTO [dbo].[Transferencias_Detalle] ([Numero_De_Documento],[Renglon],[Codigo_De_Articulo],[Descripcion],[Unidad] ,[Cantidad]) VALUES " +
                         "(" + id + "," + renglon + ",'" + codigo + "','" + descripcion + "','" + unidad + "'," + cantidad + ")";
                     SqlCommand agregar = new SqlCommand(consulta, sqlcon);
                     agregar.ExecuteNonQuery();
