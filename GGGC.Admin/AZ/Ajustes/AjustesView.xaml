@@ -85,10 +85,10 @@
                         <Grid.RowDefinitions>
 
 
-                            <RowDefinition Height="11*" />
-                            <RowDefinition Height="19*"/>
+                            <RowDefinition />
+
                         </Grid.RowDefinitions>
-                        <Grid Grid.Row="0" Background="White" Grid.RowSpan="2">
+                        <Grid  >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="70*"/>
                                 <ColumnDefinition Width="197*"/>
@@ -116,7 +116,7 @@
                                 materialDesign:HintAssist.Hint="Código de ajuste" Grid.Row="0"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"   />
                                 <TextBox x:Name="NuevoCod" TextChanged="Folioo_TextChanged"
-                                materialDesign:HintAssist.Hint="Nuevo ódigo de ajuste" Grid.Row="1"
+                                materialDesign:HintAssist.Hint="Nuevo Código de ajuste" Grid.Row="1"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"   />
                                 <DatePicker  x:Name="DateAjuste"  Grid.Row="3" Grid.Column="0"
                                  materialDesign:HintAssist.Hint="Fecha de ajuste"
@@ -130,30 +130,39 @@
                             </Grid>
                             <Grid Grid.Column="1" >
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="29*" />
-
+                                    <RowDefinition Height="67*" />
+                                    <RowDefinition Height="105*" />
+                                    <RowDefinition Height="24*" />
                                 </Grid.RowDefinitions>
                                 <Grid Grid.Row="0">
+
+                                </Grid>
+                                <Grid Grid.Row="1" >
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="16*" />
-                                        <ColumnDefinition Width="558*" />
-                                        <ColumnDefinition Width="17*"/>
-
-
+                                        <ColumnDefinition Width="512*"/>
+                                        <ColumnDefinition Width="79*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
 
-                                        <RowDefinition Height="34*" />
 
-                                        <RowDefinition Height="121*" />
+                                    <StackPanel>
 
-                                        <RowDefinition Height="41*"/>
-                                    </Grid.RowDefinitions>
-
-                                    <StackPanel  Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" Height="60">
                                         <TextBox x:Name="ObservacionCliente"
                                             Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
-                                          
+                                            Margin="5,10,6,0"
+                                            VerticalAlignment="Top"
+                                            Height="73"
+                                            AcceptsReturn="True"
+                                            TextWrapping="Wrap"
+                                            VerticalScrollBarVisibility="Auto"
+                                            materialDesign:HintAssist.Hint="Observaciones internas"
+                                            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" />
+                                    </StackPanel>
+                                    <StackPanel  Grid.Column="1" Visibility="Hidden">
+                                        <TextBox x:Name="OddbservacionCliente"
+                                                 
+                                            Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
+                                            Margin="8,10,2,0"
+                                            VerticalAlignment="Top"
                                             Height="60"
                                             AcceptsReturn="True"
                                             TextWrapping="Wrap"
@@ -161,20 +170,21 @@
                                             materialDesign:HintAssist.Hint="Observaciones cliente"
                                             IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" />
                                     </StackPanel>
-
-
-
-
-
+                                    <!--<telerik:RadWatermarkTextBox x:Name="ObservacionInterna" Margin="5,5,5,5"  WatermarkContent="Observaciones Internas"/>
+                                <telerik:RadWatermarkTextBox x:Name="ObservacionCliente" Grid.Row="1" Margin="5,5,5,5"  WatermarkContent="Observaciones Cliente"/>-->
 
 
 
                                 </Grid>
 
-
                             </Grid>
 
+
+
+
                         </Grid>
+
+
                     </Grid>
 
                     <!--</TabItem>-->

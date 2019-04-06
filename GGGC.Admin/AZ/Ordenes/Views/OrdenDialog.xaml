@@ -69,7 +69,7 @@
                 <TextBox FontSize="15" TabIndex="0" x:Name="item_Copy" IsReadOnly="True" BorderBrush="#C1C1C1" Grid.Column="2" Height="30" VerticalAlignment="Center" Margin="148,-19,118,5" TextChanged="textFactura_TextChanged" Grid.ColumnSpan="2" />
 
             </Grid>
-            <Controls:UpDown NumberDecimalDigits="0" x:Name="Cantidad" ValueChanged="quantity_ValueChanged"    MinValue="1" Grid.Column="4" Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left" Margin="118,-41,0,0" VerticalAlignment="Top" Height="32" FontSize="15" Width="80" Grid.ColumnSpan="2">
+            <Controls:UpDown NumberDecimalDigits="0"  x:Name="Cantidad" ValueChanged="quantity_ValueChanged"    MinValue="1" Grid.Column="4" Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left" Margin="118,-41,0,0" VerticalAlignment="Top" Height="32" FontSize="15" Width="80" Grid.ColumnSpan="2">
 
             </Controls:UpDown>
 

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
               xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
-           
+            xmlns:Controls="http://schemas.syncfusion.com/wpf"
              xmlns:syncfusion ="clr-namespace:Syncfusion.UI.Xaml.Gauges;assembly=Syncfusion.SfGauge.Wpf"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:tabData="clr-namespace:GGGC.Admin.AZ.Ordenes.Views"
@@ -148,7 +148,7 @@
                                         <DatePicker  x:Name="DateEntrega"  Grid.Row="2"
                                  materialDesign:HintAssist.Hint="Entrega"
                                  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
-                                        <DatePicker  x:Name="DateCaptura"  Grid.Row="3"
+                                        <DatePicker  x:Name="DateCaptura"  Grid.Row="3" Visibility="Hidden"
                                  materialDesign:HintAssist.Hint="Captura"
                                  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
@@ -161,7 +161,7 @@
                                     Style="{StaticResource MaterialDesignFloatingHintTimePicker}"
                                     materialDesign:HintAssist.Hint="Entrega" Height="25" Margin="0,8,0,0"  />
                                         <materialDesign:TimePicker  x:Name="CapturaH" Grid.Row="3" Grid.Column="2"
-                                    Style="{StaticResource MaterialDesignFloatingHintTimePicker}"
+                                    Style="{StaticResource MaterialDesignFloatingHintTimePicker}" Visibility="Hidden"
                                     materialDesign:HintAssist.Hint="Captura" Height="25" Margin="0,9,0,0"  />
 
 
@@ -493,11 +493,23 @@
                                         <ColumnDefinition />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="13*"/>
+                                            <ColumnDefinition Width="9*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Controls:UpDown Grid.Column="1" NumberDecimalDigits="0"  x:Name="Cantidad" ValueChanged="quantity_ValueChanged"  
+                                                     MinValue="0" MaxValue="100" Step="25" IsReadOnly="True" Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left"
+                                                     VerticalAlignment="Bottom" Height="32" FontSize="15" Width="80" >
+
+                                        </Controls:UpDown>
+                                        <Label VerticalContentAlignment="Bottom" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="26">GASOLINA</Label>
+                                    </Grid>
 
 
-                                    <TextBox  x:Name="Litros" Grid.Row="0" Grid.Column="0" TextChanged="Litros_TextChanged"
-                                materialDesign:HintAssist.Hint="Porcentaje Gasolina"   PreviewTextInput="GasoValidationTextBoxx"
-                                Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="120" HorizontalAlignment="Right"  />
+
+
 
 
                                     <!--<controls:RadialGauge x:Name="RadialGaugeControl" Column="1" Value="70" Minimum="0" 

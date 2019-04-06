@@ -1362,11 +1362,25 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         }
 
+        private void quantity_ValueChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Cantidad.Value > 0)
+            {
+                osopointter.Value = Convert.ToDouble(Cantidad.Value);
+            }
+            else
+            {
+                osopointter.Value = 0;
+            }
+
+
+        }
+
         private void Litros_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (Litros.Text.Length > 0)
+            if (Cantidad.Value > 0)
             {
-                osopointter.Value = Convert.ToDouble(Litros.Text);
+                osopointter.Value = Convert.ToDouble(Cantidad.Value);
             }
             else
             {
