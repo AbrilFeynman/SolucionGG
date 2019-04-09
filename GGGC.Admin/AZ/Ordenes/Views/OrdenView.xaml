@@ -165,12 +165,7 @@
                                     materialDesign:HintAssist.Hint="Captura" Height="25" Margin="0,9,0,0"  />
 
 
-                                        <!--<telerik:RadDateTimePicker  x:Name="DateRecepcion" DateTimeWatermarkContent="Fecha/Hora Recepción" Grid.Row="1" Margin="5,5,0,30" Grid.RowSpan="2"/>-->
-                                        <!--<telerik:RadDateTimePicker x:Name="DateEntrega" DateTimeWatermarkContent="Fecha/Hora Entrega" Grid.Row="2" Margin="5,5,0,31" Grid.RowSpan="2"/>-->
-                                        <!--<telerik:RadDateTimePicker x:Name="DateCaptura" DateTimeWatermarkContent="Fecha/Hora Captura"  Grid.Row="3" Margin="5,5,0,2"/>-->
-                                        <!--<ComboBox x:Name="Marca"  IsEditable="True" IsReadOnly="True" Text="Marca"  Grid.Row="1" Grid.Column="4" Margin="5,10,5,5" Height="28"/>-->
-                                        <!--<ComboBox x:Name="Modelo"  IsEditable="True" IsReadOnly="True" Text="Modelo" Grid.Row="2" Grid.Column="4" Margin="5,11,5,4" Height="28"/>-->
-                                        <TextBox  x:Name="Marca" Grid.Row="1" Grid.Column="4"
+                                   <TextBox  x:Name="Marca" Grid.Row="1" Grid.Column="4"
                                 materialDesign:HintAssist.Hint="Marca"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
 
@@ -232,7 +227,7 @@
                                             Margin="5,10,6,0"
                                             VerticalAlignment="Top"
                                             Height="60"
-                                            AcceptsReturn="True"
+                                            AcceptsReturn="False"
                                             TextWrapping="Wrap"
                                             VerticalScrollBarVisibility="Auto"
                                             materialDesign:HintAssist.Hint="Observaciones internas"
@@ -241,10 +236,10 @@
                                         <StackPanel  Grid.Column="1">
                                             <TextBox x:Name="ObservacionCliente"
                                             Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
-                                            Margin="8,10,2,0"
+                                            Margin="8,10,2,0" 
                                             VerticalAlignment="Top"
                                             Height="60"
-                                            AcceptsReturn="True"
+                                            AcceptsReturn="False"
                                             TextWrapping="Wrap"
                                             VerticalScrollBarVisibility="Auto"
                                             materialDesign:HintAssist.Hint="Observaciones cliente"

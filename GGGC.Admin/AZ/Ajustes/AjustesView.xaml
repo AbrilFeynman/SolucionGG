@@ -148,10 +148,10 @@
 
                                         <TextBox x:Name="ObservacionCliente"
                                             Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
-                                            Margin="5,10,6,0"
+                                            Margin="5,10,6,0" FontSize="14"
                                             VerticalAlignment="Top"
                                             Height="73"
-                                            AcceptsReturn="True"
+                                            AcceptsReturn="False"
                                             TextWrapping="Wrap"
                                             VerticalScrollBarVisibility="Auto"
                                             materialDesign:HintAssist.Hint="Observaciones internas"
