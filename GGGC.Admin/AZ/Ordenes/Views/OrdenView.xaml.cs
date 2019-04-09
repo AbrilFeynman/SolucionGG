@@ -988,7 +988,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             Kilometraje.Text = "";
             estrella = 1;
 
-            SliderGasolina.Value = 0;
+            Cantidadd.Value = 0;
 
 
             pllantas.IsChecked = false;
@@ -1072,7 +1072,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             //var V = recep.ToString("MM/dd/yyyy");
             m_numerodefolio = osomaloso.ToString();
 
-            string gaso = SliderGasolina.Value.ToString();
+           // string gaso = Cantidadd.Value.ToString();
             int bytAccesorios1 = fncObtenAccesorios1();
            
             int bytExte1 = fncObtenExteriores1();
@@ -1108,7 +1108,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
 
 
-            decimal gasolina =Convert.ToDecimal(SliderGasolina.Value);
+            decimal gasolina =Convert.ToDecimal(Cantidadd.Value);
 
             decimal subtotal = Convert.ToDecimal(TotalDue);
             decimal iva = Convert.ToDecimal(Iva_Copy.Text);
@@ -1364,9 +1364,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         private void quantity_ValueChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (Cantidad.Value > 0)
+            if (Cantidadd.Value > 0)
             {
-                osopointter.Value = Convert.ToDouble(Cantidad.Value);
+                osopointter.Value = Convert.ToDouble(Cantidadd.Value);
             }
             else
             {
@@ -1378,9 +1378,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         private void Litros_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (Cantidad.Value > 0)
+            if (Cantidadd.Value > 0)
             {
-                osopointter.Value = Convert.ToDouble(Cantidad.Value);
+                osopointter.Value = Convert.ToDouble(Cantidadd.Value);
             }
             else
             {

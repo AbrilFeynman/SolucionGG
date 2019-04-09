@@ -170,11 +170,11 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         private void gasolina()
         {
             double tanque = Convert.ToDouble(tblTabla.Rows[0][21]);
-            if (tanque == 0.0)
+            if (tanque == 0)
             {
 
             }
-            else if (tanque == 2.5)
+            else if (tanque == 25)
             {
                
                 textBox49.Style.BackgroundColor = Color.DarkBlue;
@@ -182,17 +182,17 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 textBox49.Style.Color = Color.White;
                // textBox49.Style.BorderColor.c = Color.Yellow;
             }
-            else if (tanque == 5.0)
+            else if (tanque == 50)
             {
                 textBox50.Style.BackgroundColor = Color.DarkBlue;
                 textBox50.Style.Color = Color.White;
             }
-            else if (tanque == 7.5)
+            else if (tanque == 75)
             {
                 textBox51.Style.BackgroundColor = Color.DarkBlue;
                 textBox51.Style.Color = Color.White;
             }
-            else if (tanque ==10.0)
+            else if (tanque ==100)
             {
                 textBox52.Style.BackgroundColor = Color.DarkBlue;
                 textBox52.Style.Color = Color.White;

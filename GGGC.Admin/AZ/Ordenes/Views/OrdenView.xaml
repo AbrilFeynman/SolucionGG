@@ -286,7 +286,7 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Label Content="ACCESORIOS" VerticalContentAlignment="Bottom"  FontWeight="Bold" Grid.Column="0" Grid.Row="0" Margin="5,-4,5,14"/>
-                                    <Label x:Name="lblGas" Content="GASOLINA"   VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"  FontWeight="Bold" Grid.Column="1" Grid.Row="0" Margin="10,0,0,10" />
+                                    <Label x:Name="lblGas" Visibility="Hidden" Content="GASOLINA"   VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"  FontWeight="Bold" Grid.Column="1" Grid.Row="0" Margin="10,0,0,10" />
                                     <CheckBox x:Name="chkgato" Grid.Column="0" Grid.Row="1"  Margin="5,10,5,0" Content="GATO"/>
 
 
@@ -320,7 +320,7 @@
 
 
                                         </Grid.RowDefinitions>
-                                        <Slider x:Name="SliderGasolina"  VerticalAlignment="Top" 
+                                        <Slider x:Name="SliderGasolina" Visibility="Hidden"  VerticalAlignment="Top" 
                         VerticalContentAlignment="Top"    Width="400" 
                         Minimum="0" Maximum="10" Ticks="0, 2.5,5, 7.5,10" IsSnapToTickEnabled="True" 
                         Style="{StaticResource MaterialDesignDiscreteSlider}" ToolTip="Indique el nivel de tanque de la gasolina." Grid.RowSpan="2" Margin="0,-4,-200,-8"  />
@@ -494,8 +494,8 @@
                                             <ColumnDefinition Width="9*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Controls:UpDown Grid.Column="1" NumberDecimalDigits="0"  x:Name="Cantidad" ValueChanged="quantity_ValueChanged"  
-                                                     MinValue="0" MaxValue="100" Step="25" IsReadOnly="True" Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left"
+                                        <Controls:UpDown Grid.Column="1" IsReadOnly="True"  NumberDecimalDigits="0"  x:Name="Cantidadd" ValueChanged="quantity_ValueChanged"  
+                                                     MinValue="0" MaxValue="100" Step="25"  Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left"
                                                      VerticalAlignment="Bottom" Height="32" FontSize="15" Width="80" >
 
                                         </Controls:UpDown>
@@ -544,7 +544,7 @@
 
                                                 <syncfusion:CircularScale.Pointers>
                                                     <syncfusion:CircularPointer x:Name="osopointter"
-                                                        PointerType="NeedlePointer"  NeedlePointerType="Triangle" Value="60"
+                                                        PointerType="NeedlePointer"  NeedlePointerType="Triangle" Value="0"
                                                                                 PointerCapStroke="LightGray" NeedlePointerStroke="LightGray" NeedlePointerStrokeThickness="10"/>
 
 
