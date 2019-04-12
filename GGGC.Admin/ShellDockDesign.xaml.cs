@@ -526,6 +526,21 @@ namespace GGGC.Admin
                         AddDetail(uc04444, "Pagares Arellantas");
                     }
                     break;
+                case "04447":
+                    UserControl uc04447 = null;
+                    if (userControls.ContainsKey("04447"))
+                    {
+                        userControls.Remove("04447");
+                        uc04447 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Inventarios.Inventarioview", type.Namespace));
+                        userControls.Add("Inventarios Rpt", uc04447);
+                    }
+                    else
+                    {
+                        uc04447 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Inventarios.Inventarioview", type.Namespace));
+                        userControls.Add("04447", uc04447);
+                        AddDetail(uc04447, "Inventarios Rpt");
+                    }
+                    break;
 
                 case "04422":
                     UserControl uc04422 = null;

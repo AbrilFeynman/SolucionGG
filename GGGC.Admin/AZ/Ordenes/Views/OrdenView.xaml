@@ -494,7 +494,7 @@
                                             <ColumnDefinition Width="9*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Controls:UpDown Grid.Column="1" IsReadOnly="True"  NumberDecimalDigits="0"  x:Name="Cantidadd" ValueChanged="quantity_ValueChanged"  
+                                        <Controls:UpDown Grid.Column="1" IsReadOnly="True" Focusable="False" NumberDecimalDigits="0"  x:Name="Cantidadd" ValueChanged="quantity_ValueChanged"  
                                                      MinValue="0" MaxValue="100" Step="25"  Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left"
                                                      VerticalAlignment="Bottom" Height="32" FontSize="15" Width="80" >
 

@@ -52,6 +52,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 string dateday = date.ToString("dd-MM-yyyy HH mm ");
                 //SaveReport(this.Report, @"C:\BIG\LRG\Excel\ORD_"+folio+ "_LRG920502BG7_"+ dateday + ".pdf");
                 string camino = @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + folio + ".pdf";
+              
                 SaveReport(this.Report, @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + folio + ".pdf");
                 UploadBlob(camino, folio);
                 // MessageBox.Show("Reporte guardado en escritorio");

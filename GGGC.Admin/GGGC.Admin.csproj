@@ -472,6 +472,15 @@
     <Compile Include="AZ\Compr\Views\ProductoDialog.xaml.cs">
       <DependentUpon>ProductoDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AZ\Inventarios\Inventarioview.xaml.cs">
+      <DependentUpon>Inventarioview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Inventarios\RptMarca.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Inventarios\RptMarca.Designer.cs">
+      <DependentUpon>RptMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="AZ\Llantas\Views\Class1.cs" />
     <Compile Include="AZ\Llantas\Views\CodeProject.xaml.cs">
       <DependentUpon>CodeProject.xaml</DependentUpon>
@@ -1209,6 +1218,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AZ\Inventarios\Inventarioview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AZ\Llantas\Views\CodeProject.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1869,6 +1882,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="AZ\Inventarios\RptMarca.resx">
+      <DependentUpon>RptMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AZ\Ordenes\Views\Report1.resx">
       <DependentUpon>Report1.cs</DependentUpon>
     </EmbeddedResource>
@@ -2072,6 +2088,8 @@
     <Resource Include="AZ\Ncr\Views\App.ico" />
     <Resource Include="Resources\Entypo-license.txt" />
     <Content Include="Resources\HibernatingRhinos.Profiler.Appender.dll" />
+    <Resource Include="Resources\Images\178151.png" />
+    <Resource Include="Resources\Images\460304.png" />
     <Content Include="Resources\Images\App\DemoUser2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2702,6 +2720,7 @@
     <Resource Include="Resources\People\pic8.png" />
     <Resource Include="Resources\People\pic9.png" />
     <Resource Include="Resources\WindowsIcons-license.txt" />
+    <Resource Include="Resources\Images\Graph-Magnifier-icon.png" />
     <Content Include="Sign\ExternalDLL\WPFSmartLibraryLight35.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
