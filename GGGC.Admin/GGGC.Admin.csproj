@@ -481,6 +481,12 @@
     <Compile Include="AZ\Inventarios\RptMarca.Designer.cs">
       <DependentUpon>RptMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="AZ\Inventarios\RptSucursales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Inventarios\RptSucursales.Designer.cs">
+      <DependentUpon>RptSucursales.cs</DependentUpon>
+    </Compile>
     <Compile Include="AZ\Inventarios\RptTrimarca.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1890,6 +1896,9 @@
     </Compile>
     <EmbeddedResource Include="AZ\Inventarios\RptMarca.resx">
       <DependentUpon>RptMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Inventarios\RptSucursales.resx">
+      <DependentUpon>RptSucursales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AZ\Inventarios\RptTrimarca.resx">
       <DependentUpon>RptTrimarca.cs</DependentUpon>

@@ -104,10 +104,47 @@ namespace GGGC.Admin.AZ.Inventarios
 
         private void GenerateSucursales()
         {
-            DataTable tablaDeatil = GetDetail();
-            RptMarca fac = new RptMarca(tablaDeatil);
+            DataTable tablaSucursales = GetSucursales();
+            RptSucursales fac = new RptSucursales(tablaSucursales);
 
         }
+
+        static DataTable GetSucursales()
+        {
+            string conect = "SERVER = 192.168.200.10; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            //SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM OrderHeader WHERE OrderID = " + folio + " ", sqlconn);
+            //SqlDataAdapter adapter = new SqlDataAdapter("SELECT TOP 100 PERCENT SUM(Existencia) AS Cantidad, GrupoID AS Linea," +
+            //    " Grupo FROM windowServiceExistencias WHERE(GrupoID IN(1, 2, 3, 4)) GROUP BY GrupoID," +
+            //    " Grupo ORDER BY GrupoID", sqlconn);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT Sucursales.Codigo_De_Sucursal AS Base, Existencias_Sucursales.Cantidad," +
+                " Existencias_Sucursales.Codigo_De_Articulo AS Articulo FROM Existencias_Sucursales INNER JOIN  " +
+                " Sucursales ON Existencias_Sucursales.Numero_Corto_De_Sucursal = Sucursales.Numero_Corto_De_Sucursal WHERE(Existencias_Sucursales.Codigo_De_Articulo = '63684')", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
+
 
 
         static DataTable GetDetail()
