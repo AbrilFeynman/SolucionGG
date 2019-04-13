@@ -5,23 +5,24 @@ namespace GGGC.Admin.AZ.Inventarios
     using System.Drawing;
     using System.Globalization;
     using System.IO;
+    using System.Threading;
     using System.Windows.Forms;
     using Telerik.Reporting;
-    using Telerik.Reporting.Processing;
     using Telerik.Reporting.Drawing;
-    using System.Threading;
+    using Telerik.Reporting.Processing;
 
     /// <summary>
-    /// Summary description for RptMarca.
+    /// Summary description for RptTrimarca.
     /// </summary>
-    public partial class RptMarca : Telerik.Reporting.Report
+    public partial class RptTrimarca : Telerik.Reporting.Report
     {
+
         private System.Data.DataTable tblTabla;
-       
+
 
         string folio = "Rept";
         string fecha = "";
-        public RptMarca()
+        public RptTrimarca()
         {
             try
             {
@@ -34,7 +35,7 @@ namespace GGGC.Admin.AZ.Inventarios
             }
         }
 
-        public RptMarca(System.Data.DataTable tbl)
+        public RptTrimarca(System.Data.DataTable tbl)
         {
 
             try
@@ -45,22 +46,22 @@ namespace GGGC.Admin.AZ.Inventarios
 
                 InitializeComponent();
                 this.tblTabla = tbl;
-                
-               
+
+
                 string fecha = DateTime.Now.ToString();
                 DateTime date = DateTime.Now;
 
                 string dateday = date.ToString("dd-MM-yyyy HH mm ");
                 objectDataSource1.DataSource = tbl;
-                graph2.DataSource = objectDataSource1;
+                graph1.DataSource = objectDataSource1;
 
-               
+
                 //SaveReport(this.Report, @"C:\BIG\LRG\Excel\ORD_"+folio+ "_LRG920502BG7_"+ dateday + ".pdf");
                 string camino = @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + dateday + ".pdf";
 
                 SaveReport(this.Report, @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + dateday + ".pdf");
-                
-                 MessageBox.Show("Reporte guardado en escritorio");
+
+                MessageBox.Show("Reporte guardado en escritorio");
             }
             catch (Exception ex)
             {
@@ -70,15 +71,15 @@ namespace GGGC.Admin.AZ.Inventarios
         }
 
 
-        
-        
-
-
-        
 
 
 
-        
+
+
+
+
+
+
 
         private void SaveReport(Telerik.Reporting.Report report, string fileName)
         {
@@ -92,7 +93,6 @@ namespace GGGC.Admin.AZ.Inventarios
                 fs.Write(result.DocumentBytes, 0, result.DocumentBytes.Length);
             }
         }
-
 
     }
 }

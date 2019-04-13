@@ -61,12 +61,24 @@ namespace GGGC.Admin.AZ.Inventarios
         {
             try
             {
-             
-                DataTable tablaDeatil = GetDetail();
-                RptMarca fac = new RptMarca(tablaDeatil);
+                switch (m_select)
+                {
+                    case 1:
+                        GenerateMarca();
+                        break;
+                    case 2:
+                        GenerateLinea();
+                        break;
+                    case 3:
+                        GenerateSucursales();
+                        break;
+                        
 
-                //this.ReportViewer1.Report = fac;
-                //this.ReportViewer1.RefreshReport();
+
+                }
+
+
+
             }
             catch (Exception ex)
             {
@@ -75,6 +87,28 @@ namespace GGGC.Admin.AZ.Inventarios
             }
 
         }
+
+        private void GenerateLinea()
+        {
+            DataTable tablaDeatil = GetDetail();
+            RptMarca fac = new RptMarca(tablaDeatil);
+
+        }
+
+        private void GenerateMarca()
+        {
+            DataTable tablaMarca = GetMarca();
+            RptTrimarca fac = new RptTrimarca(tablaMarca);
+
+        }
+
+        private void GenerateSucursales()
+        {
+            DataTable tablaDeatil = GetDetail();
+            RptMarca fac = new RptMarca(tablaDeatil);
+
+        }
+
 
         static DataTable GetDetail()
         {
@@ -104,6 +138,43 @@ namespace GGGC.Admin.AZ.Inventarios
             DataTable dtbl = new DataTable();
 
             dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
+
+
+        static DataTable GetMarca()
+        {
+            string conect = "SERVER = 192.168.200.10; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            //SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM OrderHeader WHERE OrderID = " + folio + " ", sqlconn);
+            //SqlDataAdapter adapter = new SqlDataAdapter("SELECT TOP 100 PERCENT SUM(Existencia) AS Cantidad, GrupoID AS Linea," +
+            //    " Grupo FROM windowServiceExistencias WHERE(GrupoID IN(1, 2, 3, 4)) GROUP BY GrupoID," +
+            //    " Grupo ORDER BY GrupoID", sqlconn);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT windowServiceExistencias.Marca AS Marca, SUM(windowServiceExistencias.Existencia) AS Cantidad, Marcas.Nombre AS Descripcion" +
+                " FROM  Marcas INNER JOIN  windowServiceExistencias ON Marcas.Codigo_De_Marca = windowServiceExistencias.Marca" +
+                " WHERE(windowServiceExistencias.Marca IN('BFG', 'MICH', 'UNIR')) GROUP BY windowServiceExistencias.Marca, Marcas.Nombre", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista1");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista1"];
             sqlconn.Close();
 
             return dtbl;
