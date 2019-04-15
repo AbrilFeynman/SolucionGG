@@ -84,14 +84,19 @@
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="134*"/>
-                <ColumnDefinition Width="238*"/>
+                <ColumnDefinition Width="115*"/>
+                <ColumnDefinition Width="257*"/>
                 <ColumnDefinition Width="31*"/>
                 <ColumnDefinition Width="142*"/>
                 <ColumnDefinition Width="196*"/>
                 <ColumnDefinition Width="66*"/>
             </Grid.ColumnDefinitions>
             <Image Grid.Column="4" Source="/GGGC.Admin;component/Resources/Images/178151.png"></Image>
+
+            <RadioButton FontSize="16" x:Name="rdventas" Grid.Column="1"
+    Style="{StaticResource MaterialDesignRadioButton}" Height="30" VerticalAlignment="Top" >
+                Ventas Sucursales
+            </RadioButton>
         </Grid>
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
