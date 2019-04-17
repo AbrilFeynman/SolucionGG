@@ -16,6 +16,7 @@ namespace GGGC.Admin.AZ.Inventarios
             Telerik.Reporting.GraphGroup graphGroup2 = new Telerik.Reporting.GraphGroup();
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
+            this.textBox1 = new Telerik.Reporting.TextBox();
             this.detail = new Telerik.Reporting.DetailSection();
             this.graph1 = new Telerik.Reporting.Graph();
             this.polarCoordinateSystem1 = new Telerik.Reporting.PolarCoordinateSystem();
@@ -24,7 +25,6 @@ namespace GGGC.Admin.AZ.Inventarios
             this.barSeries1 = new Telerik.Reporting.BarSeries();
             this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
             this.objectDataSource1 = new Telerik.Reporting.ObjectDataSource();
-            this.textBox1 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // pageHeaderSection1
@@ -33,6 +33,18 @@ namespace GGGC.Admin.AZ.Inventarios
             this.pageHeaderSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox1});
             this.pageHeaderSection1.Name = "pageHeaderSection1";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.0589995384216309D), Telerik.Reporting.Drawing.Unit.Cm(0.76199996471405029D));
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.4350013732910156D), Telerik.Reporting.Drawing.Unit.Cm(1.0160000324249268D));
+            this.textBox1.Style.BorderColor.Default = System.Drawing.Color.Transparent;
+            this.textBox1.Style.Color = System.Drawing.Color.Gray;
+            this.textBox1.Style.Font.Bold = true;
+            this.textBox1.Style.Font.Name = "Arial";
+            this.textBox1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+            this.textBox1.Value = "REPORTE INVENTARIO - POR MARCAS";
             // 
             // detail
             // 
@@ -118,18 +130,6 @@ namespace GGGC.Admin.AZ.Inventarios
             new Telerik.Reporting.CalculatedField("Field2", typeof(int), "Fields.Cantidad"),
             new Telerik.Reporting.CalculatedField("Field3", typeof(string), "Fields.Descripcion")});
             this.objectDataSource1.Name = "objectDataSource1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.0589995384216309D), Telerik.Reporting.Drawing.Unit.Cm(0.76199996471405029D));
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.4350013732910156D), Telerik.Reporting.Drawing.Unit.Cm(1.0160000324249268D));
-            this.textBox1.Style.BorderColor.Default = System.Drawing.Color.Transparent;
-            this.textBox1.Style.Color = System.Drawing.Color.Gray;
-            this.textBox1.Style.Font.Bold = true;
-            this.textBox1.Style.Font.Name = "Arial";
-            this.textBox1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-            this.textBox1.Value = "REPORTE INVENTARIO - POR MARCAS";
             // 
             // RptTrimarca
             // 

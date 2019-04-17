@@ -493,6 +493,12 @@
     <Compile Include="AZ\Inventarios\RptTrimarca.Designer.cs">
       <DependentUpon>RptTrimarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="AZ\Inventarios\RptVentas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Inventarios\RptVentas.Designer.cs">
+      <DependentUpon>RptVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="AZ\Llantas\Views\Class1.cs" />
     <Compile Include="AZ\Llantas\Views\CodeProject.xaml.cs">
       <DependentUpon>CodeProject.xaml</DependentUpon>
@@ -1902,6 +1908,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AZ\Inventarios\RptTrimarca.resx">
       <DependentUpon>RptTrimarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Inventarios\RptVentas.resx">
+      <DependentUpon>RptVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AZ\Ordenes\Views\Report1.resx">
       <DependentUpon>Report1.cs</DependentUpon>

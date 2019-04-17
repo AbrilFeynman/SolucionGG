@@ -72,6 +72,67 @@ namespace GGGC.Admin.AZ.Inventarios
                     case 3:
                         GenerateSucursales();
                         break;
+                    case 4:
+                        if (m_select > 0 && dtinicial.SelectedDate != null && dtfinal.SelectedDate != null)
+                        {
+                            
+                            int yInicial = Convert.ToInt16(Convert.ToDateTime(dtinicial.SelectedDate).Year.ToString());
+                            int yFinal = Convert.ToInt16(Convert.ToDateTime(dtfinal.SelectedDate).Year.ToString());
+                            if (yInicial >= 2017 && yFinal >= 2017)
+                            {
+                                if (dtinicial.SelectedDate <= dtfinal.SelectedDate)
+                                {
+
+                                    generarventas();
+
+                                }
+                                else
+                                {
+                                    RadWindow radWindow = new RadWindow();
+                                    RadWindow.Alert(new DialogParameters()
+                                    {
+                                        Content = "La fecha inicial no debe de ser mayor que la fecha final.",
+                                        Header = "BIG",
+
+                                        DialogStartupLocation = WindowStartupLocation.CenterOwner
+                                        // IconContent = "";
+                                    });
+
+
+                                }
+
+
+                            }
+                            else
+                            {
+                                RadWindow radWindow = new RadWindow();
+                                RadWindow.Alert(new DialogParameters()
+                                {
+                                    Content = "El año del reporte deben de ser mayor o igual al año 2017",
+                                    Header = "BIG",
+
+                                    DialogStartupLocation = WindowStartupLocation.CenterOwner
+                                    // IconContent = "";
+                                });
+                            }
+
+
+
+                        }
+                        else
+                        {
+                            RadWindow radWindow = new RadWindow();
+                            RadWindow.Alert(new DialogParameters()
+                            {
+                                Content = "Los parámetros son inválidos.",
+                                Header = "BIG",
+
+                                DialogStartupLocation = WindowStartupLocation.CenterOwner
+                                // IconContent = "";
+                            });
+
+                        }
+                        break;
                         
 
 
@@ -108,6 +169,94 @@ namespace GGGC.Admin.AZ.Inventarios
             RptSucursales fac = new RptSucursales(tablaSucursales);
 
         }
+
+        private void generarventas()
+        {
+            string strFechaInicial = Convert.ToDateTime(dtinicial.SelectedDate).ToString("MM/dd/yyyy HH:mm:ss");
+            string strFechaFinal = Convert.ToDateTime(dtfinal.SelectedDate).ToString("MM/dd/yyyy HH:mm:ss");
+            string FechaInicial = Convert.ToDateTime(dtinicial.SelectedDate).ToString("MM/dd/yyyy");
+            string FechaFinal = Convert.ToDateTime(dtfinal.SelectedDate).ToString("MM/dd/yyyy");
+            DataTable tablaVentas = GetVentas(strFechaInicial, strFechaFinal);
+            DataTable tablaMayoreo = GetVentasMayoreo(strFechaInicial, strFechaFinal);
+            RptVentas fac = new RptVentas(tablaVentas,tablaMayoreo,FechaInicial,FechaFinal);
+
+        }
+
+
+        static DataTable GetVentas(string inicial, string final)
+        {
+            
+           
+
+            string conect = "SERVER = 192.168.200.1; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT    CASE WHEN Numero_Corto_De_Sucursal = 55 THEN 05 ELSE Numero_Corto_De_Sucursal END AS Numerosucursal, SUM(Total) AS Total,Codigo_De_Sucursal, " +
+                "Sucursal as Nombre FROM dbo.fncReporteadorDeVentasConsolidado() fncReporteadorDeVentasConsolidado" +
+                " WHERE(Fecha_Del_Documento BETWEEN CONVERT(DATETIME, '"+inicial+ "', 102)  AND" +
+                " CONVERT(DATETIME, '"+final+ "', 102)) and (Numero_Corto_De_Sucursal not in(7,11,17)) GROUP BY Numero_Corto_De_Sucursal, Codigo_De_Sucursal, Sucursal order by Numerosucursal asc ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
+
+        static DataTable GetVentasMayoreo(string inicial, string final)
+        {
+
+
+
+            string conect = "SERVER = 192.168.200.1; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT    CASE WHEN Numero_Corto_De_Sucursal = 55 THEN 05 ELSE Numero_Corto_De_Sucursal END AS Numerosucursal, SUM(Total) AS Total,Codigo_De_Sucursal, " +
+                "Sucursal as Nombre FROM dbo.fncReporteadorDeVentasConsolidado() fncReporteadorDeVentasConsolidado" +
+                " WHERE(Fecha_Del_Documento BETWEEN CONVERT(DATETIME, '" + inicial + "', 102)  AND" +
+                " CONVERT(DATETIME, '" + final + "', 102)) and (Numero_Corto_De_Sucursal in(7,11,17)) GROUP BY Numero_Corto_De_Sucursal, Codigo_De_Sucursal, Sucursal order by Numerosucursal asc ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
+
+
+
 
         static DataTable GetSucursales()
         {
@@ -170,9 +319,9 @@ namespace GGGC.Admin.AZ.Inventarios
             //    " Grupo FROM windowServiceExistencias WHERE(GrupoID IN(1, 2, 3, 4)) GROUP BY GrupoID," +
             //    " Grupo ORDER BY GrupoID", sqlconn);
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM ExistenciasMarca", sqlconn);
-            DataSet dsPubs = new DataSet("Pubs");
+            DataSet dsPubs = new DataSet("Pubs"); 
             adapter.Fill(dsPubs, "Vista");
-            DataTable dtbl = new DataTable();
+            DataTable dtbl = new DataTable(); 
 
             dtbl = dsPubs.Tables["Vista"];
             sqlconn.Close();
@@ -241,7 +390,14 @@ namespace GGGC.Admin.AZ.Inventarios
                 
                 return 3;
             }
-           
+            else if (rdventas.IsChecked == true)
+            {
+
+                m_consulta = "";
+
+                return 4;
+            }
+
 
             return 0;
         }

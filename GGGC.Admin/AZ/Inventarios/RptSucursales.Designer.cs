@@ -11,20 +11,21 @@ namespace GGGC.Admin.AZ.Inventarios
         {
             Telerik.Reporting.GraphGroup graphGroup1 = new Telerik.Reporting.GraphGroup();
             Telerik.Reporting.Drawing.ColorPalette colorPalette1 = new Telerik.Reporting.Drawing.ColorPalette();
+            Telerik.Reporting.GraphGroup graphGroup3 = new Telerik.Reporting.GraphGroup();
             Telerik.Reporting.CategoryScale categoryScale1 = new Telerik.Reporting.CategoryScale();
             Telerik.Reporting.NumericalScale numericalScale1 = new Telerik.Reporting.NumericalScale();
             Telerik.Reporting.GraphGroup graphGroup2 = new Telerik.Reporting.GraphGroup();
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
+            this.textBox1 = new Telerik.Reporting.TextBox();
             this.detail = new Telerik.Reporting.DetailSection();
-            this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
-            this.objectDataSource1 = new Telerik.Reporting.ObjectDataSource();
             this.graph1 = new Telerik.Reporting.Graph();
             this.cartesianCoordinateSystem1 = new Telerik.Reporting.CartesianCoordinateSystem();
             this.graphAxis1 = new Telerik.Reporting.GraphAxis();
             this.graphAxis2 = new Telerik.Reporting.GraphAxis();
             this.barSeries1 = new Telerik.Reporting.BarSeries();
-            this.textBox1 = new Telerik.Reporting.TextBox();
+            this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
+            this.objectDataSource1 = new Telerik.Reporting.ObjectDataSource();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // pageHeaderSection1
@@ -34,6 +35,18 @@ namespace GGGC.Admin.AZ.Inventarios
             this.textBox1});
             this.pageHeaderSection1.Name = "pageHeaderSection1";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.064000129699707D), Telerik.Reporting.Drawing.Unit.Cm(0.76199996471405029D));
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.975000381469727D), Telerik.Reporting.Drawing.Unit.Cm(1.0160000324249268D));
+            this.textBox1.Style.BorderColor.Default = System.Drawing.Color.Transparent;
+            this.textBox1.Style.Color = System.Drawing.Color.Gray;
+            this.textBox1.Style.Font.Bold = true;
+            this.textBox1.Style.Font.Name = "Arial";
+            this.textBox1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+            this.textBox1.Value = "REPORTE INVENTARIO - CODIGO POR SUCURSALES";
+            // 
             // detail
             // 
             this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(4.6000003814697266D);
@@ -41,24 +54,10 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graph1});
             this.detail.Name = "detail";
             // 
-            // pageFooterSection1
-            // 
-            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1D);
-            this.pageFooterSection1.Name = "pageFooterSection1";
-            // 
-            // objectDataSource1
-            // 
-            this.objectDataSource1.CalculatedFields.AddRange(new Telerik.Reporting.CalculatedField[] {
-            new Telerik.Reporting.CalculatedField("Field1", typeof(string), "Fields.Base"),
-            new Telerik.Reporting.CalculatedField("Field2", typeof(int), "Fields.Cantidad"),
-            new Telerik.Reporting.CalculatedField("Field3", typeof(string), "Fields.Articulo")});
-            this.objectDataSource1.Name = "objectDataSource1";
-            // 
             // graph1
             // 
             graphGroup1.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.Field1"));
             graphGroup1.Name = "categoryGroup1";
-            graphGroup1.Sortings.Add(new Telerik.Reporting.Sorting("=Fields.Field1", Telerik.Reporting.SortDirection.Asc));
             this.graph1.CategoryGroups.Add(graphGroup1);
             colorPalette1.Colors.Add(System.Drawing.Color.DodgerBlue);
             colorPalette1.Colors.Add(System.Drawing.Color.Black);
@@ -74,7 +73,10 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graph1.PlotAreaStyle.LineColor = System.Drawing.Color.LightGray;
             this.graph1.PlotAreaStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
             this.graph1.Series.Add(this.barSeries1);
-            this.graph1.SeriesGroups.Add(graphGroup2);
+            graphGroup3.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.Field1"));
+            graphGroup3.Name = "seriesGroup1";
+            graphGroup3.Sortings.Add(new Telerik.Reporting.Sorting("=Fields.Field1", Telerik.Reporting.SortDirection.Asc));
+            this.graph1.SeriesGroups.Add(graphGroup3);
             this.graph1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(4.7000002861022949D), Telerik.Reporting.Drawing.Unit.Inch(2.2000000476837158D));
             // 
             // cartesianCoordinateSystem1
@@ -116,17 +118,18 @@ namespace GGGC.Admin.AZ.Inventarios
             this.barSeries1.SeriesGroup = graphGroup2;
             this.barSeries1.Y = "=Sum(Fields.Field2)";
             // 
-            // textBox1
+            // pageFooterSection1
             // 
-            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.064000129699707D), Telerik.Reporting.Drawing.Unit.Cm(0.76199996471405029D));
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.975000381469727D), Telerik.Reporting.Drawing.Unit.Cm(1.0160000324249268D));
-            this.textBox1.Style.BorderColor.Default = System.Drawing.Color.Transparent;
-            this.textBox1.Style.Color = System.Drawing.Color.Gray;
-            this.textBox1.Style.Font.Bold = true;
-            this.textBox1.Style.Font.Name = "Arial";
-            this.textBox1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-            this.textBox1.Value = "REPORTE INVENTARIO - CODIGO POR SUCURSALES";
+            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1D);
+            this.pageFooterSection1.Name = "pageFooterSection1";
+            // 
+            // objectDataSource1
+            // 
+            this.objectDataSource1.CalculatedFields.AddRange(new Telerik.Reporting.CalculatedField[] {
+            new Telerik.Reporting.CalculatedField("Field1", typeof(string), "Fields.Base"),
+            new Telerik.Reporting.CalculatedField("Field2", typeof(int), "Fields.Cantidad"),
+            new Telerik.Reporting.CalculatedField("Field3", typeof(string), "Fields.Articulo")});
+            this.objectDataSource1.Name = "objectDataSource1";
             // 
             // RptSucursales
             // 
