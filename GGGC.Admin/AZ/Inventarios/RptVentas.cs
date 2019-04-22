@@ -64,8 +64,9 @@ namespace GGGC.Admin.AZ.Inventarios
                 string camino = @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + dateday + ".pdf";
 
                 SaveReport(this.Report, @"C:\Ektelesis.Net\CFDI\DATOS\PDF\" + dateday + ".pdf");
-
-                MessageBox.Show("Reporte guardado en escritorio");
+                string argument = @"/select, " + camino;
+                System.Diagnostics.Process.Start("explorer.exe", argument);
+             //  MessageBox.Show("Reporte guardado en escritorio");
             }
             catch (Exception ex)
             {

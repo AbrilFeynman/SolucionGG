@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using Telerik.Windows.Controls;
 
 namespace GGGC.Admin.AZ.Inventarios
@@ -25,6 +26,8 @@ namespace GGGC.Admin.AZ.Inventarios
     {
         private int m_select = 0;
         private string m_consulta;
+        private int increment;
+        DispatcherTimer dispatcherTimer = new DispatcherTimer();
         public Inventarioview()
         {
             InitializeComponent();
@@ -35,7 +38,14 @@ namespace GGGC.Admin.AZ.Inventarios
             m_select = radios();
             if (m_select > 0)
             {
+                radbusy.BusyContent = "Generando reporte ";
 
+                radbusy.IsBusy = true;
+                increment = 0;
+                dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+                dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+                dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+                dispatcherTimer.Start();
 
 
                 generarreporte();
@@ -56,6 +66,25 @@ namespace GGGC.Admin.AZ.Inventarios
             }
 
         }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+
+            increment++;
+            timerlabel.Content = increment.ToString();
+            //Refresh(this.radbusy);
+            if (increment == 3)
+            {
+                dispatcherTimer.Stop();
+                radbusy.IsBusy = false;
+            }
+            // Updating the Label which displays the current second
+
+
+            // Forcing the CommandManager to raise the RequerySuggested event
+            // CommandManager.InvalidateRequerySuggested();
+        }
+
 
         private void generarreporte()
         {
