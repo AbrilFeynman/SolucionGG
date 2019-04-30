@@ -1,15 +1,2 @@
-Telerik.Reporting.Shape, Telerik.Reporting, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Windows.Controls.RadNumericUpDown, Telerik.Windows.Controls.Input, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7
-Telerik.Reporting.CheckBox, Telerik.Reporting, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Windows.Controls.RadDatePicker, Telerik.Windows.Controls.Input, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7
-Telerik.Reporting.Panel, Telerik.Reporting, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Windows.Controls.RadPdfViewer, Telerik.Windows.Controls.FixedDocumentViewers, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7
-Telerik.Reporting.Map, Telerik.Reporting, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Windows.Controls.RadRadialGauge, Telerik.Windows.Controls.DataVisualization, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7
-Telerik.Reporting.PictureBox, Telerik.Reporting, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Reporting.Table, Telerik.Reporting, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Reporting.TextBox, Telerik.Reporting, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Windows.Controls.RadComboBox, Telerik.Windows.Controls.Input, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7
-Telerik.Reporting.HtmlTextBox, Telerik.Reporting, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Reporting.Graph, Telerik.Reporting, Version=12.0.18.117, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Windows.Controls.RadRadioButton, Telerik.Windows.Controls, Version=2017.2.503.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7
+Telerik.Reporting.TextBox, Telerik.Reporting, Version=13.0.19.222, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Telerik.Reporting.Graph, Telerik.Reporting, Version=13.0.19.222, Culture=neutral, PublicKeyToken=a9d7983dfcc261be

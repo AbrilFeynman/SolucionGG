@@ -507,24 +507,6 @@
 
 
 
-                                    <!--<controls:RadialGauge x:Name="RadialGaugeControl" Column="1" Value="70" Minimum="0" 
-	                                        Maximum="180" TickSpacing="20" ScaleWidth="26" Unit="Units" TickBrush="Gainsboro"
-	                                        ScaleTickBrush="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-	                                        NeedleWidth="5" TickLength="18">        
-                                    </controls:RadialGauge>-->
-                                    <!--<telerik:RadRadialGauge Name="radialGauge"   Grid.Row="2"
-                                        Width="100" 
-                                        Height="100">
-                                        <telerik:RadialScale Name="scale" 
-                                            Min="1" 
-                                            Max="11">   
-                                            <telerik:RadialScale.Indicators>
-                                                <telerik:Needle Name="needle"  />
-                                                <telerik:Pinpoint />
-                                            </telerik:RadialScale.Indicators>
-                                        </telerik:RadialScale>
-                                    </telerik:RadRadialGauge>-->
-
                                     <syncfusion:SfCircularGauge Grid.Column="1"   Grid.RowSpan="3" >
 
                                         <syncfusion:SfCircularGauge.Scales >

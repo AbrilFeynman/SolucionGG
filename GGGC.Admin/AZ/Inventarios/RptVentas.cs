@@ -10,6 +10,7 @@ namespace GGGC.Admin.AZ.Inventarios
     using Telerik.Reporting;
     using Telerik.Reporting.Drawing;
     using Telerik.Reporting.Processing;
+    using Telerik.Windows.Controls.ChartView;
 
     /// <summary>
     /// Summary description for RptVentas.
@@ -46,7 +47,12 @@ namespace GGGC.Admin.AZ.Inventarios
                 InitializeComponent();
                 this.tblTabla = tbl;
 
-            
+                //Telerik.Reporting.BarSeries barSeries1 = new Telerik.Reporting.BarSeries();
+                //Telerik.Reporting.LegendItem ad = new Telerik.Reporting.LegendItem();
+                //ad.
+
+
+
                 string fecha = DateTime.Now.ToString();
                 DateTime date = DateTime.Now;
                

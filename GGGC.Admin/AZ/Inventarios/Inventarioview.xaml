@@ -87,6 +87,11 @@
                      Style="{StaticResource MaterialDesignRadioButton}" Height="30" VerticalAlignment="Top" Margin="0,81,72,-54" Grid.ColumnSpan="2" >
                 Ventas Sucursales
             </RadioButton>
+
+            <RadioButton FontSize="16" x:Name="rdventasanio" Grid.Column="3"
+                     Style="{StaticResource MaterialDesignRadioButton}" Height="30" VerticalAlignment="Top" Margin="0,81,101,-54" Grid.ColumnSpan="3" >
+                Ventas Sucursales Comparison
+            </RadioButton>
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -140,7 +145,7 @@
             </Grid.ColumnDefinitions>
             <telerik:RadBusyIndicator   x:Name="radbusy" IsBusy="False"  HorizontalAlignment="Left" Grid.ColumnSpan="4" >
 
-                <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Content="Exportar"
+                <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Grid.Column="1" Content="Exportar"
                     x:Name="Exportar" Click="Exportar_Click" HorizontalAlignment="Right" Width="120" Height="Auto" Margin="0,10,0,9" />
             </telerik:RadBusyIndicator>
         </Grid>

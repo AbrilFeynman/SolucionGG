@@ -9,7 +9,7 @@ namespace GGGC.Admin.AZ.Inventarios
     using System.Windows.Forms;
     using Telerik.Reporting;
     using Telerik.Reporting.Drawing;
-    using Telerik.Reporting.Processing;
+    using Telerik.Reporting.Processing;        
 
     /// <summary>
     /// Summary description for RptTrimarca.

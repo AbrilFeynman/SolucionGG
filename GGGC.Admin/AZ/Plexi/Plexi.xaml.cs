@@ -541,6 +541,8 @@ namespace GGGC.Admin.AZ.Plexi
                     }
                 }
             }
+            // solo pocas personas quedan si quedan de ser desveladas
+            //
             catch (Exception z)
             {
                 RadWindow radWindow = new RadWindow();
@@ -624,7 +626,7 @@ namespace GGGC.Admin.AZ.Plexi
             }
             catch (Exception z)
             {
-
+                //zapatos biaje del tiempo  
                 RadWindow radWindow = new RadWindow();
                 RadWindow.Alert(new DialogParameters()
                 {
@@ -648,15 +650,17 @@ namespace GGGC.Admin.AZ.Plexi
 
 
                 case 1:
-                    return "SELECT  LEFT(lower(dbo.Articulos.Marca), 3) + dbo.Articulos.Codigo_De_Articulo AS Codigo, dbo.Articulos.Codigo_De_Articulo as Codigo_LRG, dbo.Articulos.Marca AS Marca, dbo.Articulos.Descripcion,  " +
-        "ISNULL(dbo.vtaPrecios_Lista.PL, 0) AS PL, ISNULL(dbo.vtaScFormaExistrenciasPorSucursalArticulos.Existencia, 0) AS Existencia FROM dbo.vtaScFormaExistrenciasPorSucursalArticulos RIGHT OUTER JOIN  " +
+
+                    return "SELECT   dbo.Articulos.Codigo_De_Articulo as Codigo_LRG, dbo.Articulos.Marca AS Marca,Lineas.Nombre, dbo.Articulos.Descripcion, Articulos.Baja_Logica, " +
+        " ISNULL(dbo.vtaScFormaExistrenciasPorSucursalArticulos.Existencia, 0) AS Existencia FROM dbo.vtaScFormaExistrenciasPorSucursalArticulos RIGHT OUTER JOIN  " +
         "dbo.Articulos ON dbo.vtaScFormaExistrenciasPorSucursalArticulos.Código = dbo.Articulos.Codigo_De_Articulo LEFT OUTER JOIN  " +
         "dbo.Lineas LEFT OUTER JOIN dbo.Tipo_De_Agrupacion_De_Lineas ON dbo.Lineas.Codigo_Tipo_De_Agrupacion_De_Lineas = dbo.Tipo_De_Agrupacion_De_Lineas.Codigo_Tipo_De_Agrupacion_De_Lineas ON  " +
         "dbo.Articulos.Codigo_De_Linea = dbo.Lineas.Codigo_De_Linea LEFT OUTER JOIN dbo.vtaPrecios_Lista ON dbo.Articulos.Codigo_De_Articulo = dbo.vtaPrecios_Lista.Codigo_De_Articulo  " +
-        "WHERE(dbo.Articulos.Baja_Logica = 0) AND(dbo.Articulos.Marca IN('mich', 'bfg', 'unir')) AND Existencia >=0 and " +
-       "(dbo.Tipo_De_Agrupacion_De_Lineas.Codigo_Tipo_De_Agrupacion_De_Lineas IN(1, 2, 3, 4))ORDER BY dbo.Articulos.Marca, dbo.Articulos.Codigo_De_Articulo  ";
+        "WHERE Existencia >=0  " +
+       "ORDER BY dbo.Articulos.Marca, dbo.Articulos.Codigo_De_Articulo  ";
 
                     break;
+
                 case 2:
                     return "SELECT  'hnk' + dbo.Articulos.Codigo_De_Articulo AS Codigo, dbo.Articulos.Codigo_De_Articulo as Codigo_LRG, dbo.Articulos.Marca AS Marca, dbo.Articulos.Descripcion,  " +
         "ISNULL(dbo.vtaPrecios_Lista.PL, 0) AS PL, ISNULL(dbo.vtaScFormaExistrenciasPorSucursalArticulos.Existencia, 0) AS Existencia FROM dbo.vtaScFormaExistrenciasPorSucursalArticulos RIGHT OUTER JOIN  " +
@@ -705,6 +709,6 @@ namespace GGGC.Admin.AZ.Plexi
             }
             return "";
         
+        }
     }
-}
 }
