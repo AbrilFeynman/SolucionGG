@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="csvDataSource1.Source" xml:space="preserve">
+    <value>Numerosucursal,TotalActual,Codigo_De_Sucursal,Nombre,TotalAnterior
+1,2,B01,Felipe Pescador,18
+2,5,B02,Villa 2,19
+3,7,B03,Negrete,22
+4,9,B04,Villa 1,24
+5,10,B05,Blv Durango,22
+7,6,B07,Mayoreo,24
+</value>
+  </data>
+  <metadata name="salesData.ParameterValues" xml:space="preserve">
+    <value>{@country:United States,@year:2003,@category:1}</value>
+  </metadata>
+  <data name="salesData.SelectCommand" xml:space="preserve">
+    <value>SELECT     
+	PC.Name AS ProductCategory, 
+	PS.Name AS ProductSubCategory,
+	SOD.LineTotal as LineTotal,
+	P.Name AS ProductName,
+	SOH.OrderDate,
+	cr.Name AS Country,
+	sp.Name AS State,
+geo.Lat,
+geo.Long,
+	addr.City,
+	addr.PostalCode,
+	addr.AddressLine1 AS [Address]
+FROM         
+		Production.Product AS P 
+	INNER JOIN Production.ProductSubcategory AS PS ON P.ProductSubcategoryID = PS.ProductSubcategoryID 
+	INNER JOIN Production.ProductCategory AS PC ON PS.ProductCategoryID = PC.ProductCategoryID		
+	INNER JOIN Sales.SalesOrderDetail AS SOD ON P.ProductID = SOD.ProductID 
+	INNER JOIN Sales.SalesOrderHeader AS SOH ON SOD.SalesOrderID = SOH.SalesOrderID
+	INNER JOIN Person.Address AS addr ON addr.AddressID = soh.ShipToAddressID
+	INNER JOIN Person.StateProvince AS sp ON sp.StateProvinceID = addr.StateProvinceID	
+	INNER JOIN Person.CountryRegion AS cr ON cr.CountryRegionCode = sp.CountryRegionCode
+
+INNER JOIN ( 
+	
+	SELECT -36.7499008178711 AS Lat, 144.279006958008 AS Long, 'Australia' AS Country, 'Bendigo' AS City
+UNION SELECT -27.4684600830078, 153.023422241211, 'Australia', 'Brisbane'
+UNION SELECT -26.8043003082275, 153.134002685547, 'Australia', 'Caloundra'
+UNION SELECT -31.9643592834473, 115.93798828125, 'Australia', 'Cloverdale'
+UNION SELECT -30.2970199584961, 153.115142822266, 'Australia', 'Coffs Harbour'
+UNION SELECT -33.8744697570801, 151.212493896484, 'Australia', 'Darlinghurst'
+UNION SELECT -27.496927, 153.085819, 'Australia', 'East Brisbane'
+UNION SELECT -34.900520324707, 138.532211303711, 'Australia', 'Findon'
+UNION SELECT -38.1456985473633, 144.356994628906, 'Australia', 'Geelong'
+UNION SELECT -27.9785003662109, 153.360992431641, 'Australia', 'Gold Coast'
+UNION SELECT -31.6702995300293, 115.81600189209, 'Australia', 'Goulburn'
+UNION SELECT -27.4660491943359, 153.059646606445, 'Australia', 'Hawthorne'
+UNION SELECT -34.3660011291504, 136.132995605469, 'Australia', 'Hervey Bay'
+UNION SELECT -42.8857002258301, 147.332000732422, 'Australia', 'Hobart'
+UNION SELECT -33.8744697570801, 151.212493896484, 'Australia', 'Lane Cove'
+UNION SELECT -33.8744697570801, 151.212493896484, 'Australia', 'Lavender Bay'
+UNION SELECT -33.8744697570801, 151.212493896484, 'Australia', 'Malabar'
+UNION SELECT -33.8744697570801, 151.212493896484, 'Australia', 'Matraville'
+UNION SELECT -37.849723815918, 144.968338012695, 'Australia', 'Melbourne'
+UNION SELECT -37.6809005737305, 144.576995849609, 'Australia', 'Melton'
+UNION SELECT -33.8744697570801, 151.212493896484, 'Australia', 'Milsons Point'
+UNION SELECT -32.9259986877441, 151.77099609375, 'Australia', 'Newcastle'
+UNION SELECT -33.8744697570801, 151.212493896484, 'Australia', 'North Ryde'
+UNION SELECT -33.8391799926758, 151.207183837891, 'Australia', 'North Sydney'
+UNION SELECT -31.954719543457, 115.862480163574, 'Australia', 'Perth'
+UNION SELECT -31.4295997619629, 152.908157348633, 'Australia', 'Port Macquarie'
+UNION SELECT -33.8744697570801, 151.212493896484, 'Australia', 'Rhodes'
+UNION SELECT -23.3742198944092, 150.503646850586, 'Australia', 'Rockhampton'
+UNION SELECT -38.1133308410645, 145.137390136719, 'Australia', 'Seaford'
+UNION SELECT -33.8744697570801, 151.212493896484, 'Australia', 'Silverwater'
+UNION SELECT -37.8344917297363, 144.960220336914, 'Australia', 'South Melbourne'
+UNION SELECT -27.6149997711182, 153.124725341797, 'Australia', 'Springwood'
+UNION SELECT -33.8744697570801, 151.212493896484, 'Australia', 'St. Leonards'
+UNION SELECT -37.5800704956055, 144.729080200195, 'Australia', 'Sunbury'
+UNION SELECT -33.8740005493164, 151.203002929688, 'Australia', 'Sydney'
+UNION SELECT -19.2571907043457, 146.821243286133, 'Australia', 'Townsville'
+UNION SELECT -38.3866996765137, 142.518997192383, 'Australia', 'Warrnambool'
+UNION SELECT -34.4199981689453, 150.884002685547, 'Australia', 'Wollongong'
+UNION SELECT 42.6598892211914, -78.550178527832, 'Canada', 'Aurora'
+UNION SELECT 44.4225997924805, -79.6969985961914, 'Canada', 'Barrie'
+UNION SELECT 43.7704010009766, -79.686897277832, 'Canada', 'Brampton'
+UNION SELECT 49.2219009399414, -123.009002685547, 'Canada', 'Burnaby'
+UNION SELECT 51.0452194213867, -114.063018798828, 'Canada', 'Calgary'
+UNION SELECT 43.7102012634277, -79.2427978515625, 'Canada', 'Cliffside'
+UNION SELECT 45.4389190673828, -73.7301712036133, 'Canada', 'Dorval'
+UNION SELECT 53.453800201416, -113.509002685547, 'Canada', 'Edmonton'
+UNION SELECT 43.657413482666, -79.5814056396484, 'Canada', 'Etobicoke'
+UNION SELECT 49.2879905700684, -123.114852905273, 'Canada', 'Haney'
+UNION SELECT 49.2879905700684, -123.114852905273, 'Canada', 'Kanata'
+UNION SELECT 44.2411994934082, -76.5058975219727, 'Canada', 'Kingston'
+UNION SELECT 48.4516983032227, -123.486000061035, 'Canada', 'Langford'
+UNION SELECT 49.2879905700684, -123.114852905273, 'Canada', 'Langley'
+UNION SELECT 43.9023017883301, -79.2456970214844, 'Canada', 'Markham'
+UNION SELECT 48.4067001342773, -123.574996948242, 'Canada', 'Metchosin'
+UNION SELECT 43.6837005615234, -79.6052017211914, 'Canada', 'Mississauga'
+UNION SELECT 45.5172004699707, -73.5498962402344, 'Canada', 'Montreal'
+UNION SELECT 49.2879905700684, -123.114852905273, 'Canada', 'N. Vancouver'
+UNION SELECT 45.4198684692383, -75.7065582275391, 'Canada', 'Nepean'
+UNION SELECT 38.3572387695313, -97.1050720214844, 'Canada', 'Newton'
+UNION SELECT 48.407398223877, -123.324996948242, 'Canada', 'Oak Bay'
+UNION SELECT 45.4198684692383, -75.7065582275391, 'Canada', 'Ottawa'
+UNION SELECT 45.5155296325684, -73.6084671020508, 'Canada', 'Outremont'
+UNION SELECT 49.2879905700684, -123.114852905273, 'Canada', 'Port Hammond'
+UNION SELECT 46.8127403259277, -71.219352722168, 'Canada', 'Quebec'
+UNION SELECT 49.2879905700684, -123.114852905273, 'Canada', 'Richmond'
+UNION SELECT 48.480110168457, -123.379920959473, 'Canada', 'Royal Oak'
+UNION SELECT 45.1154594421387, -65.7566833496094, 'Canada', 'Saint John'
+UNION SELECT 50.9199981689453, -114.084991455078, 'Canada', 'Shawnee'
+UNION SELECT 46.7841796875, -71.2552871704102, 'Canada', 'Sillery'
+UNION SELECT 48.3768997192383, -123.735000610352, 'Canada', 'Sooke'
+UNION SELECT 49.1482009887695, -122.857002258301, 'Canada', 'Surrey'
+UNION SELECT 43.6483993530273, -79.4857025146484, 'Canada', 'Toronto'
+UNION SELECT 49.2879905700684, -123.114852905273, 'Canada', 'Vancouver'
+UNION SELECT 43.499698638916, -80.5286026000977, 'Canada', 'Waterloo'
+UNION SELECT 42.6277084350586, -71.3143081665039, 'Canada', 'Weston'
+UNION SELECT 49.9164009094238, -97.1956024169922, 'Canada', 'Winnipeg'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Bobigny'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Boulogne-Billancourt'
+UNION SELECT 50.7310981750488, 1.60132002830505, 'France', 'Boulogne-sur-Mer'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Cergy'
+UNION SELECT 43.4478988647461, 0.248080000281334, 'France', 'Chatou'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Colombes'
+UNION SELECT 43.6116981506348, 1.32317996025085, 'France', 'Colomiers'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Drancy'
+UNION SELECT 51.0150985717773, 2.34961009025574, 'France', 'Dunkerque'
+UNION SELECT 48.6150016784668, 2.54499006271362, 'France', 'Lieusaint'
+UNION SELECT 50.619499206543, 3.059809923172, 'France', 'Lille'
+UNION SELECT 49.1099014282227, 6.16588020324707, 'France', 'Metz'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Morangis'
+UNION SELECT 47.8978996276855, 1.90559005737305, 'France', 'Orleans'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Orly'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Pantin'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Paris'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Paris La Defense'
+UNION SELECT 50.7545013427734, 3.12028002738953, 'France', 'Roncq'
+UNION SELECT 50.701301574707, 3.18054008483887, 'France', 'Roubaix'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Saint Germain en Laye'
+UNION SELECT 45.8713989257813, -0.162780001759529, 'France', 'Saint Ouen'
+UNION SELECT 48.943000793457, 2.37045001983643, 'France', 'Saint-Denis'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Sevres'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Suresnes'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Tremblay-en-France'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Verrieres Le Buisson'
+UNION SELECT 48.3550987243652, 10.927300453186, 'Germany', 'Augsburg'
+UNION SELECT 50.1352005004883, 8.50955009460449, 'Germany', 'Bad Soden'
+UNION SELECT 52.5160713195801, 13.3769798278809, 'Germany', 'Berlin'
+UNION SELECT 50.732421875, 7.10186004638672, 'Germany', 'Bonn'
+UNION SELECT 51.5181999206543, 6.93216991424561, 'Germany', 'Bottrop'
+UNION SELECT 52.2355003356934, 10.5419998168945, 'Germany', 'Braunschweig'
+UNION SELECT 51.0536308288574, 13.7408103942871, 'Germany', 'Dresden'
+UNION SELECT 51.2156295776367, 6.77604007720947, 'Germany', 'Duesseldorf'
+UNION SELECT 51.4579010009766, 12.637900352478, 'Germany', 'Eilenburg'
+UNION SELECT 49.5872993469238, 11.0347003936768, 'Germany', 'Erlangen'
+UNION SELECT 51.4518089294434, 7.01060009002686, 'Germany', 'Essen'
+UNION SELECT 50.1120796203613, 8.68340969085693, 'Germany', 'Frankfurt'
+UNION SELECT 50.054961, 8.511532, 'Germany', 'Frankfurt am Main'
+UNION SELECT 53.5533409118652, 9.99246978759766, 'Germany', 'Hamburg'
+UNION SELECT 52.3722686767578, 9.73814964294434, 'Germany', 'Hannover'
+UNION SELECT 50.3221015930176, 11.9233999252319, 'Germany', 'Hof'
+UNION SELECT 48.7737998962402, 11.4254999160767, 'Germany', 'Ingolstadt'
+UNION SELECT 51.3161010742188, 9.46852016448975, 'Germany', 'Kassel'
+UNION SELECT 54.3232498168945, 10.1322402954102, 'Germany', 'Kiel'
+UNION SELECT 51.3451995849609, 12.3859395980835, 'Germany', 'Leipzig'
+UNION SELECT 51.4333000183105, 6.88332986831665, 'Germany', 'Muehlheim'
+UNION SELECT 50.1203994750977, 8.84708976745605, 'Germany', 'Muhlheim'
+UNION SELECT 48.1390991210938, 11.5144996643066, 'Germany', 'Munchen'
+UNION SELECT 51.9630088806152, 7.61780977249146, 'Germany', 'Munster'
+UNION SELECT 49.3489990234375, 7.17915010452271, 'Germany', 'Neunkirchen'
+UNION SELECT 50.1068992614746, 8.73309993743896, 'Germany', 'Offenbach'
+UNION SELECT 51.7181396484375, 8.75203990936279, 'Germany', 'Paderborn'
+UNION SELECT 48.1753997802734, 11.7959995269775, 'Germany', 'Poing'
+UNION SELECT 49.2314910888672, 6.99833011627197, 'Germany', 'Saarbrucken'
+UNION SELECT 49.3065986633301, 6.73655986785889, 'Germany', 'Saarlouis'
+UNION SELECT 52.1532783508301, 10.3331203460693, 'Germany', 'Salzgitter'
+UNION SELECT 51.1721611022949, 7.08675003051758, 'Germany', 'Solingen'
+UNION SELECT 49, 10, 'Germany', 'Stuttgart'
+UNION SELECT 50.138334, 8.53041, 'Germany', 'Sulzbach Taunus'
+UNION SELECT 51.6558990478516, 7.63256978988647, 'Germany', 'Werne'
+UNION SELECT 51.6655006408691, -1.292799949646, 'United Kingdom', 'Abingdon'
+UNION SELECT 54.072437286377, -2.78439235687256, 'United Kingdom', 'Basingstoke Hants'
+UNION SELECT 51.4502944946289, -1.30496120452881, 'United Kingdom', 'Berks'
+UNION SELECT 51.4502944946289, -1.30496120452881, 'United Kingdom', 'Berkshire'
+UNION SELECT 51.622200012207, 0.406569987535477, 'United Kingdom', 'Billericay'
+UNION SELECT 52.4786682128906, -1.90848004817963, 'United Kingdom', 'Birmingham'
+UNION SELECT 51.4191017150879, -0.758960008621216, 'United Kingdom', 'Bracknell'
+UNION SELECT 53.5962982177734, -2.29001998901367, 'United Kingdom', 'Bury'
+UNION SELECT 52.228401184082, 0.111850000917912, 'United Kingdom', 'Cambridge'
+UNION SELECT 51.8936004638672, -2.09120011329651, 'United Kingdom', 'Cheltenham'
+UNION SELECT 51.368215, -0.396628, 'United Kingdom', 'Esher-Molesey'
+UNION SELECT 54.9410018920898, -1.59839999675751, 'United Kingdom', 'Gateshead'
+UNION SELECT 51.8253784179688, -2.12918877601624, 'United Kingdom', 'Gloucestershire'
+UNION SELECT 51.6297187805176, -0.746129989624023, 'United Kingdom', 'High Wycombe'
+UNION SELECT 53.4836006164551, -2.88948011398315, 'United Kingdom', 'Kirkby'
+UNION SELECT 54.0484008789063, -2.79328989982605, 'United Kingdom', 'Lancaster'
+UNION SELECT 53.7747993469238, -1.5519700050354, 'United Kingdom', 'Leeds'
+UNION SELECT 53.4121017456055, -2.94757008552551, 'United Kingdom', 'Liverpool'
+UNION SELECT 51.5064315795898, -0.127189993858337, 'United Kingdom', 'London'
+UNION SELECT 51.5237998962402, -0.709839999675751, 'United Kingdom', 'Maidenhead'
+UNION SELECT 52.083179473877, -0.733588099479675, 'United Kingdom', 'Milton Keynes'
+UNION SELECT 54.9684982299805, -1.62409996986389, 'United Kingdom', 'Newcastle upon Tyne'
+UNION SELECT 51.7471008300781, -1.25654995441437, 'United Kingdom', 'Oxford'
+UNION SELECT 51.765811920166, -1.3216540813446, 'United Kingdom', 'Oxon'
+UNION SELECT 52.5702018737793, -0.240679994225502, 'United Kingdom', 'Peterborough'
+UNION SELECT 51.4535217285156, -0.963010013103485, 'United Kingdom', 'Reading'
+UNION SELECT 53.3377990722656, -2.7434298992157, 'United Kingdom', 'Runcorn'
+UNION SELECT 53.0177726745605, -2.16254615783691, 'United Kingdom', 'Stoke-on-Trent'
+UNION SELECT 53.536538, -2.181306, 'United Kingdom', 'W. York'
+UNION SELECT 53.4117012023926, -2.58464002609253, 'United Kingdom', 'Warrington'
+UNION SELECT 51.6725997924805, -0.396710008382797, 'United Kingdom', 'Watford'
+UNION SELECT 50.9128532409668, -0.513157546520233, 'United Kingdom', 'West Sussex'
+UNION SELECT 51.4327354431152, -0.884869635105133, 'United Kingdom', 'Wokingham'
+UNION SELECT 50.883667, -1.346061, 'United Kingdom', 'Woolston'
+UNION SELECT 53.9450988769531, -1.07880997657776, 'United Kingdom', 'York'
+UNION SELECT 42.6515502929688, -73.7552108764648, 'United States', 'Albany'
+UNION SELECT 39.7740097045898, -121.419471740723, 'United States', 'Alhambra'
+UNION SELECT 38.890510559082, -77.0862884521484, 'United States', 'Arlington'
+UNION SELECT 39.9179458618164, -75.1368865966797, 'United States', 'Atlanta'
+UNION SELECT 32.6074600219727, -85.4817276000977, 'United States', 'Auburn'
+UNION SELECT 33.4790916442871, -81.9753112792969, 'United States', 'Augusta'
+UNION SELECT 40.743709564209, -73.9420928955078, 'United States', 'Austell'
+UNION SELECT 30.267599105835, -97.7429809570313, 'United States', 'Austin'
+UNION SELECT 34.0851783752441, -117.960289001465, 'United States', 'Baldwin Park'
+UNION SELECT 44.4860916137695, -84.6039505004883, 'United States', 'Ballard'
+UNION SELECT 36.7519607543945, -107.982688903809, 'United States', 'Baltimore'
+UNION SELECT 34.8929595947266, -117.025817871094, 'United States', 'Barstow'
+UNION SELECT 42.670970916748, -82.7707366943359, 'United States', 'Baytown'
+UNION SELECT 48.4451103210449, -107.236106872559, 'United States', 'Beaverton'
+UNION SELECT 33.9695510864258, -118.14924621582, 'United States', 'Bell Gardens'
+UNION SELECT 40.505347, -80.049334, 'United States', 'Bellevue'
+UNION SELECT 33.7973518371582, -118.059349060059, 'United States', 'Bellflower'
+UNION SELECT 33.6504211425781, -117.835357666016, 'United States', 'Berkeley'
+UNION SELECT 34.0734786987305, -118.400337219238, 'United States', 'Beverly Hills'
+UNION SELECT 34.9650001525879, -94.7146911621094, 'United States', 'Billings'
+UNION SELECT 29.4221496582031, -94.6913604736328, 'United States', 'Biloxi'
+UNION SELECT 33.520679473877, -86.8117599487305, 'United States', 'Birmingham'
+UNION SELECT 34.5755195617676, -82.5808334350586, 'United States', 'Bluffton'
+UNION SELECT 47.7613716125488, -122.205619812012, 'United States', 'Bothell'
+UNION SELECT 36.322639465332, -93.2059936523438, 'United States', 'Bountiful'
+UNION SELECT 27.4955005645752, -82.5780715942383, 'United States', 'Bradenton'
+UNION SELECT 42.2063903808594, -71.0048065185547, 'United States', 'Braintree'
+UNION SELECT 47.2976417541504, -88.3653793334961, 'United States', 'Branch'
+UNION SELECT 35.1073303222656, -94.6705703735352, 'United States', 'Branson'
+UNION SELECT 47.564998626709, -122.627471923828, 'United States', 'Bremerton'
+UNION SELECT 33.6789283752441, -117.66007232666, 'United States', 'Burbank'
+UNION SELECT 47.4686317443848, -122.339653015137, 'United States', 'Burien'
+UNION SELECT 32.8949203491211, -117.094612121582, 'United States', 'Burlingame'
+UNION SELECT 42.4437294006348, -83.320556640625, 'United States', 'Byron'
+UNION SELECT 34.1576995849609, -118.353286743164, 'United States', 'Camarillo'
+UNION SELECT 37.2014083862305, -85.334228515625, 'United States', 'Campbellsville'
+UNION SELECT 34.209171295166, -118.600624084473, 'United States', 'Canoga Park'
+UNION SELECT 41.9160499572754, -88.1205596923828, 'United States', 'Carol Stream'
+UNION SELECT 33.1327018737793, -88.1392593383789, 'United States', 'Carrollton'
+UNION SELECT 39.1560897827148, -119.692901611328, 'United States', 'Carson'
+UNION SELECT 29.9987201690674, -97.8520278930664, 'United States', 'Casper'
+UNION SELECT 37.6779518127441, -113.06175994873, 'United States', 'Cedar City'
+UNION SELECT 30.5065994262695, -97.821891784668, 'United States', 'Cedar Park'
+UNION SELECT 40.6805381774902, -122.365608215332, 'United States', 'Central Valley'
+UNION SELECT 33.8685417175293, -118.063697814941, 'United States', 'Cerritos'
+UNION SELECT 38.1638717651367, -107.824020385742, 'United States', 'Chandler'
+UNION SELECT 38.8835983276367, -77.4397506713867, 'United States', 'Chantilly'
+UNION SELECT 35.2228584289551, -80.8379592895508, 'United States', 'Charlotte'
+UNION SELECT 42.9039306640625, -78.7405700683594, 'United States', 'Cheektowaga'
+UNION SELECT 46.0045394897461, -122.830238342285, 'United States', 'Chehalis'
+UNION SELECT 44.5331001281738, -101.935470581055, 'United States', 'Cheyenne'
+UNION SELECT 41.8842506408691, -87.6324462890625, 'United States', 'Chicago'
+UNION SELECT 32.6408996582031, -117.084281921387, 'United States', 'Chula Vista'
+UNION SELECT 39.1071281433105, -84.5041275024414, 'United States', 'Cincinnati'
+UNION SELECT 38.6986312866211, -121.271713256836, 'United States', 'Citrus Heights'
+UNION SELECT 45.412109375, -122.569091796875, 'United States', 'Clackamas'
+UNION SELECT 33.449878692627, -81.9894409179688, 'United States', 'Clarkston'
+UNION SELECT 39.9186401367188, -93.9593276977539, 'United States', 'Clay'
+UNION SELECT 43.7441711425781, -121.611763000488, 'United States', 'Clearwater'
+UNION SELECT 30.6205406188965, -96.3258972167969, 'United States', 'College Station'
+UNION SELECT 39.9619903564453, -83.0027465820313, 'United States', 'Columbus'
+UNION SELECT 39.6307106018066, -105.084732055664, 'United States', 'Concord'
+UNION SELECT 32.8949203491211, -117.094612121582, 'United States', 'Coronado'
+UNION SELECT 27.7964096069336, -97.4035568237305, 'United States', 'Corpus Christi'
+UNION SELECT 44.5630569458008, -123.258888244629, 'United States', 'Corvallis'
+UNION SELECT 36.1380500793457, -85.2636871337891, 'United States', 'Crossville'
+UNION SELECT 34.0216102600098, -118.396209716797, 'United States', 'Culver City'
+UNION SELECT 31.3070602416992, -85.7139129638672, 'United States', 'Daleville'
+UNION SELECT 32.778148651123, -96.7954025268555, 'United States', 'Dallas'
+UNION SELECT 37.691089630127, -122.472816467285, 'United States', 'Daly City'
+UNION SELECT 42.4349899291992, -83.3105926513672, 'United States', 'Denby'
+UNION SELECT 39.7400093078613, -104.992301940918, 'United States', 'Denver'
+UNION SELECT 36.6013603210449, -93.3340835571289, 'United States', 'Destin'
+UNION SELECT 41.7351608276367, -83.5291213989258, 'United States', 'Detroit'
+UNION SELECT 33.7973518371582, -118.059349060059, 'United States', 'Downey'
+UNION SELECT 46.7879600524902, -92.099853515625, 'United States', 'Duluth'
+UNION SELECT 41.277759552002, -72.8713912963867, 'United States', 'East Haven'
+UNION SELECT 37.7511100769043, -81.2163009643555, 'United States', 'Edina'
+UNION SELECT 31.457010269165, -92.4259719848633, 'United States', 'Edmonds'
+UNION SELECT 32.7949485778809, -116.95947265625, 'United States', 'El Cajon'
+UNION SELECT 33.919921875, -118.415962219238, 'United States', 'El Segundo'
+UNION SELECT 42.0395584106445, -88.2832412719727, 'United States', 'Elgin'
+UNION SELECT 38.4090194702148, -121.365272521973, 'United States', 'Elk Grove'
+UNION SELECT 42.0997314453125, -76.0456695556641, 'United States', 'Endicott'
+UNION SELECT 39.6546211242676, -104.993560791016, 'United States', 'Englewood'
+UNION SELECT 32.8949203491211, -117.094612121582, 'United States', 'Escondido'
+UNION SELECT 31.6669006347656, -92.8883209228516, 'United States', 'Euclid'
+UNION SELECT 39.0236892700195, -107.909507751465, 'United States', 'Eureka'
+UNION SELECT 47.9765892028809, -122.205932617188, 'United States', 'Everett'
+UNION SELECT 38.8854904174805, -77.1736221313477, 'United States', 'Falls Church'
+UNION SELECT 47.3011283874512, -122.329849243164, 'United States', 'Federal Way'
+UNION SELECT 46.0668411254883, -86.6498489379883, 'United States', 'Ferguson'
+UNION SELECT 38.6094207763672, -121.460586547852, 'United States', 'Fernley'
+UNION SELECT 34.8004493713379, -87.6752624511719, 'United States', 'Florence'
+UNION SELECT 32.598819732666, -97.0529327392578, 'United States', 'Fontana'
+UNION SELECT 41.0802612304688, -85.138313293457, 'United States', 'Fort Wayne'
+UNION SELECT 32.7509498596191, -97.3308563232422, 'United States', 'Fort Worth'
+UNION SELECT 42.0085411071777, -111.421112060547, 'United States', 'Fremont'
+UNION SELECT 30.9933338165283, -92.9822235107422, 'United States', 'Fullerton'
+UNION SELECT 42.6615180969238, -83.6156387329102, 'United States', 'Gaffney'
+UNION SELECT 32.9142684936523, -96.6365509033203, 'United States', 'Garland'
+UNION SELECT 33.3290405273438, -111.789756774902, 'United States', 'Gilbert'
+UNION SELECT 35.2684097290039, -119.923027038574, 'United States', 'Gilroy'
+UNION SELECT 39.81737, -74.96751, 'United States', 'Glendale'
+UNION SELECT 47.5071411132813, -111.30606842041, 'United States', 'Great Falls'
+UNION SELECT 40.4232711791992, -104.694458007813, 'United States', 'Greeley'
+UNION SELECT 36.0689888000488, -79.7947006225586, 'United States', 'Greensboro'
+UNION SELECT 29.419849395752, -94.6905212402344, 'United States', 'Gulfport'
+UNION SELECT 38.3954086303711, -120.802871704102, 'United States', 'Hanford'
+UNION SELECT 32.4612808227539, -100.020156860352, 'United States', 'Heath'
+UNION SELECT 34.3264808654785, -118.46166229248, 'United States', 'Hillsboro'
+UNION SELECT 33.4797210693359, -86.7816696166992, 'United States', 'Hollywood'
+UNION SELECT 29.7077503204346, -95.5537719726563, 'United States', 'Houston'
+UNION SELECT 41.3806991577148, -123.594139099121, 'United States', 'Humble'
+UNION SELECT 34.7291297912598, -86.5849761962891, 'United States', 'Huntsville'
+UNION SELECT 43.492000579834, -112.0419921875, 'United States', 'Idaho Falls'
+UNION SELECT 32.5765609741211, -117.116157531738, 'United States', 'Imperial Beach'
+UNION SELECT 43.8810081481934, -85.7999801635742, 'United States', 'Indianapolis'
+UNION SELECT 32.8135108947754, -96.9554977416992, 'United States', 'Irving'
+UNION SELECT 39.6340103149414, -121.339057922363, 'United States', 'Issaquah'
+UNION SELECT 38.5775108337402, -92.1778411865234, 'United States', 'Jefferson City'
+UNION SELECT 44.8269081115723, -87.3886108398438, 'United States', 'Joliet'
+UNION SELECT 35.5041389465332, -80.6376190185547, 'United States', 'Kannapolis'
+UNION SELECT 39.1029510498047, -94.5830764770508, 'United States', 'Kansas City'
+UNION SELECT 29.580810546875, -98.5364379882813, 'United States', 'Kelso'
+UNION SELECT 39.6923294067383, -121.318237304688, 'United States', 'Kendall'
+UNION SELECT 42.393611907959, -73.3649978637695, 'United States', 'Kenmore'
+UNION SELECT 46.2080383300781, -119.116981506348, 'United States', 'Kennewick'
+UNION SELECT 43.0322113037109, -85.5492630004883, 'United States', 'Kent'
+UNION SELECT 32.8027496337891, -96.4710311889648, 'United States', 'Killeen'
+UNION SELECT 46.357120513916, -84.8982696533203, 'United States', 'Kirkland'
+UNION SELECT 42.1280212402344, -124.345062255859, 'United States', 'Kittery'
+UNION SELECT 42.2238807678223, -121.78205871582, 'United States', 'Klamath Falls'
+UNION SELECT 41.642650604248, -85.4265213012695, 'United States', 'La Grange'
+UNION SELECT 32.8949203491211, -117.094612121582, 'United States', 'La Jolla'
+UNION SELECT 32.7660217285156, -117.023551940918, 'United States', 'La Mesa'
+UNION SELECT 31.5778694152832, -88.5441970825195, 'United States', 'Lacey'
+UNION SELECT 33.6675682067871, -117.327857971191, 'United States', 'Lake Elsinore'
+UNION SELECT 43.4282302856445, -73.711669921875, 'United States', 'Lake George'
+UNION SELECT 28.044189453125, -81.9478607177734, 'United States', 'Lakeland'
+UNION SELECT 39.7109184265137, -105.082069396973, 'United States', 'Lakewood'
+UNION SELECT 27.5309200286865, -99.5019989013672, 'United States', 'Laredo'
+UNION SELECT 32.3069000244141, -106.777847290039, 'United States', 'Las Cruces'
+UNION SELECT 39.45, -98.908, 'United States', 'Lebanon'
+UNION SELECT 45.2238883972168, -114.113891601563, 'United States', 'Leesburg'
+UNION SELECT 32.7407989501953, -117.03108215332, 'United States', 'Lemon Grove'
+UNION SELECT 45.7918090820313, -119.338592529297, 'United States', 'Lewiston'
+UNION SELECT 32.6674613952637, -117.071891784668, 'United States', 'Lincoln Acres'
+UNION SELECT 31.6914806365967, -106.054832458496, 'United States', 'Logansport'
+UNION SELECT 33.7667198181152, -118.192398071289, 'United States', 'Long Beach'
+UNION SELECT 30.6599998474121, -98.4669418334961, 'United States', 'Longmont'
+UNION SELECT 30.7385902404785, -94.9288177490234, 'United States', 'Longview'
+UNION SELECT 34.0534896850586, -118.245323181152, 'United States', 'Los Angeles'
+UNION SELECT 39.2933311462402, -106.12255859375, 'United States', 'Loveland'
+UNION SELECT 42.4902763366699, -71.0722198486328, 'United States', 'Lynnwood'
+UNION SELECT 37.4235687255859, -79.1246871948242, 'United States', 'Madison Heights'
+UNION SELECT 41.7648696899414, -72.1980361938477, 'United States', 'Mansfield'
+UNION SELECT 33.9531898498535, -84.5458831787109, 'United States', 'Marietta'
+UNION SELECT 33.7279586791992, -117.766143798828, 'United States', 'Marysville'
+UNION SELECT 46.4244003295898, -94.3152236938477, 'United States', 'Maryville'
+UNION SELECT 34.5324897766113, -90.5934906005859, 'United States', 'Mcdonough'
+UNION SELECT 33.8762588500977, -98.571907043457, 'United States', 'Medford'
+UNION SELECT 40.7927513122559, -73.4162979125977, 'United States', 'Melville'
+UNION SELECT 35.1497611999512, -90.0492477416992, 'United States', 'Memphis'
+UNION SELECT 33.8149604797363, -92.4275665283203, 'United States', 'Mentor'
+UNION SELECT 41.7193603515625, -86.9031677246094, 'United States', 'Michigan City'
+UNION SELECT 32.0005912780762, -102.074447631836, 'United States', 'Midland'
+UNION SELECT 37.9076118469238, -122.548187255859, 'United States', 'Mill Valley'
+UNION SELECT 37.4328002929688, -121.897262573242, 'United States', 'Milpitas'
+UNION SELECT 37.6386413574219, -121, 'United States', 'Modesto'
+UNION SELECT 44.9834403991699, -93.2743530273438, 'United States', 'Moline'
+UNION SELECT 34.1475486755371, -117.998779296875, 'United States', 'Monrovia'
+UNION SELECT 33.6935615539551, -78.8826599121094, 'United States', 'Myrtle Beach'
+UNION SELECT 42.7583618164063, -71.4642105102539, 'United States', 'Nashua'
+UNION SELECT 36.167839050293, -86.7781600952148, 'United States', 'Nashville'
+UNION SELECT 32.6719398498535, -117.105422973633, 'United States', 'National City'
+UNION SELECT 41.001838684082, -80.3472366333008, 'United States', 'New Castle'
+UNION SELECT 43.0717887878418, -75.2870407104492, 'United States', 'New Hartford'
+UNION SELECT 41.3076210021973, -72.9246215820313, 'United States', 'New Haven'
+UNION SELECT 40.7820014953613, -73.8327026367188, 'United States', 'New York'
+UNION SELECT 40.0602111816406, -82.4042587280273, 'United States', 'Newark'
+UNION SELECT 44.6322784423828, -124.057579040527, 'United States', 'Newport'
+UNION SELECT 38.2753982543945, -75.2191009521484, 'United States', 'Newport Hills'
+UNION SELECT 37.082878112793, -76.4802322387695, 'United States', 'Newport News'
+UNION SELECT 41.9933891296387, -87.9459533691406, 'United States', 'Norridge'
+UNION SELECT 43.406608581543, -124.224548339844, 'United States', 'North Bend'
+UNION SELECT 35.623911, -105.227364, 'United States', 'North Las Vegas'
+UNION SELECT 40.644660949707, -74.1012115478516, 'United States', 'North Randall'
+UNION SELECT 42.5257987976074, -96.4839935302734, 'United States', 'North Sioux City'
+UNION SELECT 42.839900970459, -106.272308349609, 'United States', 'Norwood'
+UNION SELECT 38.106071472168, -122.567886352539, 'United States', 'Novato'
+UNION SELECT 42.4609718322754, -83.4744186401367, 'United States', 'Novi'
+UNION SELECT 34.3675117492676, -109.742378234863, 'United States', 'Oakland'
+UNION SELECT 30.1278495788574, -92.49658203125, 'United States', 'Ogden'
+UNION SELECT 47.0392303466797, -122.891357421875, 'United States', 'Olympia'
+UNION SELECT 33.7878608703613, -117.850402832031, 'United States', 'Orange'
+UNION SELECT 37.4446601867676, -122.160789489746, 'United States', 'Palo Alto'
+UNION SELECT 40.643138885498, -111.49397277832, 'United States', 'Park City'
+UNION SELECT 40.692138671875, -89.587760925293, 'United States', 'Peoria'
+UNION SELECT 33.4482612609863, -112.07576751709, 'United States', 'Phoenix'
+UNION SELECT 35.7885894775391, -83.5559005737305, 'United States', 'Pigeon Forge'
+UNION SELECT 42.822208404541, -71.1043090820313, 'United States', 'Plaistow'
+UNION SELECT 31.0190296173096, -94.8483428955078, 'United States', 'Plano'
+UNION SELECT 46.8699798583984, -113.881393432617, 'United States', 'Pontiac'
+UNION SELECT 42.975830078125, -82.4284515380859, 'United States', 'Port Huron'
+UNION SELECT 47.5410308837891, -122.638473510742, 'United States', 'Port Orchard'
+UNION SELECT 45.511791229248, -122.675628662109, 'United States', 'Portland'
+UNION SELECT 48.0728607177734, -122.721099853516, 'United States', 'Puyallup'
+UNION SELECT 40.8486099243164, -74.5617218017578, 'United States', 'Randolph'
+UNION SELECT 32.9009208679199, -111.776870727539, 'United States', 'Redford'
+UNION SELECT 45.0948295593262, -83.9583892822266, 'United States', 'Redmond'
+UNION SELECT 37.4845008850098, -122.227722167969, 'United States', 'Redwood City'
+UNION SELECT 42.5257682800293, -83.5339126586914, 'United States', 'Renton'
+UNION SELECT 35.2415885925293, -106.660026550293, 'United States', 'Rio Rancho'
+UNION SELECT 41.586181640625, -109.222618103027, 'United States', 'Rock Springs'
+UNION SELECT 35.9488410949707, -77.7949905395508, 'United States', 'Rocky Mount'
+UNION SELECT 30.5090408325195, -97.6772232055664, 'United States', 'Round Rock'
+UNION SELECT 44.5084800720215, -84.7696990966797, 'United States', 'Saginaw'
+UNION SELECT 38.6277503967285, -90.1995620727539, 'United States', 'Saint Louis'
+UNION SELECT 38.249439239502, -85.6503677368164, 'United States', 'Saint Matthews'
+UNION SELECT 40.7600593566895, -111.888221740723, 'United States', 'Salt Lake City'
+UNION SELECT 29.4245796203613, -98.4946136474609, 'United States', 'San Antonio'
+UNION SELECT 37.6249198913574, -122.414138793945, 'United States', 'San Bruno'
+UNION SELECT 37.5045013427734, -122.26229095459, 'United States', 'San Carlos'
+UNION SELECT 32.715690612793, -117.161720275879, 'United States', 'San Diego'
+UNION SELECT 34.0970802307129, -118.108238220215, 'United States', 'San Gabriel'
+UNION SELECT 37.3385810852051, -121.885566711426, 'United States', 'San Jose'
+UNION SELECT 37.5470314025879, -122.314826965332, 'United States', 'San Mateo'
+UNION SELECT 37.7789688110352, -121.968688964844, 'United States', 'San Ramon'
+UNION SELECT 36.6140518188477, -121.850578308105, 'United States', 'Sand City'
+UNION SELECT 40.0852890014648, -88.3159790039063, 'United States', 'Sandpoint'
+UNION SELECT 40.5701293945313, -111.895469665527, 'United States', 'Sandy'
+UNION SELECT 33.7495803833008, -117.874298095703, 'United States', 'Santa Ana'
+UNION SELECT 35.6916809082031, -105.937957763672, 'United States', 'Santa Fe'
+UNION SELECT 27.3388805389404, -82.5396270751953, 'United States', 'Sarasota'
+UNION SELECT 33.1577796936035, -81.7614593505859, 'United States', 'Savannah'
+UNION SELECT 47.6035690307617, -122.329452514648, 'United States', 'Seattle'
+UNION SELECT 48.0796508789063, -123.103668212891, 'United States', 'Sequim'
+UNION SELECT 38.9892692565918, -80.2271270751953, 'United States', 'Smithfield'
+UNION SELECT 40.563648223877, -74.6163482666016, 'United States', 'Somerset'
+UNION SELECT 41.6790504455566, -86.2540435791016, 'United States', 'South Bend'
+UNION SELECT 45.6631393432617, -118.806358337402, 'United States', 'Southgate'
+UNION SELECT 29.6270999908447, -95.6247024536133, 'United States', 'Sparks'
+UNION SELECT 47.6860504150391, -117.283843994141, 'United States', 'Spokane'
+UNION SELECT 32.8949203491211, -117.094612121582, 'United States', 'Spring Valley'
+UNION SELECT 39.9785118103027, -90.7602615356445, 'United States', 'Springdale'
+UNION SELECT 39.8010482788086, -89.6436004638672, 'United States', 'Springfield'
+UNION SELECT 41.0518188476563, -73.5422286987305, 'United States', 'Stamford'
+UNION SELECT 37.953670501709, -121.290748596191, 'United States', 'Stockton'
+UNION SELECT 29.6329593658447, -95.5994491577148, 'United States', 'Sugar Land'
+UNION SELECT 38.3455543518066, -81.6413879394531, 'United States', 'Sunrise'
+UNION SELECT 39.5104103088379, -121.171142578125, 'United States', 'Surprise'
+UNION SELECT 30.0253791809082, -95.446647644043, 'United States', 'Suwanee'
+UNION SELECT 47.2551307678223, -122.44164276123, 'United States', 'Tacoma'
+UNION SELECT 28.0519599914551, -82.3392105102539, 'United States', 'Tampa'
+UNION SELECT 45.4250793457031, -122.765777587891, 'United States', 'Tigard'
+UNION SELECT 40.1015701293945, -87.6539764404297, 'United States', 'Tilton'
+UNION SELECT 40.5329704284668, -112.298530578613, 'United States', 'Tooele'
+UNION SELECT 33.8366584777832, -118.341659545898, 'United States', 'Torrance'
+UNION SELECT 33.6609191894531, -117.590217590332, 'United States', 'Trabuco Canyon'
+UNION SELECT 35.394660949707, -119.105659484863, 'United States', 'Troutdale'
+UNION SELECT 32.221549987793, -110.969757080078, 'United States', 'Tucson'
+UNION SELECT 34.2574081420898, -88.7078323364258, 'United States', 'Tupelo'
+UNION SELECT 44.2063407897949, -84.7298126220703, 'United States', 'Tuscola'
+UNION SELECT 37.5888290405273, -122.02751159668, 'United States', 'Union City'
+UNION SELECT 39.4293785095215, -107.246589660645, 'United States', 'Upland'
+UNION SELECT 40.6641883850098, -73.7085113525391, 'United States', 'Valley Stream'
+UNION SELECT 34.197811126709, -118.465385437012, 'United States', 'Van Nuys'
+UNION SELECT 27.6388492584229, -80.3942184448242, 'United States', 'Vero Beach'
+UNION SELECT 36.7550201416016, -76.059196472168, 'United States', 'Virginia Beach'
+UNION SELECT 42.0788917541504, -91.5989227294922, 'United States', 'W. Linn'
+UNION SELECT 46.0703811645508, -118.342376708984, 'United States', 'Walla Walla'
+UNION SELECT 41.2584114074707, -74.3583068847656, 'United States', 'Warwick'
+UNION SELECT 45.5792198181152, -122.353256225586, 'United States', 'Washougal'
+UNION SELECT 41.5550003051758, -73.0469436645508, 'United States', 'Waterbury'
+UNION SELECT 47.4147109985352, -120.305107116699, 'United States', 'Wenatchee'
+UNION SELECT 41.8820304870605, -88.2010192871094, 'United States', 'West Chicago'
+UNION SELECT 34.0721397399902, -117.93807220459, 'United States', 'West Covina'
+UNION SELECT 42.3242111206055, -83.4009780883789, 'United States', 'Westland'
+UNION SELECT 39.863468170166, -105.048866271973, 'United States', 'Westminster'
+UNION SELECT 42.3547210693359, -82.9897232055664, 'United States', 'Whittier'
+UNION SELECT 36.0996208190918, -80.2410888671875, 'United States', 'Winston-Salem'
+UNION SELECT 40.312969, -78.910119, 'United States', 'Wood Dale'
+UNION SELECT 40.2201690673828, -79.4942626953125, 'United States', 'Woodburn'
+UNION SELECT 39.8180198669434, -74.9674224853516, 'United States', 'Woodbury'
+UNION SELECT 34.1661758422852, -118.604881286621, 'United States', 'Woodland Hills'
+UNION SELECT 42.003059387207, -71.5133590698242, 'United States', 'Woonsocket'
+UNION SELECT 42.0654983520508, -71.3295135498047, 'United States', 'Wrentham'
+UNION SELECT 46.6041297912598, -120.507049560547, 'United States', 'Yakima'
+UNION SELECT -38.0808906555176, 145.265625, 'Australia', 'Cranbourne'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Courbevoie'
+UNION SELECT 48.9873809814453, 1.88876497745514, 'France', 'Les Ulis'
+UNION SELECT 51.0755996704102, 6.60370016098022, 'Germany', 'Grevenbroich'
+UNION SELECT 48.7523498535156, -122.471221923828, 'United States', 'Bellingham'
+UNION SELECT 30.8909206390381, -84.3248672485352, 'United States', 'Decatur'
+UNION SELECT 35.9521293640137, -115.109039306641, 'United States', 'Ellensburg'
+UNION SELECT 32.8949203491211, -117.094612121582, 'United States', 'Grossmont'
+UNION SELECT 33.1743698120117, -117.304870605469, 'United States', 'Hamden'
+UNION SELECT 33.6439781188965, -117.717140197754, 'United States', 'Holland'
+UNION SELECT 43.0713500976563, -71.4517135620117, 'United States', 'Hooksett'
+UNION SELECT 33.6872406005859, -117.825820922852, 'United States', 'Irvine'
+UNION SELECT 43.0759315490723, -88.7754592895508, 'United States', 'Johnson Creek'
+UNION SELECT 29.3688201904297, -94.9717178344727, 'United States', 'La Marque'
+UNION SELECT 36.022388458252, -86.5835876464844, 'United States', 'La Vergne'
+UNION SELECT 45.4197387695313, -122.667617797852, 'United States', 'Lake Oswego'
+UNION SELECT 44.6565093994141, -107.752670288086, 'United States', 'Mesa'
+UNION SELECT 35.7724800109863, -115.63020324707, 'United States', 'Mesquite'
+UNION SELECT 25.7748107910156, -80.1977310180664, 'United States', 'Miami'
+UNION SELECT 40.1615791320801, -120.387481689453, 'United States', 'Milford'
+UNION SELECT 41.4833335876465, -72.3499984741211, 'United States', 'Millington'
+UNION SELECT 43.0418090820313, -87.9068374633789, 'United States', 'Milwaukee'
+UNION SELECT 45.4451599121094, -122.641510009766, 'United States', 'Milwaukie'
+UNION SELECT 46.4538879394531, -92.7686080932617, 'United States', 'Minneapolis'
+UNION SELECT 46.8727798461914, -113.996231079102, 'United States', 'Missoula'
+UNION SELECT 39.6001396179199, -87.6957092285156, 'United States', 'Monroe'
+UNION SELECT 44.7932281494141, -89.7034301757813, 'United States', 'Mosinee'
+UNION SELECT 33.616828918457, -117.93034362793, 'United States', 'Newport Beach'
+UNION SELECT 25.9332294464111, -80.1622161865234, 'United States', 'North Miami Beach'
+UNION SELECT 41.293529510498, -82.2173309326172, 'United States', 'Oberlin'
+UNION SELECT 31.8492603302002, -102.374931335449, 'United States', 'Odessa'
+UNION SELECT 42.8528900146484, -77.2997894287109, 'United States', 'Ontario'
+UNION SELECT 45.3365097045898, -122.592781066895, 'United States', 'Oregon City'
+UNION SELECT 28.5532210693359, -81.4767192382813, 'United States', 'Orlando'
+UNION SELECT 34.2003402709961, -119.180122375488, 'United States', 'Oxnard'
+UNION SELECT 44.1258888244629, -76.0886001586914, 'United States', 'Parker'
+UNION SELECT 37.6581916809082, -121.877128601074, 'United States', 'Pleasanton'
+UNION SELECT 30.1273498535156, -92.4986724853516, 'United States', 'Racine'
+UNION SELECT 34.0630683898926, -117.226127624512, 'United States', 'Redlands'
+UNION SELECT 39.5273818969727, -119.813438415527, 'United States', 'Reno'
+UNION SELECT 40.2201690673828, -79.4942626953125, 'United States', 'Riverton'
+UNION SELECT 38.5793304443359, -121.490898132324, 'United States', 'Sacramento'
+UNION SELECT 39.4432563781738, -98.9573364257813, 'United States', 'Saint Ann'
+UNION SELECT 44.9332618713379, -123.043807983398, 'United States', 'Salem'
+UNION SELECT 47.6135406494141, -122.035461425781, 'United States', 'Sammamish'
+UNION SELECT 37.7771186828613, -122.419639587402, 'United States', 'San Francisco'
+UNION SELECT 32.8949203491211, -117.094612121582, 'United States', 'San Ysidro'
+UNION SELECT 36.9740180969238, -122.030952453613, 'United States', 'Santa Cruz'
+UNION SELECT 34.0115585327148, -118.492286682129, 'United States', 'Santa Monica'
+UNION SELECT 33.4939994812012, -111.920692443848, 'United States', 'Scottsdale'
+UNION SELECT 48.508731842041, -122.238571166992, 'United States', 'Sedro Woolley'
+UNION SELECT 41.290599822998, -73.1185836791992, 'United States', 'Shelton'
+UNION SELECT 34.1503868103027, -118.44181060791, 'United States', 'Sherman Oaks'
+UNION SELECT 34.2894592285156, -118.717658996582, 'United States', 'Simi Valley'
+UNION SELECT 29.8681793212891, -98.5690078735352, 'United States', 'Southfield'
+UNION SELECT 33.728931427002, -117.772590637207, 'United States', 'Visalia'
+UNION SELECT 41.12451171875, -73.3719100952148, 'United States', 'Westport'
+UNION SELECT 47.7593803405762, -122.204086303711, 'United States', 'Woodinville'
+UNION SELECT 39.4432563781738, -98.9573364257813, 'United States', 'Zeeland'
+UNION SELECT 36.9984092712402, -91.3251800537109, 'United States', 'Howell'
+UNION SELECT 36.1994285583496, -115.174728393555, 'United States', 'Las Vegas'
+UNION SELECT 28.3570899963379, -80.6859893798828, 'United States', 'Merritt Island'
+UNION SELECT 33.6958084106445, -117.773132324219, 'United States', 'Raleigh'
+UNION SELECT 37.6776390075684, -122.459480285645, 'United States', 'Colma'	
+	) AS geo ON geo.Country = cr.Name AND geo.City = addr.City
+
+WHERE 
+	cr.Name IN (@country) 
+	AND DATEPART(YEAR, SOH.OrderDate) IN (@year)
+	AND PC.ProductCategoryID IN (@category)
+
+</value>
+  </data>
+  <metadata name="$this.Zoom" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>0.6666667</value>
+  </metadata>
+  <metadata name="$this.ShowSnapGrid" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

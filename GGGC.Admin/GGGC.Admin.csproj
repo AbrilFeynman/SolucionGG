@@ -549,11 +549,23 @@
     <Compile Include="AZ\Inventarios\Inventarioview.xaml.cs">
       <DependentUpon>Inventarioview.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AZ\Inventarios\RptComparison.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Inventarios\RptComparison.Designer.cs">
+      <DependentUpon>RptComparison.cs</DependentUpon>
+    </Compile>
     <Compile Include="AZ\Inventarios\RptMarca.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="AZ\Inventarios\RptMarca.Designer.cs">
       <DependentUpon>RptMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Inventarios\Rptmeta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Inventarios\Rptmeta.Designer.cs">
+      <DependentUpon>Rptmeta.cs</DependentUpon>
     </Compile>
     <Compile Include="AZ\Inventarios\RptSucursales.cs">
       <SubType>Component</SubType>
@@ -1974,8 +1986,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="AZ\Inventarios\RptComparison.resx">
+      <DependentUpon>RptComparison.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AZ\Inventarios\RptMarca.resx">
       <DependentUpon>RptMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Inventarios\Rptmeta.resx">
+      <DependentUpon>Rptmeta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AZ\Inventarios\RptSucursales.resx">
       <DependentUpon>RptSucursales.cs</DependentUpon>

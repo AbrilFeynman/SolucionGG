@@ -703,6 +703,9 @@ namespace GGGC.Admin.AZ.Transferencias
 
 
 
+
+
+
         private void SaveDetail()
         {
 

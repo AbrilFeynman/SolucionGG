@@ -10,22 +10,15 @@ namespace GGGC.Admin.AZ.Inventarios
 		private void InitializeComponent()
 		{
             Telerik.Reporting.GraphGroup graphGroup1 = new Telerik.Reporting.GraphGroup();
-            Telerik.Reporting.Drawing.ColorPalette colorPalette1 = new Telerik.Reporting.Drawing.ColorPalette();
             Telerik.Reporting.CategoryScale categoryScale1 = new Telerik.Reporting.CategoryScale();
             Telerik.Reporting.NumericalScale numericalScale1 = new Telerik.Reporting.NumericalScale();
             Telerik.Reporting.GraphGroup graphGroup2 = new Telerik.Reporting.GraphGroup();
             Telerik.Reporting.GraphGroup graphGroup3 = new Telerik.Reporting.GraphGroup();
-            Telerik.Reporting.Drawing.ColorPalette colorPalette2 = new Telerik.Reporting.Drawing.ColorPalette();
             Telerik.Reporting.CategoryScale categoryScale2 = new Telerik.Reporting.CategoryScale();
             Telerik.Reporting.NumericalScale numericalScale2 = new Telerik.Reporting.NumericalScale();
             Telerik.Reporting.GraphGroup graphGroup4 = new Telerik.Reporting.GraphGroup();
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             this.detail = new Telerik.Reporting.DetailSection();
-            this.graph1 = new Telerik.Reporting.Graph();
-            this.cartesianCoordinateSystem1 = new Telerik.Reporting.CartesianCoordinateSystem();
-            this.graphAxis1 = new Telerik.Reporting.GraphAxis();
-            this.graphAxis2 = new Telerik.Reporting.GraphAxis();
-            this.barSeries1 = new Telerik.Reporting.BarSeries();
             this.textBox2 = new Telerik.Reporting.TextBox();
             this.textBox3 = new Telerik.Reporting.TextBox();
             this.graph2 = new Telerik.Reporting.Graph();
@@ -39,97 +32,22 @@ namespace GGGC.Admin.AZ.Inventarios
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
             this.textBox1 = new Telerik.Reporting.TextBox();
             this.textBox4 = new Telerik.Reporting.TextBox();
+            this.graph1 = new Telerik.Reporting.Graph();
+            this.cartesianCoordinateSystem1 = new Telerik.Reporting.CartesianCoordinateSystem();
+            this.graphAxis1 = new Telerik.Reporting.GraphAxis();
+            this.graphAxis2 = new Telerik.Reporting.GraphAxis();
+            this.barSeries1 = new Telerik.Reporting.BarSeries();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // detail
             // 
             this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(9.15D);
             this.detail.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
-            this.graph1,
             this.textBox2,
             this.textBox3,
-            this.graph2});
+            this.graph2,
+            this.graph1});
             this.detail.Name = "detail";
-            // 
-            // graph1
-            // 
-            graphGroup1.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.Field3"));
-            graphGroup1.Name = "categoryGroup1";
-            graphGroup1.Sortings.Add(new Telerik.Reporting.Sorting("=Fields.Field1", Telerik.Reporting.SortDirection.Asc));
-            this.graph1.CategoryGroups.Add(graphGroup1);
-            colorPalette1.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18))))));
-            colorPalette1.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(203)))), ((int)(((byte)(196))))));
-            colorPalette1.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(90)))), ((int)(((byte)(36))))));
-            colorPalette1.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(50))))));
-            colorPalette1.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(82)))), ((int)(((byte)(221))))));
-            colorPalette1.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(32)))), ((int)(((byte)(39))))));
-            colorPalette1.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(102))))));
-            colorPalette1.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(20)))), ((int)(((byte)(100))))));
-            colorPalette1.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(30)))), ((int)(((byte)(81))))));
-            colorPalette1.Colors.Add(System.Drawing.Color.Olive);
-            colorPalette1.Colors.Add(System.Drawing.Color.SteelBlue);
-            colorPalette1.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))));
-            colorPalette1.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(229)))), ((int)(((byte)(56))))));
-            this.graph1.ColorPalette = colorPalette1;
-            this.graph1.CoordinateSystems.Add(this.cartesianCoordinateSystem1);
-            this.graph1.Legend.Style.LineColor = System.Drawing.Color.LightGray;
-            this.graph1.Legend.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
-            this.graph1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(1.016D), Telerik.Reporting.Drawing.Unit.Cm(1.249D));
-            this.graph1.Name = "graph1";
-            this.graph1.PlotAreaStyle.LineColor = System.Drawing.Color.LightGray;
-            this.graph1.PlotAreaStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
-            this.graph1.Series.Add(this.barSeries1);
-            this.graph1.SeriesGroups.Add(graphGroup2);
-            this.graph1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.002D), Telerik.Reporting.Drawing.Unit.Cm(9.652D));
-            // 
-            // cartesianCoordinateSystem1
-            // 
-            this.cartesianCoordinateSystem1.Name = "cartesianCoordinateSystem1";
-            this.cartesianCoordinateSystem1.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(2D);
-            this.cartesianCoordinateSystem1.XAxis = this.graphAxis1;
-            this.cartesianCoordinateSystem1.YAxis = this.graphAxis2;
-            // 
-            // graphAxis1
-            // 
-            this.graphAxis1.MajorGridLineStyle.LineColor = System.Drawing.Color.LightGray;
-            this.graphAxis1.MajorGridLineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.graphAxis1.MinorGridLineStyle.LineColor = System.Drawing.Color.LightGray;
-            this.graphAxis1.MinorGridLineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.graphAxis1.MinorGridLineStyle.Visible = false;
-            this.graphAxis1.Name = "GraphAxis1";
-            categoryScale1.SpacingSlotCount = 0D;
-            this.graphAxis1.Scale = categoryScale1;
-            // 
-            // graphAxis2
-            // 
-            this.graphAxis2.LabelFormat = "{0:C2}";
-            this.graphAxis2.MajorGridLineStyle.LineColor = System.Drawing.Color.LightGray;
-            this.graphAxis2.MajorGridLineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.graphAxis2.MinorGridLineStyle.LineColor = System.Drawing.Color.LightGray;
-            this.graphAxis2.MinorGridLineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
-            this.graphAxis2.MinorGridLineStyle.Visible = false;
-            this.graphAxis2.Name = "GraphAxis2";
-            numericalScale1.SpacingSlotCount = 0D;
-            this.graphAxis2.Scale = numericalScale1;
-            this.graphAxis2.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
-            // 
-            // barSeries1
-            // 
-            this.barSeries1.ArrangeMode = Telerik.Reporting.GraphSeriesArrangeMode.Stacked;
-            this.barSeries1.CategoryGroup = graphGroup1;
-            this.barSeries1.CoordinateSystem = this.cartesianCoordinateSystem1;
-            this.barSeries1.DataPointLabel = "=CDbl(Fields.Field2) / CDbl(Exec(\'graph1\', Sum(Fields.Field2)))";
-            this.barSeries1.DataPointLabelConnectorStyle.Padding.Bottom = Telerik.Reporting.Drawing.Unit.Point(2D);
-            this.barSeries1.DataPointLabelConnectorStyle.Padding.Top = Telerik.Reporting.Drawing.Unit.Point(2D);
-            this.barSeries1.DataPointLabelFormat = "{0:0.00%}";
-            this.barSeries1.DataPointLabelStyle.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
-            this.barSeries1.LegendItem.Format = "{0:C2}";
-            this.barSeries1.LegendItem.Value = "=Format(\"{0,-3}\",Field3) + \'  \'+ Format(\"{0,-12}\",(Format(\"{0:C2}\",Field2)))";
-            graphGroup2.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.Field1"));
-            graphGroup2.Name = "seriesGroup1";
-            graphGroup2.Sortings.Add(new Telerik.Reporting.Sorting("=Fields.Field2", Telerik.Reporting.SortDirection.Asc));
-            this.barSeries1.SeriesGroup = graphGroup2;
-            this.barSeries1.Y = "=Sum(Fields.Field2)";
             // 
             // textBox2
             // 
@@ -157,39 +75,24 @@ namespace GGGC.Admin.AZ.Inventarios
             // 
             // graph2
             // 
-            graphGroup3.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.Field3"));
-            graphGroup3.Name = "categoryGroup1";
-            graphGroup3.Sortings.Add(new Telerik.Reporting.Sorting("=Fields.Field1", Telerik.Reporting.SortDirection.Asc));
-            this.graph2.CategoryGroups.Add(graphGroup3);
-            colorPalette2.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18))))));
-            colorPalette2.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(203)))), ((int)(((byte)(196))))));
-            colorPalette2.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(90)))), ((int)(((byte)(36))))));
-            colorPalette2.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(50))))));
-            colorPalette2.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(82)))), ((int)(((byte)(221))))));
-            colorPalette2.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(32)))), ((int)(((byte)(39))))));
-            colorPalette2.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(102))))));
-            colorPalette2.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(20)))), ((int)(((byte)(100))))));
-            colorPalette2.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(30)))), ((int)(((byte)(81))))));
-            colorPalette2.Colors.Add(System.Drawing.Color.Olive);
-            colorPalette2.Colors.Add(System.Drawing.Color.SteelBlue);
-            colorPalette2.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))));
-            colorPalette2.Colors.Add(System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(229)))), ((int)(((byte)(56))))));
-            this.graph2.ColorPalette = colorPalette2;
+            graphGroup1.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.Field3"));
+            graphGroup1.Name = "categoryGroup1";
+            graphGroup1.Sortings.Add(new Telerik.Reporting.Sorting("=Fields.Field1", Telerik.Reporting.SortDirection.Asc));
+            this.graph2.CategoryGroups.Add(graphGroup1);
             this.graph2.CoordinateSystems.Add(this.cartesianCoordinateSystem2);
             this.graph2.Legend.Style.LineColor = System.Drawing.Color.LightGray;
             this.graph2.Legend.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
-            this.graph2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(1.016D), Telerik.Reporting.Drawing.Unit.Cm(12.271D));
+            this.graph2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(1.016D), Telerik.Reporting.Drawing.Unit.Cm(12.427D));
             this.graph2.Name = "graph2";
             this.graph2.PlotAreaStyle.LineColor = System.Drawing.Color.LightGray;
             this.graph2.PlotAreaStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
             this.graph2.Series.Add(this.barSeries2);
-            this.graph2.SeriesGroups.Add(graphGroup4);
-            this.graph2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.002D), Telerik.Reporting.Drawing.Unit.Cm(9.652D));
+            this.graph2.SeriesGroups.Add(graphGroup2);
+            this.graph2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.002D), Telerik.Reporting.Drawing.Unit.Cm(9.737D));
             // 
             // cartesianCoordinateSystem2
             // 
             this.cartesianCoordinateSystem2.Name = "cartesianCoordinateSystem1";
-            this.cartesianCoordinateSystem2.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(2D);
             this.cartesianCoordinateSystem2.XAxis = this.graphAxis3;
             this.cartesianCoordinateSystem2.YAxis = this.graphAxis4;
             // 
@@ -201,8 +104,8 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graphAxis3.MinorGridLineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.graphAxis3.MinorGridLineStyle.Visible = false;
             this.graphAxis3.Name = "GraphAxis1";
-            categoryScale2.SpacingSlotCount = 0D;
-            this.graphAxis3.Scale = categoryScale2;
+            categoryScale1.SpacingSlotCount = 0D;
+            this.graphAxis3.Scale = categoryScale1;
             // 
             // graphAxis4
             // 
@@ -213,26 +116,24 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graphAxis4.MinorGridLineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.graphAxis4.MinorGridLineStyle.Visible = false;
             this.graphAxis4.Name = "GraphAxis2";
-            numericalScale2.SpacingSlotCount = 0D;
-            this.graphAxis4.Scale = numericalScale2;
-            this.graphAxis4.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
+            this.graphAxis4.Scale = numericalScale1;
             // 
             // barSeries2
             // 
             this.barSeries2.ArrangeMode = Telerik.Reporting.GraphSeriesArrangeMode.Stacked;
-            this.barSeries2.CategoryGroup = graphGroup3;
+            this.barSeries2.CategoryGroup = graphGroup1;
             this.barSeries2.CoordinateSystem = this.cartesianCoordinateSystem2;
             this.barSeries2.DataPointLabel = "=CDbl(Fields.Field2) / CDbl(Exec(\'graph2\', Sum(Fields.Field2)))";
             this.barSeries2.DataPointLabelConnectorStyle.Padding.Bottom = Telerik.Reporting.Drawing.Unit.Point(2D);
             this.barSeries2.DataPointLabelConnectorStyle.Padding.Top = Telerik.Reporting.Drawing.Unit.Point(2D);
+            this.barSeries2.DataPointLabelConnectorStyle.Visible = false;
             this.barSeries2.DataPointLabelFormat = "{0:0.00%}";
             this.barSeries2.DataPointLabelStyle.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
-            this.barSeries2.LegendItem.Format = "{0:C2}";
             this.barSeries2.LegendItem.Value = "=Format(\"{0,-3}\",Field3) + \'  \'+ Format(\"{0,-12}\",(Format(\"{0:C2}\",Field2)))";
-            graphGroup4.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.Field1"));
-            graphGroup4.Name = "seriesGroup1";
-            graphGroup4.Sortings.Add(new Telerik.Reporting.Sorting("=Fields.Field2", Telerik.Reporting.SortDirection.Asc));
-            this.barSeries2.SeriesGroup = graphGroup4;
+            graphGroup2.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.Field1"));
+            graphGroup2.Name = "seriesGroup1";
+            graphGroup2.Sortings.Add(new Telerik.Reporting.Sorting("Fields.Field2", Telerik.Reporting.SortDirection.Asc));
+            this.barSeries2.SeriesGroup = graphGroup2;
             this.barSeries2.Y = "=Sum(Fields.Field2)";
             // 
             // objectDataSource1
@@ -292,6 +193,69 @@ namespace GGGC.Admin.AZ.Inventarios
             this.textBox4.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox4.Value = "";
             // 
+            // graph1
+            // 
+            graphGroup3.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.Field3"));
+            graphGroup3.Name = "categoryGroup1";
+            graphGroup3.Sortings.Add(new Telerik.Reporting.Sorting("=Fields.Field1", Telerik.Reporting.SortDirection.Asc));
+            this.graph1.CategoryGroups.Add(graphGroup3);
+            this.graph1.CoordinateSystems.Add(this.cartesianCoordinateSystem1);
+            this.graph1.Legend.Style.LineColor = System.Drawing.Color.LightGray;
+            this.graph1.Legend.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
+            this.graph1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(1.016D), Telerik.Reporting.Drawing.Unit.Cm(1.563D));
+            this.graph1.Name = "graph1";
+            this.graph1.PlotAreaStyle.LineColor = System.Drawing.Color.LightGray;
+            this.graph1.PlotAreaStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
+            this.graph1.Series.Add(this.barSeries1);
+            this.graph1.SeriesGroups.Add(graphGroup4);
+            this.graph1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.002D), Telerik.Reporting.Drawing.Unit.Cm(9.737D));
+            // 
+            // cartesianCoordinateSystem1
+            // 
+            this.cartesianCoordinateSystem1.Name = "cartesianCoordinateSystem1";
+            this.cartesianCoordinateSystem1.XAxis = this.graphAxis1;
+            this.cartesianCoordinateSystem1.YAxis = this.graphAxis2;
+            // 
+            // graphAxis1
+            // 
+            this.graphAxis1.MajorGridLineStyle.LineColor = System.Drawing.Color.LightGray;
+            this.graphAxis1.MajorGridLineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
+            this.graphAxis1.MinorGridLineStyle.LineColor = System.Drawing.Color.LightGray;
+            this.graphAxis1.MinorGridLineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
+            this.graphAxis1.MinorGridLineStyle.Visible = false;
+            this.graphAxis1.Name = "GraphAxis1";
+            categoryScale2.SpacingSlotCount = 0D;
+            this.graphAxis1.Scale = categoryScale2;
+            // 
+            // graphAxis2
+            // 
+            this.graphAxis2.LabelFormat = "{0:C2}";
+            this.graphAxis2.MajorGridLineStyle.LineColor = System.Drawing.Color.LightGray;
+            this.graphAxis2.MajorGridLineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
+            this.graphAxis2.MinorGridLineStyle.LineColor = System.Drawing.Color.LightGray;
+            this.graphAxis2.MinorGridLineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
+            this.graphAxis2.MinorGridLineStyle.Visible = false;
+            this.graphAxis2.Name = "GraphAxis2";
+            this.graphAxis2.Scale = numericalScale2;
+            // 
+            // barSeries1
+            // 
+            this.barSeries1.ArrangeMode = Telerik.Reporting.GraphSeriesArrangeMode.Stacked;
+            this.barSeries1.CategoryGroup = graphGroup3;
+            this.barSeries1.CoordinateSystem = this.cartesianCoordinateSystem1;
+            this.barSeries1.DataPointLabel = "=CDbl(Fields.Field2) / CDbl(Exec(\'graph1\', Sum(Fields.Field2)))";
+            this.barSeries1.DataPointLabelConnectorStyle.Padding.Bottom = Telerik.Reporting.Drawing.Unit.Point(2D);
+            this.barSeries1.DataPointLabelConnectorStyle.Padding.Top = Telerik.Reporting.Drawing.Unit.Point(2D);
+            this.barSeries1.DataPointLabelConnectorStyle.Visible = false;
+            this.barSeries1.DataPointLabelFormat = "{0:0.00%}";
+            this.barSeries1.DataPointLabelStyle.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
+            this.barSeries1.LegendItem.Value = "=Format(\"{0,-3}\",Field3) + \'  \'+ Format(\"{0,-12}\",(Format(\"{0:C2}\",Field2)))";
+            graphGroup4.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.Field1"));
+            graphGroup4.Name = "seriesGroup1";
+            graphGroup4.Sortings.Add(new Telerik.Reporting.Sorting("Fields.Field2", Telerik.Reporting.SortDirection.Asc));
+            this.barSeries1.SeriesGroup = graphGroup4;
+            this.barSeries1.Y = "=Sum(Fields.Field2)";
+            // 
             // RptVentas
             // 
             this.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
@@ -311,18 +275,13 @@ namespace GGGC.Admin.AZ.Inventarios
             this.StyleSheet.AddRange(new Telerik.Reporting.Drawing.StyleRule[] {
             styleRule1});
             this.UnitOfMeasure = Telerik.Reporting.Drawing.UnitType.Cm;
-            this.Width = Telerik.Reporting.Drawing.Unit.Cm(20.5D);
+            this.Width = Telerik.Reporting.Drawing.Unit.Cm(20.611D);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
             }
 		#endregion
 		private Telerik.Reporting.DetailSection detail;
         private Telerik.Reporting.ObjectDataSource objectDataSource1;
-        private Telerik.Reporting.Graph graph1;
-        private Telerik.Reporting.CartesianCoordinateSystem cartesianCoordinateSystem1;
-        private Telerik.Reporting.GraphAxis graphAxis1;
-        private Telerik.Reporting.GraphAxis graphAxis2;
-        private Telerik.Reporting.BarSeries barSeries1;
         private Telerik.Reporting.ObjectDataSource objectDataSource2;
         private Telerik.Reporting.PageFooterSection pageFooterSection1;
         private Telerik.Reporting.PageHeaderSection pageHeaderSection1;
@@ -335,5 +294,10 @@ namespace GGGC.Admin.AZ.Inventarios
         private Telerik.Reporting.GraphAxis graphAxis3;
         private Telerik.Reporting.GraphAxis graphAxis4;
         private Telerik.Reporting.BarSeries barSeries2;
+        private Telerik.Reporting.Graph graph1;
+        private Telerik.Reporting.CartesianCoordinateSystem cartesianCoordinateSystem1;
+        private Telerik.Reporting.GraphAxis graphAxis1;
+        private Telerik.Reporting.GraphAxis graphAxis2;
+        private Telerik.Reporting.BarSeries barSeries1;
     }
 }

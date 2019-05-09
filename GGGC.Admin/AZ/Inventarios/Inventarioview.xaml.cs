@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
@@ -19,6 +21,7 @@ namespace GGGC.Admin.AZ.Inventarios
         DispatcherTimer dispatcherTimer = new DispatcherTimer();
         public Inventarioview()
         {
+           
             InitializeComponent();
         }
 
@@ -164,7 +167,7 @@ namespace GGGC.Admin.AZ.Inventarios
                                 if (dtinicial.SelectedDate <= dtfinal.SelectedDate)
                                 {
 
-                                    generarventas();
+                                    generarventasant();
 
                                 }
                                 else
@@ -196,6 +199,32 @@ namespace GGGC.Admin.AZ.Inventarios
                                     // IconContent = "";
                                 });
                             }
+
+
+
+                        }
+                        else
+                        {
+                            RadWindow radWindow = new RadWindow();
+                            RadWindow.Alert(new DialogParameters()
+                            {
+                                Content = "Los parámetros son inválidos.",
+                                Header = "BIG",
+
+                                DialogStartupLocation = WindowStartupLocation.CenterOwner
+                                // IconContent = "";
+                            });
+
+                        }
+
+
+                        break;
+                    case 6:
+                        if (m_select > 0 && messelec.SelectedDate != null && Ivaa.SelectedIndex > -1)
+                        {
+
+
+                            meta();
 
 
 
@@ -253,22 +282,348 @@ namespace GGGC.Admin.AZ.Inventarios
 
         }
 
+
+
+        private void meta()
+        {
+
+            int mess = Convert.ToDateTime(messelec.SelectedDate).Month;
+            int year = Convert.ToDateTime(messelec.SelectedDate).Year;
+            int sucursal = Convert.ToInt32(Ivaa.SelectionBoxItem);
+            string fecha =Convert.ToDateTime( messelec.SelectedDate).ToString("MMMM-yyyy").ToUpper();
+
+            DataTable crud = new DataTable();
+            crud = GetDates(mess,year);
+            DataTable detalle = new DataTable();
+            detalle = GetDetalle(mess,year,sucursal);
+
+            var lstLeftJoin =
+                from fact in crud.AsEnumerable()
+                join desc in detalle.AsEnumerable() on fact.Field<int>("Date") equals desc.Field<int>("Dia") into FactDesc
+                from fd in FactDesc.DefaultIfEmpty()
+                select new
+                {
+                    Dia = fact.Field<int>("Date"),
+                    Total = (fd == null) ? 0 : fd.Field<decimal>("Total")
+                }
+                ;
+
+            DataTable nueva = new DataTable();
+            nueva.Columns.Add("Date", typeof(int));
+            nueva.Columns.Add("Total", typeof(decimal));
+
+            foreach (var item in lstLeftJoin)
+            {
+                
+                nueva.Rows.Add(item.Dia, item.Total);
+
+            }
+
+
+            Rptmeta fac = new Rptmeta(nueva, fecha);
+
+
+
+
+
+        }
+
+
+        public DataTable GetDates(int mes, int anio)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Date", typeof(Int32));
+
+            int year = anio;
+            int month = mes;
+
+            int daysInMonth = DateTime.DaysInMonth(year, month);
+            for (int i = 0; i < daysInMonth; i++)
+            {
+                DataRow dr = dt.NewRow();
+                dr["Date"] = i + 1;
+                dt.Rows.Add(dr);
+            }
+
+            return dt;
+        }
+
+        static DataTable GetDetalle(int mes, int anio, int sucursal)
+        {
+
+
+
+            string conect = "SERVER = 192.168.200.1; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT Codigo_De_Sucursal,SUM(Total)as Total, Fecha_Del_Documento as Fecha, Day(Fecha_Del_Documento) as Dia " +
+                "FROM dbo.fncReporteadorDeVentas() fncReporteadorDeVentas WHERE month(Fecha_Del_Documento) = "+mes+" and year(Fecha_Del_Documento) = "+anio+" " +
+                "and(Numero_Corto_De_Sucursal in ("+sucursal+")) group by Fecha_Del_Documento, Codigo_De_Sucursal ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
+
+
+
+
         private void generarventas()
         {
-            DateTime marfil = Convert.ToDateTime(dtinicial.SelectedDate);
-            marfil = marfil.AddYears(-1);
+       
 
             string strFechaInicial = Convert.ToDateTime(dtinicial.SelectedDate).ToString("MM/dd/yyyy HH:mm:ss");
             string strFechaFinal = Convert.ToDateTime(dtfinal.SelectedDate).ToString("MM/dd/yyyy HH:mm:ss");
             string FechaInicial = Convert.ToDateTime(dtinicial.SelectedDate).ToString("MM/dd/yyyy");
             string FechaFinal = Convert.ToDateTime(dtfinal.SelectedDate).ToString("MM/dd/yyyy");
+           
             DataTable tablaVentas = GetVentas(strFechaInicial, strFechaFinal);
             DataTable tablaMayoreo = GetVentasMayoreo(strFechaInicial, strFechaFinal);
-            RptVentas fac = new RptVentas(tablaVentas, tablaMayoreo, FechaInicial, FechaFinal);
+
+
+
+
+           RptVentas fac = new RptVentas(tablaVentas, tablaMayoreo, FechaInicial, FechaFinal);
 
         }
+        private void generarventasant()
+        {
+            //FECHAS CON UN AÑO MENOS
+            DateTime unobef = Convert.ToDateTime(dtinicial.SelectedDate);
+            unobef = unobef.AddYears(-1);
+            string anioant = unobef.Year.ToString();
+            string anio = unobef.Year.ToString();
+            string anioactual = Convert.ToDateTime(dtinicial.SelectedDate).Year.ToString();
+            DateTime dosbef = Convert.ToDateTime(dtfinal.SelectedDate);
+            dosbef = dosbef.AddYears(-1);
+
+            //FORMATOS DE LAS FECHAS PARA SQL Y PARAMETROS
+            string strFechaInicial = Convert.ToDateTime(dtinicial.SelectedDate).ToString("MM/dd/yyyy HH:mm:ss");
+            string strFechaFinal = Convert.ToDateTime(dtfinal.SelectedDate).ToString("MM/dd/yyyy HH:mm:ss");
+            string FechaInicial = Convert.ToDateTime(dtinicial.SelectedDate).ToString("MM/dd/yyyy");
+            string FechaFinal = Convert.ToDateTime(dtfinal.SelectedDate).ToString("MM/dd/yyyy");
+            string strFechaInicialAnt = Convert.ToDateTime(unobef).ToString("MM/dd/yyyy HH:mm:ss");
+            string strFechaFinalAnt = Convert.ToDateTime(dosbef).ToString("MM/dd/yyyy HH:mm:ss");
+
+            //TABLAS AÑO ACTUAL AÑO ANTERIOR
+            DataTable tablaVentas = GetVentasActual(strFechaInicial, strFechaFinal);
+            DataTable tblventasanterior = GetVentasAnterior(strFechaInicialAnt, strFechaFinalAnt);
+
+            DataTable tablaMayoreo = GetVentasMayoreoActual(strFechaInicial, strFechaFinal);
+            DataTable tablaMayoreoanterior = GetVentasMayoreoAnt(strFechaInicialAnt, strFechaFinalAnt);
+
+            //FUSIONAR LAS DOS TABLAS ANTERIOR Y ACTUAL
+            // DataTable tablaMen = Gw
+            var query = from table1 in tablaVentas.AsEnumerable()
+                          join table2 in tblventasanterior.AsEnumerable() 
+                          on table1.Field<int>("Numerosucursal") equals 
+                          table2.Field<int>("Numerosucursal")
+                          select new
+                          {
+                              Numerosucursal = table1.Field<int>("Numerosucursal"),
+                              TotalActual = table1.Field<decimal>("TotalActual"),
+                              Codigo_De_Sucursal = table1.Field<string>("Codigo_De_Sucursal"),
+                              Nombre = table1.Field<string>("Nombre"),
+                              TotalAnterior = table2.Field<decimal>("TotalAnterior"),
+                          };
+            DataTable nueva = new DataTable();
+            nueva.Columns.Add("Numerosucursal", typeof(int));
+            nueva.Columns.Add("TotalActual", typeof(decimal));
+            nueva.Columns.Add("Codigo_De_Sucursal", typeof(string));
+            nueva.Columns.Add("Nombre", typeof(string));
+            nueva.Columns.Add("TotalAnterior", typeof(decimal));
+
+            
+
+            foreach (var item in query)
+            {
+                nueva.Rows.Add(item.Numerosucursal, item.TotalActual, item.Codigo_De_Sucursal,item.Nombre, item.TotalAnterior);
+
+            }
 
 
+            var query2 = from table1 in tablaMayoreo.AsEnumerable()
+                         join table2 in tablaMayoreoanterior.AsEnumerable()
+                         on table1.Field<int>("Numerosucursal") equals
+                         table2.Field<int>("Numerosucursal")
+                         select new
+                         {
+                             Numerosucursal = table1.Field<int>("Numerosucursal"),
+                             TotalActual = table1.Field<decimal>("TotalActual"),
+                             Codigo_De_Sucursal = table1.Field<string>("Codigo_De_Sucursal"),
+                             Nombre = table1.Field<string>("Nombre"),
+                             TotalAnterior = table2.Field<decimal>("TotalAnterior"),
+                         };
+
+            DataTable nueva2 = new DataTable();
+            nueva2.Columns.Add("Numerosucursal", typeof(int));
+            nueva2.Columns.Add("TotalActual", typeof(decimal));
+            nueva2.Columns.Add("Codigo_De_Sucursal", typeof(string));
+            nueva2.Columns.Add("Nombre", typeof(string));
+            nueva2.Columns.Add("TotalAnterior", typeof(decimal));
+
+
+            foreach (var item2 in query2)
+            {
+                nueva2.Rows.Add(item2.Numerosucursal, item2.TotalActual, item2.Codigo_De_Sucursal, item2.Nombre, item2.TotalAnterior);
+
+            }
+            // tablaVentas = query.CopyToDataTable<DataRow>();
+
+
+            //tablaVentas.Merge(tblventasanterior);
+            //tablaMayoreo.Merge(tablaMayoreoanterior);
+
+            //REPORTE TELERIK
+            RptComparison fac = new RptComparison(nueva,nueva2, FechaInicial, FechaFinal);
+
+        }
+        static DataTable GetVentasMayoreoActual(string inicial, string final)
+        {
+
+
+
+            string conect = "SERVER = 192.168.200.1; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT    CASE WHEN Numero_Corto_De_Sucursal = 55 THEN 05 ELSE Numero_Corto_De_Sucursal " +
+                                                       "END AS Numerosucursal, " +
+                                                       "SUM(Total) AS TotalActual, " +
+                                                       "CASE WHEN Codigo_De_Sucursal = 'B1' THEN 'B01' " +
+                                                       "WHEN Codigo_De_Sucursal = 'B2' THEN 'B02' " +
+                                                       "WHEN Codigo_De_Sucursal = 'B3' THEN 'B03' " +
+                                                       "WHEN Codigo_De_Sucursal = 'B4' THEN 'B04' " +
+
+                                                       "WHEN Codigo_De_Sucursal = 'B8' THEN 'B08' " +
+                                                       "WHEN Codigo_De_Sucursal = 'B9' THEN 'B09' ELSE Codigo_De_Sucursal " +
+                                                       "END AS Codigo_De_Sucursal , Sucursal as Nombre " +
+                                                       " FROM dbo.fncReporteadorDeVentas() fncReporteadorDeVentas" +
+                                                        " WHERE(Fecha_Del_Documento BETWEEN CONVERT(DATETIME, '" + inicial + "', 102)  AND" +
+                                                        " CONVERT(DATETIME, '" + final + "', 102)) and (Numero_Corto_De_Sucursal in(7,11,17)) GROUP BY Numero_Corto_De_Sucursal, Codigo_De_Sucursal, Sucursal order by Numerosucursal asc ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
+        static DataTable GetVentasActual(string inicial, string final)
+        {
+
+
+
+            string conect = "SERVER = 192.168.200.1; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT    CASE WHEN Numero_Corto_De_Sucursal = 55 THEN 05 ELSE Numero_Corto_De_Sucursal " +
+                                                        "END AS Numerosucursal, " +
+                                                        "SUM(Total) AS TotalActual, " +
+                                                        "CASE WHEN Codigo_De_Sucursal = 'B1' THEN 'B01' " +
+                                                        "WHEN Codigo_De_Sucursal = 'B2' THEN 'B02' " +
+                                                        "WHEN Codigo_De_Sucursal = 'B3' THEN 'B03' " +
+                                                        "WHEN Codigo_De_Sucursal = 'B4' THEN 'B04' " +
+
+                                                        "WHEN Codigo_De_Sucursal = 'B8' THEN 'B08' " +
+                                                        "WHEN Codigo_De_Sucursal = 'B9' THEN 'B09' ELSE Codigo_De_Sucursal " +
+                                                        "END AS Codigo_De_Sucursal , Sucursal as Nombre " +
+                                                        " FROM dbo.fncReporteadorDeVentas() fncReporteadorDeVentas" +
+                                                         " WHERE(Fecha_Del_Documento BETWEEN CONVERT(DATETIME, '" + inicial + "', 102)  AND" +
+                                                         " CONVERT(DATETIME, '" + final + "', 102)) and (Numero_Corto_De_Sucursal not in(7,11,17)) GROUP BY Numero_Corto_De_Sucursal, Codigo_De_Sucursal, Sucursal order by Numerosucursal asc ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
+        static DataTable GetVentasAnterior(string inicial, string final)
+        {
+
+
+
+            string conect = "SERVER = 192.168.200.1; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT    CASE WHEN Numero_Corto_De_Sucursal = 55 THEN 05 ELSE Numero_Corto_De_Sucursal " +
+                                                        "END AS Numerosucursal, " +
+                                                        "SUM(Total) AS TotalAnterior " +
+
+                                                        " FROM dbo.fncReporteadorDeVentas() fncReporteadorDeVentas" +
+                                                         " WHERE(Fecha_Del_Documento BETWEEN CONVERT(DATETIME, '" + inicial + "', 102)  AND" +
+                                                         " CONVERT(DATETIME, '" + final + "', 102)) and (Numero_Corto_De_Sucursal not in(7,10,11,17)) GROUP BY Numero_Corto_De_Sucursal, Codigo_De_Sucursal, Sucursal order by Numerosucursal asc ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
         static DataTable GetVentas(string inicial, string final)
         {
 
@@ -300,9 +655,50 @@ namespace GGGC.Admin.AZ.Inventarios
                                                       
                                                         "WHEN Codigo_De_Sucursal = 'B8' THEN 'B08' " +
                                                         "WHEN Codigo_De_Sucursal = 'B9' THEN 'B09' ELSE Codigo_De_Sucursal "+
-                                                        "END AS Codigo_De_Sucursal , Sucursal as Nombre FROM dbo.fncReporteadorDeVentasConsolidado() fncReporteadorDeVentasConsolidado" +
+                                                        "END AS Codigo_De_Sucursal , Sucursal as Nombre FROM dbo.fncReporteadorDeVentas() fncReporteadorDeVentas" +
                                                          " WHERE(Fecha_Del_Documento BETWEEN CONVERT(DATETIME, '" + inicial + "', 102)  AND" +
                                                          " CONVERT(DATETIME, '" + final + "', 102)) and (Numero_Corto_De_Sucursal not in(7,11,17)) GROUP BY Numero_Corto_De_Sucursal, Codigo_De_Sucursal, Sucursal order by Numerosucursal asc ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
+
+        static DataTable GetVentasMayoreoAnt(string inicial, string final)
+        {
+
+
+
+            string conect = "SERVER = 192.168.200.1; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT    CASE WHEN Numero_Corto_De_Sucursal = 55 THEN 05 ELSE Numero_Corto_De_Sucursal " +
+                                                        "END AS Numerosucursal, " +
+                                                        "SUM(Total) AS TotalAnterior " +
+
+                                                        " FROM dbo.fncReporteadorDeVentas() fncReporteadorDeVentas" +
+                                                         " WHERE(Fecha_Del_Documento BETWEEN CONVERT(DATETIME, '" + inicial + "', 102)  AND" +
+                                                         " CONVERT(DATETIME, '" + final + "', 102)) and (Numero_Corto_De_Sucursal  in(7,10,11,17)) GROUP BY Numero_Corto_De_Sucursal, Codigo_De_Sucursal, Sucursal order by Numerosucursal asc ", sqlconn);
             DataSet dsPubs = new DataSet("Pubs");
             adapter.Fill(dsPubs, "Vista");
             DataTable dtbl = new DataTable();
@@ -338,7 +734,7 @@ namespace GGGC.Admin.AZ.Inventarios
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT     Numero_Corto_De_Sucursal  AS Numerosucursal, SUM(Total) AS Total," +
 
                 "CASE WHEN Codigo_De_Sucursal = 'B7' THEN 'B07' ELSE Codigo_De_Sucursal END AS Codigo_De_Sucursal, " +
-                "Sucursal as Nombre FROM dbo.fncReporteadorDeVentasConsolidado() fncReporteadorDeVentasConsolidado" +
+                "Sucursal as Nombre FROM dbo.fncReporteadorDeVentas() fncReporteadorDeVentas" +
                 " WHERE(Fecha_Del_Documento BETWEEN CONVERT(DATETIME, '" + inicial + "', 102)  AND" +
                 " CONVERT(DATETIME, '" + final + "', 102)) and (Numero_Corto_De_Sucursal in(7,11,17)) GROUP BY Numero_Corto_De_Sucursal, Codigo_De_Sucursal, Sucursal order by Numerosucursal asc ", sqlconn);
             DataSet dsPubs = new DataSet("Pubs");
@@ -465,8 +861,7 @@ namespace GGGC.Admin.AZ.Inventarios
 
         }
 
-
-
+  
         int radios()
         {
             if (rdmarca.IsChecked == true)
@@ -502,6 +897,14 @@ namespace GGGC.Admin.AZ.Inventarios
 
                 return 5;
             }
+            else if (rdventas_meta.IsChecked == true)
+            {
+
+                m_consulta = "";
+
+                return 6;
+            }
+
 
 
             return 0;
