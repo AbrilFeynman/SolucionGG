@@ -69,6 +69,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            
             <RadioButton FontSize="16" x:Name="rdmarca" Grid.Column="1"
     Style="{StaticResource MaterialDesignRadioButton}" Height="30" VerticalAlignment="Bottom" >
                 Marca
@@ -93,7 +94,7 @@
                 Ventas Sucursales Comparison
             </RadioButton>
             <RadioButton FontSize="16" x:Name="rdventas_meta" Grid.Column="1"
-                Style="{StaticResource MaterialDesignRadioButton}" Height="28" VerticalAlignment="Top" Margin="0,223,72,-194" Grid.ColumnSpan="2" Content="Ventas Meta" />
+                Style="{StaticResource MaterialDesignRadioButton}" Height="28" VerticalAlignment="Top" Margin="0,200,72,-171" Grid.ColumnSpan="2" Content="Ventas Meta" />
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -105,7 +106,18 @@
                 <ColumnDefinition Width="66*"/>
             </Grid.ColumnDefinitions>
             <Image Grid.Column="4" Source="/GGGC.Admin;component/Resources/Images/178151.png"></Image>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
 
+                <TextBox  x:Name="codigo" Grid.Row="4" 
+                                materialDesign:HintAssist.Hint="Codigo"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </Grid>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -117,7 +129,11 @@
                         FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"  materialDesign:HintAssist.Hint="Fecha Inicial" 
                         Grid.Row="1" />
 
-                <telerik:RadDateTimePicker x:Name="messelec" InputMode="DatePicker" DateSelectionMode="Month" Margin="180,0,-180,12" Grid.Row="2"/>
+                <telerik:RadDateTimePicker x:Name="messelec" InputMode="DatePicker" DateSelectionMode="Month" Margin="202,24,-202,10" Grid.Row="1"/>
+                <RadioButton FontSize="16" x:Name="Clientes"
+                    Style="{StaticResource MaterialDesignRadioButton}" Height="27" VerticalAlignment="Top" Margin="0,10,78,0" Content="Venta Clientes" Grid.Row="3" />
+                <RadioButton FontSize="16" x:Name="Codigo"
+                    Style="{StaticResource MaterialDesignRadioButton}" Height="20" VerticalAlignment="Top" Margin="0,41,49,0" Content="Venta Productos" Grid.Row="3" />
             </Grid>
             <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
@@ -125,13 +141,14 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
                 <DatePicker x:Name="dtfinal" Width="174" Grid.Row="1" SelectedDateFormat="Long" FontSize="14" 
                             HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Fecha Final" 
-                           VerticalAlignment="Top" />
-                <Label Visibility="Hidden" Name="timerlabel" Content="Label" HorizontalAlignment="Left" Margin="10,16,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150"/>
+                           VerticalAlignment="Top" Height="26" />
+                <Label Visibility="Hidden" Name="timerlabel" Content="Label" HorizontalAlignment="Left" Margin="10,16,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150" Height="26"/>
 
-                <ComboBox Grid.Column="3" Grid.Row="3" Width="190" HorizontalAlignment="Left" x:Name="Ivaa"
+                <ComboBox Grid.Row="2" Width="190" HorizontalAlignment="Left" x:Name="Ivaa"
                                           materialDesign:HintAssist.Hint="Sucursal"
                                           Style="{StaticResource MaterialDesignFloatingHintComboBox}"  >
                     <ComboBoxItem>
@@ -141,7 +158,7 @@
                         2
                     </ComboBoxItem>
                     <ComboBoxItem>
-                       3
+                        3
                     </ComboBoxItem>
 
                     <ComboBoxItem>
@@ -182,6 +199,12 @@
                     </ComboBoxItem>
 
                 </ComboBox>
+                <TextBox  x:Name="RFC" Grid.Row="3" 
+                                materialDesign:HintAssist.Hint="RFC"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}"   />
+                <TextBox  x:Name="anio" Grid.Row="4" 
+                                materialDesign:HintAssist.Hint="Año"
+                                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
 
             </Grid>
 

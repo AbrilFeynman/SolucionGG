@@ -85,6 +85,7 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graph1.CategoryGroups.Add(graphGroup1);
             this.graph1.CoordinateSystems.Add(this.cartesianCoordinateSystem1);
             this.graph1.DataSource = null;
+            this.graph1.Legend.Position = Telerik.Reporting.GraphItemPosition.TopCenter;
             this.graph1.Legend.Style.LineColor = System.Drawing.Color.LightGray;
             this.graph1.Legend.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
             this.graph1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0.7D));
@@ -100,7 +101,7 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graph1.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Pixel(10D);
             this.graph1.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Pixel(10D);
             this.graph1.Style.Padding.Top = Telerik.Reporting.Drawing.Unit.Pixel(10D);
-            graphTitle1.Position = Telerik.Reporting.GraphItemPosition.TopCenter;
+            graphTitle1.Position = Telerik.Reporting.GraphItemPosition.TopLeft;
             graphTitle1.Style.LineColor = System.Drawing.Color.LightGray;
             graphTitle1.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
             graphTitle1.Text = "";
@@ -121,6 +122,7 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graphAxis1.MinorGridLineStyle.Visible = false;
             this.graphAxis1.Name = "GraphAxis1";
             this.graphAxis1.Scale = categoryScale1;
+            this.graphAxis1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
             // 
             // graphAxis2
             // 
@@ -132,7 +134,7 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graphAxis2.MinorGridLineStyle.Visible = false;
             this.graphAxis2.Name = "GraphAxis2";
             this.graphAxis2.Scale = numericalScale1;
-            this.graphAxis2.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(10D);
+            this.graphAxis2.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
             // 
             // barSeries1
             // 
@@ -143,10 +145,13 @@ namespace GGGC.Admin.AZ.Inventarios
             colorPalette1.Colors.Add(System.Drawing.Color.LimeGreen);
             this.barSeries1.ColorPalette = colorPalette1;
             this.barSeries1.CoordinateSystem = this.cartesianCoordinateSystem1;
+            this.barSeries1.DataPointLabel = "=Fields.Total";
+            this.barSeries1.DataPointLabelAngle = 270;
             this.barSeries1.DataPointLabelConnectorStyle.Padding.Bottom = Telerik.Reporting.Drawing.Unit.Point(2D);
             this.barSeries1.DataPointLabelConnectorStyle.Padding.Top = Telerik.Reporting.Drawing.Unit.Point(2D);
             this.barSeries1.DataPointLabelConnectorStyle.Visible = false;
-            this.barSeries1.DataPointLabelStyle.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
+            this.barSeries1.DataPointLabelFormat = "{0:C0}";
+            this.barSeries1.DataPointLabelStyle.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.barSeries1.LegendItem.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
             this.barSeries1.LegendItem.Value = "Ventas";
             graphGroup3.Name = "seriesGroup";
@@ -160,7 +165,7 @@ namespace GGGC.Admin.AZ.Inventarios
             this.lineSeries4.DataPointLabelFormat = "{0:C2}";
             this.lineSeries4.DataPointLabelStyle.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
             this.lineSeries4.DataPointLabelStyle.Visible = true;
-            this.lineSeries4.DataPointStyle.Visible = true;
+            this.lineSeries4.DataPointStyle.Visible = false;
             this.lineSeries4.LegendItem.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
             this.lineSeries4.LegendItem.Value = "Meta";
             this.lineSeries4.LineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -172,7 +177,7 @@ namespace GGGC.Admin.AZ.Inventarios
             this.lineSeries4.Name = "lineSeries2";
             this.lineSeries4.SeriesGroup = graphGroup3;
             this.lineSeries4.Size = null;
-            this.lineSeries4.Y = "=100000.00";
+            this.lineSeries4.Y = "=200000.00";
             // 
             // objectDataSource1
             // 
@@ -190,7 +195,7 @@ namespace GGGC.Admin.AZ.Inventarios
             this.Name = "Rptmeta";
             this.PageSettings.ContinuousPaper = false;
             this.PageSettings.Landscape = true;
-            this.PageSettings.Margins = new Telerik.Reporting.Drawing.MarginsU(Telerik.Reporting.Drawing.Unit.Cm(0.5D), Telerik.Reporting.Drawing.Unit.Cm(0.5D), Telerik.Reporting.Drawing.Unit.Cm(0.5D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.PageSettings.Margins = new Telerik.Reporting.Drawing.MarginsU(Telerik.Reporting.Drawing.Unit.Cm(0.1D), Telerik.Reporting.Drawing.Unit.Cm(0.1D), Telerik.Reporting.Drawing.Unit.Cm(0.1D), Telerik.Reporting.Drawing.Unit.Cm(0.1D));
             this.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.LetterRotated;
             styleRule1.Selectors.AddRange(new Telerik.Reporting.Drawing.ISelector[] {
             new Telerik.Reporting.Drawing.TypeSelector(typeof(Telerik.Reporting.TextItemBase)),

@@ -70,11 +70,7 @@ namespace GGGC.Admin.AZ.Inventarios
                 dispatcherTimer.Stop();
                 radbusy.IsBusy = false;
             }
-            // Updating the Label which displays the current second
-
-
-            // Forcing the CommandManager to raise the RequerySuggested event
-            // CommandManager.InvalidateRequerySuggested();
+       
         }
 
 
@@ -242,6 +238,56 @@ namespace GGGC.Admin.AZ.Inventarios
                             });
 
                         }
+                        break;
+                    case 7:
+                        if (m_select > 0 && RFC.Text != null && anio.Text != null)
+                        {
+
+
+                            clientes();
+
+
+
+                        }
+                        else
+                        {
+                            RadWindow radWindow = new RadWindow();
+                            RadWindow.Alert(new DialogParameters()
+                            {
+                                Content = "Los parámetros son inválidos.",
+                                Header = "BIG",
+
+                                DialogStartupLocation = WindowStartupLocation.CenterOwner
+                                // IconContent = "";
+                            });
+
+                        }
+
+
+                        break;
+                    case 8:
+                        if (m_select > 0 && codigo.Text != null && anio.Text != null)
+                        {
+
+
+                            codigos();
+
+
+
+                        }
+                        else
+                        {
+                            RadWindow radWindow = new RadWindow();
+                            RadWindow.Alert(new DialogParameters()
+                            {
+                                Content = "Los parámetros son inválidos.",
+                                Header = "BIG",
+
+                                DialogStartupLocation = WindowStartupLocation.CenterOwner
+                                // IconContent = "";
+                            });
+
+                        }
 
 
                         break;
@@ -348,6 +394,30 @@ namespace GGGC.Admin.AZ.Inventarios
             return dt;
         }
 
+        public DataTable GetMonths()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Mes", typeof(Int32));
+            dt.Columns.Add("Namemonth", typeof(string));
+
+
+
+            DateTime now = new DateTime(2019, 1, 1);
+            for (int i = 0; i < 12; i++)
+            {
+                DataRow dr = dt.NewRow();
+                dr["Mes"] = i + 1;
+                dr["Namemonth"] = now.ToString("MMM").ToUpper();
+                now = now.AddMonths(1);
+                dt.Rows.Add(dr);
+            }
+
+            return dt;
+        }
+
+
+
+
         static DataTable GetDetalle(int mes, int anio, int sucursal)
         {
 
@@ -404,6 +474,147 @@ namespace GGGC.Admin.AZ.Inventarios
            RptVentas fac = new RptVentas(tablaVentas, tablaMayoreo, FechaInicial, FechaFinal);
 
         }
+
+        private void clientes()
+        {
+            //FECHAS CON UN AÑO MENOS
+            
+            
+            int  anio1 =Convert.ToInt32( anio.Text);
+            int ani2 = anio1 - 1;
+            int ani3 = anio1 - 2;
+           
+            string rfc = RFC.Text;
+            string Nombre = getnombre(rfc);
+
+            //TABLAS AÑO ACTUAL AÑO ANTERIOR
+            DataTable tabla1 = GetClientes(anio1,rfc);
+            DataTable tbl2 = GetClientes(ani2, rfc);
+            DataTable tbl3 = GetClientes(ani3, rfc);
+
+            DataTable Meses = GetMonths();
+      
+            var query =
+               from fact in Meses.AsEnumerable()
+               join desc in tabla1.AsEnumerable() on fact.Field<int>("Mes") equals desc.Field<int>("Mes") into FactDesc
+               from fd in FactDesc.DefaultIfEmpty()
+
+               join desc2 in tbl2.AsEnumerable() on fact.Field<int>("Mes") equals desc2.Field<int>("Mes") into FactDesc2
+               from fd2 in FactDesc2.DefaultIfEmpty()
+
+               join desc3 in tbl3.AsEnumerable() on fact.Field<int>("Mes") equals desc3.Field<int>("Mes") into FactDesc3
+               from fd3 in FactDesc3.DefaultIfEmpty()
+
+               select new
+               {
+             
+                   Mes = fact.Field<int>("Mes"),
+                   MesName = fact.Field<string>("Namemonth"),
+                   RFC = (fd == null) ? "XXXX":fd.Field<string>("RFC"),
+                   Nombre =(fd == null)? "XXXX": fd.Field<string>("Nombre"),
+                   Total1 =(fd == null) ? 0: fd.Field<decimal>("Total"),
+                   Total2 = (fd2 == null) ? 0 : fd2.Field<decimal>("Total"),
+                   Total3 = (fd3 == null) ? 0 : fd3.Field<decimal>("Total")
+
+               }
+               ;
+
+            DataTable nueva = new DataTable();
+            nueva.Columns.Add("Mes", typeof(int));
+            nueva.Columns.Add("Mesname", typeof(string));
+            nueva.Columns.Add("RFC", typeof(string));
+            nueva.Columns.Add("Nombre", typeof(string));
+           
+            nueva.Columns.Add("Total", typeof(decimal));
+            nueva.Columns.Add("Total2", typeof(decimal));
+            nueva.Columns.Add("Total3", typeof(decimal));
+
+
+
+            foreach (var item in query)
+            {
+                nueva.Rows.Add(item.Mes,item.MesName, item.RFC, item.Nombre, item.Total1,item.Total2, item.Total3);
+
+            }
+
+
+           
+
+            //REPORTE TELERIK
+          RptCliente fac = new RptCliente(nueva, Nombre);
+
+        }
+
+        private void codigos()
+        {
+            //FECHAS CON UN AÑO MENOS
+
+
+            int anio1 = Convert.ToInt32(anio.Text);
+            int ani2 = anio1 - 1;
+            int ani3 = anio1 - 2;
+
+            string codigo1 = codigo.Text;
+            string Nombre = getcodigo(codigo1);
+
+            //TABLAS AÑO ACTUAL AÑO ANTERIOR
+            DataTable tabla1 = GetCodigos(anio1, codigo1);
+            DataTable tbl2 = GetCodigos(ani2, codigo1);
+            DataTable tbl3 = GetCodigos(ani3, codigo1);
+
+            DataTable Meses = GetMonths();
+
+            var query =
+               from fact in Meses.AsEnumerable()
+               join desc in tabla1.AsEnumerable() on fact.Field<int>("Mes") equals desc.Field<int>("Mes") into FactDesc
+               from fd in FactDesc.DefaultIfEmpty()
+
+               join desc2 in tbl2.AsEnumerable() on fact.Field<int>("Mes") equals desc2.Field<int>("Mes") into FactDesc2
+               from fd2 in FactDesc2.DefaultIfEmpty()
+
+               join desc3 in tbl3.AsEnumerable() on fact.Field<int>("Mes") equals desc3.Field<int>("Mes") into FactDesc3
+               from fd3 in FactDesc3.DefaultIfEmpty()
+
+               select new
+               {
+
+                   Mes = fact.Field<int>("Mes"),
+                   MesName = fact.Field<string>("Namemonth"),
+                   Articulo = (fd == null) ? "XXXX" : fd.Field<string>("Codigo"),
+                   Descripcion = (fd == null) ? "XXXX" : fd.Field<string>("Descripcion"),
+                   Total1 = (fd == null) ? 0 : fd.Field<decimal>("Total"),
+                   Total2 = (fd2 == null) ? 0 : fd2.Field<decimal>("Total"),
+                   Total3 = (fd3 == null) ? 0 : fd3.Field<decimal>("Total")
+
+               }
+               ;
+
+            DataTable nueva = new DataTable();
+            nueva.Columns.Add("Mes", typeof(int));
+            nueva.Columns.Add("Mesname", typeof(string));
+            nueva.Columns.Add("Codigo", typeof(string));
+            nueva.Columns.Add("Descripcion", typeof(string));
+
+            nueva.Columns.Add("Total", typeof(decimal));
+            nueva.Columns.Add("Total2", typeof(decimal));
+            nueva.Columns.Add("Total3", typeof(decimal));
+
+
+
+            foreach (var item in query)
+            {
+                nueva.Rows.Add(item.Mes, item.MesName, item.Articulo, item.Descripcion, item.Total1, item.Total2, item.Total3);
+
+            }
+
+
+
+
+            //REPORTE TELERIK
+            RptCodigos fac = new RptCodigos(nueva, Nombre);
+
+        }
+
         private void generarventasant()
         {
             //FECHAS CON UN AÑO MENOS
@@ -444,6 +655,8 @@ namespace GGGC.Admin.AZ.Inventarios
                               Nombre = table1.Field<string>("Nombre"),
                               TotalAnterior = table2.Field<decimal>("TotalAnterior"),
                           };
+
+
             DataTable nueva = new DataTable();
             nueva.Columns.Add("Numerosucursal", typeof(int));
             nueva.Columns.Add("TotalActual", typeof(decimal));
@@ -586,6 +799,150 @@ namespace GGGC.Admin.AZ.Inventarios
             return dtbl;
 
         }
+
+
+        static string getnombre( string rfc)
+        {
+
+
+
+            string conect = "SERVER = 192.168.200.1; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT Nombre From Clientes where RFC = '"+rfc+"' ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+            string nombre = dtbl.Rows[0][0].ToString();
+
+            return nombre;
+
+        }
+
+
+        static DataTable GetCodigos(int anio, string cod)
+        {
+
+
+
+            string conect = "SERVER = 192.168.200.1; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT  Codigo_De_Articulo as Codigo, Articulo as Descripcion, MONTH(Fecha_Del_Documento) AS Mes, YEAR(Fecha_Del_Documento) AS Año, SUM(Cantidad)" +
+                " AS Total FROM  dbo.fncReporteadorDeVentas() fncReporteadorDeVentas WHERE(YEAR(Fecha_Del_Documento) IN(" + anio + ")) GROUP BY YEAR(Fecha_Del_Documento), MONTH(Fecha_Del_Documento)," +
+                " Codigo_De_Articulo, Articulo HAVING(Codigo_De_Articulo = '" + cod + "') ORDER BY YEAR(Fecha_Del_Documento), MONTH(Fecha_Del_Documento) ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
+
+        static string getcodigo(string codigo)
+        {
+
+
+
+            string conect = "SERVER = 192.168.200.1; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT Descripcion From Articulos where Codigo_De_Articulo = '" +codigo + "' ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+            string nombre = dtbl.Rows[0][0].ToString();
+
+            return nombre;
+
+        }
+
+        static DataTable GetClientes(int anio, string rfc)
+        {
+
+
+
+            string conect = "SERVER = 192.168.200.1; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT  TOP 100 PERCENT RFC, Nombre, MONTH(Fecha_Del_Documento) AS Mes, YEAR(Fecha_Del_Documento) AS Year, SUM(Total) AS Total" +
+                " FROM  dbo.fncReporteadorDeVentasConsolidado() fncReporteadorDeVentasConsolidado WHERE(YEAR(Fecha_Del_Documento) IN("+anio+")) " +
+                "GROUP BY RFC, MONTH(Fecha_Del_Documento), YEAR(Fecha_Del_Documento), Nombre HAVING(RFC = '"+rfc+"') ORDER BY YEAR(Fecha_Del_Documento), MONTH(Fecha_Del_Documento) ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
+
+
+
+
         static DataTable GetVentasAnterior(string inicial, string final)
         {
 
@@ -903,6 +1260,20 @@ namespace GGGC.Admin.AZ.Inventarios
                 m_consulta = "";
 
                 return 6;
+            }
+            else if (Clientes.IsChecked == true)
+            {
+
+                m_consulta = "";
+
+                return 7;
+            }
+            else if (Codigo.IsChecked == true)
+            {
+
+                m_consulta = "";
+
+                return 8;
             }
 
 

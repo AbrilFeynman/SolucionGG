@@ -546,8 +546,23 @@
     <Compile Include="AZ\Compr\Views\ProductoDialog.xaml.cs">
       <DependentUpon>ProductoDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AZ\Cotizacion\Cotizacionview.xaml.cs">
+      <DependentUpon>Cotizacionview.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AZ\Inventarios\Inventarioview.xaml.cs">
       <DependentUpon>Inventarioview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Inventarios\RptCliente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Inventarios\RptCliente.Designer.cs">
+      <DependentUpon>RptCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Inventarios\RptCodigos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Inventarios\RptCodigos.Designer.cs">
+      <DependentUpon>RptCodigos.cs</DependentUpon>
     </Compile>
     <Compile Include="AZ\Inventarios\RptComparison.cs">
       <SubType>Component</SubType>
@@ -1322,6 +1337,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AZ\Cotizacion\Cotizacionview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AZ\Inventarios\Inventarioview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1986,6 +2005,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="AZ\Inventarios\RptCliente.resx">
+      <DependentUpon>RptCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Inventarios\RptCodigos.resx">
+      <DependentUpon>RptCodigos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AZ\Inventarios\RptComparison.resx">
       <DependentUpon>RptComparison.cs</DependentUpon>
     </EmbeddedResource>

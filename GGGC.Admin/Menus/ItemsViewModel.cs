@@ -556,6 +556,8 @@ namespace GGGC.Admin.Menus
                     mnuGG_Tablero.Items.Add(mnuGG_Modules_TableroNivel1_3);
                     BusinessItem mnuGG_Modules_TableroNivel1_4 = new BusinessItem(mnuGG) { Name = "Reportes Inventarios", Tag = "04447", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
                     mnuGG_Tablero.Items.Add(mnuGG_Modules_TableroNivel1_4);
+                    BusinessItem mnuGG_Modules_TableroNivel1_5 = new BusinessItem(mnuGG) { Name = "Cotizaciones", Tag = "0717", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
+                    mnuGG_Tablero.Items.Add(mnuGG_Modules_TableroNivel1_5);
 
 
                     BusinessItem mnuGG_Modules_Nivel1_1 = new BusinessItem(mnuGG) { Name = "OrdenPatio", Tag = "0117", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };

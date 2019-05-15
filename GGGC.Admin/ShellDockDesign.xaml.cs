@@ -633,6 +633,23 @@ namespace GGGC.Admin
                         AddDetail(uc07117, "Ventas General");
                     }
                     break;
+
+
+                case "0717":
+                    UserControl uc0717 = null;
+                    if (userControls.ContainsKey("0717"))
+                    {
+                        userControls.Remove("0717");
+                        uc0717 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Cotizacion.Cotizacionview", type.Namespace));
+                        userControls.Add("Cotizaciones", uc0717);
+                    }
+                    else
+                    {
+                        uc0717 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Cotizacion.Cotizacionview", type.Namespace));
+                        userControls.Add("0717", uc0717);
+                        AddDetail(uc0717, "cotizaciones");
+                    }
+                    break;
                 case "071173":
                     UserControl uc071173 = null;
                     if (userControls.ContainsKey("071173"))
