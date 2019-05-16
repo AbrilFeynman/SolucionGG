@@ -109,7 +109,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // pageHeaderSection1
             // 
-            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1.9857667684555054D);
+            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1.986D);
             this.pageHeaderSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.shpFolio,
             this.txtEmisorNombre,
@@ -143,19 +143,19 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // shpFolio
             // 
-            this.shpFolio.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.636874198913574D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.shpFolio.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.637D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.shpFolio.Name = "shpFolio";
             this.shpFolio.ShapeType = new Telerik.Reporting.Drawing.Shapes.PolygonShape(4, 45D, 5);
-            this.shpFolio.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.7735414505004883D), Telerik.Reporting.Drawing.Unit.Cm(0.89999997615814209D));
+            this.shpFolio.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.774D), Telerik.Reporting.Drawing.Unit.Cm(0.9D));
             this.shpFolio.Stretch = true;
             this.shpFolio.Style.Color = System.Drawing.Color.Black;
             this.shpFolio.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(1D);
             // 
             // txtEmisorNombre
             // 
-            this.txtEmisorNombre.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.1960415840148926D), Telerik.Reporting.Drawing.Unit.Cm(-0.026458332315087318D));
+            this.txtEmisorNombre.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.196D), Telerik.Reporting.Drawing.Unit.Cm(-0.026D));
             this.txtEmisorNombre.Name = "txtEmisorNombre";
-            this.txtEmisorNombre.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(13.300000190734863D), Telerik.Reporting.Drawing.Unit.Cm(0.89999997615814209D));
+            this.txtEmisorNombre.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(13.3D), Telerik.Reporting.Drawing.Unit.Cm(0.9D));
             this.txtEmisorNombre.Style.Color = System.Drawing.Color.White;
             this.txtEmisorNombre.Style.Font.Bold = true;
             this.txtEmisorNombre.Style.Font.Name = "Times New Roman";
@@ -166,9 +166,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtEmisorRFC
             // 
-            this.txtEmisorRFC.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.0372915267944336D), Telerik.Reporting.Drawing.Unit.Cm(0.5027083158493042D));
+            this.txtEmisorRFC.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.037D), Telerik.Reporting.Drawing.Unit.Cm(0.503D));
             this.txtEmisorRFC.Name = "txtEmisorRFC";
-            this.txtEmisorRFC.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(14.983333587646484D), Telerik.Reporting.Drawing.Unit.Cm(0.49980071187019348D));
+            this.txtEmisorRFC.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(14.983D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.txtEmisorRFC.Style.Font.Bold = true;
             this.txtEmisorRFC.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.txtEmisorRFC.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
@@ -176,26 +176,26 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtEmisorExpedido
             // 
-            this.txtEmisorExpedido.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.509374618530273D), Telerik.Reporting.Drawing.Unit.Cm(2.3283333778381348D));
+            this.txtEmisorExpedido.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.509D), Telerik.Reporting.Drawing.Unit.Cm(2.328D));
             this.txtEmisorExpedido.Name = "txtEmisorExpedido";
-            this.txtEmisorExpedido.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(7.5666704177856445D), Telerik.Reporting.Drawing.Unit.Cm(1.2998001575469971D));
+            this.txtEmisorExpedido.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(7.567D), Telerik.Reporting.Drawing.Unit.Cm(1.3D));
             this.txtEmisorExpedido.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.txtEmisorExpedido.Value = "";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.509374618530273D), Telerik.Reporting.Drawing.Unit.Cm(1.984375D));
+            this.textBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.509D), Telerik.Reporting.Drawing.Unit.Cm(1.984D));
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.4000000953674316D), Telerik.Reporting.Drawing.Unit.Cm(0.28813403844833374D));
+            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.4D), Telerik.Reporting.Drawing.Unit.Cm(0.288D));
             this.textBox3.Style.Font.Bold = true;
             this.textBox3.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.textBox3.Value = "EXPEDIDO EN :";
             // 
             // txtReceptorNombre
             // 
-            this.txtReceptorNombre.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.18520833551883698D), Telerik.Reporting.Drawing.Unit.Cm(2.3547916412353516D));
+            this.txtReceptorNombre.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.185D), Telerik.Reporting.Drawing.Unit.Cm(2.355D));
             this.txtReceptorNombre.Name = "txtReceptorNombre";
-            this.txtReceptorNombre.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.100000381469727D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.txtReceptorNombre.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.1D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.txtReceptorNombre.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtReceptorNombre.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtReceptorNombre.Style.Font.Bold = true;
@@ -204,9 +204,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtReceptorCiudad
             // 
-            this.txtReceptorCiudad.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.18520833551883698D), Telerik.Reporting.Drawing.Unit.Cm(3.5718748569488525D));
+            this.txtReceptorCiudad.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.185D), Telerik.Reporting.Drawing.Unit.Cm(3.572D));
             this.txtReceptorCiudad.Name = "txtReceptorCiudad";
-            this.txtReceptorCiudad.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.100000381469727D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.txtReceptorCiudad.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.1D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.txtReceptorCiudad.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtReceptorCiudad.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtReceptorCiudad.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -214,9 +214,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtReceptorColonia
             // 
-            this.txtReceptorColonia.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.18520833551883698D), Telerik.Reporting.Drawing.Unit.Cm(3.1485416889190674D));
+            this.txtReceptorColonia.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.185D), Telerik.Reporting.Drawing.Unit.Cm(3.149D));
             this.txtReceptorColonia.Name = "txtReceptorColonia";
-            this.txtReceptorColonia.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.100000381469727D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.txtReceptorColonia.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.1D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.txtReceptorColonia.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtReceptorColonia.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtReceptorColonia.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -224,9 +224,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtReceptorDireccion
             // 
-            this.txtReceptorDireccion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.18520833551883698D), Telerik.Reporting.Drawing.Unit.Cm(2.75166654586792D));
+            this.txtReceptorDireccion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.185D), Telerik.Reporting.Drawing.Unit.Cm(2.752D));
             this.txtReceptorDireccion.Name = "txtReceptorDireccion";
-            this.txtReceptorDireccion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.100000381469727D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.txtReceptorDireccion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.1D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.txtReceptorDireccion.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtReceptorDireccion.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtReceptorDireccion.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -234,9 +234,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtReceptorRFC
             // 
-            this.txtReceptorRFC.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.18520833551883698D), Telerik.Reporting.Drawing.Unit.Cm(3.9952082633972168D));
+            this.txtReceptorRFC.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.185D), Telerik.Reporting.Drawing.Unit.Cm(3.995D));
             this.txtReceptorRFC.Name = "txtReceptorRFC";
-            this.txtReceptorRFC.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.100000381469727D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.txtReceptorRFC.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.1D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.txtReceptorRFC.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtReceptorRFC.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtReceptorRFC.Style.Font.Bold = true;
@@ -245,9 +245,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtFecha
             // 
-            this.txtFecha.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.82208251953125D), Telerik.Reporting.Drawing.Unit.Cm(1.6404166221618652D));
+            this.txtFecha.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.822D), Telerik.Reporting.Drawing.Unit.Cm(1.64D));
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.082916259765625D), Telerik.Reporting.Drawing.Unit.Cm(0.50583332777023315D));
+            this.txtFecha.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.083D), Telerik.Reporting.Drawing.Unit.Cm(0.506D));
             this.txtFecha.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtFecha.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtFecha.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
@@ -255,9 +255,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtCondicionPago
             // 
-            this.txtCondicionPago.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.626041412353516D), Telerik.Reporting.Drawing.Unit.Cm(4.1539583206176758D));
+            this.txtCondicionPago.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.626D), Telerik.Reporting.Drawing.Unit.Cm(4.154D));
             this.txtCondicionPago.Name = "txtCondicionPago";
-            this.txtCondicionPago.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.1937499046325684D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.txtCondicionPago.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.194D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.txtCondicionPago.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtCondicionPago.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtCondicionPago.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -267,10 +267,10 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // txtMetodoDePago
             // 
             this.txtMetodoDePago.CanGrow = true;
-            this.txtMetodoDePago.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.626041412353516D), Telerik.Reporting.Drawing.Unit.Cm(4.2333331108093262D));
+            this.txtMetodoDePago.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.626D), Telerik.Reporting.Drawing.Unit.Cm(4.233D));
             this.txtMetodoDePago.Multiline = false;
             this.txtMetodoDePago.Name = "txtMetodoDePago";
-            this.txtMetodoDePago.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.9000000953674316D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.txtMetodoDePago.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.9D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.txtMetodoDePago.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtMetodoDePago.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtMetodoDePago.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -279,9 +279,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtPedido
             // 
-            this.txtPedido.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.626041412353516D), Telerik.Reporting.Drawing.Unit.Cm(3.7835416793823242D));
+            this.txtPedido.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.626D), Telerik.Reporting.Drawing.Unit.Cm(3.784D));
             this.txtPedido.Name = "txtPedido";
-            this.txtPedido.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.3650000095367432D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.txtPedido.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.365D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.txtPedido.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtPedido.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtPedido.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -290,9 +290,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtNumeroDeFolio
             // 
-            this.txtNumeroDeFolio.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(17.779998779296875D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
+            this.txtNumeroDeFolio.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(17.78D), Telerik.Reporting.Drawing.Unit.Cm(0.053D));
             this.txtNumeroDeFolio.Name = "txtNumeroDeFolio";
-            this.txtNumeroDeFolio.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.4900000095367432D), Telerik.Reporting.Drawing.Unit.Cm(0.800000011920929D));
+            this.txtNumeroDeFolio.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.49D), Telerik.Reporting.Drawing.Unit.Cm(0.8D));
             this.txtNumeroDeFolio.Style.BorderColor.Default = System.Drawing.Color.Silver;
             this.txtNumeroDeFolio.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
             this.txtNumeroDeFolio.Style.Color = System.Drawing.Color.Black;
@@ -304,9 +304,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtTipoCFD
             // 
-            this.txtTipoCFD.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.689791679382324D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
+            this.txtTipoCFD.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.69D), Telerik.Reporting.Drawing.Unit.Cm(0.053D));
             this.txtTipoCFD.Name = "txtTipoCFD";
-            this.txtTipoCFD.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.5158336162567139D), Telerik.Reporting.Drawing.Unit.Cm(0.793958306312561D));
+            this.txtTipoCFD.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.516D), Telerik.Reporting.Drawing.Unit.Cm(0.794D));
             this.txtTipoCFD.Style.Font.Bold = true;
             this.txtTipoCFD.Style.Font.Name = "Tahoma";
             this.txtTipoCFD.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
@@ -316,9 +316,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtEmplelado
             // 
-            this.txtEmplelado.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(17.912290573120117D), Telerik.Reporting.Drawing.Unit.Cm(4.04812479019165D));
+            this.txtEmplelado.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(17.912D), Telerik.Reporting.Drawing.Unit.Cm(4.048D));
             this.txtEmplelado.Name = "txtEmplelado";
-            this.txtEmplelado.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.4577085971832275D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.txtEmplelado.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.458D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.txtEmplelado.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtEmplelado.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtEmplelado.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -327,10 +327,10 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtTels
             // 
-            this.txtTels.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.18520833551883698D), Telerik.Reporting.Drawing.Unit.Cm(3.96875D));
+            this.txtTels.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.185D), Telerik.Reporting.Drawing.Unit.Cm(3.969D));
             this.txtTels.Multiline = false;
             this.txtTels.Name = "txtTels";
-            this.txtTels.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.100000381469727D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.txtTels.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.1D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.txtTels.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtTels.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtTels.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -340,10 +340,10 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // txtNumeroDeCliente
             // 
             this.txtNumeroDeCliente.CanGrow = false;
-            this.txtNumeroDeCliente.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.18520833551883698D), Telerik.Reporting.Drawing.Unit.Cm(2.0108332633972168D));
+            this.txtNumeroDeCliente.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.185D), Telerik.Reporting.Drawing.Unit.Cm(2.011D));
             this.txtNumeroDeCliente.Multiline = false;
             this.txtNumeroDeCliente.Name = "txtNumeroDeCliente";
-            this.txtNumeroDeCliente.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.6535423994064331D), Telerik.Reporting.Drawing.Unit.Cm(0.2941666841506958D));
+            this.txtNumeroDeCliente.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.654D), Telerik.Reporting.Drawing.Unit.Cm(0.294D));
             this.txtNumeroDeCliente.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtNumeroDeCliente.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtNumeroDeCliente.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -351,18 +351,18 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // pbxLogo
             // 
-            this.pbxLogo.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(-0.026458332315087318D));
+            this.pbxLogo.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(-0.026D));
             this.pbxLogo.MimeType = "image/jpeg";
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.8400001525878906D), Telerik.Reporting.Drawing.Unit.Cm(1.3300000429153442D));
+            this.pbxLogo.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.84D), Telerik.Reporting.Drawing.Unit.Cm(1.33D));
             this.pbxLogo.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.ScaleProportional;
             this.pbxLogo.Value = ((object)(resources.GetObject("pbxLogo.Value")));
             // 
             // textBox5
             // 
-            this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.1912498474121094D), Telerik.Reporting.Drawing.Unit.Cm(0.13229165971279144D));
+            this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.191D), Telerik.Reporting.Drawing.Unit.Cm(0.132D));
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.0752077102661133D), Telerik.Reporting.Drawing.Unit.Cm(0.60854166746139526D));
+            this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.075D), Telerik.Reporting.Drawing.Unit.Cm(0.609D));
             this.textBox5.Style.Color = System.Drawing.Color.Navy;
             this.textBox5.Style.Font.Bold = true;
             this.textBox5.Style.Font.Name = "Tahoma";
@@ -370,9 +370,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtCuentas
             // 
-            this.txtCuentas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.626041412353516D), Telerik.Reporting.Drawing.Unit.Cm(4.259791374206543D));
+            this.txtCuentas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.626D), Telerik.Reporting.Drawing.Unit.Cm(4.26D));
             this.txtCuentas.Name = "txtCuentas";
-            this.txtCuentas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.5900001525878906D), Telerik.Reporting.Drawing.Unit.Cm(0.64999997615814209D));
+            this.txtCuentas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.59D), Telerik.Reporting.Drawing.Unit.Cm(0.65D));
             this.txtCuentas.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.txtCuentas.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtCuentas.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -381,9 +381,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox12
             // 
-            this.textBox12.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.901457786560059D), Telerik.Reporting.Drawing.Unit.Cm(1.1112499237060547D));
+            this.textBox12.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.901D), Telerik.Reporting.Drawing.Unit.Cm(1.111D));
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1600000858306885D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.textBox12.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.16D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.textBox12.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox12.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox12.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -393,9 +393,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox13
             // 
-            this.textBox13.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.72166633605957D), Telerik.Reporting.Drawing.Unit.Cm(4.0745830535888672D));
+            this.textBox13.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.722D), Telerik.Reporting.Drawing.Unit.Cm(4.075D));
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.0612497329711914D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.textBox13.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.061D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.textBox13.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox13.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox13.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -405,9 +405,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox14
             // 
-            this.textBox14.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.482915878295898D), Telerik.Reporting.Drawing.Unit.Cm(3.8893749713897705D));
+            this.textBox14.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.483D), Telerik.Reporting.Drawing.Unit.Cm(3.889D));
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.190000057220459D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.textBox14.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.19D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.textBox14.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox14.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox14.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -418,9 +418,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox15
             // 
-            this.textBox15.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.482915878295898D), Telerik.Reporting.Drawing.Unit.Cm(4.1539583206176758D));
+            this.textBox15.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.483D), Telerik.Reporting.Drawing.Unit.Cm(4.154D));
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1879167556762695D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.textBox15.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.188D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.textBox15.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox15.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox15.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -431,9 +431,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox16
             // 
-            this.textBox16.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.482915878295898D), Telerik.Reporting.Drawing.Unit.Cm(4.127500057220459D));
+            this.textBox16.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.483D), Telerik.Reporting.Drawing.Unit.Cm(4.128D));
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1614582538604736D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.textBox16.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.161D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.textBox16.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox16.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox16.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -444,9 +444,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox17
             // 
-            this.textBox17.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.482915878295898D), Telerik.Reporting.Drawing.Unit.Cm(4.2333331108093262D));
+            this.textBox17.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.483D), Telerik.Reporting.Drawing.Unit.Cm(4.233D));
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1600000858306885D), Telerik.Reporting.Drawing.Unit.Cm(0.40000000596046448D));
+            this.textBox17.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.16D), Telerik.Reporting.Drawing.Unit.Cm(0.4D));
             this.textBox17.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox17.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox17.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -457,7 +457,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // detail
             // 
-            this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(8.0000009536743164D);
+            this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(8D);
             this.detail.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.shape10,
             this.pictureBox1,
@@ -506,17 +506,17 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // shape10
             // 
-            this.shape10.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(8.2100152969360352D));
+            this.shape10.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(8.21D));
             this.shape10.Name = "shape10";
             this.shape10.ShapeType = new Telerik.Reporting.Drawing.Shapes.PolygonShape(4, 45D, 3);
-            this.shape10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(20.280000686645508D), Telerik.Reporting.Drawing.Unit.Cm(1.3500000238418579D));
+            this.shape10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(20.28D), Telerik.Reporting.Drawing.Unit.Cm(1.35D));
             this.shape10.Stretch = true;
             this.shape10.Style.Color = System.Drawing.Color.Black;
             this.shape10.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(1D);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(17.017999649047852D), Telerik.Reporting.Drawing.Unit.Cm(15.784152030944824D));
+            this.pictureBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(17.018D), Telerik.Reporting.Drawing.Unit.Cm(15.784D));
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3D), Telerik.Reporting.Drawing.Unit.Cm(3D));
             this.pictureBox1.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.Stretch;
@@ -527,9 +527,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             this.textBox31,
             this.htmlPagare,
             this.textBox24});
-            this.panel1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(11.041056632995606D));
+            this.panel1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(11.041D));
             this.panel1.Name = "panel1";
-            this.panel1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(20.350000381469727D), Telerik.Reporting.Drawing.Unit.Cm(3.3610498905181885D));
+            this.panel1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(20.35D), Telerik.Reporting.Drawing.Unit.Cm(3.361D));
             this.panel1.Style.BorderColor.Default = System.Drawing.Color.Black;
             this.panel1.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.panel1.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -537,27 +537,27 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox31
             // 
-            this.textBox31.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.12645833194255829D), Telerik.Reporting.Drawing.Unit.Cm(0.1483333557844162D));
+            this.textBox31.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.126D), Telerik.Reporting.Drawing.Unit.Cm(0.148D));
             this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(8.2535419464111328D), Telerik.Reporting.Drawing.Unit.Cm(1.4762504100799561D));
+            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(8.254D), Telerik.Reporting.Drawing.Unit.Cm(1.476D));
             this.textBox31.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox31.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox31.Value = "Recibí de conformidad la\r\nmercancia arriba citada ";
             // 
             // htmlPagare
             // 
-            this.htmlPagare.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(9.5324983596801758D), Telerik.Reporting.Drawing.Unit.Cm(0.20875744521617889D));
+            this.htmlPagare.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(9.532D), Telerik.Reporting.Drawing.Unit.Cm(0.209D));
             this.htmlPagare.Name = "htmlPagare";
-            this.htmlPagare.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(10.567501068115234D), Telerik.Reporting.Drawing.Unit.Cm(2.2466666698455811D));
+            this.htmlPagare.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(10.568D), Telerik.Reporting.Drawing.Unit.Cm(2.247D));
             this.htmlPagare.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
             this.htmlPagare.Style.Visible = false;
             this.htmlPagare.Value = resources.GetString("htmlPagare.Value");
             // 
             // textBox24
             // 
-            this.textBox24.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.20583125948905945D), Telerik.Reporting.Drawing.Unit.Cm(2.7993834018707275D));
+            this.textBox24.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.206D), Telerik.Reporting.Drawing.Unit.Cm(2.799D));
             this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(8.2270832061767578D), Telerik.Reporting.Drawing.Unit.Cm(0.34999999403953552D));
+            this.textBox24.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(8.227D), Telerik.Reporting.Drawing.Unit.Cm(0.35D));
             this.textBox24.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox24.Style.BorderWidth.Top = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox24.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -566,9 +566,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox28
             // 
-            this.textBox28.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.344196319580078D), Telerik.Reporting.Drawing.Unit.Cm(14.507098197937012D));
+            this.textBox28.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.344D), Telerik.Reporting.Drawing.Unit.Cm(14.507D));
             this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.9999995231628418D), Telerik.Reporting.Drawing.Unit.Cm(0.50000017881393433D));
+            this.textBox28.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox28.Style.BackgroundColor = System.Drawing.Color.Silver;
             this.textBox28.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox28.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -581,7 +581,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtNoCertificado
             // 
-            this.txtNoCertificado.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.344196319580078D), Telerik.Reporting.Drawing.Unit.Cm(15.009806632995606D));
+            this.txtNoCertificado.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.344D), Telerik.Reporting.Drawing.Unit.Cm(15.01D));
             this.txtNoCertificado.Name = "txtNoCertificado";
             this.txtNoCertificado.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.txtNoCertificado.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -594,9 +594,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox30
             // 
-            this.textBox30.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(14.507098197937012D));
+            this.textBox30.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(14.507D));
             this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.352714538574219D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox30.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.353D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox30.Style.BackgroundColor = System.Drawing.Color.Silver;
             this.textBox30.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox30.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -608,9 +608,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtSelloDigital
             // 
-            this.txtSelloDigital.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(15.009806632995606D));
+            this.txtSelloDigital.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(15.01D));
             this.txtSelloDigital.Name = "txtSelloDigital";
-            this.txtSelloDigital.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.352716445922852D), Telerik.Reporting.Drawing.Unit.Cm(0.99980008602142334D));
+            this.txtSelloDigital.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.353D), Telerik.Reporting.Drawing.Unit.Cm(1D));
             this.txtSelloDigital.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.txtSelloDigital.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtSelloDigital.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -621,9 +621,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtSelloSAT
             // 
-            this.txtSelloSAT.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(16.544389724731445D));
+            this.txtSelloSAT.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(16.544D));
             this.txtSelloSAT.Name = "txtSelloSAT";
-            this.txtSelloSAT.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.352716445922852D), Telerik.Reporting.Drawing.Unit.Cm(0.99980008602142334D));
+            this.txtSelloSAT.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.353D), Telerik.Reporting.Drawing.Unit.Cm(1D));
             this.txtSelloSAT.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.txtSelloSAT.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtSelloSAT.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -634,9 +634,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox37
             // 
-            this.textBox37.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(16.041681289672852D));
+            this.textBox37.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(16.042D));
             this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.352714538574219D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox37.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.353D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox37.Style.BackgroundColor = System.Drawing.Color.Silver;
             this.textBox37.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox37.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -648,9 +648,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox38
             // 
-            this.textBox38.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(17.523347854614258D));
+            this.textBox38.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(17.523D));
             this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.352714538574219D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox38.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.353D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox38.Style.BackgroundColor = System.Drawing.Color.Silver;
             this.textBox38.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox38.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -662,9 +662,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtCadenaSAT
             // 
-            this.txtCadenaSAT.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(18.026056289672852D));
+            this.txtCadenaSAT.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(18.026D));
             this.txtCadenaSAT.Name = "txtCadenaSAT";
-            this.txtCadenaSAT.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.352716445922852D), Telerik.Reporting.Drawing.Unit.Cm(1.2643834352493286D));
+            this.txtCadenaSAT.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.353D), Telerik.Reporting.Drawing.Unit.Cm(1.264D));
             this.txtCadenaSAT.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtCadenaSAT.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.txtCadenaSAT.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -674,7 +674,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox40
             // 
-            this.textBox40.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(19.428348541259766D));
+            this.textBox40.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(19.428D));
             this.textBox40.Name = "textBox40";
             this.textBox40.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.5D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox40.Style.Color = System.Drawing.Color.Gray;
@@ -684,18 +684,18 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // htmlTimbreFecha
             // 
-            this.htmlTimbreFecha.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.9298210144042969D), Telerik.Reporting.Drawing.Unit.Cm(19.428348541259766D));
+            this.htmlTimbreFecha.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.93D), Telerik.Reporting.Drawing.Unit.Cm(19.428D));
             this.htmlTimbreFecha.Name = "htmlTimbreFecha";
-            this.htmlTimbreFecha.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(15.714579582214356D), Telerik.Reporting.Drawing.Unit.Cm(0.47466909885406494D));
+            this.htmlTimbreFecha.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(15.715D), Telerik.Reporting.Drawing.Unit.Cm(0.475D));
             this.htmlTimbreFecha.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.htmlTimbreFecha.Style.Visible = false;
             this.htmlTimbreFecha.Value = resources.GetString("htmlTimbreFecha.Value");
             // 
             // textBox29
             // 
-            this.textBox29.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.098779499530792236D), Telerik.Reporting.Drawing.Unit.Cm(0.007932332344353199D));
+            this.textBox29.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.099D), Telerik.Reporting.Drawing.Unit.Cm(0.008D));
             this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.5560410022735596D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox29.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.556D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox29.Style.BorderColor.Default = System.Drawing.Color.LightGray;
             this.textBox29.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox29.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -707,7 +707,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox33
             // 
-            this.textBox33.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.4908628463745117D), Telerik.Reporting.Drawing.Unit.Cm(0.007932332344353199D));
+            this.textBox33.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.491D), Telerik.Reporting.Drawing.Unit.Cm(0.008D));
             this.textBox33.Name = "textBox33";
             this.textBox33.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox33.Style.BorderColor.Default = System.Drawing.Color.LightGray;
@@ -719,9 +719,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox34
             // 
-            this.textBox34.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(3.0356543064117432D), Telerik.Reporting.Drawing.Unit.Cm(0.007932332344353199D));
+            this.textBox34.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(3.036D), Telerik.Reporting.Drawing.Unit.Cm(0.008D));
             this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.4997996091842651D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox34.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.5D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox34.Style.BorderColor.Default = System.Drawing.Color.LightGray;
             this.textBox34.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox34.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -732,9 +732,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox39
             // 
-            this.textBox39.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.418153762817383D), Telerik.Reporting.Drawing.Unit.Cm(0.007932332344353199D));
+            this.textBox39.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.418D), Telerik.Reporting.Drawing.Unit.Cm(0.008D));
             this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.5252163410186768D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox39.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.525D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox39.Style.BorderColor.Default = System.Drawing.Color.LightGray;
             this.textBox39.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox39.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -745,9 +745,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox43
             // 
-            this.textBox43.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.249195098876953D), Telerik.Reporting.Drawing.Unit.Cm(0.007932332344353199D));
+            this.textBox43.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.249D), Telerik.Reporting.Drawing.Unit.Cm(0.008D));
             this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.7887483835220337D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox43.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.789D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox43.Style.BorderColor.Default = System.Drawing.Color.LightGray;
             this.textBox43.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox43.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -758,9 +758,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // htmlMoneda
             // 
-            this.htmlMoneda.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(9.3741817474365234D));
+            this.htmlMoneda.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(9.374D));
             this.htmlMoneda.Name = "htmlMoneda";
-            this.htmlMoneda.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(13.782084465026856D), Telerik.Reporting.Drawing.Unit.Cm(0.13229165971279144D));
+            this.htmlMoneda.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(13.782D), Telerik.Reporting.Drawing.Unit.Cm(0.132D));
             this.htmlMoneda.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlMoneda.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlMoneda.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -774,9 +774,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // htmlTextBox3
             // 
-            this.htmlTextBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.777737617492676D), Telerik.Reporting.Drawing.Unit.Cm(8.9508485794067383D));
+            this.htmlTextBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.778D), Telerik.Reporting.Drawing.Unit.Cm(8.951D));
             this.htmlTextBox3.Name = "htmlTextBox3";
-            this.htmlTextBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.9999997615814209D), Telerik.Reporting.Drawing.Unit.Cm(0.59999889135360718D));
+            this.htmlTextBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
             this.htmlTextBox3.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlTextBox3.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlTextBox3.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -792,9 +792,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // htmlTextBox6
             // 
-            this.htmlTextBox6.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.788570404052734D), Telerik.Reporting.Drawing.Unit.Cm(9.0302238464355469D));
+            this.htmlTextBox6.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.789D), Telerik.Reporting.Drawing.Unit.Cm(9.03D));
             this.htmlTextBox6.Name = "htmlTextBox6";
-            this.htmlTextBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1508464813232422D), Telerik.Reporting.Drawing.Unit.Cm(0.59999889135360718D));
+            this.htmlTextBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.151D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
             this.htmlTextBox6.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlTextBox6.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlTextBox6.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -811,9 +811,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // htmlEtiquetaIVA
             // 
-            this.htmlEtiquetaIVA.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.788570404052734D), Telerik.Reporting.Drawing.Unit.Cm(8.3423070907592773D));
+            this.htmlEtiquetaIVA.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.789D), Telerik.Reporting.Drawing.Unit.Cm(8.342D));
             this.htmlEtiquetaIVA.Name = "htmlEtiquetaIVA";
-            this.htmlEtiquetaIVA.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1508464813232422D), Telerik.Reporting.Drawing.Unit.Cm(0.79000020027160645D));
+            this.htmlEtiquetaIVA.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.151D), Telerik.Reporting.Drawing.Unit.Cm(0.79D));
             this.htmlEtiquetaIVA.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlEtiquetaIVA.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlEtiquetaIVA.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -828,9 +828,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // htmlSubTotalIVA
             // 
-            this.htmlSubTotalIVA.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.12711238861084D), Telerik.Reporting.Drawing.Unit.Cm(9.3741817474365234D));
+            this.htmlSubTotalIVA.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.127D), Telerik.Reporting.Drawing.Unit.Cm(9.374D));
             this.htmlSubTotalIVA.Name = "htmlSubTotalIVA";
-            this.htmlSubTotalIVA.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.419581413269043D), Telerik.Reporting.Drawing.Unit.Cm(0.79000002145767212D));
+            this.htmlSubTotalIVA.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.42D), Telerik.Reporting.Drawing.Unit.Cm(0.79D));
             this.htmlSubTotalIVA.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlSubTotalIVA.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlSubTotalIVA.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -846,9 +846,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // htmlTotal
             // 
-            this.htmlTotal.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.582321166992188D), Telerik.Reporting.Drawing.Unit.Cm(9.6652240753173828D));
+            this.htmlTotal.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.582D), Telerik.Reporting.Drawing.Unit.Cm(9.665D));
             this.htmlTotal.Name = "htmlTotal";
-            this.htmlTotal.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.4037623405456543D), Telerik.Reporting.Drawing.Unit.Cm(0.59999889135360718D));
+            this.htmlTotal.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.404D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
             this.htmlTotal.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlTotal.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlTotal.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -866,13 +866,13 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // table1
             // 
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.5999999046325684D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.6000000238418579D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(9.0000019073486328D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.9000002145767212D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.2999989986419678D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.4195821285247803D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.6D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.6D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(9D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.9D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.3D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.42D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.5D)));
             this.table1.Body.SetCellContent(0, 0, this.textBox6);
             this.table1.Body.SetCellContent(0, 2, this.textBox7);
             this.table1.Body.SetCellContent(0, 3, this.textBox8);
@@ -894,14 +894,14 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             this.textBox8,
             this.textBox9,
             this.textBox10});
-            this.table1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.20461282134056091D), Telerik.Reporting.Drawing.Unit.Cm(0.54415279626846313D));
+            this.table1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.205D), Telerik.Reporting.Drawing.Unit.Cm(0.544D));
             this.table1.Name = "table1";
             tableGroup8.Name = "Group1";
             tableGroup7.ChildGroups.Add(tableGroup8);
             tableGroup7.Groupings.Add(new Telerik.Reporting.Grouping(""));
             tableGroup7.Name = "Detail";
             this.table1.RowGroups.Add(tableGroup7);
-            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(19.819581985473633D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(19.82D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.table1.Style.BorderColor.Default = System.Drawing.Color.White;
             this.table1.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.table1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -911,7 +911,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // textBox6
             // 
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.6000001430511475D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.textBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.6D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox6.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox6.Style.BorderWidth.Left = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox6.StyleName = "";
@@ -920,7 +920,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // textBox7
             // 
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox7.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox7.Style.BorderWidth.Left = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox7.StyleName = "";
@@ -929,7 +929,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // textBox8
             // 
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.8999999761581421D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.9D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox8.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox8.Style.BorderWidth.Left = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox8.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -940,7 +940,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             this.textBox9.Format = "{0:N2}";
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2999999523162842D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.textBox9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.3D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox9.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox9.Style.BorderWidth.Left = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox9.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
@@ -951,7 +951,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             this.textBox10.Format = "{0:N2}";
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.4195823669433594D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.42D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox10.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox10.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox10.Style.BorderWidth.Left = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -963,7 +963,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // textBox4
             // 
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.6000001430511475D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.6D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox4.Style.BorderWidth.Left = Telerik.Reporting.Drawing.Unit.Pixel(1D);
             this.textBox4.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox4.StyleName = "";
@@ -984,51 +984,51 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // shape2
             // 
-            this.shape2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.7446126937866211D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.shape2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.745D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.shape2.Name = "shape2";
             this.shape2.ShapeType = new Telerik.Reporting.Drawing.Shapes.LineShape(Telerik.Reporting.Drawing.Shapes.LineDirection.NS);
-            this.shape2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.20999999344348908D), Telerik.Reporting.Drawing.Unit.Cm(8D));
+            this.shape2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.21D), Telerik.Reporting.Drawing.Unit.Cm(8D));
             this.shape2.Style.Color = System.Drawing.Color.Black;
             // 
             // shape5
             // 
-            this.shape5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.1998209953308105D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.shape5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.2D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.shape5.Name = "shape5";
             this.shape5.ShapeType = new Telerik.Reporting.Drawing.Shapes.LineShape(Telerik.Reporting.Drawing.Shapes.LineDirection.NS);
-            this.shape5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.20999999344348908D), Telerik.Reporting.Drawing.Unit.Cm(8D));
+            this.shape5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.21D), Telerik.Reporting.Drawing.Unit.Cm(8D));
             this.shape5.Style.Color = System.Drawing.Color.Black;
             // 
             // shape7
             // 
-            this.shape7.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.412737846374512D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.shape7.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.413D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.shape7.Name = "shape7";
             this.shape7.ShapeType = new Telerik.Reporting.Drawing.Shapes.LineShape(Telerik.Reporting.Drawing.Shapes.LineDirection.NS);
-            this.shape7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.20999999344348908D), Telerik.Reporting.Drawing.Unit.Cm(8D));
+            this.shape7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.21D), Telerik.Reporting.Drawing.Unit.Cm(8D));
             this.shape7.Style.Color = System.Drawing.Color.Black;
             // 
             // shape8
             // 
-            this.shape8.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.011070251464844D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.shape8.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.011D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.shape8.Name = "shape8";
             this.shape8.ShapeType = new Telerik.Reporting.Drawing.Shapes.LineShape(Telerik.Reporting.Drawing.Shapes.LineDirection.NS);
-            this.shape8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.12999999523162842D), Telerik.Reporting.Drawing.Unit.Cm(8D));
+            this.shape8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.13D), Telerik.Reporting.Drawing.Unit.Cm(8D));
             this.shape8.Style.Color = System.Drawing.Color.Black;
             this.shape8.Style.Visible = true;
             // 
             // shape9
             // 
-            this.shape9.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(0.37834897637367249D));
+            this.shape9.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(0.378D));
             this.shape9.Name = "shape9";
             this.shape9.ShapeType = new Telerik.Reporting.Drawing.Shapes.LineShape(Telerik.Reporting.Drawing.Shapes.LineDirection.EW);
-            this.shape9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(20.319999694824219D), Telerik.Reporting.Drawing.Unit.Cm(0.13229165971279144D));
+            this.shape9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(20.32D), Telerik.Reporting.Drawing.Unit.Cm(0.132D));
             this.shape9.Style.Color = System.Drawing.Color.Black;
             // 
             // textBox27
             // 
             this.textBox27.CanGrow = false;
-            this.textBox27.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.0458628311753273D), Telerik.Reporting.Drawing.Unit.Cm(10.776473999023438D));
+            this.textBox27.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.046D), Telerik.Reporting.Drawing.Unit.Cm(10.776D));
             this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(14.832291603088379D), Telerik.Reporting.Drawing.Unit.Cm(0.3470839262008667D));
+            this.textBox27.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(14.832D), Telerik.Reporting.Drawing.Unit.Cm(0.347D));
             this.textBox27.Style.Color = System.Drawing.Color.Black;
             this.textBox27.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.textBox27.Style.Visible = false;
@@ -1038,10 +1038,10 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // txtNota
             // 
             this.txtNota.CanGrow = false;
-            this.txtNota.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(9.6387653350830078D));
+            this.txtNota.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(9.639D));
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
-            this.txtNota.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(20.319999694824219D), Telerik.Reporting.Drawing.Unit.Cm(0.796875D));
+            this.txtNota.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(20.32D), Telerik.Reporting.Drawing.Unit.Cm(0.797D));
             this.txtNota.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.txtNota.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.txtNota.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -1052,36 +1052,36 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.011070251464844D), Telerik.Reporting.Drawing.Unit.Cm(9.1095991134643555D));
+            this.txtTotal.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.011D), Telerik.Reporting.Drawing.Unit.Cm(9.11D));
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2000000476837158D), Telerik.Reporting.Drawing.Unit.Cm(0.47999998927116394D));
+            this.txtTotal.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2D), Telerik.Reporting.Drawing.Unit.Cm(0.48D));
             this.txtTotal.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.txtTotal.Style.Visible = false;
             this.txtTotal.Value = "";
             // 
             // txtIVA
             // 
-            this.txtIVA.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.011070251464844D), Telerik.Reporting.Drawing.Unit.Cm(8.6598072052001953D));
+            this.txtIVA.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.011D), Telerik.Reporting.Drawing.Unit.Cm(8.66D));
             this.txtIVA.Name = "txtIVA";
-            this.txtIVA.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2000000476837158D), Telerik.Reporting.Drawing.Unit.Cm(0.47999998927116394D));
+            this.txtIVA.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2D), Telerik.Reporting.Drawing.Unit.Cm(0.48D));
             this.txtIVA.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.txtIVA.Style.Visible = false;
             this.txtIVA.Value = "";
             // 
             // txtSubtotal
             // 
-            this.txtSubtotal.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.011070251464844D), Telerik.Reporting.Drawing.Unit.Cm(8.1835575103759766D));
+            this.txtSubtotal.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.011D), Telerik.Reporting.Drawing.Unit.Cm(8.184D));
             this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2000000476837158D), Telerik.Reporting.Drawing.Unit.Cm(0.47999998927116394D));
+            this.txtSubtotal.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.2D), Telerik.Reporting.Drawing.Unit.Cm(0.48D));
             this.txtSubtotal.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.txtSubtotal.Style.Visible = true;
             this.txtSubtotal.Value = "";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(12.931071281433106D), Telerik.Reporting.Drawing.Unit.Cm(0.007932332344353199D));
+            this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(12.931D), Telerik.Reporting.Drawing.Unit.Cm(0.008D));
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.5027093887329102D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.503D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox2.Style.BorderColor.Default = System.Drawing.Color.LightGray;
             this.textBox2.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox2.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Pixel(1D);
@@ -1092,17 +1092,17 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // shape3
             // 
-            this.shape3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(12.851696014404297D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.shape3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(12.852D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.shape3.Name = "shape3";
             this.shape3.ShapeType = new Telerik.Reporting.Drawing.Shapes.LineShape(Telerik.Reporting.Drawing.Shapes.LineDirection.NS);
-            this.shape3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.20999999344348908D), Telerik.Reporting.Drawing.Unit.Cm(8D));
+            this.shape3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.21D), Telerik.Reporting.Drawing.Unit.Cm(8D));
             this.shape3.Style.Color = System.Drawing.Color.Black;
             // 
             // txtRegimen
             // 
-            this.txtRegimen.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.67732048034668D), Telerik.Reporting.Drawing.Unit.Cm(10.776473999023438D));
+            this.txtRegimen.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.677D), Telerik.Reporting.Drawing.Unit.Cm(10.776D));
             this.txtRegimen.Name = "txtRegimen";
-            this.txtRegimen.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.704167366027832D), Telerik.Reporting.Drawing.Unit.Cm(0.3470839262008667D));
+            this.txtRegimen.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.704D), Telerik.Reporting.Drawing.Unit.Cm(0.347D));
             this.txtRegimen.Style.Color = System.Drawing.Color.Black;
             this.txtRegimen.Style.Font.Bold = true;
             this.txtRegimen.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -1111,9 +1111,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // textBox11
             // 
-            this.textBox11.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.019404498860239983D), Telerik.Reporting.Drawing.Unit.Cm(19.825223922729492D));
+            this.textBox11.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.019D), Telerik.Reporting.Drawing.Unit.Cm(19.825D));
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.0902082920074463D), Telerik.Reporting.Drawing.Unit.Cm(0.34395831823349D));
+            this.textBox11.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.09D), Telerik.Reporting.Drawing.Unit.Cm(0.344D));
             this.textBox11.Style.Font.Bold = true;
             this.textBox11.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox11.Style.Visible = false;
@@ -1121,9 +1121,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // htmlTextBox1
             // 
-            this.htmlTextBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.777737617492676D), Telerik.Reporting.Drawing.Unit.Cm(8.3687658309936523D));
+            this.htmlTextBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.778D), Telerik.Reporting.Drawing.Unit.Cm(8.369D));
             this.htmlTextBox1.Name = "htmlTextBox1";
-            this.htmlTextBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.9999997615814209D), Telerik.Reporting.Drawing.Unit.Cm(0.79000020027160645D));
+            this.htmlTextBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2D), Telerik.Reporting.Drawing.Unit.Cm(0.79D));
             this.htmlTextBox1.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlTextBox1.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlTextBox1.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -1137,9 +1137,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // htmlCantidadLetras
             // 
-            this.htmlCantidadLetras.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(8.2100152969360352D));
+            this.htmlCantidadLetras.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(8.21D));
             this.htmlCantidadLetras.Name = "htmlCantidadLetras";
-            this.htmlCantidadLetras.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(13.779999732971191D), Telerik.Reporting.Drawing.Unit.Cm(1.1339583396911621D));
+            this.htmlCantidadLetras.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(13.78D), Telerik.Reporting.Drawing.Unit.Cm(1.134D));
             this.htmlCantidadLetras.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlCantidadLetras.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.htmlCantidadLetras.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -1157,9 +1157,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // txtCancelacion
             // 
             this.txtCancelacion.CanGrow = false;
-            this.txtCancelacion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.019404498860239983D), Telerik.Reporting.Drawing.Unit.Cm(10.45897388458252D));
+            this.txtCancelacion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.019D), Telerik.Reporting.Drawing.Unit.Cm(10.459D));
             this.txtCancelacion.Name = "txtCancelacion";
-            this.txtCancelacion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(14.832291603088379D), Telerik.Reporting.Drawing.Unit.Cm(0.3470839262008667D));
+            this.txtCancelacion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(14.832D), Telerik.Reporting.Drawing.Unit.Cm(0.347D));
             this.txtCancelacion.Style.Color = System.Drawing.Color.Black;
             this.txtCancelacion.Style.Font.Bold = false;
             this.txtCancelacion.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -1170,9 +1170,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // textBox18
             // 
             this.textBox18.CanGrow = false;
-            this.textBox18.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.00200080871582D), Telerik.Reporting.Drawing.Unit.Cm(10.450153350830078D));
+            this.textBox18.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.002D), Telerik.Reporting.Drawing.Unit.Cm(10.45D));
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.4747381210327148D), Telerik.Reporting.Drawing.Unit.Cm(0.3470839262008667D));
+            this.textBox18.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.475D), Telerik.Reporting.Drawing.Unit.Cm(0.347D));
             this.textBox18.Style.Color = System.Drawing.Color.Black;
             this.textBox18.Style.Font.Bold = false;
             this.textBox18.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
@@ -1182,7 +1182,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // pageFooterSection1
             // 
-            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(0.22580401599407196D);
+            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(0.226D);
             this.pageFooterSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.htmlTextBox4,
             this.htmlTextBox5});
@@ -1190,9 +1190,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // htmlTextBox4
             // 
-            this.htmlTextBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.082903526723384857D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
+            this.htmlTextBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.083D), Telerik.Reporting.Drawing.Unit.Cm(0.053D));
             this.htmlTextBox4.Name = "htmlTextBox4";
-            this.htmlTextBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(13.512083053588867D), Telerik.Reporting.Drawing.Unit.Cm(0.5206255316734314D));
+            this.htmlTextBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(13.512D), Telerik.Reporting.Drawing.Unit.Cm(0.521D));
             this.htmlTextBox4.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.htmlTextBox4.Style.Visible = false;
             this.htmlTextBox4.Value = "<strong><span>ESTE DOCUMENTO ES UNA REPRESENTACION IMPRESA DE UN CFDI<br />EL REG" +
@@ -1201,9 +1201,9 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             // 
             // htmlTextBox5
             // 
-            this.htmlTextBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.291028022766113D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.htmlTextBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.291D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.htmlTextBox5.Name = "htmlTextBox5";
-            this.htmlTextBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.089897632598877D), Telerik.Reporting.Drawing.Unit.Cm(0.547083854675293D));
+            this.htmlTextBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.09D), Telerik.Reporting.Drawing.Unit.Cm(0.547D));
             this.htmlTextBox5.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.htmlTextBox5.Value = "<p style=\"text-align: right\"><span style=\"font-size: 8pt\"><strong>Página {PageNum" +
     "ber} de {PageCount}</strong></span></p>";
@@ -1227,7 +1227,7 @@ namespace GGGC.Admin.AZ.Remisiones.Views
             this.StyleSheet.AddRange(new Telerik.Reporting.Drawing.StyleRule[] {
             styleRule1});
             this.UnitOfMeasure = Telerik.Reporting.Drawing.UnitType.Cm;
-            this.Width = Telerik.Reporting.Drawing.Unit.Cm(20.904998779296875D);
+            this.Width = Telerik.Reporting.Drawing.Unit.Cm(20.905D);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
             }

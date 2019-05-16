@@ -782,19 +782,10 @@
         KACiiigAooooAKKKKACiiigD/9k=
 </value>
   </data>
-  <data name="htmlPagare.Value" xml:space="preserve">
-    <value>DEBO (EMOS) Y PAGARE (MOS) INCONDICIONALMENTE A LA ORDEN DE &lt;br /&gt;&lt;strong&gt;{0},&lt;/strong&gt; EN ESTA CIUDAD EL DIA &lt;strong&gt;{2}&lt;/strong&gt;&amp;nbsp;LA CANTIDAD DE &lt;strong&gt;$ {1}&lt;/strong&gt;, VALOR DE LA MERCANCIA QUE HE (MOS) RECIBIDO A MI (NUESTRA) ENTERA SATISFACCIÓN ESTE PAGARÉ ES MERCANTIL Y ESTA REGIDO POR LA LEY GENERAL DE TÍTULOS DE CRÉDITO EN SUS ARTÍCULOS 172 Y 173 PARTE FINAL Y ARTÍCULOS CORRELATIVOS, POR NO SER PAGARÉ DOMICILIADO QUEDA EXPRESAMENTE CONVENIDO QUE SI NO ES PAGADO A SU VENCIMIENTO CAUSARÁ INTERESES MORATORIOS DEL 10 % MENSUAL</value>
-  </data>
-  <data name="htmlTimbreFecha.Value" xml:space="preserve">
-    <value>&lt;strong&gt;Folio Fiscal:&lt;/strong&gt; &lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 9pt"&gt;{0}&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;strong&gt;Fecha de Certificación del CFDI:&lt;/strong&gt; {1}&lt;br /&gt;&lt;strong&gt;Fecha de&amp;nbsp;Emisión del CFDI:&lt;/strong&gt; {2}&lt;br /&gt;&lt;strong&gt;No. de Serie del Certificado del SAT:&lt;/strong&gt; {3}</value>
-  </data>
+  <metadata name="$this.Zoom" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>1.5</value>
+  </metadata>
   <metadata name="$this.ShowSnapGrid" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.SnapToGrid" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="$this.SnapToSnapLines" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
   </metadata>
 </root>

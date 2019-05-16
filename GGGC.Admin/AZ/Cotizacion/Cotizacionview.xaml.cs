@@ -52,31 +52,69 @@ namespace GGGC.Admin.AZ.Cotizacion
             }
             return s;
         }
-        private void BtnImpr1_Click(object sender, RoutedEventArgs e)
+
+        static DataTable GetDetalle(string folio)
         {
 
+
+
+           
+
+            SqlConnection sqlconn = new SqlConnection(GetOrigen(intSUCURSALID));
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT     Cotizaciones.Numero_De_Folio AS Folio, Sucursales.Descripcion as Sucursal, Cotizaciones.Fecha_De_Cotizacion as Fecha, Cotizaciones.De, Cotizaciones.Para, " +
+                "Cotizaciones.Atencion, Cotizaciones.Saludo, Cotizaciones_Detalle.Codigo_De_Articulo as Codigo, Cotizaciones_Detalle.Descripcion AS Descripcion, Cotizaciones_Detalle.Unidad, Cotizaciones_Detalle.Cantidad, " +
+                "Cotizaciones_Detalle.Precio_De_Venta as Pventa, Cotizaciones_Detalle.Importe_Total as Ptotal, Cotizaciones.Aclaraciones, Cotizaciones.Despedida FROM Cotizaciones INNER JOIN" +
+                " Cotizaciones_Detalle ON Cotizaciones.Numero_De_Documento = Cotizaciones_Detalle.Numero_De_Documento INNER JOIN Sucursales ON Cotizaciones.Numero_Corto_De_Sucursal = Sucursales.Numero_Corto_De_Sucursal" +
+                " WHERE(Cotizaciones.Numero_De_Folio = '"+folio+"') ORDER BY Cotizaciones.Fecha_Y_Hora_De_Ultima_Actualizacion DESC", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return dtbl;
+
+        }
+
+
+        private void BtnImpr1_Click(object sender, RoutedEventArgs e)
+        {
+            
             try
             {
 
-
-             
-
-                SqlConnection cn;
-                SqlCommand cmd;
-                SqlDataReader dr;
-
                 string folio = folioid.Text;
-                cn = new SqlConnection(GetOrigen(intSUCURSALID));
-                cn.Open();
-                string id = this.folioid.Text;
 
-                cmd = new SqlCommand("Select * From dbo.Cotizaciones where dbo.Cotizaciones.Numero_De_Folio = '"+folio+"'", cn);
-                dr = cmd.ExecuteReader();
-                if (dr.Read())
+
+                DataTable Budget = new DataTable();
+                Budget = GetDetalle(folio);
+               
+
+
+                if (Budget.Rows.Count > 0)
 
                 {
-                    DataTable Budget = new DataTable();
-                    Budget.Load(dr, LoadOption.PreserveChanges) ;
+                    //Guarda Localmente El PDF
+
+                  //7  RptBudget rpt = new RptBudget(Budget);
+                    //la manda a desplegar en una nueva ventana 
+                    // string camino = @"C:\Ektelesis.Net\CFDI\DATOS\PDF\COT_" + folio + "_LRG920502BG7.pdf";
+                    Window1 form = new Window1(Budget);
+                    form.ShowDialog();
 
 
                 }
@@ -95,7 +133,7 @@ namespace GGGC.Admin.AZ.Cotizacion
                         // IconContent = "";
                     });
 
-                    dr.Close();
+                   
 
 
                 }

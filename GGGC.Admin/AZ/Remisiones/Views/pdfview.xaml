@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GGGC.Admin.AZ.Remisiones.Views"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-             xmlns:fixedViewersUI="clr-namespace:Telerik.Windows.Controls.FixedDocumentViewersUI;assembly=Telerik.Windows.Controls.FixedDocumentViewersUI"
-             xmlns:converters="clr-namespace:Telerik.Windows.Documents.Converters;assembly=Telerik.Windows.Controls.FixedDocumentViewers"
+        xmlns:fixedViewersUI="clr-namespace:Telerik.Windows.Controls.FixedDocumentViewersUI;assembly=Telerik.Windows.Controls.FixedDocumentViewersUI"
+        xmlns:converters="clr-namespace:Telerik.Windows.Documents.Converters;assembly=Telerik.Windows.Controls.FixedDocumentViewers"
             
         mc:Ignorable="d"
         Title="Imprimir" Width="850.5" Height="600"  WindowStyle="SingleBorderWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
@@ -27,21 +27,6 @@
 
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-
-
-                <!--<DockPanel Name="mainPanel" VerticalAlignment="Center">
-
-                <TextBlock Margin="15 0 0 0" Text="[Inventarios] - Refacciones" DockPanel.Dock="Left" Foreground="White" FontSize="14.667" FontFamily="Myriad Pro Light" TextWrapping="Wrap" VerticalAlignment="Center"/>
-                <Border Name="btnClose"   BorderThickness="1"  DockPanel.Dock="Right" Height="20"  MouseLeftButtonDown="btnClose_MouseLeftButtonDown"
-               
-                ToolTip="Close">
-
-                </Border>
-
-                <Label Content="" DockPanel.Dock="Bottom"  />
-
-            </DockPanel>-->
-
 
                 <Grid Grid.Row="0">
                     <Grid.RowDefinitions>
@@ -185,10 +170,7 @@
                             </telerik:RadContextMenu.ContextMenu>
                         </telerik:RadPdfViewer>
 
-                        <!--<StackPanel Grid.Row="2" Orientation="Horizontal">
-                            <Button Content="Load from Uri" Click="LoadFromUri" />
-                            <Button Content="Load from Stream" Click="LoadFromStream" />
-                        </StackPanel>-->
+                      
 
 
                     </Grid>

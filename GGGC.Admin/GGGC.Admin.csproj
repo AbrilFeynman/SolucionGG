@@ -250,6 +250,8 @@
     <Reference Include="Syncfusion.Licensing, Version=17.1451.0.38, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
       <HintPath>..\SolutionGG\packages\Syncfusion.Licensing.17.1.0.38\lib\net451\Syncfusion.Licensing.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=17.1460.0.38, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.PdfViewer.WPF, Version=17.1460.0.38, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.SfGauge.WPF, Version=17.1451.0.38, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\SolutionGG\packages\Syncfusion.SfGauge.WPF.17.1.0.38\lib\net451\Syncfusion.SfGauge.WPF.dll</HintPath>
     </Reference>
@@ -548,6 +550,15 @@
     </Compile>
     <Compile Include="AZ\Cotizacion\Cotizacionview.xaml.cs">
       <DependentUpon>Cotizacionview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Cotizacion\RptBudget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Cotizacion\RptBudget.Designer.cs">
+      <DependentUpon>RptBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Cotizacion\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="AZ\Inventarios\Inventarioview.xaml.cs">
       <DependentUpon>Inventarioview.xaml</DependentUpon>
@@ -1341,6 +1352,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AZ\Cotizacion\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AZ\Inventarios\Inventarioview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -2005,6 +2020,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="AZ\Cotizacion\RptBudget.resx">
+      <DependentUpon>RptBudget.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AZ\Inventarios\RptCliente.resx">
       <DependentUpon>RptCliente.cs</DependentUpon>
     </EmbeddedResource>

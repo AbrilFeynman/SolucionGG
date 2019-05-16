@@ -5,3 +5,4 @@ Telerik.Reporting.HtmlTextBox, Telerik.Reporting, Version=13.0.19.222, Culture=n
 Telerik.Reporting.Graph, Telerik.Reporting, Version=13.0.19.222, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
 Telerik.Reporting.TextBox, Telerik.Reporting, Version=13.0.19.222, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
 Telerik.Reporting.Shape, Telerik.Reporting, Version=13.0.19.222, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Telerik.Windows.Controls.RadPdfViewer, Telerik.Windows.Controls.FixedDocumentViewers, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7

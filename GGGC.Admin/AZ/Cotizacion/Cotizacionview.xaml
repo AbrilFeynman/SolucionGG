@@ -85,7 +85,7 @@
 
                         </Grid.ColumnDefinitions>
                         <Button x:Name="btnImpr1"  Content="Imprimir " Grid.Column="0" HorizontalAlignment="Center" Height="30"
-                                VerticalAlignment="Bottom" Width="80" FontSize="9" 
+                                VerticalAlignment="Bottom" Width="80" FontSize="11" 
                                 Click="BtnImpr1_Click" Margin="23,0,23,16" />
 
 
