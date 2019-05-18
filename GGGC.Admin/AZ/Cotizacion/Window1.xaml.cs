@@ -22,10 +22,10 @@ namespace GGGC.Admin.AZ.Cotizacion
     /// </summary>
     public partial class Window1 : Window
     {
-        public Window1(System.Data.DataTable tbl)
+        public Window1(System.Data.DataTable tbl, int sucursal)
         {
             InitializeComponent();
-            RptBudget rpt = new RptBudget(tbl);
+            RptBudget rpt = new RptBudget(tbl, sucursal);
             this.ReportViewer1.Report = rpt;
             this.ReportViewer1.RefreshReport();
         }

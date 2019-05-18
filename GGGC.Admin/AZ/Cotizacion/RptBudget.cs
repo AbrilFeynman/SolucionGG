@@ -18,44 +18,51 @@ namespace GGGC.Admin.AZ.Cotizacion
     /// </summary>
     public partial class RptBudget : Telerik.Reporting.Report
     {
-        public RptBudget(System.Data.DataTable tbl)
+        public RptBudget(System.Data.DataTable tbl, int sucursal)
         {
-            //
-            // Required for telerik Reporting designer support
-            //
+            
             Thread.CurrentThread.CurrentCulture = new CultureInfo("es-MX");
             InitializeComponent();
             objectDataSource1.DataSource = tbl;
             string folio = tbl.Rows[0][0].ToString();
-            txtNumeroDeFolio.Value = folio;
-            textBox3.Value = tbl.Rows[0][1].ToString();
+            textBox5.Value = folio;
+            textBox15.Value = tbl.Rows[0][3].ToString();
             DateTime fecha = new DateTime();
             fecha = Convert.ToDateTime(tbl.Rows[0][2]);
-            textBox1.Value = "DURANGO, DGO. AL " + fecha.Day.ToString() + " DE " + fecha.ToString("MMMM").ToUpper() + " DE " + fecha.Year.ToString();
-            textBox13.Value = tbl.Rows[0][3].ToString();
-            textBox14.Value = tbl.Rows[0][4].ToString();
-            textBox17.Value = tbl.Rows[0][5].ToString();
+            txtfecha.Value =  fecha.Day.ToString() + " " + fecha.ToString("MMM").ToUpper() + " ," + fecha.Year.ToString();
+            textBox32.Value = tbl.Rows[0][5].ToString();
+            textBox13.Value = tbl.Rows[0][4].ToString();
+            textBox3.Value = tbl.Rows[0][6].ToString();
+            textBox14.Value = tbl.Rows[0][13].ToString();
+            textBox20.Value = tbl.Rows[0][14].ToString();
 
             object sumObject;
             sumObject = tbl.Compute("Sum(Ptotal)", string.Empty);
             decimal suma = Convert.ToDecimal(sumObject);
-            txtSubtotal.Value = "$" + suma.ToString("#,###.00", CultureInfo.InvariantCulture);
-
+            textBox28.Value = "$" + suma.ToString("#,###.00", CultureInfo.InvariantCulture);
+            if (sucursal == 11 || sucursal == 12 || sucursal == 13 || sucursal == 15 || sucursal == 17 || sucursal == 18)
+            {
+                textBox30.Value = "27058 - TORREÓN, COAH.";
+            }
+            else
+            {
+                textBox30.Value = "34207 - DURANGO, DGO.";
+            }
             decimal iva = suma * Convert.ToDecimal( 0.16);
             decimal total = suma + iva;
-            txtIVA.Value = "$" + iva.ToString("#,###.00", CultureInfo.InvariantCulture);
-            txtTotal.Value = "$" + total.ToString("#,###.00", CultureInfo.InvariantCulture);
+           textBox27.Value = "$" + iva.ToString("#,###.00", CultureInfo.InvariantCulture);
+           textBox16.Value = "$" + total.ToString("#,###.00", CultureInfo.InvariantCulture);
             generarImportes(total);
-            textBox18.Value = tbl.Rows[0][13].ToString();
-            textBox19.Value = tbl.Rows[0][14].ToString();
-
-            //CONVERTIR EL DECIMAL TOTAL A LETRA
+            //textBox18.Value = tbl.Rows[0][13].ToString();
+           // textBox19.Value = tbl.Rows[0][14].ToString();
+            textBox12.Value = "$" + total.ToString("#,###.00", CultureInfo.InvariantCulture);
+            textBox16.Value = "$" + total.ToString("#,###.00", CultureInfo.InvariantCulture);
 
             string camino = @"C:\Ektelesis.Net\CFDI\DATOS\PDF\COT_" + folio + "_LRG920502BG7.pdf";
 
             SaveReport(this.Report, camino);
       
-            //  MessageBox.Show("Reporte guardado en escritorio");
+        
 
 
         }
@@ -129,7 +136,7 @@ namespace GGGC.Admin.AZ.Cotizacion
                     cantidadLetra = "(" + Conversiones.NumeroALetras(cantidad.ToString(), moneda, simbolo) + ")";
                 }
 
-                this.htmlCantidadLetras.Value = string.Format(htmlCantidadLetras.Value.ToString(), cantidadLetra);
+              //  this.htmlCantidadLetras.Value = string.Format(htmlCantidadLetras.Value.ToString(), cantidadLetra);
             }
             catch (Exception ex)
             {

@@ -113,7 +113,7 @@ namespace GGGC.Admin.AZ.Cotizacion
                   //7  RptBudget rpt = new RptBudget(Budget);
                     //la manda a desplegar en una nueva ventana 
                     // string camino = @"C:\Ektelesis.Net\CFDI\DATOS\PDF\COT_" + folio + "_LRG920502BG7.pdf";
-                    Window1 form = new Window1(Budget);
+                    Window1 form = new Window1(Budget, intSUCURSALID);
                     form.ShowDialog();
 
 

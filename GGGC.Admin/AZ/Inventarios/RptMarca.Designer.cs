@@ -36,9 +36,9 @@ namespace GGGC.Admin.AZ.Inventarios
             // 
             // textBox1
             // 
-            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.3499999046325684D), Telerik.Reporting.Drawing.Unit.Cm(0.76200008392333984D));
+            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.35D), Telerik.Reporting.Drawing.Unit.Cm(0.762D));
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(8.3819999694824219D), Telerik.Reporting.Drawing.Unit.Cm(1.0160000324249268D));
+            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(8.382D), Telerik.Reporting.Drawing.Unit.Cm(1.016D));
             this.textBox1.Style.BorderColor.Default = System.Drawing.Color.Transparent;
             this.textBox1.Style.Color = System.Drawing.Color.Gray;
             this.textBox1.Style.Font.Bold = true;
@@ -67,13 +67,13 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graph2.Legend.IsInsidePlotArea = true;
             this.graph2.Legend.Style.LineColor = System.Drawing.Color.LightGray;
             this.graph2.Legend.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
-            this.graph2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(3.5560002326965332D), Telerik.Reporting.Drawing.Unit.Cm(1.2699999809265137D));
+            this.graph2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(3.556D), Telerik.Reporting.Drawing.Unit.Cm(1.27D));
             this.graph2.Name = "graph2";
             this.graph2.PlotAreaStyle.LineColor = System.Drawing.Color.LightGray;
             this.graph2.PlotAreaStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
             this.graph2.Series.Add(this.barSeries1);
             this.graph2.SeriesGroups.Add(graphGroup2);
-            this.graph2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(14.986000061035156D), Telerik.Reporting.Drawing.Unit.Cm(5.8420004844665527D));
+            this.graph2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(14.986D), Telerik.Reporting.Drawing.Unit.Cm(5.842D));
             // 
             // polarCoordinateSystem1
             // 
