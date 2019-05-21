@@ -18,6 +18,8 @@ namespace GGGC.Admin.AZ.Cotizacion
     /// </summary>
     public partial class RptBudget : Telerik.Reporting.Report
     {
+       string telefono;
+        string correo;
         public RptBudget(System.Data.DataTable tbl, int sucursal)
         {
             
@@ -48,6 +50,9 @@ namespace GGGC.Admin.AZ.Cotizacion
             {
                 textBox30.Value = "34207 - DURANGO, DGO.";
             }
+
+
+           textBox18.Value= strTelefonoCorreo(sucursal);
             decimal iva = suma * Convert.ToDecimal( 0.16);
             decimal total = suma + iva;
            textBox27.Value = "$" + iva.ToString("#,###.00", CultureInfo.InvariantCulture);
@@ -66,6 +71,102 @@ namespace GGGC.Admin.AZ.Cotizacion
 
 
         }
+      
+
+
+
+        static string strTelefonoCorreo(int sucursal)
+        {
+            int bytSuc = sucursal;
+            string strCadena = "";
+
+            switch (bytSuc)
+            {
+                case 1:
+                    
+                    strCadena = "TELS. (618) 811 06 19 / 812 62 05 / 811 65 11" + "\n" + "felipepescador@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 2:
+                    strCadena = "TELS. (618) 129 51 39 / 129 45 47" + "\n" + "villa2@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 3:
+                    strCadena = "TELS. (618) 818 80 44 / 818 01 85" + "\n" + "vizcaya@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 4:
+                    strCadena = "TELS. (618) 129 78 25 / 129 76 41 FAX 129 78 43" + "\n" + "villa1@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 6:
+                    strCadena = "TELS. (618) 129 78 25 / 129 76 41 FAX 129 78 43" + "\n"; //+ "centrollan@llantasyrinesdelguadiana.com";
+                    break;
+                case 5:
+                    strCadena = "TELS. (618) 128 43 75 / 128 44 24" + "\n" + "blvdurango@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 7:
+                    strCadena = "TELS. (618) 129 78 25 / 129 76 41" + "\n" + "mayoreo@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 8:
+                    strCadena = "TELS. (618) 835 82 29" + "\n" + "libramiento@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 9:
+                    strCadena = "TELS. (618) 818 73 20 / 817 13 07" + "\n" + "nazas@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 10:
+                    strCadena = "TELS. (614) 433 14 00" + "\n" + "zarco@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 11:
+                    strCadena = "TELS. (871) 204 05 67 / 204 44 40" + "\n" + "abastos@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 12:
+                    strCadena = "TELS. (871) 204 05 67 / 204 44 40" + "\n" + "abastosmenudeo@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 13:
+                    strCadena = "TELS. (871) 714 70 45" + "\n" + "miguelaleman@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 15:
+                    strCadena = "TELS. (871) 732 49 47 / 732 49 48" + "\n" + "triana@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 16:
+                    strCadena = "TELS. (618) 811 26 79" + "\n" + "domingoarrieta@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 20:
+                    strCadena = "TELS. (618) 129 78 25 / 129 76 41" + "\n" + "mayoreo@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 17:
+                    strCadena = "TELS. (871) 733 11 72" + "\n" + "centrocamionero@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 18:
+                    strCadena = "TELS. (871) 733 11 72" + "\n" + "centrocamionero@llantasyrinesdelguadiana.com";
+                    break;
+
+                case 0:
+                    strCadena = ".-";
+                    break;
+            }
+
+            return strCadena;
+        }
+
+
+
+
+
+
 
         private void SaveReport(Telerik.Reporting.Report report, string fileName)
         {

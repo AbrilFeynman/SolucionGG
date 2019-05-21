@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Xml.Serialization;
 using Telerik.Windows.Controls;
 
 namespace GGGC.Admin.AZ.PagareArellantas
@@ -245,53 +247,53 @@ namespace GGGC.Admin.AZ.PagareArellantas
         }
         private void btnImpr3_Click(object sender, RoutedEventArgs e)
         {
-            radbusy.IsBusy = true;
-            increment = 0;
-            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
-            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            dispatcherTimer.Start();
+
+            Comprobante comprobante;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "XML Files (*.xml)|*.xml";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                StreamReader sr = File.OpenText(openFileDialog.FileName);
 
 
+                string pathXML = openFileDialog.FileName.ToString();
 
-            string specifier;
-            System.Globalization.CultureInfo culture;
-            specifier = "C";
-            culture = CultureInfo.CreateSpecificCulture("en-US");
+                // exctodt(folioid.Text);
+                XmlSerializer oSerializer = new XmlSerializer(typeof(Comprobante));
+                using (StreamReader reader = new StreamReader(pathXML))
+                {
 
-            FolioFactura = folioid.Text;
-            Cantidad = flores.ToString(specifier, culture);
-            Fecha = lblF3.Content.ToString();
-            CantLetra = divedendo;
-            numPagare = "3";
-            string numpagares = bytNumeroDePagares.ToString();
-            Nombre = lblCliente.Text.ToString();
-            Direccion = lblDireccion.Text.ToString();
-            Colonia = lblColonia.Text.ToString();
-            Ciudad = lblCiudad.Text.ToString();
-            //FechaActual = DateTime.Now;
-            //VerPagare mostrar = new VerPagare(FolioFactura, Cantidad, Fecha, CantLetra, numPagare, numpagares, Nombre, Direccion, Colonia, Ciudad,Estado);
-            //RptPagare report = new RptPagare(FolioFactura, Cantidad, Fecha, CantLetra, numPagare, numpagares, Nombre, Direccion, Colonia, Ciudad, Estado);
-            RptPagare report = new RptPagare(FolioFactura, Cantidad, Fecha, CantLetra, numPagare, numpagares, Nombre, Direccion, Colonia, Ciudad, Estado);
-            System.Drawing.Printing.PrinterSettings printerSettings
-              = new System.Drawing.Printing.PrinterSettings();
+                    comprobante = (Comprobante)oSerializer.Deserialize(reader);
 
-            //--------- The standard print controller comes with no UI----------//
-            System.Drawing.Printing.PrintController standardPrintController =
-                new System.Drawing.Printing.StandardPrintController();
+                    var folio = comprobante.Serie + comprobante.Folio;
+                    var total = comprobante.Total;
+                    var fecha = comprobante.Fecha;
+                    var rfc = comprobante.Receptor.Rfc;
+                    if (rfc != null)
+                    {
 
-            // Print the report using the custom print controller
-            Telerik.Reporting.Processing.ReportProcessor reportProcessor
-                = new Telerik.Reporting.Processing.ReportProcessor();
+                    }
+                    else
+                    {
 
-            reportProcessor.PrintController = standardPrintController;
+                        RadWindow radWindow = new RadWindow();
+                        RadWindow.Alert(new DialogParameters()
+                        {
+                            Content = "Su archivo no es una factura fiscal." ,
+                            Header = "BIG",
 
-            Telerik.Reporting.TypeReportSource typeReportSource =
-                new Telerik.Reporting.TypeReportSource();
+                            DialogStartupLocation = WindowStartupLocation.CenterOwner
+                            // IconContent = "";
+                        });
+                    }
+                    // var direccion = comprobante.Receptor.
+
+                }
+            }
+
+            
 
 
-
-            reportProcessor.PrintReport(report, printerSettings);
 
 
         }

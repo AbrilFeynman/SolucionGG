@@ -243,15 +243,47 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         private void RadButton_Click(object sender, RoutedEventArgs e)
 
         {
-
-
             var objtitem = InvoiceOrder.SelectedItem;
-            string oso = ((System.Data.DataRowView)objtitem).Row.ItemArray[0].ToString();
-       
-            descargar(oso);
+            string folio = ((System.Data.DataRowView)objtitem).Row.ItemArray[0].ToString();
+
            
-            pdfview formu = new pdfview(oso);
-            formu.ShowDialog();
+            DataTable tablaOrden = GetHeader(folio);
+            DataTable tablaDeatil = GetDetail(folio);
+            Ordenprint Orden = new Ordenprint(tablaOrden, tablaDeatil);
+
+
+
+            //descargar(oso);
+
+            //pdfview formu = new pdfview(oso);
+            //formu.ShowDialog();
+            //se manda aimprimir como el pagare para que no lleve el formato
+
+
+            //Reportb1 reportb1 = new Reportb1(FolioFactura, Cantidad, Fecha, CantLetra, numPagare, numpagares, Nombre, Direccion, Colonia, Ciudad, Estado);
+
+            System.Drawing.Printing.PrinterSettings printerSettings
+              = new System.Drawing.Printing.PrinterSettings();
+
+
+            System.Drawing.Printing.PrintController standardPrintController =
+                new System.Drawing.Printing.StandardPrintController();
+
+
+            Telerik.Reporting.Processing.ReportProcessor reportProcessor
+                = new Telerik.Reporting.Processing.ReportProcessor();
+
+            reportProcessor.PrintController = standardPrintController;
+
+            Telerik.Reporting.TypeReportSource typeReportSource =
+                new Telerik.Reporting.TypeReportSource();
+
+
+
+            reportProcessor.PrintReport(Orden, printerSettings);
+
+
+
 
         }
 

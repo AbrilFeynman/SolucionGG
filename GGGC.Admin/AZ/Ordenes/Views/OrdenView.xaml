@@ -703,7 +703,9 @@
 
                         <!--<Button Grid.Column="0" Style="{StaticResource ExportButtonStyle}" FontWeight="Normal"  Width="110" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="AddButton" Click="Add"  Content="Agregar"  FontSize="16" Margin="10,0,0,0" />-->
                         <!--<Button Grid.Column="1" Style="{StaticResource DeleteItemButton}"  Click="Delete"  FontWeight="Normal" IsEnabled="False"  Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="DeleteButton" Content="Eliminar"  FontSize="16" />-->
-                        <Button Grid.Column="4"  Style="{StaticResource MaterialDesignRaisedDarkButton}" FontWeight="Normal"  Width="110" Height="35" HorizontalAlignment="Left" VerticalAlignment="Center"  x:Name="Save" Click="Save_Click" Content="Guardar"  FontSize="16" Margin="10,0,0,0" />
+                        <Button Grid.Column="4"  Style="{StaticResource MaterialDesignRaisedDarkButton}" FontWeight="Normal"  Width="110" 
+                                Height="35" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                x:Name="Save" Click="Save_Click" Content="Guardar"  FontSize="16" Margin="10,0,0,0" />
 
                         <Button Grid.Column="5"  Style="{StaticResource MaterialDesignRaisedDarkButton}" FontWeight="Normal"  Width="110" Height="35" HorizontalAlignment="Left" VerticalAlignment="Center"  x:Name="Exportar" Click="Exportar_Click"  Content="Exportar"  FontSize="16" Margin="10,0,0,0" />
 

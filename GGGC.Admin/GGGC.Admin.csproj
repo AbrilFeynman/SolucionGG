@@ -684,6 +684,12 @@
     </Compile>
     <Compile Include="AZ\Ordenes\Views\OrdenesViewModel.cs" />
     <Compile Include="AZ\Ordenes\Views\OrdenItem.cs" />
+    <Compile Include="AZ\Ordenes\Views\Ordenprint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Ordenes\Views\Ordenprint.Designer.cs">
+      <DependentUpon>Ordenprint.cs</DependentUpon>
+    </Compile>
     <Compile Include="AZ\Ordenes\Views\OrdenView.xaml.cs">
       <DependentUpon>OrdenView.xaml</DependentUpon>
     </Compile>
@@ -701,12 +707,6 @@
     </Compile>
     <Compile Include="AZ\Ordenes\Views\Report1.Designer.cs">
       <DependentUpon>Report1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AZ\Ordenes\Views\Reportdef.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="AZ\Ordenes\Views\Reportdef.Designer.cs">
-      <DependentUpon>Reportdef.cs</DependentUpon>
     </Compile>
     <Compile Include="AZ\Ordenes\Views\RptOrden.cs">
       <SubType>Component</SubType>
@@ -746,6 +746,7 @@
     <Compile Include="AZ\OtrosIngresos\Views\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AZ\PagareArellantas\cfdv33.cs" />
     <Compile Include="AZ\PagareArellantas\Conversion.cs" />
     <Compile Include="AZ\PagareArellantas\PagareAView.xaml.cs">
       <DependentUpon>PagareAView.xaml</DependentUpon>
@@ -762,6 +763,7 @@
     <Compile Include="AZ\PagareArellantas\RptPagare.Designer.cs">
       <DependentUpon>RptPagare.cs</DependentUpon>
     </Compile>
+    <Compile Include="AZ\PagareArellantas\TimbreFiscalDigitalv11.cs" />
     <Compile Include="AZ\PagareCentro\Conversion.cs" />
     <Compile Include="AZ\PagareCentro\PagareCView.xaml.cs">
       <DependentUpon>PagareCView.xaml</DependentUpon>
@@ -2047,11 +2049,11 @@
     <EmbeddedResource Include="AZ\Inventarios\RptVentas.resx">
       <DependentUpon>RptVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Ordenes\Views\Ordenprint.resx">
+      <DependentUpon>Ordenprint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AZ\Ordenes\Views\Report1.resx">
       <DependentUpon>Report1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AZ\Ordenes\Views\Reportdef.resx">
-      <DependentUpon>Reportdef.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AZ\Ordenes\Views\RptOrden.resx">
       <DependentUpon>RptOrden.cs</DependentUpon>

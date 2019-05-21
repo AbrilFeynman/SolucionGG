@@ -45,9 +45,9 @@ namespace GGGC.Admin.AZ.Cotizacion
             this.textBox24 = new Telerik.Reporting.TextBox();
             this.textBox15 = new Telerik.Reporting.TextBox();
             this.textBox18 = new Telerik.Reporting.TextBox();
-            this.textBox19 = new Telerik.Reporting.TextBox();
             this.textBox21 = new Telerik.Reporting.TextBox();
-            this.textBox23 = new Telerik.Reporting.TextBox();
+            this.textBox14 = new Telerik.Reporting.TextBox();
+            this.textBox20 = new Telerik.Reporting.TextBox();
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
             this.textBox1 = new Telerik.Reporting.TextBox();
             this.textBoxC = new Telerik.Reporting.TextBox();
@@ -57,12 +57,10 @@ namespace GGGC.Admin.AZ.Cotizacion
             this.textBox12 = new Telerik.Reporting.TextBox();
             this.textBox13 = new Telerik.Reporting.TextBox();
             this.pbxLogo = new Telerik.Reporting.PictureBox();
-            this.textBox30 = new Telerik.Reporting.TextBox();
             this.textBox31 = new Telerik.Reporting.TextBox();
+            this.textBox30 = new Telerik.Reporting.TextBox();
             this.textBox32 = new Telerik.Reporting.TextBox();
             this.textBox3 = new Telerik.Reporting.TextBox();
-            this.textBox14 = new Telerik.Reporting.TextBox();
-            this.textBox20 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // detail
@@ -461,14 +459,12 @@ namespace GGGC.Admin.AZ.Cotizacion
             // 
             // pageFooterSection1
             // 
-            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1.3D);
+            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1.4D);
             this.pageFooterSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox24,
             this.textBox15,
             this.textBox18,
-            this.textBox19,
             this.textBox21,
-            this.textBox23,
             this.textBox14,
             this.textBox20});
             this.pageFooterSection1.Name = "pageFooterSection1";
@@ -477,7 +473,7 @@ namespace GGGC.Admin.AZ.Cotizacion
             // 
             // textBox24
             // 
-            this.textBox24.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(12.86D), Telerik.Reporting.Drawing.Unit.Cm(2.54D));
+            this.textBox24.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(12.86D), Telerik.Reporting.Drawing.Unit.Cm(2.794D));
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.861D), Telerik.Reporting.Drawing.Unit.Cm(0.508D));
             this.textBox24.Style.BorderColor.Top = System.Drawing.Color.DimGray;
@@ -491,7 +487,7 @@ namespace GGGC.Admin.AZ.Cotizacion
             // 
             // textBox15
             // 
-            this.textBox15.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.737D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.textBox15.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.737D), Telerik.Reporting.Drawing.Unit.Cm(0.254D));
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.398D), Telerik.Reporting.Drawing.Unit.Cm(0.508D));
             this.textBox15.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -503,57 +499,56 @@ namespace GGGC.Admin.AZ.Cotizacion
             // 
             // textBox18
             // 
-            this.textBox18.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.848D), Telerik.Reporting.Drawing.Unit.Cm(2.286D));
+            this.textBox18.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.737D), Telerik.Reporting.Drawing.Unit.Cm(2.286D));
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(8.128D), Telerik.Reporting.Drawing.Unit.Cm(0.762D));
+            this.textBox18.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.709D), Telerik.Reporting.Drawing.Unit.Cm(1.016D));
             this.textBox18.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox18.Style.Font.Name = "Calibri Light";
-            this.textBox18.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+            this.textBox18.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
             this.textBox18.Style.LineStyle = Telerik.Reporting.Drawing.LineStyle.Solid;
             this.textBox18.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox18.Value = "felipepescador@llantasyrinesdelguadiana.com";
             // 
-            // textBox19
-            // 
-            this.textBox19.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(9.144D), Telerik.Reporting.Drawing.Unit.Cm(2.286D));
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.048D), Telerik.Reporting.Drawing.Unit.Cm(0.762D));
-            this.textBox19.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox19.Style.Font.Name = "Calibri Light";
-            this.textBox19.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-            this.textBox19.Style.LineStyle = Telerik.Reporting.Drawing.LineStyle.Solid;
-            this.textBox19.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(8D);
-            this.textBox19.Value = "01 618 129 4372";
-            // 
             // textBox21
             // 
-            this.textBox21.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.848D), Telerik.Reporting.Drawing.Unit.Cm(1.831D));
+            this.textBox21.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.737D), Telerik.Reporting.Drawing.Unit.Cm(1.854D));
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.803D), Telerik.Reporting.Drawing.Unit.Cm(0.762D));
+            this.textBox21.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.794D), Telerik.Reporting.Drawing.Unit.Cm(0.508D));
             this.textBox21.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox21.Style.Font.Bold = true;
             this.textBox21.Style.Font.Name = "Calibri Light";
-            this.textBox21.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
+            this.textBox21.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
             this.textBox21.Style.LineStyle = Telerik.Reporting.Drawing.LineStyle.Solid;
             this.textBox21.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(8D);
-            this.textBox21.Value = "ONLINE";
+            this.textBox21.Value = "CONTACTO";
             // 
-            // textBox23
+            // textBox14
             // 
-            this.textBox23.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(9.144D), Telerik.Reporting.Drawing.Unit.Cm(1.831D));
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.54D), Telerik.Reporting.Drawing.Unit.Cm(0.762D));
-            this.textBox23.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox23.Style.Font.Bold = true;
-            this.textBox23.Style.Font.Name = "Calibri Light";
-            this.textBox23.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
-            this.textBox23.Style.LineStyle = Telerik.Reporting.Drawing.LineStyle.Solid;
-            this.textBox23.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(8D);
-            this.textBox23.Value = "TELÉFONO";
+            this.textBox14.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.737D), Telerik.Reporting.Drawing.Unit.Cm(0.762D));
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(18.913D), Telerik.Reporting.Drawing.Unit.Cm(0.508D));
+            this.textBox14.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox14.Style.Font.Name = "Calibri Light";
+            this.textBox14.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
+            this.textBox14.Style.LineStyle = Telerik.Reporting.Drawing.LineStyle.Solid;
+            this.textBox14.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(8D);
+            this.textBox14.Value = "DE";
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.737D), Telerik.Reporting.Drawing.Unit.Cm(1.27D));
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(18.913D), Telerik.Reporting.Drawing.Unit.Cm(0.508D));
+            this.textBox20.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox20.Style.Font.Name = "Calibri Light";
+            this.textBox20.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
+            this.textBox20.Style.LineStyle = Telerik.Reporting.Drawing.LineStyle.Solid;
+            this.textBox20.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(8D);
+            this.textBox20.Value = "DE";
             // 
             // pageHeaderSection1
             // 
-            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(3D);
+            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(2.9D);
             this.pageHeaderSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox1,
             this.textBoxC,
@@ -661,6 +656,17 @@ namespace GGGC.Admin.AZ.Cotizacion
             this.pbxLogo.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.ScaleProportional;
             this.pbxLogo.Value = ((object)(resources.GetObject("pbxLogo.Value")));
             // 
+            // textBox31
+            // 
+            this.textBox31.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.489D), Telerik.Reporting.Drawing.Unit.Cm(2.032D));
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.787D), Telerik.Reporting.Drawing.Unit.Cm(0.508D));
+            this.textBox31.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox31.Style.Font.Bold = true;
+            this.textBox31.Style.Font.Name = "Calibri Light";
+            this.textBox31.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
+            this.textBox31.Value = "Expedido en :";
+            // 
             // textBox30
             // 
             this.textBox30.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.539D), Telerik.Reporting.Drawing.Unit.Cm(2.032D));
@@ -672,17 +678,6 @@ namespace GGGC.Admin.AZ.Cotizacion
             this.textBox30.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
             this.textBox30.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox30.Value = "Fecha : ";
-            // 
-            // textBox31
-            // 
-            this.textBox31.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.489D), Telerik.Reporting.Drawing.Unit.Cm(2.032D));
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.787D), Telerik.Reporting.Drawing.Unit.Cm(0.508D));
-            this.textBox31.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox31.Style.Font.Bold = true;
-            this.textBox31.Style.Font.Name = "Calibri Light";
-            this.textBox31.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
-            this.textBox31.Value = "Expedido en :";
             // 
             // textBox32
             // 
@@ -709,30 +704,6 @@ namespace GGGC.Admin.AZ.Cotizacion
             this.textBox3.Style.LineStyle = Telerik.Reporting.Drawing.LineStyle.Solid;
             this.textBox3.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(0.8D);
             this.textBox3.Value = "PARA";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.737D), Telerik.Reporting.Drawing.Unit.Cm(0.508D));
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(18.913D), Telerik.Reporting.Drawing.Unit.Cm(0.508D));
-            this.textBox14.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox14.Style.Font.Name = "Calibri Light";
-            this.textBox14.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
-            this.textBox14.Style.LineStyle = Telerik.Reporting.Drawing.LineStyle.Solid;
-            this.textBox14.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(8D);
-            this.textBox14.Value = "DE";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.737D), Telerik.Reporting.Drawing.Unit.Cm(1.016D));
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(18.913D), Telerik.Reporting.Drawing.Unit.Cm(0.508D));
-            this.textBox20.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox20.Style.Font.Name = "Calibri Light";
-            this.textBox20.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(13D);
-            this.textBox20.Style.LineStyle = Telerik.Reporting.Drawing.LineStyle.Solid;
-            this.textBox20.Style.LineWidth = Telerik.Reporting.Drawing.Unit.Point(8D);
-            this.textBox20.Value = "DE";
             // 
             // RptBudget
             // 
@@ -792,9 +763,7 @@ namespace GGGC.Admin.AZ.Cotizacion
         private Telerik.Reporting.TextBox textBox24;
         private Telerik.Reporting.TextBox textBox15;
         private Telerik.Reporting.TextBox textBox18;
-        private Telerik.Reporting.TextBox textBox19;
         private Telerik.Reporting.TextBox textBox21;
-        private Telerik.Reporting.TextBox textBox23;
         private Telerik.Reporting.PictureBox pbxLogo;
         private Telerik.Reporting.TextBox textBox31;
         private Telerik.Reporting.TextBox textBox30;

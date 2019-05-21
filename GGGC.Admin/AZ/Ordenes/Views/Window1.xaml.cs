@@ -35,8 +35,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             {
                 DataTable tablaOrden = GetHeader(folio);
                 DataTable tablaDeatil = GetDetail(folio);
-                RptOrden fac = new RptOrden(tablaOrden, tablaDeatil);
                
+                RptOrden fac = new RptOrden(tablaOrden, tablaDeatil);
+
                 this.ReportViewer1.Report = fac;
                 this.ReportViewer1.RefreshReport();
             }

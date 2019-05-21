@@ -30,6 +30,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             Telerik.Reporting.TableGroup tableGroup18 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.TableGroup tableGroup19 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.TableGroup tableGroup20 = new Telerik.Reporting.TableGroup();
+            Telerik.Reporting.TableGroup tableGroup21 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             this.textBox89 = new Telerik.Reporting.TextBox();
             this.textBox91 = new Telerik.Reporting.TextBox();
@@ -150,12 +151,14 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             this.textBox53 = new Telerik.Reporting.TextBox();
             this.textBox54 = new Telerik.Reporting.TextBox();
             this.textBox55 = new Telerik.Reporting.TextBox();
+            this.textBox39 = new Telerik.Reporting.TextBox();
+            this.textBox36 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // textBox89
             // 
             this.textBox89.Name = "textBox89";
-            this.textBox89.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.0233645439147949D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox89.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.023D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox89.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox89.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox89.Style.Color = System.Drawing.Color.DarkBlue;
@@ -169,7 +172,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox91
             // 
             this.textBox91.Name = "textBox91";
-            this.textBox91.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.5772733688354492D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox91.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.916D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox91.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox91.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox91.Style.Color = System.Drawing.Color.DarkBlue;
@@ -183,7 +186,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox29
             // 
             this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.5827028751373291D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox29.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.213D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox29.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox29.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox29.Style.Color = System.Drawing.Color.DarkBlue;
@@ -197,7 +200,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox31
             // 
             this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.4339501857757568D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox31.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.434D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox31.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox31.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox31.Style.Color = System.Drawing.Color.DarkBlue;
@@ -211,7 +214,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox33
             // 
             this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.0852105617523193D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox33.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.979D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox33.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox33.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox33.Style.Color = System.Drawing.Color.DarkBlue;
@@ -225,7 +228,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox93
             // 
             this.textBox93.Name = "textBox93";
-            this.textBox93.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.0533323287963867D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox93.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.053D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox93.Style.BorderColor.Bottom = System.Drawing.Color.Transparent;
             this.textBox93.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox93.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -241,7 +244,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox47
             // 
             this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.43656259775161743D));
+            this.textBox47.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.437D));
             this.textBox47.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox47.Style.Font.Bold = true;
             this.textBox47.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
@@ -250,7 +253,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // pageHeaderSection1
             // 
-            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(2.9047391414642334D);
+            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(2.905D);
             this.pageHeaderSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.pbxLogo,
             this.textBox2,
@@ -291,18 +294,18 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // pbxLogo
             // 
-            this.pbxLogo.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.37041664123535156D), Telerik.Reporting.Drawing.Unit.Cm(9.9921220680698752E-05D));
+            this.pbxLogo.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.366D), Telerik.Reporting.Drawing.Unit.Cm(0.004D));
             this.pbxLogo.MimeType = "image/png";
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(19.700000762939453D), Telerik.Reporting.Drawing.Unit.Cm(2.5113542079925537D));
+            this.pbxLogo.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(19.7D), Telerik.Reporting.Drawing.Unit.Cm(2.511D));
             this.pbxLogo.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.ScaleProportional;
             this.pbxLogo.Value = ((object)(resources.GetObject("pbxLogo.Value")));
             // 
             // textBox2
             // 
-            this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.34395831823349D), Telerik.Reporting.Drawing.Unit.Cm(2.6061458587646484D));
+            this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.34D), Telerik.Reporting.Drawing.Unit.Cm(2.61D));
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.8000001907348633D), Telerik.Reporting.Drawing.Unit.Cm(0.49000000953674316D));
+            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.8D), Telerik.Reporting.Drawing.Unit.Cm(0.49D));
             this.textBox2.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox2.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox2.Style.LineColor = System.Drawing.Color.Blue;
@@ -310,9 +313,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox3
             // 
-            this.textBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(10.133437156677246D), Telerik.Reporting.Drawing.Unit.Cm(2.6044025421142578D));
+            this.textBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(10.129D), Telerik.Reporting.Drawing.Unit.Cm(2.608D));
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.9393749237060547D), Telerik.Reporting.Drawing.Unit.Cm(0.49000000953674316D));
+            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.939D), Telerik.Reporting.Drawing.Unit.Cm(0.49D));
             this.textBox3.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox3.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox3.Style.Color = System.Drawing.Color.DarkBlue;
@@ -322,9 +325,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox4
             // 
-            this.textBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.34500002861022949D), Telerik.Reporting.Drawing.Unit.Cm(3.0855214595794678D));
+            this.textBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.341D), Telerik.Reporting.Drawing.Unit.Cm(3.09D));
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.8100004196167D), Telerik.Reporting.Drawing.Unit.Cm(0.56483334302902222D));
+            this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.81D), Telerik.Reporting.Drawing.Unit.Cm(0.565D));
             this.textBox4.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox4.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox4.Style.Color = System.Drawing.Color.DarkBlue;
@@ -334,9 +337,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox5
             // 
-            this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(10.150458335876465D), Telerik.Reporting.Drawing.Unit.Cm(3.0881664752960205D));
+            this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(10.146D), Telerik.Reporting.Drawing.Unit.Cm(3.092D));
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.9158334732055664D), Telerik.Reporting.Drawing.Unit.Cm(0.56483334302902222D));
+            this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.916D), Telerik.Reporting.Drawing.Unit.Cm(0.565D));
             this.textBox5.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox5.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox5.Style.Color = System.Drawing.Color.DarkBlue;
@@ -346,9 +349,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox6
             // 
-            this.textBox6.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.34764590859413147D), Telerik.Reporting.Drawing.Unit.Cm(3.6437914371490479D));
+            this.textBox6.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.344D), Telerik.Reporting.Drawing.Unit.Cm(3.648D));
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(19.719999313354492D), Telerik.Reporting.Drawing.Unit.Cm(3.07277774810791D));
+            this.textBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(19.72D), Telerik.Reporting.Drawing.Unit.Cm(3.073D));
             this.textBox6.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox6.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox6.Style.Color = System.Drawing.Color.Blue;
@@ -358,9 +361,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox7
             // 
-            this.textBox7.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(3.7067084312438965D), Telerik.Reporting.Drawing.Unit.Cm(3.753572940826416D));
+            this.textBox7.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(3.703D), Telerik.Reporting.Drawing.Unit.Cm(3.758D));
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(7.6196870803833008D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(7.62D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox7.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox7.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox7.Style.Color = System.Drawing.Color.Black;
@@ -370,9 +373,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox8
             // 
-            this.textBox8.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.54872918128967285D), Telerik.Reporting.Drawing.Unit.Cm(4.5680651664733887D));
+            this.textBox8.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.545D), Telerik.Reporting.Drawing.Unit.Cm(4.572D));
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.6268750429153442D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.627D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox8.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox8.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox8.Style.Color = System.Drawing.Color.DarkBlue;
@@ -382,9 +385,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox9
             // 
-            this.textBox9.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.56460416316986084D), Telerik.Reporting.Drawing.Unit.Cm(5.360051155090332D));
+            this.textBox9.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.561D), Telerik.Reporting.Drawing.Unit.Cm(5.364D));
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.1770833730697632D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox9.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.177D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox9.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox9.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox9.Style.Color = System.Drawing.Color.DarkBlue;
@@ -394,9 +397,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox10
             // 
-            this.textBox10.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.54872918128967285D), Telerik.Reporting.Drawing.Unit.Cm(6.1026644706726074D));
+            this.textBox10.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.545D), Telerik.Reporting.Drawing.Unit.Cm(6.107D));
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.5475000143051148D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox10.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.548D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox10.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox10.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox10.Style.Color = System.Drawing.Color.DarkBlue;
@@ -406,9 +409,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox11
             // 
-            this.textBox11.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.941686630249023D), Telerik.Reporting.Drawing.Unit.Cm(4.1914792060852051D));
+            this.textBox11.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.938D), Telerik.Reporting.Drawing.Unit.Cm(4.195D));
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.87583327293396D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox11.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.876D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox11.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox11.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox11.Style.Color = System.Drawing.Color.DarkBlue;
@@ -418,9 +421,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox12
             // 
-            this.textBox12.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.556276321411133D), Telerik.Reporting.Drawing.Unit.Cm(3.7707920074462891D));
+            this.textBox12.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.552D), Telerik.Reporting.Drawing.Unit.Cm(3.775D));
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.2638888359069824D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox12.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.264D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox12.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox12.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox12.Style.Color = System.Drawing.Color.DarkBlue;
@@ -430,9 +433,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox14
             // 
-            this.textBox14.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.524904251098633D), Telerik.Reporting.Drawing.Unit.Cm(5.0196256637573242D));
+            this.textBox14.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.521D), Telerik.Reporting.Drawing.Unit.Cm(5.024D));
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.3005555868148804D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox14.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.301D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox14.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox14.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox14.Style.Color = System.Drawing.Color.DarkBlue;
@@ -442,9 +445,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox15
             // 
-            this.textBox15.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.668658256530762D), Telerik.Reporting.Drawing.Unit.Cm(4.5989384651184082D));
+            this.textBox15.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.665D), Telerik.Reporting.Drawing.Unit.Cm(4.603D));
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.1418055295944214D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox15.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.142D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox15.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox15.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox15.Style.Color = System.Drawing.Color.DarkBlue;
@@ -454,9 +457,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox16
             // 
-            this.textBox16.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.971165657043457D), Telerik.Reporting.Drawing.Unit.Cm(6.2552299499511719D));
+            this.textBox16.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.967D), Telerik.Reporting.Drawing.Unit.Cm(6.259D));
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.85958337783813477D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox16.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.86D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox16.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox16.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox16.Style.Color = System.Drawing.Color.DarkBlue;
@@ -466,9 +469,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox17
             // 
-            this.textBox17.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.991452217102051D), Telerik.Reporting.Drawing.Unit.Cm(5.4244384765625D));
+            this.textBox17.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.987D), Telerik.Reporting.Drawing.Unit.Cm(5.428D));
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.84194445610046387D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox17.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.842D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox17.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox17.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox17.Style.Color = System.Drawing.Color.DarkBlue;
@@ -478,9 +481,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox13
             // 
-            this.textBox13.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.604999542236328D), Telerik.Reporting.Drawing.Unit.Cm(5.8340620994567871D));
+            this.textBox13.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.601D), Telerik.Reporting.Drawing.Unit.Cm(5.838D));
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.2300000190734863D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox13.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.23D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox13.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox13.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox13.Style.Color = System.Drawing.Color.DarkBlue;
@@ -490,9 +493,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox18
             // 
-            this.textBox18.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.53435426950454712D), Telerik.Reporting.Drawing.Unit.Cm(3.7562189102172852D));
+            this.textBox18.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.53D), Telerik.Reporting.Drawing.Unit.Cm(3.76D));
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.0027084350585938D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox18.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.003D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox18.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox18.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox18.Style.Color = System.Drawing.Color.DarkBlue;
@@ -502,9 +505,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox19
             // 
-            this.textBox19.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.3743541240692139D), Telerik.Reporting.Drawing.Unit.Cm(4.5680651664733887D));
+            this.textBox19.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.37D), Telerik.Reporting.Drawing.Unit.Cm(4.572D));
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.482604026794434D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox19.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.483D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox19.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox19.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox19.Style.Color = System.Drawing.Color.Black;
@@ -514,9 +517,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox20
             // 
-            this.textBox20.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(1.8981044292449951D), Telerik.Reporting.Drawing.Unit.Cm(5.3574051856994629D));
+            this.textBox20.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(1.894D), Telerik.Reporting.Drawing.Unit.Cm(5.361D));
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.8469791412353516D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox20.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.847D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox20.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox20.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox20.Style.Color = System.Drawing.Color.Black;
@@ -526,9 +529,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox21
             // 
-            this.textBox21.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.2552919387817383D), Telerik.Reporting.Drawing.Unit.Cm(6.1026644706726074D));
+            this.textBox21.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.251D), Telerik.Reporting.Drawing.Unit.Cm(6.107D));
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.4633331298828125D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox21.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.463D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox21.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox21.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox21.Style.Color = System.Drawing.Color.Black;
@@ -538,9 +541,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox22
             // 
-            this.textBox22.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.902498245239258D), Telerik.Reporting.Drawing.Unit.Cm(3.76020884513855D));
+            this.textBox22.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.898D), Telerik.Reporting.Drawing.Unit.Cm(3.764D));
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.1271877288818359D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox22.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.127D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox22.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox22.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox22.Style.Color = System.Drawing.Color.Black;
@@ -550,9 +553,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox23
             // 
-            this.textBox23.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.91837215423584D), Telerik.Reporting.Drawing.Unit.Cm(4.1729588508605957D));
+            this.textBox23.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.914D), Telerik.Reporting.Drawing.Unit.Cm(4.177D));
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.1227779388427734D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.123D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox23.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox23.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox23.Style.Color = System.Drawing.Color.Black;
@@ -562,9 +565,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox24
             // 
-            this.textBox24.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.894558906555176D), Telerik.Reporting.Drawing.Unit.Cm(4.5857095718383789D));
+            this.textBox24.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.891D), Telerik.Reporting.Drawing.Unit.Cm(4.59D));
             this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.6641666889190674D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox24.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.664D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox24.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox24.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox24.Style.Color = System.Drawing.Color.Black;
@@ -574,9 +577,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox25
             // 
-            this.textBox25.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.907791137695313D), Telerik.Reporting.Drawing.Unit.Cm(4.995811939239502D));
+            this.textBox25.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.904D), Telerik.Reporting.Drawing.Unit.Cm(5D));
             this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.6641666889190674D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox25.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.664D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox25.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox25.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox25.Style.Color = System.Drawing.Color.Black;
@@ -586,9 +589,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox26
             // 
-            this.textBox26.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.897207260131836D), Telerik.Reporting.Drawing.Unit.Cm(5.4085626602172852D));
+            this.textBox26.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.893D), Telerik.Reporting.Drawing.Unit.Cm(5.413D));
             this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.6641666889190674D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox26.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.664D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox26.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox26.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox26.Style.Color = System.Drawing.Color.Black;
@@ -598,9 +601,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox27
             // 
-            this.textBox27.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.913082122802734D), Telerik.Reporting.Drawing.Unit.Cm(5.82131290435791D));
+            this.textBox27.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.909D), Telerik.Reporting.Drawing.Unit.Cm(5.825D));
             this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.6641666889190674D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox27.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.664D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox27.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox27.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox27.Style.Color = System.Drawing.Color.Black;
@@ -610,9 +613,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox28
             // 
-            this.textBox28.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.928956031799316D), Telerik.Reporting.Drawing.Unit.Cm(6.2472915649414062D));
+            this.textBox28.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.925D), Telerik.Reporting.Drawing.Unit.Cm(6.251D));
             this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.6641666889190674D), Telerik.Reporting.Drawing.Unit.Cm(0.39812499284744263D));
+            this.textBox28.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.664D), Telerik.Reporting.Drawing.Unit.Cm(0.398D));
             this.textBox28.Style.BorderColor.Default = System.Drawing.Color.Blue;
             this.textBox28.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox28.Style.Color = System.Drawing.Color.Black;
@@ -622,23 +625,23 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.32455575466156006D), Telerik.Reporting.Drawing.Unit.Cm(6.69671630859375D));
+            this.pictureBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.321D), Telerik.Reporting.Drawing.Unit.Cm(6.701D));
             this.pictureBox2.MimeType = "image/png";
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(19.80583381652832D), Telerik.Reporting.Drawing.Unit.Cm(0.67250007390975952D));
+            this.pictureBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(19.806D), Telerik.Reporting.Drawing.Unit.Cm(0.673D));
             this.pictureBox2.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.ScaleProportional;
             this.pictureBox2.Value = ((object)(resources.GetObject("pictureBox2.Value")));
             // 
             // textBox1
             // 
-            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.42520809173584D), Telerik.Reporting.Drawing.Unit.Cm(0.87312495708465576D));
+            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.421D), Telerik.Reporting.Drawing.Unit.Cm(0.877D));
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3D), Telerik.Reporting.Drawing.Unit.Cm(0.60000002384185791D));
+            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
             this.textBox1.Value = "textBox1";
             // 
             // detail
             // 
-            this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(2.3537015914916992D);
+            this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(2.354D);
             this.detail.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox101,
             this.textBox68,
@@ -655,9 +658,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox101
             // 
-            this.textBox101.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.111055850982666D), Telerik.Reporting.Drawing.Unit.Inch(0.49960550665855408D));
+            this.textBox101.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.101D), Telerik.Reporting.Drawing.Unit.Inch(0.5D));
             this.textBox101.Name = "textBox101";
-            this.textBox101.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.80324995517730713D), Telerik.Reporting.Drawing.Unit.Inch(0.17703640460968018D));
+            this.textBox101.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.803D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.textBox101.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox101.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox101.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -672,9 +675,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox68
             // 
-            this.textBox68.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.111055850982666D), Telerik.Reporting.Drawing.Unit.Inch(0.67672061920166016D));
+            this.textBox68.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.101D), Telerik.Reporting.Drawing.Unit.Inch(0.677D));
             this.textBox68.Name = "textBox68";
-            this.textBox68.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.80324995517730713D), Telerik.Reporting.Drawing.Unit.Inch(0.17703640460968018D));
+            this.textBox68.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.803D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.textBox68.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox68.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox68.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -689,9 +692,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox71
             // 
-            this.textBox71.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.5583724975585938D), Telerik.Reporting.Drawing.Unit.Inch(0.50325107574462891D));
+            this.textBox71.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.548D), Telerik.Reporting.Drawing.Unit.Inch(0.503D));
             this.textBox71.Name = "textBox71";
-            this.textBox71.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.54262912273406982D), Telerik.Reporting.Drawing.Unit.Inch(0.17703646421432495D));
+            this.textBox71.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.543D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.textBox71.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox71.Style.Font.Bold = true;
             this.textBox71.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -702,9 +705,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox72
             // 
-            this.textBox72.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.5583724975585938D), Telerik.Reporting.Drawing.Unit.Inch(0.68453311920166016D));
+            this.textBox72.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.548D), Telerik.Reporting.Drawing.Unit.Inch(0.685D));
             this.textBox72.Name = "textBox72";
-            this.textBox72.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.55304580926895142D), Telerik.Reporting.Drawing.Unit.Inch(0.17703646421432495D));
+            this.textBox72.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.553D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.textBox72.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox72.Style.Font.Bold = true;
             this.textBox72.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -715,9 +718,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox73
             // 
-            this.textBox73.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.1666274070739746D), Telerik.Reporting.Drawing.Unit.Inch(0.85643988847732544D));
+            this.textBox73.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.156D), Telerik.Reporting.Drawing.Unit.Inch(0.856D));
             this.textBox73.Name = "textBox73";
-            this.textBox73.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.94891816377639771D), Telerik.Reporting.Drawing.Unit.Inch(0.17703646421432495D));
+            this.textBox73.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.949D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.textBox73.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox73.Style.Font.Bold = true;
             this.textBox73.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -728,19 +731,21 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // table1
             // 
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.0233631134033203D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(5.577272891998291D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.5827012062072754D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.4339499473571777D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.085209846496582D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.0533325672149658D)));
-            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.023D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(4.916D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.213D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.434D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.18D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(1.979D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.053D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.61D)));
             this.table1.Body.SetCellContent(0, 0, this.textBox90);
             this.table1.Body.SetCellContent(0, 1, this.textBox92);
-            this.table1.Body.SetCellContent(0, 5, this.textBox94);
+            this.table1.Body.SetCellContent(0, 6, this.textBox94);
             this.table1.Body.SetCellContent(0, 2, this.textBox30);
             this.table1.Body.SetCellContent(0, 3, this.textBox32);
-            this.table1.Body.SetCellContent(0, 4, this.textBox34);
+            this.table1.Body.SetCellContent(0, 5, this.textBox34);
+            this.table1.Body.SetCellContent(0, 4, this.textBox36);
             tableGroup1.Name = "tableGroup1";
             tableGroup1.ReportItem = this.textBox89;
             tableGroup2.Name = "tableGroup2";
@@ -749,16 +754,19 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             tableGroup3.ReportItem = this.textBox29;
             tableGroup4.Name = "group2";
             tableGroup4.ReportItem = this.textBox31;
-            tableGroup5.Name = "group3";
-            tableGroup5.ReportItem = this.textBox33;
-            tableGroup6.Name = "group";
-            tableGroup6.ReportItem = this.textBox93;
+            tableGroup5.Name = "group4";
+            tableGroup5.ReportItem = this.textBox39;
+            tableGroup6.Name = "group3";
+            tableGroup6.ReportItem = this.textBox33;
+            tableGroup7.Name = "group";
+            tableGroup7.ReportItem = this.textBox93;
             this.table1.ColumnGroups.Add(tableGroup1);
             this.table1.ColumnGroups.Add(tableGroup2);
             this.table1.ColumnGroups.Add(tableGroup3);
             this.table1.ColumnGroups.Add(tableGroup4);
             this.table1.ColumnGroups.Add(tableGroup5);
             this.table1.ColumnGroups.Add(tableGroup6);
+            this.table1.ColumnGroups.Add(tableGroup7);
             this.table1.DataSource = this.objectDataSource1;
             this.table1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox90,
@@ -772,13 +780,15 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             this.textBox29,
             this.textBox31,
             this.textBox33,
-            this.textBox93});
-            this.table1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(5.3445830345153809D), Telerik.Reporting.Drawing.Unit.Cm(0.029424075037240982D));
+            this.textBox93,
+            this.textBox39,
+            this.textBox36});
+            this.table1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(5.318D), Telerik.Reporting.Drawing.Unit.Cm(0.029D));
             this.table1.Name = "table1";
-            tableGroup7.Groupings.Add(new Telerik.Reporting.Grouping(null));
-            tableGroup7.Name = "detailTableGroup";
-            this.table1.RowGroups.Add(tableGroup7);
-            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(14.755828857421875D), Telerik.Reporting.Drawing.Unit.Cm(1.2200000286102295D));
+            tableGroup8.Groupings.Add(new Telerik.Reporting.Grouping(null));
+            tableGroup8.Name = "detailTableGroup";
+            this.table1.RowGroups.Add(tableGroup8);
+            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(14.798D), Telerik.Reporting.Drawing.Unit.Cm(1.22D));
             this.table1.Style.BorderColor.Bottom = System.Drawing.Color.Transparent;
             this.table1.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.table1.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
@@ -790,7 +800,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox90
             // 
             this.textBox90.Name = "textBox90";
-            this.textBox90.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.0233645439147949D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox90.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.023D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox90.Style.BorderColor.Bottom = System.Drawing.Color.Transparent;
             this.textBox90.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox90.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -803,7 +813,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox92
             // 
             this.textBox92.Name = "textBox92";
-            this.textBox92.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.5772733688354492D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox92.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.916D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox92.Style.BorderColor.Bottom = System.Drawing.Color.Transparent;
             this.textBox92.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox92.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -816,7 +826,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox94
             // 
             this.textBox94.Name = "textBox94";
-            this.textBox94.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.0533323287963867D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox94.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.053D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox94.Style.BorderColor.Bottom = System.Drawing.Color.Transparent;
             this.textBox94.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox94.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -829,7 +839,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox30
             // 
             this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.5827028751373291D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox30.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.213D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox30.Style.BorderColor.Bottom = System.Drawing.Color.Transparent;
             this.textBox30.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox30.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -842,7 +852,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox32
             // 
             this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.4339501857757568D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox32.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.434D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox32.Style.BorderColor.Bottom = System.Drawing.Color.Transparent;
             this.textBox32.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox32.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -855,7 +865,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox34
             // 
             this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.0852105617523193D), Telerik.Reporting.Drawing.Unit.Cm(0.61000001430511475D));
+            this.textBox34.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.979D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
             this.textBox34.Style.BorderColor.Bottom = System.Drawing.Color.Transparent;
             this.textBox34.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox34.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -882,9 +892,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox69
             // 
-            this.textBox69.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.1197915077209473D), Telerik.Reporting.Drawing.Unit.Inch(0.85677117109298706D));
+            this.textBox69.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(7.109D), Telerik.Reporting.Drawing.Unit.Inch(0.857D));
             this.textBox69.Name = "textBox69";
-            this.textBox69.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.79283326864242554D), Telerik.Reporting.Drawing.Unit.Inch(0.17703640460968018D));
+            this.textBox69.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.793D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.textBox69.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox69.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox69.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
@@ -899,18 +909,18 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // table2
             // 
-            this.table2.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.51593804359436035D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.63229167461395264D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.31479182839393616D)));
-            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D)));
+            this.table2.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(3.523D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.516D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.5D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.5D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.5D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.5D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.5D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.5D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.632D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.5D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.315D)));
+            this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.5D)));
             this.table2.Body.SetCellContent(9, 0, this.textBox48);
             this.table2.Body.SetCellContent(10, 0, this.textBox38);
             this.table2.Body.SetCellContent(8, 0, this.textBox46);
@@ -922,9 +932,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             this.table2.Body.SetCellContent(4, 0, this.psuspen);
             this.table2.Body.SetCellContent(5, 0, this.pfrenos);
             this.table2.Body.SetCellContent(6, 0, this.pcambioaceite);
-            tableGroup8.Name = "tableGroup";
-            tableGroup8.ReportItem = this.textBox47;
-            this.table2.ColumnGroups.Add(tableGroup8);
+            tableGroup9.Name = "tableGroup";
+            tableGroup9.ReportItem = this.textBox47;
+            this.table2.ColumnGroups.Add(tableGroup9);
             this.table2.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.pllantas,
             this.palineacion,
@@ -938,39 +948,39 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             this.textBox48,
             this.textBox38,
             this.textBox47});
-            this.table2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.37041664123535156D), Telerik.Reporting.Drawing.Unit.Cm(0.078817054629325867D));
+            this.table2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.344D), Telerik.Reporting.Drawing.Unit.Cm(0.079D));
             this.table2.Name = "table2";
-            tableGroup10.Name = "group5";
-            tableGroup11.Name = "group6";
-            tableGroup12.Name = "group7";
-            tableGroup13.Name = "group8";
-            tableGroup14.Name = "group9";
-            tableGroup15.Name = "group10";
-            tableGroup16.Name = "group11";
-            tableGroup17.Name = "group16";
-            tableGroup18.Name = "group15";
-            tableGroup19.Name = "group13";
-            tableGroup20.Name = "group14";
-            tableGroup9.ChildGroups.Add(tableGroup10);
-            tableGroup9.ChildGroups.Add(tableGroup11);
-            tableGroup9.ChildGroups.Add(tableGroup12);
-            tableGroup9.ChildGroups.Add(tableGroup13);
-            tableGroup9.ChildGroups.Add(tableGroup14);
-            tableGroup9.ChildGroups.Add(tableGroup15);
-            tableGroup9.ChildGroups.Add(tableGroup16);
-            tableGroup9.ChildGroups.Add(tableGroup17);
-            tableGroup9.ChildGroups.Add(tableGroup18);
-            tableGroup9.ChildGroups.Add(tableGroup19);
-            tableGroup9.ChildGroups.Add(tableGroup20);
-            tableGroup9.Groupings.Add(new Telerik.Reporting.Grouping(null));
-            tableGroup9.Name = "detailTableGroup1";
-            this.table2.RowGroups.Add(tableGroup9);
-            this.table2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(5.8995847702026367D));
+            tableGroup11.Name = "group5";
+            tableGroup12.Name = "group6";
+            tableGroup13.Name = "group7";
+            tableGroup14.Name = "group8";
+            tableGroup15.Name = "group9";
+            tableGroup16.Name = "group10";
+            tableGroup17.Name = "group11";
+            tableGroup18.Name = "group16";
+            tableGroup19.Name = "group15";
+            tableGroup20.Name = "group13";
+            tableGroup21.Name = "group14";
+            tableGroup10.ChildGroups.Add(tableGroup11);
+            tableGroup10.ChildGroups.Add(tableGroup12);
+            tableGroup10.ChildGroups.Add(tableGroup13);
+            tableGroup10.ChildGroups.Add(tableGroup14);
+            tableGroup10.ChildGroups.Add(tableGroup15);
+            tableGroup10.ChildGroups.Add(tableGroup16);
+            tableGroup10.ChildGroups.Add(tableGroup17);
+            tableGroup10.ChildGroups.Add(tableGroup18);
+            tableGroup10.ChildGroups.Add(tableGroup19);
+            tableGroup10.ChildGroups.Add(tableGroup20);
+            tableGroup10.ChildGroups.Add(tableGroup21);
+            tableGroup10.Groupings.Add(new Telerik.Reporting.Grouping(null));
+            tableGroup10.Name = "detailTableGroup1";
+            this.table2.RowGroups.Add(tableGroup10);
+            this.table2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(5.9D));
             // 
             // textBox48
             // 
             this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.31479164958000183D));
+            this.textBox48.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.315D));
             this.textBox48.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox48.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox48.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -980,7 +990,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox38
             // 
             this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.49999997019767761D));
+            this.textBox38.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox38.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox38.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.None;
             this.textBox38.Style.Color = System.Drawing.Color.DarkBlue;
@@ -994,7 +1004,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox46
             // 
             this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox46.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox46.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox46.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox46.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -1004,7 +1014,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // textBox35
             // 
             this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.63229173421859741D));
+            this.textBox35.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.632D));
             this.textBox35.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox35.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox35.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -1014,9 +1024,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // pllantas
             // 
             this.pllantas.FalseValue = "False";
-            this.pllantas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.2863011360168457D), Telerik.Reporting.Drawing.Unit.Inch(0.59612149000167847D));
+            this.pllantas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.286D), Telerik.Reporting.Drawing.Unit.Inch(0.596D));
             this.pllantas.Name = "pllantas";
-            this.pllantas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.51593798398971558D));
+            this.pllantas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.516D));
             this.pllantas.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.pllantas.Style.Color = System.Drawing.Color.DarkBlue;
             this.pllantas.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -1030,9 +1040,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // palineacion
             // 
             this.palineacion.FalseValue = "False";
-            this.palineacion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.0390787124633789D), Telerik.Reporting.Drawing.Unit.Inch(0.59889942407608032D));
+            this.palineacion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.039D), Telerik.Reporting.Drawing.Unit.Inch(0.599D));
             this.palineacion.Name = "palineacion";
-            this.palineacion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.palineacion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.palineacion.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.palineacion.Style.Color = System.Drawing.Color.DarkBlue;
             this.palineacion.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -1046,9 +1056,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // pbalanceo
             // 
             this.pbalanceo.FalseValue = "False";
-            this.pbalanceo.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.9071344137191773D), Telerik.Reporting.Drawing.Unit.Inch(0.56417721509933472D));
+            this.pbalanceo.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.907D), Telerik.Reporting.Drawing.Unit.Inch(0.564D));
             this.pbalanceo.Name = "pbalanceo";
-            this.pbalanceo.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.pbalanceo.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.pbalanceo.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.pbalanceo.Style.Color = System.Drawing.Color.DarkBlue;
             this.pbalanceo.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -1063,7 +1073,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.pamorti.FalseValue = "False";
             this.pamorti.Name = "pamorti";
-            this.pamorti.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.pamorti.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.pamorti.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.pamorti.Style.Color = System.Drawing.Color.DarkBlue;
             this.pamorti.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -1077,9 +1087,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // psuspen
             // 
             this.psuspen.FalseValue = "False";
-            this.psuspen.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.0182452201843262D), Telerik.Reporting.Drawing.Unit.Inch(0.65445494651794434D));
+            this.psuspen.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.018D), Telerik.Reporting.Drawing.Unit.Inch(0.654D));
             this.psuspen.Name = "psuspen";
-            this.psuspen.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.psuspen.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.psuspen.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.psuspen.Style.Color = System.Drawing.Color.DarkBlue;
             this.psuspen.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -1093,9 +1103,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // pfrenos
             // 
             this.pfrenos.FalseValue = "False";
-            this.pfrenos.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.5501899719238281D), Telerik.Reporting.Drawing.Unit.Inch(0.88084369897842407D));
+            this.pfrenos.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.55D), Telerik.Reporting.Drawing.Unit.Inch(0.881D));
             this.pfrenos.Name = "pfrenos";
-            this.pfrenos.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.pfrenos.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.pfrenos.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.pfrenos.Style.Color = System.Drawing.Color.DarkBlue;
             this.pfrenos.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -1109,9 +1119,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // pcambioaceite
             // 
             this.pcambioaceite.FalseValue = "False";
-            this.pcambioaceite.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.2849118709564209D), Telerik.Reporting.Drawing.Unit.Inch(1.2336218357086182D));
+            this.pcambioaceite.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.285D), Telerik.Reporting.Drawing.Unit.Inch(1.234D));
             this.pcambioaceite.Name = "pcambioaceite";
-            this.pcambioaceite.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.5233681201934814D), Telerik.Reporting.Drawing.Unit.Cm(0.50000005960464478D));
+            this.pcambioaceite.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.523D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.pcambioaceite.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.pcambioaceite.Style.Color = System.Drawing.Color.DarkBlue;
             this.pcambioaceite.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
@@ -1124,16 +1134,16 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.3307291567325592D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.pictureBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.344D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.pictureBox3.MimeType = "image/png";
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(19.809999465942383D), Telerik.Reporting.Drawing.Unit.Cm(0.67000001668930054D));
+            this.pictureBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(19.81D), Telerik.Reporting.Drawing.Unit.Cm(0.67D));
             this.pictureBox3.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.ScaleProportional;
             this.pictureBox3.Value = ((object)(resources.GetObject("pictureBox3.Value")));
             // 
             // pageFooterSection1
             // 
-            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(5.2300000190734863D);
+            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(5.23D);
             this.pageFooterSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox70,
             this.Caja,
@@ -1192,9 +1202,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox70
             // 
-            this.textBox70.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.2015624046325684D), Telerik.Reporting.Drawing.Unit.Inch(3.359375D));
+            this.textBox70.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.228D), Telerik.Reporting.Drawing.Unit.Inch(3.401D));
             this.textBox70.Name = "textBox70";
-            this.textBox70.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.69563579559326172D), Telerik.Reporting.Drawing.Unit.Inch(0.14578646421432495D));
+            this.textBox70.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.696D), Telerik.Reporting.Drawing.Unit.Inch(0.146D));
             this.textBox70.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox70.Style.Font.Bold = true;
             this.textBox70.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -1205,9 +1215,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // Caja
             // 
-            this.Caja.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.39375051856040955D), Telerik.Reporting.Drawing.Unit.Inch(3.5370883941650391D));
+            this.Caja.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.42D), Telerik.Reporting.Drawing.Unit.Inch(3.579D));
             this.Caja.Name = "Caja";
-            this.Caja.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(7.2340970039367676D), Telerik.Reporting.Drawing.Unit.Inch(0.57496845722198486D));
+            this.Caja.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(7.234D), Telerik.Reporting.Drawing.Unit.Inch(0.575D));
             this.Caja.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.Caja.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.Caja.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -1220,9 +1230,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox80
             // 
-            this.textBox80.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.3958333432674408D), Telerik.Reporting.Drawing.Unit.Inch(4.1312332153320312D));
+            this.textBox80.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.422D), Telerik.Reporting.Drawing.Unit.Inch(4.173D));
             this.textBox80.Name = "textBox80";
-            this.textBox80.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(7.2215986251831055D), Telerik.Reporting.Drawing.Unit.Inch(0.29992121458053589D));
+            this.textBox80.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(7.222D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
             this.textBox80.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox80.Style.Font.Bold = false;
             this.textBox80.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -1233,9 +1243,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox83
             // 
-            this.textBox83.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.6250008344650269D), Telerik.Reporting.Drawing.Unit.Inch(4.8158774375915527D));
+            this.textBox83.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(1.651D), Telerik.Reporting.Drawing.Unit.Inch(4.858D));
             this.textBox83.Name = "textBox83";
-            this.textBox83.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.1999993324279785D), Telerik.Reporting.Drawing.Unit.Inch(0.29992121458053589D));
+            this.textBox83.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.2D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
             this.textBox83.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox83.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox83.Style.Font.Bold = false;
@@ -1247,9 +1257,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox84
             // 
-            this.textBox84.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.5230355262756348D), Telerik.Reporting.Drawing.Unit.Inch(4.8158774375915527D));
+            this.textBox84.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.549D), Telerik.Reporting.Drawing.Unit.Inch(4.858D));
             this.textBox84.Name = "textBox84";
-            this.textBox84.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.301964282989502D), Telerik.Reporting.Drawing.Unit.Inch(0.33464342355728149D));
+            this.textBox84.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.302D), Telerik.Reporting.Drawing.Unit.Inch(0.335D));
             this.textBox84.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox84.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox84.Style.Font.Bold = false;
@@ -1261,9 +1271,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox74
             // 
-            this.textBox74.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.63420200347900391D), Telerik.Reporting.Drawing.Unit.Inch(0.21006955206394196D));
+            this.textBox74.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.66D), Telerik.Reporting.Drawing.Unit.Inch(0.252D));
             this.textBox74.Name = "textBox74";
-            this.textBox74.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.69563579559326172D), Telerik.Reporting.Drawing.Unit.Inch(0.17703646421432495D));
+            this.textBox74.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.696D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.textBox74.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox74.Style.Font.Bold = true;
             this.textBox74.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -1275,9 +1285,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // chkbotonesinteriores
             // 
             this.chkbotonesinteriores.FalseValue = "False";
-            this.chkbotonesinteriores.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3923563957214355D), Telerik.Reporting.Drawing.Unit.Inch(1.7999123334884644D));
+            this.chkbotonesinteriores.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.418D), Telerik.Reporting.Drawing.Unit.Inch(1.842D));
             this.chkbotonesinteriores.Name = "chkbotonesinteriores";
-            this.chkbotonesinteriores.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.4236111640930176D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkbotonesinteriores.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.424D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkbotonesinteriores.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkbotonesinteriores.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkbotonesinteriores.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1288,9 +1298,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // chkcinturones
             // 
             this.chkcinturones.FalseValue = "False";
-            this.chkcinturones.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3923563957214355D), Telerik.Reporting.Drawing.Unit.Inch(1.6215269565582275D));
+            this.chkcinturones.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.418D), Telerik.Reporting.Drawing.Unit.Inch(1.663D));
             this.chkcinturones.Name = "chkcinturones";
-            this.chkcinturones.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0916666984558106D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkcinturones.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.092D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkcinturones.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkcinturones.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkcinturones.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1301,9 +1311,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // chkcenicero
             // 
             this.chkcenicero.FalseValue = "False";
-            this.chkcenicero.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3923563957214355D), Telerik.Reporting.Drawing.Unit.Inch(1.4431414604187012D));
+            this.chkcenicero.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.418D), Telerik.Reporting.Drawing.Unit.Inch(1.485D));
             this.chkcenicero.Name = "chkcenicero";
-            this.chkcenicero.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.2609139680862427D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkcenicero.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.261D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkcenicero.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkcenicero.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkcenicero.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1314,9 +1324,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // chkespejoretrovisor
             // 
             this.chkespejoretrovisor.FalseValue = "False";
-            this.chkespejoretrovisor.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3923563957214355D), Telerik.Reporting.Drawing.Unit.Inch(1.2673609256744385D));
+            this.chkespejoretrovisor.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.418D), Telerik.Reporting.Drawing.Unit.Inch(1.309D));
             this.chkespejoretrovisor.Name = "chkespejoretrovisor";
-            this.chkespejoretrovisor.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.2916669845581055D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkespejoretrovisor.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.292D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkespejoretrovisor.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkespejoretrovisor.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkespejoretrovisor.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1327,9 +1337,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // chkencendedor
             // 
             this.chkencendedor.FalseValue = "False";
-            this.chkencendedor.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3923563957214355D), Telerik.Reporting.Drawing.Unit.Inch(1.0889761447906494D));
+            this.chkencendedor.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.418D), Telerik.Reporting.Drawing.Unit.Inch(1.131D));
             this.chkencendedor.Name = "chkencendedor";
-            this.chkencendedor.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.153969407081604D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkencendedor.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.154D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkencendedor.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkencendedor.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkencendedor.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1340,9 +1350,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // chkbocinas
             // 
             this.chkbocinas.FalseValue = "False";
-            this.chkbocinas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3923563957214355D), Telerik.Reporting.Drawing.Unit.Inch(0.91059070825576782D));
+            this.chkbocinas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.418D), Telerik.Reporting.Drawing.Unit.Inch(0.952D));
             this.chkbocinas.Name = "chkbocinas";
-            this.chkbocinas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.2916669845581055D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkbocinas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.292D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkbocinas.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkbocinas.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkbocinas.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1353,9 +1363,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // chkradio
             // 
             this.chkradio.FalseValue = "False";
-            this.chkradio.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3923563957214355D), Telerik.Reporting.Drawing.Unit.Inch(0.73220527172088623D));
+            this.chkradio.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.418D), Telerik.Reporting.Drawing.Unit.Inch(0.774D));
             this.chkradio.Name = "chkradio";
-            this.chkradio.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.1914688348770142D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkradio.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.191D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkradio.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkradio.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkradio.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1366,9 +1376,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // chkcalefaccion
             // 
             this.chkcalefaccion.FalseValue = "False";
-            this.chkcalefaccion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3923563957214355D), Telerik.Reporting.Drawing.Unit.Inch(0.55381923913955688D));
+            this.chkcalefaccion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.418D), Telerik.Reporting.Drawing.Unit.Inch(0.595D));
             this.chkcalefaccion.Name = "chkcalefaccion";
-            this.chkcalefaccion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.85277760028839111D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkcalefaccion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.853D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkcalefaccion.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkcalefaccion.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkcalefaccion.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1379,9 +1389,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // chkinstrumentostablero
             // 
             this.chkinstrumentostablero.FalseValue = "False";
-            this.chkinstrumentostablero.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3923563957214355D), Telerik.Reporting.Drawing.Unit.Inch(0.37673589587211609D));
+            this.chkinstrumentostablero.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.418D), Telerik.Reporting.Drawing.Unit.Inch(0.418D));
             this.chkinstrumentostablero.Name = "chkinstrumentostablero";
-            this.chkinstrumentostablero.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.4379973411560059D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkinstrumentostablero.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.438D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkinstrumentostablero.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkinstrumentostablero.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkinstrumentostablero.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1393,9 +1403,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.chkcarroseria.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkcarroseria.FalseValue = "False";
-            this.chkcarroseria.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.20451401174068451D), Telerik.Reporting.Drawing.Unit.Inch(1.9717873334884644D));
+            this.chkcarroseria.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.231D), Telerik.Reporting.Drawing.Unit.Inch(2.013D));
             this.chkcarroseria.Name = "chkcarroseria";
-            this.chkcarroseria.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.310416579246521D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkcarroseria.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.31D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkcarroseria.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkcarroseria.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkcarroseria.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1408,9 +1418,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.chktapongasolina.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chktapongasolina.FalseValue = "False";
-            this.chktapongasolina.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.39722201228141785D), Telerik.Reporting.Drawing.Unit.Inch(1.7934019565582275D));
+            this.chktapongasolina.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.423D), Telerik.Reporting.Drawing.Unit.Inch(1.835D));
             this.chktapongasolina.Name = "chktapongasolina";
-            this.chktapongasolina.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.1197917461395264D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chktapongasolina.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.12D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chktapongasolina.Style.Color = System.Drawing.Color.DarkBlue;
             this.chktapongasolina.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chktapongasolina.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1423,9 +1433,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.chkmoldaduras.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkmoldaduras.FalseValue = "False";
-            this.chkmoldaduras.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.26093772053718567D), Telerik.Reporting.Drawing.Unit.Inch(1.6150164604187012D));
+            this.chkmoldaduras.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.287D), Telerik.Reporting.Drawing.Unit.Inch(1.657D));
             this.chkmoldaduras.Name = "chkmoldaduras";
-            this.chkmoldaduras.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.2555553913116455D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkmoldaduras.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.256D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkmoldaduras.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkmoldaduras.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkmoldaduras.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1438,9 +1448,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.chktapas.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chktapas.FalseValue = "False";
-            this.chktapas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.52482640743255615D), Telerik.Reporting.Drawing.Unit.Inch(1.4379332065582275D));
+            this.chktapas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.551D), Telerik.Reporting.Drawing.Unit.Inch(1.48D));
             this.chktapas.Name = "chktapas";
-            this.chktapas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.99166649580001831D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chktapas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.992D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chktapas.Style.Color = System.Drawing.Color.DarkBlue;
             this.chktapas.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chktapas.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1453,9 +1463,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.chkemblema.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkemblema.FalseValue = "False";
-            this.chkemblema.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.519618034362793D), Telerik.Reporting.Drawing.Unit.Inch(1.2621526718139648D));
+            this.chkemblema.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.546D), Telerik.Reporting.Drawing.Unit.Inch(1.304D));
             this.chkemblema.Name = "chkemblema";
-            this.chkemblema.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.99571478366851807D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkemblema.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.996D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkemblema.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkemblema.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkemblema.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1468,9 +1478,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.chkcristales.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkcristales.FalseValue = "False";
-            this.chkcristales.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.81649422645568848D), Telerik.Reporting.Drawing.Unit.Inch(1.0837677717208862D));
+            this.chkcristales.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.843D), Telerik.Reporting.Drawing.Unit.Inch(1.125D));
             this.chkcristales.Name = "chkcristales";
-            this.chkcristales.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.69999980926513672D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkcristales.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.7D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkcristales.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkcristales.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkcristales.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1483,9 +1493,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.chkespejolateral.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkespejolateral.FalseValue = "False";
-            this.chkespejolateral.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.46232596039772034D), Telerik.Reporting.Drawing.Unit.Inch(0.90798652172088623D));
+            this.chkespejolateral.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.488D), Telerik.Reporting.Drawing.Unit.Inch(0.95D));
             this.chkespejolateral.Name = "chkespejolateral";
-            this.chkespejolateral.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0541664361953735D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkespejolateral.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.054D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkespejolateral.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkespejolateral.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkespejolateral.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1498,9 +1508,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.chkantena.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkantena.FalseValue = "False";
-            this.chkantena.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.32170107960700989D), Telerik.Reporting.Drawing.Unit.Inch(0.73220527172088623D));
+            this.chkantena.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.348D), Telerik.Reporting.Drawing.Unit.Inch(0.774D));
             this.chkantena.Name = "chkantena";
-            this.chkantena.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.1957147121429443D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkantena.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.196D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkantena.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkantena.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkantena.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1513,9 +1523,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.chkcuartoluces.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkcuartoluces.FalseValue = "False";
-            this.chkcuartoluces.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.64201462268829346D), Telerik.Reporting.Drawing.Unit.Inch(0.55381923913955688D));
+            this.chkcuartoluces.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.668D), Telerik.Reporting.Drawing.Unit.Inch(0.595D));
             this.chkcuartoluces.Name = "chkcuartoluces";
-            this.chkcuartoluces.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.87708312273025513D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkcuartoluces.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.877D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkcuartoluces.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkcuartoluces.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkcuartoluces.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1528,9 +1538,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.chkunidadluces.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkunidadluces.FalseValue = "False";
-            this.chkunidadluces.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.52482640743255615D), Telerik.Reporting.Drawing.Unit.Inch(0.37673589587211609D));
+            this.chkunidadluces.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.551D), Telerik.Reporting.Drawing.Unit.Inch(0.418D));
             this.chkunidadluces.Name = "chkunidadluces";
-            this.chkunidadluces.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.99571478366851807D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.chkunidadluces.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.996D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.chkunidadluces.Style.Color = System.Drawing.Color.DarkBlue;
             this.chkunidadluces.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.chkunidadluces.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1541,9 +1551,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox75
             // 
-            this.textBox75.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.60069465637207D), Telerik.Reporting.Drawing.Unit.Inch(0.23090285062789917D));
+            this.textBox75.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.627D), Telerik.Reporting.Drawing.Unit.Inch(0.273D));
             this.textBox75.Name = "textBox75";
-            this.textBox75.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.59992080926895142D), Telerik.Reporting.Drawing.Unit.Inch(0.17703646421432495D));
+            this.textBox75.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.6D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.textBox75.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox75.Style.Font.Bold = true;
             this.textBox75.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -1554,19 +1564,19 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.2638885974884033D), Telerik.Reporting.Drawing.Unit.Inch(0.28298631310462952D));
+            this.pictureBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.29D), Telerik.Reporting.Drawing.Unit.Inch(0.325D));
             this.pictureBox1.MimeType = "image/png";
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.3658528327941895D), Telerik.Reporting.Drawing.Unit.Inch(2.0236108303070068D));
+            this.pictureBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.366D), Telerik.Reporting.Drawing.Unit.Inch(2.024D));
             this.pictureBox1.Value = ((object)(resources.GetObject("pictureBox1.Value")));
             // 
             // checkbocinaclaxon
             // 
             this.checkbocinaclaxon.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkbocinaclaxon.FalseValue = "False";
-            this.checkbocinaclaxon.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.434721976518631D), Telerik.Reporting.Drawing.Unit.Inch(2.1499128341674805D));
+            this.checkbocinaclaxon.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.461D), Telerik.Reporting.Drawing.Unit.Inch(2.192D));
             this.checkbocinaclaxon.Name = "checkbocinaclaxon";
-            this.checkbocinaclaxon.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0812498331069946D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkbocinaclaxon.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.081D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkbocinaclaxon.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkbocinaclaxon.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkbocinaclaxon.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1579,9 +1589,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             this.checklimpiaparabrisas.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checklimpiaparabrisas.FalseValue = "False";
-            this.checklimpiaparabrisas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.39583301544189453D), Telerik.Reporting.Drawing.Unit.Inch(2.3332457542419434D));
+            this.checklimpiaparabrisas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.422D), Telerik.Reporting.Drawing.Unit.Inch(2.375D));
             this.checklimpiaparabrisas.Name = "checklimpiaparabrisas";
-            this.checklimpiaparabrisas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.1159720420837402D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checklimpiaparabrisas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.116D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checklimpiaparabrisas.Style.Color = System.Drawing.Color.DarkBlue;
             this.checklimpiaparabrisas.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checklimpiaparabrisas.Style.LineColor = System.Drawing.Color.DarkBlue;
@@ -1593,9 +1603,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checkmanijasinterior
             // 
             this.checkmanijasinterior.FalseValue = "False";
-            this.checkmanijasinterior.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.395134449005127D), Telerik.Reporting.Drawing.Unit.Inch(1.9693566560745239D));
+            this.checkmanijasinterior.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.421D), Telerik.Reporting.Drawing.Unit.Inch(2.011D));
             this.checkmanijasinterior.Name = "checkmanijasinterior";
-            this.checkmanijasinterior.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.4236111640930176D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkmanijasinterior.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.424D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkmanijasinterior.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkmanijasinterior.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkmanijasinterior.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1606,9 +1616,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checktapetes
             // 
             this.checktapetes.FalseValue = "False";
-            this.checktapetes.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.39307165145874D), Telerik.Reporting.Drawing.Unit.Inch(2.1445379257202148D));
+            this.checktapetes.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.419D), Telerik.Reporting.Drawing.Unit.Inch(2.186D));
             this.checktapetes.Name = "checktapetes";
-            this.checktapetes.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.4236111640930176D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checktapetes.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.424D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checktapetes.Style.Color = System.Drawing.Color.DarkBlue;
             this.checktapetes.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checktapetes.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1619,9 +1629,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checkvestiduras
             // 
             this.checkvestiduras.FalseValue = "False";
-            this.checkvestiduras.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3930721282958984D), Telerik.Reporting.Drawing.Unit.Inch(2.3112046718597412D));
+            this.checkvestiduras.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.419D), Telerik.Reporting.Drawing.Unit.Inch(2.353D));
             this.checkvestiduras.Name = "checkvestiduras";
-            this.checkvestiduras.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.4236111640930176D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkvestiduras.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.424D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkvestiduras.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkvestiduras.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkvestiduras.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1632,9 +1642,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checkgato
             // 
             this.checkgato.FalseValue = "False";
-            this.checkgato.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.36458349227905273D), Telerik.Reporting.Drawing.Unit.Inch(2.6238944530487061D));
+            this.checkgato.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.391D), Telerik.Reporting.Drawing.Unit.Inch(2.666D));
             this.checkgato.Name = "checkgato";
-            this.checkgato.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0614582300186157D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkgato.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.061D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkgato.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkgato.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkgato.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1646,9 +1656,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checkestucheherramientas
             // 
             this.checkestucheherramientas.FalseValue = "False";
-            this.checkestucheherramientas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.36458349227905273D), Telerik.Reporting.Drawing.Unit.Inch(2.8009777069091797D));
+            this.checkestucheherramientas.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.391D), Telerik.Reporting.Drawing.Unit.Inch(2.843D));
             this.checkestucheherramientas.Name = "checkestucheherramientas";
-            this.checkestucheherramientas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.5781252384185791D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkestucheherramientas.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.578D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkestucheherramientas.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkestucheherramientas.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkestucheherramientas.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1660,9 +1670,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checkclaxon
             // 
             this.checkclaxon.FalseValue = "False";
-            this.checkclaxon.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.36458349227905273D), Telerik.Reporting.Drawing.Unit.Inch(2.9780609607696533D));
+            this.checkclaxon.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.391D), Telerik.Reporting.Drawing.Unit.Inch(3.02D));
             this.checkclaxon.Name = "checkclaxon";
-            this.checkclaxon.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0614582300186157D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkclaxon.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.061D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkclaxon.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkclaxon.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkclaxon.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1674,9 +1684,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checkvarillaaceite
             // 
             this.checkvarillaaceite.FalseValue = "False";
-            this.checkvarillaaceite.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.36458349227905273D), Telerik.Reporting.Drawing.Unit.Inch(3.1551444530487061D));
+            this.checkvarillaaceite.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.391D), Telerik.Reporting.Drawing.Unit.Inch(3.197D));
             this.checkvarillaaceite.Name = "checkvarillaaceite";
-            this.checkvarillaaceite.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0614582300186157D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkvarillaaceite.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.061D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkvarillaaceite.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkvarillaaceite.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkvarillaaceite.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1688,9 +1698,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checkmaneralgato
             // 
             this.checkmaneralgato.FalseValue = "False";
-            this.checkmaneralgato.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.6312501430511475D), Telerik.Reporting.Drawing.Unit.Inch(2.6301441192626953D));
+            this.checkmaneralgato.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.657D), Telerik.Reporting.Drawing.Unit.Inch(2.672D));
             this.checkmaneralgato.Name = "checkmaneralgato";
-            this.checkmaneralgato.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0614582300186157D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkmaneralgato.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.061D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkmaneralgato.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkmaneralgato.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkmaneralgato.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1702,9 +1712,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checktrianguloseg
             // 
             this.checktrianguloseg.FalseValue = "False";
-            this.checktrianguloseg.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.6312501430511475D), Telerik.Reporting.Drawing.Unit.Inch(2.8072273731231689D));
+            this.checktrianguloseg.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.657D), Telerik.Reporting.Drawing.Unit.Inch(2.849D));
             this.checktrianguloseg.Name = "checktrianguloseg";
-            this.checktrianguloseg.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.5781252384185791D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checktrianguloseg.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.578D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checktrianguloseg.Style.Color = System.Drawing.Color.DarkBlue;
             this.checktrianguloseg.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checktrianguloseg.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1716,9 +1726,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checktaponaceite
             // 
             this.checktaponaceite.FalseValue = "False";
-            this.checktaponaceite.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.6312501430511475D), Telerik.Reporting.Drawing.Unit.Inch(2.9843108654022217D));
+            this.checktaponaceite.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.657D), Telerik.Reporting.Drawing.Unit.Inch(3.026D));
             this.checktaponaceite.Name = "checktaponaceite";
-            this.checktaponaceite.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0614582300186157D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checktaponaceite.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.061D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checktaponaceite.Style.Color = System.Drawing.Color.DarkBlue;
             this.checktaponaceite.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checktaponaceite.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1730,9 +1740,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checkfiltroaire
             // 
             this.checkfiltroaire.FalseValue = "False";
-            this.checkfiltroaire.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.6312501430511475D), Telerik.Reporting.Drawing.Unit.Inch(3.1613941192626953D));
+            this.checkfiltroaire.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.657D), Telerik.Reporting.Drawing.Unit.Inch(3.203D));
             this.checkfiltroaire.Name = "checkfiltroaire";
-            this.checkfiltroaire.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0614582300186157D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkfiltroaire.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.061D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkfiltroaire.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkfiltroaire.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkfiltroaire.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1744,9 +1754,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checkllaverueda
             // 
             this.checkllaverueda.FalseValue = "False";
-            this.checkllaverueda.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3979167938232422D), Telerik.Reporting.Drawing.Unit.Inch(2.6155605316162109D));
+            this.checkllaverueda.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.424D), Telerik.Reporting.Drawing.Unit.Inch(2.657D));
             this.checkllaverueda.Name = "checkllaverueda";
-            this.checkllaverueda.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0614582300186157D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkllaverueda.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.061D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkllaverueda.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkllaverueda.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkllaverueda.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1758,9 +1768,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checkllantarefaccion
             // 
             this.checkllantarefaccion.FalseValue = "False";
-            this.checkllantarefaccion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3979167938232422D), Telerik.Reporting.Drawing.Unit.Inch(2.7926437854766846D));
+            this.checkllantarefaccion.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.424D), Telerik.Reporting.Drawing.Unit.Inch(2.834D));
             this.checkllantarefaccion.Name = "checkllantarefaccion";
-            this.checkllantarefaccion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.5781252384185791D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkllantarefaccion.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.578D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkllantarefaccion.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkllantarefaccion.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkllantarefaccion.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1772,9 +1782,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checktaponradiador
             // 
             this.checktaponradiador.FalseValue = "False";
-            this.checktaponradiador.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3979167938232422D), Telerik.Reporting.Drawing.Unit.Inch(2.9697272777557373D));
+            this.checktaponradiador.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.424D), Telerik.Reporting.Drawing.Unit.Inch(3.011D));
             this.checktaponradiador.Name = "checktaponradiador";
-            this.checktaponradiador.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.3635416030883789D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checktaponradiador.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.364D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checktaponradiador.Style.Color = System.Drawing.Color.DarkBlue;
             this.checktaponradiador.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checktaponradiador.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1786,9 +1796,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // checkbateriamca
             // 
             this.checkbateriamca.FalseValue = "False";
-            this.checkbateriamca.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.3979167938232422D), Telerik.Reporting.Drawing.Unit.Inch(3.1468105316162109D));
+            this.checkbateriamca.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6.424D), Telerik.Reporting.Drawing.Unit.Inch(3.188D));
             this.checkbateriamca.Name = "checkbateriamca";
-            this.checkbateriamca.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.0614582300186157D), Telerik.Reporting.Drawing.Unit.Inch(0.17703649401664734D));
+            this.checkbateriamca.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.061D), Telerik.Reporting.Drawing.Unit.Inch(0.177D));
             this.checkbateriamca.Style.Color = System.Drawing.Color.DarkBlue;
             this.checkbateriamca.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.checkbateriamca.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
@@ -1799,9 +1809,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox49
             // 
-            this.textBox49.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.028332710266113D), Telerik.Reporting.Drawing.Unit.Cm(8.54194164276123D));
+            this.textBox49.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(15.094D), Telerik.Reporting.Drawing.Unit.Cm(8.648D));
             this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.0817710161209106D), Telerik.Reporting.Drawing.Unit.Cm(0.33541667461395264D));
+            this.textBox49.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.082D), Telerik.Reporting.Drawing.Unit.Cm(0.335D));
             this.textBox49.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox49.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox49.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -1813,9 +1823,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox50
             // 
-            this.textBox50.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.11577033996582D), Telerik.Reporting.Drawing.Unit.Cm(8.544586181640625D));
+            this.textBox50.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(16.182D), Telerik.Reporting.Drawing.Unit.Cm(8.65D));
             this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.0817710161209106D), Telerik.Reporting.Drawing.Unit.Cm(0.33541667461395264D));
+            this.textBox50.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.082D), Telerik.Reporting.Drawing.Unit.Cm(0.335D));
             this.textBox50.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox50.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox50.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -1827,9 +1837,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox51
             // 
-            this.textBox51.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(17.203207015991211D), Telerik.Reporting.Drawing.Unit.Cm(8.5340023040771484D));
+            this.textBox51.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(17.269D), Telerik.Reporting.Drawing.Unit.Cm(8.666D));
             this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.0817710161209106D), Telerik.Reporting.Drawing.Unit.Cm(0.33541667461395264D));
+            this.textBox51.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.082D), Telerik.Reporting.Drawing.Unit.Cm(0.335D));
             this.textBox51.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox51.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox51.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -1841,9 +1851,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox52
             // 
-            this.textBox52.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.268383026123047D), Telerik.Reporting.Drawing.Unit.Cm(8.5381412506103516D));
+            this.textBox52.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(18.335D), Telerik.Reporting.Drawing.Unit.Cm(8.67D));
             this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.0817710161209106D), Telerik.Reporting.Drawing.Unit.Cm(0.33541667461395264D));
+            this.textBox52.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.082D), Telerik.Reporting.Drawing.Unit.Cm(0.335D));
             this.textBox52.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
             this.textBox52.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox52.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -1855,9 +1865,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // Observaciones
             // 
-            this.Observaciones.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(1.0583332777023315D), Telerik.Reporting.Drawing.Unit.Cm(9.2342681884765625D));
+            this.Observaciones.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(1.124D), Telerik.Reporting.Drawing.Unit.Cm(9.34D));
             this.Observaciones.Name = "Observaciones";
-            this.Observaciones.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(18.239999771118164D), Telerik.Reporting.Drawing.Unit.Cm(1.1468055248260498D));
+            this.Observaciones.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(18.24D), Telerik.Reporting.Drawing.Unit.Cm(1.147D));
             this.Observaciones.Style.BorderColor.Default = System.Drawing.Color.Transparent;
             this.Observaciones.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
             this.Observaciones.Style.Font.Strikeout = false;
@@ -1865,9 +1875,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox53
             // 
-            this.textBox53.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.5902764797210693D), Telerik.Reporting.Drawing.Unit.Inch(4.2326221466064453D));
+            this.textBox53.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.616D), Telerik.Reporting.Drawing.Unit.Inch(4.274D));
             this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.36944419145584106D), Telerik.Reporting.Drawing.Unit.Inch(0.29992121458053589D));
+            this.textBox53.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.369D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
             this.textBox53.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox53.Style.Font.Bold = false;
             this.textBox53.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -1878,9 +1888,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox54
             // 
-            this.textBox54.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.0791654586791992D), Telerik.Reporting.Drawing.Unit.Inch(4.2353997230529785D));
+            this.textBox54.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.105D), Telerik.Reporting.Drawing.Unit.Inch(4.277D));
             this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.69583308696746826D), Telerik.Reporting.Drawing.Unit.Inch(0.29992121458053589D));
+            this.textBox54.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.696D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
             this.textBox54.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox54.Style.Font.Bold = false;
             this.textBox54.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -1891,9 +1901,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             // 
             // textBox55
             // 
-            this.textBox55.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.7972209453582764D), Telerik.Reporting.Drawing.Unit.Inch(4.2312335968017578D));
+            this.textBox55.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(3.823D), Telerik.Reporting.Drawing.Unit.Inch(4.273D));
             this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.69583308696746826D), Telerik.Reporting.Drawing.Unit.Inch(0.29992121458053589D));
+            this.textBox55.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.696D), Telerik.Reporting.Drawing.Unit.Inch(0.3D));
             this.textBox55.Style.Color = System.Drawing.Color.DarkBlue;
             this.textBox55.Style.Font.Bold = false;
             this.textBox55.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
@@ -1901,6 +1911,33 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             this.textBox55.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
             this.textBox55.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox55.Value = "";
+            // 
+            // textBox39
+            // 
+            this.textBox39.Name = "textBox39";
+            this.textBox39.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.18D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
+            this.textBox39.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
+            this.textBox39.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox39.Style.Color = System.Drawing.Color.DarkBlue;
+            this.textBox39.Style.Font.Bold = true;
+            this.textBox39.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
+            this.textBox39.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.textBox39.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox39.StyleName = "";
+            this.textBox39.Value = "CÓDIGO";
+            // 
+            // textBox36
+            // 
+            this.textBox36.Name = "textBox36";
+            this.textBox36.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.18D), Telerik.Reporting.Drawing.Unit.Cm(0.61D));
+            this.textBox36.Style.BorderColor.Bottom = System.Drawing.Color.Transparent;
+            this.textBox36.Style.BorderColor.Default = System.Drawing.Color.DarkBlue;
+            this.textBox36.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox36.Style.Color = System.Drawing.Color.Black;
+            this.textBox36.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(7D);
+            this.textBox36.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox36.StyleName = "";
+            this.textBox36.Value = "= Fields.Field9";
             // 
             // RptOrden
             // 
@@ -1931,7 +1968,6 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 		private Telerik.Reporting.PageHeaderSection pageHeaderSection1;
 		private Telerik.Reporting.DetailSection detail;
 		private Telerik.Reporting.PageFooterSection pageFooterSection1;
-        private Telerik.Reporting.PictureBox pbxLogo;
         private Telerik.Reporting.TextBox textBox101;
         private Telerik.Reporting.TextBox textBox68;
         private Telerik.Reporting.TextBox textBox71;
@@ -1972,34 +2008,6 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         private Telerik.Reporting.TextBox textBox93;
         private Telerik.Reporting.ObjectDataSource objectDataSource1;
         private Telerik.Reporting.TextBox textBox69;
-        private Telerik.Reporting.TextBox textBox2;
-        private Telerik.Reporting.TextBox textBox3;
-        private Telerik.Reporting.TextBox textBox4;
-        private Telerik.Reporting.TextBox textBox5;
-        private Telerik.Reporting.TextBox textBox6;
-        private Telerik.Reporting.TextBox textBox7;
-        private Telerik.Reporting.TextBox textBox8;
-        private Telerik.Reporting.TextBox textBox9;
-        private Telerik.Reporting.TextBox textBox10;
-        private Telerik.Reporting.TextBox textBox11;
-        private Telerik.Reporting.TextBox textBox12;
-        private Telerik.Reporting.TextBox textBox14;
-        private Telerik.Reporting.TextBox textBox15;
-        private Telerik.Reporting.TextBox textBox16;
-        private Telerik.Reporting.TextBox textBox17;
-        private Telerik.Reporting.TextBox textBox13;
-        private Telerik.Reporting.TextBox textBox18;
-        private Telerik.Reporting.TextBox textBox19;
-        private Telerik.Reporting.TextBox textBox20;
-        private Telerik.Reporting.TextBox textBox21;
-        private Telerik.Reporting.TextBox textBox22;
-        private Telerik.Reporting.TextBox textBox23;
-        private Telerik.Reporting.TextBox textBox24;
-        private Telerik.Reporting.TextBox textBox25;
-        private Telerik.Reporting.TextBox textBox26;
-        private Telerik.Reporting.TextBox textBox27;
-        private Telerik.Reporting.TextBox textBox28;
-        private Telerik.Reporting.PictureBox pictureBox2;
         private Telerik.Reporting.TextBox textBox30;
         private Telerik.Reporting.TextBox textBox32;
         private Telerik.Reporting.TextBox textBox34;
@@ -2012,7 +2020,6 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         private Telerik.Reporting.Table table2;
         private Telerik.Reporting.TextBox textBox47;
         private Telerik.Reporting.TextBox textBox48;
-        private Telerik.Reporting.TextBox textBox1;
         private Telerik.Reporting.CheckBox checkbocinaclaxon;
         private Telerik.Reporting.CheckBox checklimpiaparabrisas;
         private Telerik.Reporting.TextBox textBox46;
@@ -2047,5 +2054,37 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         private Telerik.Reporting.CheckBox psuspen;
         private Telerik.Reporting.CheckBox pfrenos;
         private Telerik.Reporting.CheckBox pcambioaceite;
+        private Telerik.Reporting.PictureBox pbxLogo;
+        private Telerik.Reporting.TextBox textBox2;
+        private Telerik.Reporting.TextBox textBox3;
+        private Telerik.Reporting.TextBox textBox4;
+        private Telerik.Reporting.TextBox textBox5;
+        private Telerik.Reporting.TextBox textBox6;
+        private Telerik.Reporting.TextBox textBox7;
+        private Telerik.Reporting.TextBox textBox8;
+        private Telerik.Reporting.TextBox textBox9;
+        private Telerik.Reporting.TextBox textBox10;
+        private Telerik.Reporting.TextBox textBox11;
+        private Telerik.Reporting.TextBox textBox12;
+        private Telerik.Reporting.TextBox textBox14;
+        private Telerik.Reporting.TextBox textBox15;
+        private Telerik.Reporting.TextBox textBox16;
+        private Telerik.Reporting.TextBox textBox17;
+        private Telerik.Reporting.TextBox textBox13;
+        private Telerik.Reporting.TextBox textBox18;
+        private Telerik.Reporting.TextBox textBox19;
+        private Telerik.Reporting.TextBox textBox20;
+        private Telerik.Reporting.TextBox textBox21;
+        private Telerik.Reporting.TextBox textBox22;
+        private Telerik.Reporting.TextBox textBox23;
+        private Telerik.Reporting.TextBox textBox24;
+        private Telerik.Reporting.TextBox textBox25;
+        private Telerik.Reporting.TextBox textBox26;
+        private Telerik.Reporting.TextBox textBox27;
+        private Telerik.Reporting.TextBox textBox28;
+        private Telerik.Reporting.PictureBox pictureBox2;
+        private Telerik.Reporting.TextBox textBox1;
+        private Telerik.Reporting.TextBox textBox36;
+        private Telerik.Reporting.TextBox textBox39;
     }
 }

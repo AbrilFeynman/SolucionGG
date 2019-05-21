@@ -272,7 +272,9 @@
                             <Label  FontSize="12"  x:Name="lblF4" Margin="5,119,0,41" Grid.Column="3"/>
                             <Label FontSize="12"  x:Name="lblF5" Margin="5,119,0,41" Grid.Column="4"/>
 
-                            <Button x:Name="btnImpr1"  Content="Imprimir " Grid.Column="0" HorizontalAlignment="Center" Height="30"  VerticalAlignment="Bottom" Width="80" FontSize="9"   Click="btnImpr1_Click" Margin="18,0,28,6"/>
+                            <Button x:Name="btnImpr1"  Content="Imprimir " Grid.Column="0"
+                                    HorizontalAlignment="Center" Height="30"  VerticalAlignment="Bottom"
+                                    Width="80" FontSize="9"   Click="btnImpr1_Click" Margin="18,0,28,6"/>
                             <Button x:Name="btnImpr2"  Content="Imprimir " Grid.Column="1" HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="80" FontSize="9"   Click="btnImpr2_Click" Margin="18,154,28,6"/>
                             <Button x:Name="btnImpr3"  Content="Imprimir " Grid.Column="2" HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="80" FontSize="9" Click="btnImpr3_Click" Margin="18,154,28,6"/>
                             <Button x:Name="btnImpr4"  Content="Imprimir " Grid.Column="3" HorizontalAlignment="Center"  Height="30"  VerticalAlignment="Center" Width="80" FontSize="9"  Click="btnImpr4_Click" Margin="18,154,28,6"/>
