@@ -29,6 +29,14 @@ namespace GGGC.Admin.AZ.PagareArellantas
     public partial class PagareAView : UserControl
     {
 
+
+        public string folioa ;
+        public decimal totala ;
+        public  string fechaa ;
+        public string rfca ;
+        public string nombrea;
+        public string nocte;
+
         public static byte intEMPRESAID = 0;
         public static byte intSUCURSALID = 0;
 
@@ -115,6 +123,72 @@ namespace GGGC.Admin.AZ.PagareArellantas
 
 
             radbusy.IsBusy = true;
+    
+
+            increment = 0;
+            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+
+            string specifier;
+            System.Globalization.CultureInfo culture;
+            specifier = "C";
+            culture = CultureInfo.CreateSpecificCulture("es-MX");
+
+
+
+            FolioFactura = folioa;
+            Cantidad = flores.ToString(specifier, culture);
+            Fecha = lblF1.Content.ToString();
+            CantLetra = divedendo;
+            numPagare = "1";
+            string numpagares = bytNumeroDePagares.ToString();
+            Nombre = lblCliente.Text.ToString();
+            Direccion = lblDireccion.Text.ToString();
+            Colonia = lblColonia.Text.ToString();
+            Ciudad = lblCiudad.Text.ToString();
+            //FechaActual = DateTime.Now;
+
+            //RptPagare report = new RptPagare(FolioFactura, Cantidad, Fecha, CantLetra, numPagare, numpagares, Nombre, Direccion, Colonia, Ciudad, Estado);
+            RptPagare report = new RptPagare(FolioFactura, Cantidad, Fecha, CantLetra, numPagare, numpagares, Nombre, Direccion, Colonia, Ciudad, Estado);
+            System.Drawing.Printing.PrinterSettings printerSettings
+              = new System.Drawing.Printing.PrinterSettings();
+
+            //--------- The standard print controller comes with no UI----------//
+            System.Drawing.Printing.PrintController standardPrintController =
+                new System.Drawing.Printing.StandardPrintController();
+
+            // Print the report using the custom print controller
+            Telerik.Reporting.Processing.ReportProcessor reportProcessor
+                = new Telerik.Reporting.Processing.ReportProcessor();
+
+            reportProcessor.PrintController = standardPrintController;
+
+            Telerik.Reporting.TypeReportSource typeReportSource =
+                new Telerik.Reporting.TypeReportSource();
+
+
+
+            reportProcessor.PrintReport(report, printerSettings);
+
+            //radbusy.IsBusy = false;
+            //usando el preview
+            // VerPagare mostrar = new VerPagare(FolioFactura, Cantidad, Fecha, CantLetra, numPagare, numpagares, Nombre, Direccion, Colonia, Ciudad,Estado);
+
+
+
+
+        }
+
+        private void btnImpr3_Click(object sender, RoutedEventArgs e)
+
+
+        {
+
+
+
+            radbusy.IsBusy = true;
             //btnImpr1.IsEnabled = false;
             //Refresh(btnImpr1);
             //Refresh(radbusy);
@@ -130,11 +204,11 @@ namespace GGGC.Admin.AZ.PagareArellantas
             specifier = "C";
             culture = CultureInfo.CreateSpecificCulture("es-MX");
 
-            FolioFactura = folioid.Text;
+            FolioFactura = folioa;
             Cantidad = flores.ToString(specifier, culture);
-            Fecha = lblF1.Content.ToString();
+            Fecha = lblF3.Content.ToString();
             CantLetra = divedendo;
-            numPagare = "1";
+            numPagare = "3";
             string numpagares = bytNumeroDePagares.ToString();
             Nombre = lblCliente.Text.ToString();
             Direccion = lblDireccion.Text.ToString();
@@ -206,7 +280,7 @@ namespace GGGC.Admin.AZ.PagareArellantas
             specifier = "C";
             culture = CultureInfo.CreateSpecificCulture("en-US");
 
-            FolioFactura = folioid.Text;
+            FolioFactura = folioa;
             Cantidad = flores.ToString(specifier, culture);
             Fecha = lblF2.Content.ToString();
             CantLetra = divedendo;
@@ -245,7 +319,7 @@ namespace GGGC.Admin.AZ.PagareArellantas
 
 
         }
-        private void btnImpr3_Click(object sender, RoutedEventArgs e)
+        private void search_Click(object sender, RoutedEventArgs e)
         {
 
             Comprobante comprobante;
@@ -265,12 +339,40 @@ namespace GGGC.Admin.AZ.PagareArellantas
 
                     comprobante = (Comprobante)oSerializer.Deserialize(reader);
 
-                    var folio = comprobante.Serie + comprobante.Folio;
-                    var total = comprobante.Total;
-                    var fecha = comprobante.Fecha;
-                    var rfc = comprobante.Receptor.Rfc;
-                    if (rfc != null)
+                     folioa = comprobante.Serie + comprobante.Folio;
+                     totala = comprobante.Total;
+                     fechaa = comprobante.Fecha;
+                     rfca = comprobante.Receptor.Rfc;
+                    nombrea = comprobante.Receptor.Nombre;
+
+                    string formap = comprobante.MetodoPago;
+                    if (rfca != null)
                     {
+                        if (formap == "PPD")
+                        {
+                           
+                            cargarFacturas();
+                        }
+                        else
+                        {
+
+                            //limpiar
+                            limpiar();
+                            RadWindow radWindow = new RadWindow();
+                            RadWindow.Alert(new DialogParameters()
+                            {
+                                Content = "La factura no es de credito.",
+                                Header = "BIG",
+
+                                DialogStartupLocation = WindowStartupLocation.CenterOwner
+                                // IconContent = "";
+                            });
+                        }
+
+                        
+
+
+                        //al final se pone en pantalla el nombre de la ruta del archivo
 
                     }
                     else
@@ -289,12 +391,41 @@ namespace GGGC.Admin.AZ.PagareArellantas
                     // var direccion = comprobante.Receptor.
 
                 }
+                folioid.Text = openFileDialog.FileName.ToString();
             }
 
             
 
 
 
+
+        }
+
+        public void limpiar() {
+
+            lblFecha.Text = "";
+            lblcond.Text = "";
+            lblCliente.Text = "";
+            lblDireccion.Text = "";
+            lblColonia.Text = "";
+            lblCiudad.Text = "";
+            txtP1.Content = "";
+            txtP2.Content = "";
+            txtP3.Content = "";
+            txtP4.Content = "";
+            txtP5.Content = "";
+            lblF1.Content = "";
+            lblF2.Content = "";
+            lblF3.Content = "";
+            lblF4.Content = "";
+            lblF5.Content = "";
+            label18.Text = "";
+            label20.Text = "";
+            lblPagare1.Text = "";
+            lblPagare2.Text = "";
+            lblPagare3.Text = "";
+            lblPagare4.Text = "";
+            lblPagare5.Text = "";
 
         }
         private void btnImpr4_Click(object sender, RoutedEventArgs e)
@@ -313,7 +444,7 @@ namespace GGGC.Admin.AZ.PagareArellantas
             specifier = "C";
             culture = CultureInfo.CreateSpecificCulture("en-US");
 
-            FolioFactura = folioid.Text;
+            FolioFactura = folioa;
             Cantidad = flores.ToString(specifier, culture);
             Fecha = lblF4.Content.ToString();
             CantLetra = divedendo;
@@ -366,7 +497,7 @@ namespace GGGC.Admin.AZ.PagareArellantas
             specifier = "C";
             culture = CultureInfo.CreateSpecificCulture("en-US");
 
-            FolioFactura = folioid.Text;
+            FolioFactura = folioa;
             Cantidad = flores.ToString(specifier, culture);
             Fecha = lblF5.Content.ToString();
             CantLetra = divedendo;
@@ -420,9 +551,9 @@ namespace GGGC.Admin.AZ.PagareArellantas
         {
             string conexion;
             
-            string vpn = "B20";
-            string server = getvpn(vpn);
-            conexion = "SERVER = " + server + "; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007";
+            //string vpn = "B20";
+            //string server = getvpn(vpn);
+            conexion = "SERVER = 192.168.200.20; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007";
             return conexion;
           
         }
@@ -488,9 +619,48 @@ namespace GGGC.Admin.AZ.PagareArellantas
 
                 cn = new SqlConnection(GetOrigen());
                 cn.Open();
-                string id = this.folioid.Text;
+                string id = folioa;
 
-                cmd = new SqlCommand("Select dbo.Facturas_Y_Devoluciones.Folio_Del_Documento, dbo.Facturas_Y_Devoluciones.Fecha_Del_Documento, dbo.Facturas_Y_Devoluciones.Total, dbo.Facturas_Y_Devoluciones.Ciudad,dbo.Facturas_Y_Devoluciones.Estado, dbo.Facturas_Y_Devoluciones.Nombre, dbo.Facturas_Y_Devoluciones.Direccion, dbo.Facturas_Y_Devoluciones.Colonia, dbo.Condiciones_De_Pago.Codigo_De_Condicion_De_Pago As CodigoDePago, dbo.Condiciones_De_Pago.Descripcion As Descripcion, dbo.Condiciones_De_Pago.Ordenamiento As Ordenamiento From dbo.Facturas_Y_Devoluciones LEFT OUTER JOIN dbo.Condiciones_De_Pago on dbo.Facturas_Y_Devoluciones.Codigo_De_Condiciones_De_Pago = dbo.Condiciones_De_Pago.Codigo_De_Condicion_De_Pago where dbo.Facturas_Y_Devoluciones.Folio_Del_Documento ='" + id + "'", cn);
+                if (rfca == "XAXX010101000")
+                {
+                    string s = nombrea.Substring(0, nombrea.IndexOf(" "));
+
+                  
+                    if (s == "LUCIANO")
+                    {
+                        nocte = "01113021";
+                    }
+                    else if (s == "LEANDRA")
+                    {
+                        nocte = "0111101";
+                    }
+                    else if (s == "RAYMUNDO")
+                    {
+                        nocte = "01131853";
+                    }
+                    else if (s == "JESUS")
+                    {
+                        nocte = "01020564";
+                    }
+                   
+
+
+
+                    cmd = new SqlCommand("Select dbo.clientes.Ciudad, dbo.Clientes.Estado, dbo.Clientes.Nombre, dbo.Clientes.Direccion, dbo.Clientes.Colonia, " +
+                  "dbo.Clientes.Codigo_De_Condiciones_De_Pago As CodigoDePago, dbo.Condiciones_De_Pago.Descripcion As Descripcion From dbo.Clientes " +
+                  "LEFT OUTER JOIN dbo.Condiciones_De_Pago on  dbo.Clientes.Codigo_De_Condiciones_De_Pago = dbo.Condiciones_De_Pago.Codigo_De_Condicion_De_Pago" +
+                  " where (dbo.Clientes.Numero_De_Cliente= '"+nocte+"') ", cn);
+                }
+                else
+                {
+                    cmd = new SqlCommand("Select dbo.clientes.Ciudad, dbo.Clientes.Estado, dbo.Clientes.Nombre, dbo.Clientes.Direccion, dbo.Clientes.Colonia, " +
+                   "dbo.Clientes.Codigo_De_Condiciones_De_Pago As CodigoDePago, dbo.Condiciones_De_Pago.Descripcion As Descripcion From dbo.Clientes " +
+                   "LEFT OUTER JOIN dbo.Condiciones_De_Pago on  dbo.Clientes.Codigo_De_Condiciones_De_Pago = dbo.Condiciones_De_Pago.Codigo_De_Condicion_De_Pago" +
+                   " where dbo.Clientes.RFC = '" + rfca + "' ", cn);
+                }
+
+
+               
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
 
@@ -500,26 +670,25 @@ namespace GGGC.Admin.AZ.PagareArellantas
                     lblDireccion.Text = dr["Direccion"].ToString();
                     lblCiudad.Text = dr["Ciudad"].ToString();
                     lblColonia.Text = dr["Colonia"].ToString();
-                    //DateTime deit = Convert.ToDateTime(tblDetalle.Rows[0][14]);
-                    //txtFecha.Value = deit.ToString("dd/MMMM/yyyy").ToUpper();
-                    DateTime deit = Convert.ToDateTime(dr["Fecha_Del_Documento"]);
+                  
+                    DateTime deit = Convert.ToDateTime(fechaa);
                     lblFecha.Text = deit.ToString("dd/MMMM/yyyy").ToUpper();
 
                     string specifierr;
                     System.Globalization.CultureInfo culturer;
                     specifierr = "C";
                     culturer = CultureInfo.CreateSpecificCulture("en-US");
-                    ttal = Convert.ToDecimal(dr["Total"]);
+                    ttal = Convert.ToDecimal(totala);
                     label20.Text = ttal.ToString(specifierr, culturer);
 
 
-                    label18.Text = c.enletras(dr["Total"].ToString()).ToUpper();
+                    label18.Text = c.enletras(totala.ToString()).ToUpper();
 
 
                     lblcond.Text = dr["Descripcion"].ToString().ToUpper();
                     byte estrella = Convert.ToByte(dr["CodigoDePago"]);
                     string cnj = estrella.ToString();
-                    string date = dr["Fecha_Del_Documento"].ToString();
+                    string date = fechaa.ToString();
                     DateTime dat = Convert.ToDateTime(date);
 
 
@@ -537,8 +706,7 @@ namespace GGGC.Admin.AZ.PagareArellantas
 
 
                             {
-                                //btnImpr1.Visibility = Visibility.Hidden;
-                                // lbl666.Content = "KRISHNA";
+                              
                                 break;
                             }
 
@@ -1389,7 +1557,7 @@ namespace GGGC.Admin.AZ.PagareArellantas
         private string fncFechaDeVencimiento(DateTime dteFechaDeVencimiento)
         {
             string dteFechaDeVencimientos = string.Empty; ;
-            if (this.folioid.Text != "")
+            if (folioa != "")
             {
 
 
@@ -1444,6 +1612,7 @@ namespace GGGC.Admin.AZ.PagareArellantas
                 case 36:
                 case 37:
                 case 38:
+                case 60:
 
 
                     {

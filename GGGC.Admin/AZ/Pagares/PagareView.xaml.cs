@@ -123,7 +123,7 @@ namespace GGGC.Admin.AZ.Pagares
 
         {
             NombreImpresora = nombre();
-            radbusy.BusyContent = "Imprimiendo en "+NombreImpresora;
+            radbusy.BusyContent = "Imprimiendo "+NombreImpresora;
 
              radbusy.IsBusy = true;
             //btnImpr1.IsEnabled = false;

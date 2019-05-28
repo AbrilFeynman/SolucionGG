@@ -253,15 +253,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
 
 
-            //descargar(oso);
-
-            //pdfview formu = new pdfview(oso);
-            //formu.ShowDialog();
-            //se manda aimprimir como el pagare para que no lleve el formato
-
-
-            //Reportb1 reportb1 = new Reportb1(FolioFactura, Cantidad, Fecha, CantLetra, numPagare, numpagares, Nombre, Direccion, Colonia, Ciudad, Estado);
-
+         
             System.Drawing.Printing.PrinterSettings printerSettings
               = new System.Drawing.Printing.PrinterSettings();
 
@@ -888,6 +880,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         {
             string trecepcion = DateRecepcionH.SelectedTime.Value.ToString("HH:mm:ss");
             string tEntrega = DateEntregaH.SelectedTime.Value.ToString("HH:mm:ss");
+            int rampa = Convert.ToInt32(Rampa.Text);
             int bytExte1 = fncObtenExteriores1();
             if (tabla.Rows.Count > 0 && txtradial.Text.Length > 4 )
             {
@@ -895,19 +888,30 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 {
                     if (bytExte1 >1)
                     {
+                        if (rampa > 0 & rampa < 5)
+                        {
+                            SaveHeader();
 
-                        SaveHeader();
+                            SaveDetail();
+                            //Limpiar botones
+                            cleanscreen();
+                            DateRecepcionH.SelectedTime = DateTime.Now;
+                            CapturaH.SelectedTime = DateTime.Now;
+                            DateEntregaH.SelectedTime = DateTime.Now;
+                            string oso = m_numerodefolio;
+                            llenarConsulta();
+                            Window1 form = new Window1(oso);
+                            form.ShowDialog();
+                        }
+                        else
+                        {
 
-                        SaveDetail();
-                        //Limpiar botones
-                        cleanscreen();
-                        DateRecepcionH.SelectedTime = DateTime.Now;
-                        CapturaH.SelectedTime = DateTime.Now;
-                        DateEntregaH.SelectedTime = DateTime.Now;
-                        string oso = m_numerodefolio;
-                        llenarConsulta();
-                        Window1 form = new Window1(oso);
-                        form.ShowDialog();
+                            MessageBox.Show("Número de rampa no disponible");
+
+                        }
+
+
+                       
                     }
                     else
                     {

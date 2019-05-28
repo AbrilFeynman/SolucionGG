@@ -196,24 +196,24 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             else if (tanque == 25)
             {
 
-                textBox49.Style.BackgroundColor = Color.DarkBlue;
+                textBox49.Style.BackgroundColor = Color.Gray;
                 //textBox49.Style.LineColor = Color.White;
                 textBox49.Style.Color = Color.White;
                 // textBox49.Style.BorderColor.c = Color.Yellow;
             }
             else if (tanque == 50)
             {
-                textBox50.Style.BackgroundColor = Color.DarkBlue;
+                textBox50.Style.BackgroundColor = Color.Gray;
                 textBox50.Style.Color = Color.White;
             }
             else if (tanque == 75)
             {
-                textBox51.Style.BackgroundColor = Color.DarkBlue;
+                textBox51.Style.BackgroundColor = Color.Gray;
                 textBox51.Style.Color = Color.White;
             }
             else if (tanque == 100)
             {
-                textBox52.Style.BackgroundColor = Color.DarkBlue;
+                textBox52.Style.BackgroundColor = Color.Gray;
                 textBox52.Style.Color = Color.White;
 
             }
