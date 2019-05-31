@@ -558,6 +558,8 @@ namespace GGGC.Admin.Menus
                     mnuGG_Tablero.Items.Add(mnuGG_Modules_TableroNivel1_4);
                     BusinessItem mnuGG_Modules_TableroNivel1_5 = new BusinessItem(mnuGG) { Name = "Cotizaciones", Tag = "0717", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
                     mnuGG_Tablero.Items.Add(mnuGG_Modules_TableroNivel1_5);
+                    BusinessItem mnuGG_Modules_TableroNivel1_6 = new BusinessItem(mnuGG) { Name = "Edi", Tag = "04448", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
+                    mnuGG_Tablero.Items.Add(mnuGG_Modules_TableroNivel1_6);
 
 
                     BusinessItem mnuGG_Modules_Nivel1_1 = new BusinessItem(mnuGG) { Name = "OrdenPatio", Tag = "0117", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
@@ -674,6 +676,8 @@ namespace GGGC.Admin.Menus
 
                     BusinessItem mnuGG_Modulos_Nivel1_3 = new BusinessItem(mnuGG) { Name = "Ajustes", Tag = "0102", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
                     mnuGG_Compras.Items.Add(mnuGG_Modulos_Nivel1_3);
+                    BusinessItem mnuGG_Modulos_Nivel1_4 = new BusinessItem(mnuGG) { Name = "Edi", Tag = "04448", IsSelected = false, IsEnabled = true, Visibility = (int)System.Windows.Visibility.Visible };
+                    mnuGG_Compras.Items.Add(mnuGG_Modulos_Nivel1_4);
 
 
                     //Root

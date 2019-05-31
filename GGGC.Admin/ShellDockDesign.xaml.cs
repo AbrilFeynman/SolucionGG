@@ -542,6 +542,22 @@ namespace GGGC.Admin
                     }
                     break;
 
+                case "04448":
+                    UserControl uc04448 = null;
+                    if (userControls.ContainsKey("04448"))
+                    {
+                        userControls.Remove("04448");
+                        uc04448 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Edi.Ediview", type.Namespace));
+                        userControls.Add("EDI", uc04448);
+                    }
+                    else
+                    {
+                        uc04448 = (UserControl)assembly.CreateInstance(string.Format("{0}.AZ.Edi.Ediview", type.Namespace));
+                        userControls.Add("04448", uc04448);
+                        AddDetail(uc04448, "EDI");
+                    }
+                    break;
+
                 case "04422":
                     UserControl uc04422 = null;
                     if (userControls.ContainsKey("04422"))
