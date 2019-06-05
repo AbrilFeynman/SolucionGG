@@ -566,6 +566,18 @@
     <Compile Include="AZ\Inventarios\Inventarioview.xaml.cs">
       <DependentUpon>Inventarioview.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AZ\Inventarios\metafechas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Inventarios\metafechas.Designer.cs">
+      <DependentUpon>metafechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AZ\Inventarios\metasgral.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AZ\Inventarios\metasgral.Designer.cs">
+      <DependentUpon>metasgral.cs</DependentUpon>
+    </Compile>
     <Compile Include="AZ\Inventarios\RptCliente.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2031,6 +2043,12 @@
     </Compile>
     <EmbeddedResource Include="AZ\Cotizacion\RptBudget.resx">
       <DependentUpon>RptBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Inventarios\metafechas.resx">
+      <DependentUpon>metafechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AZ\Inventarios\metasgral.resx">
+      <DependentUpon>metasgral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AZ\Inventarios\RptCliente.resx">
       <DependentUpon>RptCliente.cs</DependentUpon>

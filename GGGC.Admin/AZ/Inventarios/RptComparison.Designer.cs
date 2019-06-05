@@ -13,12 +13,6 @@ namespace GGGC.Admin.AZ.Inventarios
             Telerik.Reporting.GraphTitle graphTitle1 = new Telerik.Reporting.GraphTitle();
             Telerik.Reporting.CategoryScale categoryScale1 = new Telerik.Reporting.CategoryScale();
             Telerik.Reporting.NumericalScale numericalScale1 = new Telerik.Reporting.NumericalScale();
-            Telerik.Reporting.DataColumn dataColumn1 = new Telerik.Reporting.DataColumn();
-            Telerik.Reporting.DataColumn dataColumn2 = new Telerik.Reporting.DataColumn();
-            Telerik.Reporting.DataColumn dataColumn3 = new Telerik.Reporting.DataColumn();
-            Telerik.Reporting.DataColumn dataColumn4 = new Telerik.Reporting.DataColumn();
-            Telerik.Reporting.DataColumn dataColumn5 = new Telerik.Reporting.DataColumn();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RptComparison));
             Telerik.Reporting.Drawing.ColorPalette colorPalette1 = new Telerik.Reporting.Drawing.ColorPalette();
             Telerik.Reporting.GraphGroup graphGroup2 = new Telerik.Reporting.GraphGroup();
             Telerik.Reporting.GraphGroup graphGroup3 = new Telerik.Reporting.GraphGroup();
@@ -26,6 +20,7 @@ namespace GGGC.Admin.AZ.Inventarios
             Telerik.Reporting.CategoryScale categoryScale2 = new Telerik.Reporting.CategoryScale();
             Telerik.Reporting.NumericalScale numericalScale2 = new Telerik.Reporting.NumericalScale();
             Telerik.Reporting.GraphGroup graphGroup4 = new Telerik.Reporting.GraphGroup();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RptComparison));
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
             this.textBox1 = new Telerik.Reporting.TextBox();
@@ -37,19 +32,18 @@ namespace GGGC.Admin.AZ.Inventarios
             this.cartesianCoordinateSystem1 = new Telerik.Reporting.CartesianCoordinateSystem();
             this.graphAxis1 = new Telerik.Reporting.GraphAxis();
             this.graphAxis2 = new Telerik.Reporting.GraphAxis();
-            this.csvDataSource1 = new Telerik.Reporting.CsvDataSource();
-            this.lineSeries4 = new Telerik.Reporting.LineSeries();
             this.barSeries1 = new Telerik.Reporting.BarSeries();
-            this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
-            this.objectDataSource1 = new Telerik.Reporting.ObjectDataSource();
-            this.objectDataSource2 = new Telerik.Reporting.ObjectDataSource();
-            this.salesData = new Telerik.Reporting.SqlDataSource();
+            this.lineSeries4 = new Telerik.Reporting.LineSeries();
             this.graph2 = new Telerik.Reporting.Graph();
             this.cartesianCoordinateSystem2 = new Telerik.Reporting.CartesianCoordinateSystem();
             this.graphAxis3 = new Telerik.Reporting.GraphAxis();
             this.graphAxis4 = new Telerik.Reporting.GraphAxis();
-            this.lineSeries1 = new Telerik.Reporting.LineSeries();
             this.barSeries2 = new Telerik.Reporting.BarSeries();
+            this.lineSeries1 = new Telerik.Reporting.LineSeries();
+            this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
+            this.objectDataSource1 = new Telerik.Reporting.ObjectDataSource();
+            this.objectDataSource2 = new Telerik.Reporting.ObjectDataSource();
+            this.salesData = new Telerik.Reporting.SqlDataSource();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // pageHeaderSection1
@@ -175,28 +169,21 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graphAxis2.Name = "GraphAxis2";
             this.graphAxis2.Scale = numericalScale1;
             // 
-            // csvDataSource1
+            // barSeries1
             // 
-            dataColumn1.Name = "Numerosucursal";
-            dataColumn2.Name = "TotalActual";
-            dataColumn2.Type = Telerik.Reporting.SimpleType.Integer;
-            dataColumn3.Name = "Codigo_De_Sucursal";
-            dataColumn4.Name = "Nombre";
-            dataColumn5.Name = "TotalAnterior";
-            dataColumn5.Type = Telerik.Reporting.SimpleType.Integer;
-            this.csvDataSource1.Columns.Add(dataColumn1);
-            this.csvDataSource1.Columns.Add(dataColumn2);
-            this.csvDataSource1.Columns.Add(dataColumn3);
-            this.csvDataSource1.Columns.Add(dataColumn4);
-            this.csvDataSource1.Columns.Add(dataColumn5);
-            this.csvDataSource1.FieldSeparators = new char[] {
-        ','};
-            this.csvDataSource1.HasHeaders = true;
-            this.csvDataSource1.Name = "csvDataSource1";
-            this.csvDataSource1.RecordSeparators = new char[] {
-        '\r',
-        '\n'};
-            this.csvDataSource1.Source = resources.GetString("csvDataSource1.Source");
+            this.barSeries1.CategoryGroup = graphGroup1;
+            colorPalette1.Colors.Add(System.Drawing.Color.LimeGreen);
+            this.barSeries1.ColorPalette = colorPalette1;
+            this.barSeries1.CoordinateSystem = this.cartesianCoordinateSystem1;
+            this.barSeries1.DataPointLabelConnectorStyle.Padding.Bottom = Telerik.Reporting.Drawing.Unit.Point(2D);
+            this.barSeries1.DataPointLabelConnectorStyle.Padding.Top = Telerik.Reporting.Drawing.Unit.Point(2D);
+            this.barSeries1.DataPointLabelConnectorStyle.Visible = false;
+            this.barSeries1.DataPointLabelStyle.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
+            this.barSeries1.LegendItem.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
+            this.barSeries1.LegendItem.Value = "2019";
+            graphGroup2.Name = "seriesGroup";
+            this.barSeries1.SeriesGroup = graphGroup2;
+            this.barSeries1.Y = "= Fields.TotalActual";
             // 
             // lineSeries4
             // 
@@ -219,51 +206,6 @@ namespace GGGC.Admin.AZ.Inventarios
             this.lineSeries4.SeriesGroup = graphGroup2;
             this.lineSeries4.Size = null;
             this.lineSeries4.Y = "= Sum(Fields.TotalAnterior)";
-            // 
-            // barSeries1
-            // 
-            this.barSeries1.CategoryGroup = graphGroup1;
-            colorPalette1.Colors.Add(System.Drawing.Color.LimeGreen);
-            this.barSeries1.ColorPalette = colorPalette1;
-            this.barSeries1.CoordinateSystem = this.cartesianCoordinateSystem1;
-            this.barSeries1.DataPointLabelConnectorStyle.Padding.Bottom = Telerik.Reporting.Drawing.Unit.Point(2D);
-            this.barSeries1.DataPointLabelConnectorStyle.Padding.Top = Telerik.Reporting.Drawing.Unit.Point(2D);
-            this.barSeries1.DataPointLabelConnectorStyle.Visible = false;
-            this.barSeries1.DataPointLabelStyle.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
-            this.barSeries1.LegendItem.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
-            this.barSeries1.LegendItem.Value = "2019";
-            graphGroup2.Name = "seriesGroup";
-            this.barSeries1.SeriesGroup = graphGroup2;
-            this.barSeries1.Y = "= Fields.TotalActual";
-            // 
-            // pageFooterSection1
-            // 
-            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(0.521D);
-            this.pageFooterSection1.Name = "pageFooterSection1";
-            // 
-            // objectDataSource1
-            // 
-            this.objectDataSource1.CalculatedFields.AddRange(new Telerik.Reporting.CalculatedField[] {
-            new Telerik.Reporting.CalculatedField("Field1", typeof(string), "Fields.Numerosucursal"),
-            new Telerik.Reporting.CalculatedField("Field2", typeof(decimal), "Fields.TotalActual"),
-            new Telerik.Reporting.CalculatedField("Field3", typeof(string), "Fields.Codigo_De_Sucursal"),
-            new Telerik.Reporting.CalculatedField("Field4", typeof(string), "Fields.Nombre"),
-            new Telerik.Reporting.CalculatedField("Field5", typeof(decimal), "Fields.TotalAnterior")});
-            this.objectDataSource1.Name = "objectDataSource1";
-            // 
-            // objectDataSource2
-            // 
-            this.objectDataSource2.Name = "objectDataSource2";
-            // 
-            // salesData
-            // 
-            this.salesData.ConnectionString = "My.MySettings.TelerikConnectionString";
-            this.salesData.Name = "salesData";
-            this.salesData.Parameters.AddRange(new Telerik.Reporting.SqlDataSourceParameter[] {
-            new Telerik.Reporting.SqlDataSourceParameter("@country", System.Data.DbType.String, "=Parameters.country.Value"),
-            new Telerik.Reporting.SqlDataSourceParameter("@year", System.Data.DbType.Int32, "=Parameters.year.Value"),
-            new Telerik.Reporting.SqlDataSourceParameter("@category", System.Data.DbType.Int32, "=Parameters.category.Value")});
-            this.salesData.SelectCommand = resources.GetString("salesData.SelectCommand");
             // 
             // graph2
             // 
@@ -320,6 +262,20 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graphAxis4.Name = "GraphAxis2";
             this.graphAxis4.Scale = numericalScale2;
             // 
+            // barSeries2
+            // 
+            this.barSeries2.CategoryGroup = graphGroup3;
+            this.barSeries2.CoordinateSystem = this.cartesianCoordinateSystem2;
+            this.barSeries2.DataPointLabelConnectorStyle.Padding.Bottom = Telerik.Reporting.Drawing.Unit.Point(2D);
+            this.barSeries2.DataPointLabelConnectorStyle.Padding.Top = Telerik.Reporting.Drawing.Unit.Point(2D);
+            this.barSeries2.DataPointLabelConnectorStyle.Visible = false;
+            this.barSeries2.DataPointLabelStyle.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
+            this.barSeries2.LegendItem.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
+            this.barSeries2.LegendItem.Value = "2019";
+            graphGroup4.Name = "seriesGroup";
+            this.barSeries2.SeriesGroup = graphGroup4;
+            this.barSeries2.Y = "= Fields.TotalActual";
+            // 
             // lineSeries1
             // 
             this.lineSeries1.CategoryGroup = graphGroup3;
@@ -342,19 +298,34 @@ namespace GGGC.Admin.AZ.Inventarios
             this.lineSeries1.Size = null;
             this.lineSeries1.Y = "= Sum(Fields.TotalAnterior)";
             // 
-            // barSeries2
+            // pageFooterSection1
             // 
-            this.barSeries2.CategoryGroup = graphGroup3;
-            this.barSeries2.CoordinateSystem = this.cartesianCoordinateSystem2;
-            this.barSeries2.DataPointLabelConnectorStyle.Padding.Bottom = Telerik.Reporting.Drawing.Unit.Point(2D);
-            this.barSeries2.DataPointLabelConnectorStyle.Padding.Top = Telerik.Reporting.Drawing.Unit.Point(2D);
-            this.barSeries2.DataPointLabelConnectorStyle.Visible = false;
-            this.barSeries2.DataPointLabelStyle.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
-            this.barSeries2.LegendItem.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
-            this.barSeries2.LegendItem.Value = "2019";
-            graphGroup4.Name = "seriesGroup";
-            this.barSeries2.SeriesGroup = graphGroup4;
-            this.barSeries2.Y = "= Fields.TotalActual";
+            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(0.521D);
+            this.pageFooterSection1.Name = "pageFooterSection1";
+            // 
+            // objectDataSource1
+            // 
+            this.objectDataSource1.CalculatedFields.AddRange(new Telerik.Reporting.CalculatedField[] {
+            new Telerik.Reporting.CalculatedField("Field1", typeof(string), "Fields.Numerosucursal"),
+            new Telerik.Reporting.CalculatedField("Field2", typeof(decimal), "Fields.TotalActual"),
+            new Telerik.Reporting.CalculatedField("Field3", typeof(string), "Fields.Codigo_De_Sucursal"),
+            new Telerik.Reporting.CalculatedField("Field4", typeof(string), "Fields.Nombre"),
+            new Telerik.Reporting.CalculatedField("Field5", typeof(decimal), "Fields.TotalAnterior")});
+            this.objectDataSource1.Name = "objectDataSource1";
+            // 
+            // objectDataSource2
+            // 
+            this.objectDataSource2.Name = "objectDataSource2";
+            // 
+            // salesData
+            // 
+            this.salesData.ConnectionString = "My.MySettings.TelerikConnectionString";
+            this.salesData.Name = "salesData";
+            this.salesData.Parameters.AddRange(new Telerik.Reporting.SqlDataSourceParameter[] {
+            new Telerik.Reporting.SqlDataSourceParameter("@country", System.Data.DbType.String, "=Parameters.country.Value"),
+            new Telerik.Reporting.SqlDataSourceParameter("@year", System.Data.DbType.Int32, "=Parameters.year.Value"),
+            new Telerik.Reporting.SqlDataSourceParameter("@category", System.Data.DbType.Int32, "=Parameters.category.Value")});
+            this.salesData.SelectCommand = resources.GetString("salesData.SelectCommand");
             // 
             // RptComparison
             // 
@@ -395,7 +366,6 @@ namespace GGGC.Admin.AZ.Inventarios
         private Telerik.Reporting.CartesianCoordinateSystem cartesianCoordinateSystem1;
         private Telerik.Reporting.GraphAxis graphAxis1;
         private Telerik.Reporting.GraphAxis graphAxis2;
-        private Telerik.Reporting.CsvDataSource csvDataSource1;
         private Telerik.Reporting.LineSeries lineSeries4;
         private Telerik.Reporting.BarSeries barSeries1;
         private Telerik.Reporting.Graph graph2;

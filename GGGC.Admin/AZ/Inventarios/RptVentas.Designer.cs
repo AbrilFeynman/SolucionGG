@@ -39,6 +39,7 @@ namespace GGGC.Admin.AZ.Inventarios
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
             this.textBox1 = new Telerik.Reporting.TextBox();
             this.textBox4 = new Telerik.Reporting.TextBox();
+            this.lineSeries1 = new Telerik.Reporting.LineSeries();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // detail
@@ -156,6 +157,7 @@ namespace GGGC.Admin.AZ.Inventarios
             this.graph1.PlotAreaStyle.LineColor = System.Drawing.Color.LightGray;
             this.graph1.PlotAreaStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Inch(0D);
             this.graph1.Series.Add(this.barSeries1);
+            this.graph1.Series.Add(this.lineSeries1);
             this.graph1.SeriesGroups.Add(graphGroup4);
             this.graph1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(16.002D), Telerik.Reporting.Drawing.Unit.Cm(9.737D));
             graphTitle2.Style.LineColor = System.Drawing.Color.LightGray;
@@ -266,6 +268,21 @@ namespace GGGC.Admin.AZ.Inventarios
             this.textBox4.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox4.Value = "";
             // 
+            // lineSeries1
+            // 
+            this.lineSeries1.CategoryGroup = graphGroup3;
+            this.lineSeries1.CoordinateSystem = this.cartesianCoordinateSystem1;
+            this.lineSeries1.DataPointStyle.Visible = true;
+            this.lineSeries1.LegendItem.Style.Visible = false;
+            this.lineSeries1.LineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
+            this.lineSeries1.MarkerMaxSize = Telerik.Reporting.Drawing.Unit.Pixel(50D);
+            this.lineSeries1.MarkerMinSize = Telerik.Reporting.Drawing.Unit.Pixel(5D);
+            this.lineSeries1.MarkerSize = Telerik.Reporting.Drawing.Unit.Pixel(5D);
+            this.lineSeries1.MissingValuesLineStyle.LineWidth = Telerik.Reporting.Drawing.Unit.Pixel(1D);
+            this.lineSeries1.SeriesGroup = graphGroup4;
+            this.lineSeries1.Size = null;
+            this.lineSeries1.Y = "=Sum(Fields.Field2)";
+            // 
             // RptVentas
             // 
             this.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
@@ -309,5 +326,6 @@ namespace GGGC.Admin.AZ.Inventarios
         private Telerik.Reporting.GraphAxis graphAxis1;
         private Telerik.Reporting.GraphAxis graphAxis2;
         private Telerik.Reporting.BarSeries barSeries1;
+        private Telerik.Reporting.LineSeries lineSeries1;
     }
 }

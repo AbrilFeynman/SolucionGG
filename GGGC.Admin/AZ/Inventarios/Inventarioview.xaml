@@ -69,7 +69,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            
+
             <RadioButton FontSize="16" x:Name="rdmarca" Grid.Column="1"
     Style="{StaticResource MaterialDesignRadioButton}" Height="30" VerticalAlignment="Bottom" >
                 Marca
@@ -94,7 +94,15 @@
                 Ventas Sucursales Comparison
             </RadioButton>
             <RadioButton FontSize="16" x:Name="rdventas_meta" Grid.Column="1"
-                Style="{StaticResource MaterialDesignRadioButton}" Height="28" VerticalAlignment="Top" Margin="0,200,72,-171" Grid.ColumnSpan="2" Content="Ventas Meta" />
+                Style="{StaticResource MaterialDesignRadioButton}" Height="28" VerticalAlignment="Top" Margin="0,200,72,-171" Grid.ColumnSpan="2" Content="Ventas Meta P/S" />
+            <RadioButton FontSize="16" x:Name="rdventas_meta_gral"
+                Style="{StaticResource MaterialDesignRadioButton}" Height="24"
+                         VerticalAlignment="Top" Margin="83,226,72,-193" Grid.ColumnSpan="3"
+                         Content="Ventas Meta GRAL Mes" />
+            <RadioButton FontSize="16" x:Name="rdventas_meta_fechas"
+                Style="{StaticResource MaterialDesignRadioButton}" Height="24"
+                VerticalAlignment="Top" Margin="83,249,51,-216" Grid.ColumnSpan="3"
+                Content="Ventas Meta GRAL Fechas" />
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -131,7 +139,7 @@
 
                 <telerik:RadDateTimePicker x:Name="messelec" InputMode="DatePicker" DateSelectionMode="Month" Margin="202,24,-202,10" Grid.Row="1"/>
                 <RadioButton FontSize="16" x:Name="Clientes"
-                    Style="{StaticResource MaterialDesignRadioButton}" Height="27" VerticalAlignment="Top" Margin="0,10,78,0" Content="Venta Clientes" Grid.Row="3" />
+                    Style="{StaticResource MaterialDesignRadioButton}" Height="27" VerticalAlignment="Top" Margin="0,7,78,0" Content="Venta Clientes" Grid.Row="3" />
                 <RadioButton FontSize="16" x:Name="Codigo"
                     Style="{StaticResource MaterialDesignRadioButton}" Height="20" VerticalAlignment="Top" Margin="0,41,49,0" Content="Venta Productos" Grid.Row="3" />
             </Grid>

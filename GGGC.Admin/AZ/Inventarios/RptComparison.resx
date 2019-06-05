@@ -117,16 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="csvDataSource1.Source" xml:space="preserve">
-    <value>Numerosucursal,TotalActual,Codigo_De_Sucursal,Nombre,TotalAnterior
-1,2,B01,Felipe Pescador,18
-2,5,B02,Villa 2,19
-3,7,B03,Negrete,22
-4,9,B04,Villa 1,24
-5,10,B05,Blv Durango,22
-7,6,B07,Mayoreo,24
-</value>
-  </data>
   <metadata name="salesData.ParameterValues" xml:space="preserve">
     <value>{@country:United States,@year:2003,@category:1}</value>
   </metadata>
