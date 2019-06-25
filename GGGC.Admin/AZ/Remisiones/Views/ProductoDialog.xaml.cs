@@ -93,7 +93,11 @@ namespace GGGC.Admin.AZ.Remisiones.Views
                 string conect = "SERVER = 192.168.200.20; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007";
                 SqlConnection con = new SqlConnection(conect);
 
-                string cmd = "Select Top 100 percent dbo.Articulos.Codigo_De_Articulo AS Codigo, dbo.Articulos.Descripcion, dbo.Articulos.Ancho, dbo.Articulos.Serie, dbo.Articulos.Rin, dbo.Articulos.Descripcion +' '+dbo.Articulos.Ancho+' '+dbo.Articulos.Codigo_De_Articulo AS NombreCompleto, dbo.Articulos.Descripcion +' '+dbo.Articulos.Ancho +' '+CONVERT (varchar(50), dbo.Articulos.Serie)+' '+CONVERT (varchar(50), dbo.Articulos.Rin) AS Llanta from Articulos ";
+                string cmd = "Select Top 100 percent dbo.Articulos.Codigo_De_Articulo AS Codigo," +
+                    " dbo.Articulos.Descripcion, dbo.Articulos.Ancho, dbo.Articulos.Serie," +
+                    " dbo.Articulos.Rin, dbo.Articulos.Descripcion +' '+dbo.Articulos.Ancho+' '+dbo.Articulos.Codigo_De_Articulo AS" +
+                    " NombreCompleto, dbo.Articulos.Descripcion +' '+dbo.Articulos.Ancho +' '+CONVERT (varchar(50), dbo.Articulos.Serie)+' '+CONVERT (varchar(50), dbo.Articulos.Rin)" +
+                    " AS Llanta from Articulos ";
                 
                  con.Open(); 
                

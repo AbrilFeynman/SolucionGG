@@ -54,7 +54,10 @@
 
 
         </ResourceDictionary>
+
     </UserControl.Resources>
+
+
     <TabControl>
         <TabItem Header="NUEVO" >
             <Grid x:Name="RootGrid" >
@@ -165,7 +168,7 @@
                                     materialDesign:HintAssist.Hint="Captura" Height="25" Margin="0,9,0,0"  />
 
 
-                                   <TextBox  x:Name="Marca" Grid.Row="1" Grid.Column="4"
+                                        <TextBox  x:Name="Marca" Grid.Row="1" Grid.Column="4"
                                 materialDesign:HintAssist.Hint="Marca"
                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
 
@@ -563,29 +566,63 @@
                 </TabControl>
                 <Grid Grid.Row="1" Background="White" x:Name="botones">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="167*"/>
+                        <ColumnDefinition Width="200*"/>
+                        <ColumnDefinition Width="92*"/>
+                        <ColumnDefinition Width="111*"/>
+                        <ColumnDefinition Width="65*"/>
+                        <ColumnDefinition Width="94"/>
+                        <ColumnDefinition Width="72*"/>
 
 
                     </Grid.ColumnDefinitions>
-                    <Button  x:Name="AddButton" Click="Add"  Content="Agregar"  Grid.Column="0"
-                Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                  Height="29" Width="87" VerticalAlignment="Center"
-                ToolTip="Agregue articulos a la orden de patio." />
 
 
-                    <Button  x:Name="DeleteButton" Content="Eliminar"  Click="Delete"  Grid.Column="1"
-                   Style="{StaticResource MaterialDesignRaisedAccentButton}"
-                              Height="29" Width="87"
-                             VerticalAlignment="Center"  HorizontalAlignment="Left"
-                         BorderBrush="#d91e18"
-                         Background="#d91e18"
-                ToolTip="Seleccione el articulo que desea eliminar."/>
+                    <telerik:RadMultiColumnComboBox DisplayMemberPath="Codigo" x:Name="combo" 
+                                                    AutoCompleteMode="Search" KeyDown="Combo_KeyDown"
+                                                    CloseDropDownAfterSelectionInput="True" 
+                                NullText="Codigo..." VerticalContentAlignment="Top" VerticalAlignment="Bottom"
+                                SelectionChanged="RadMultiColumnComboBox_SelectionChanged"
+                                DropDownWidth="470"
+                                DropDownHeight="255" Margin="0,0,10,0" Height="27" >
+                        <telerik:RadMultiColumnComboBox.ItemsSourceProvider  >
+                            <telerik:GridViewItemsSourceProvider AutoGenerateColumns="False"  IsReadOnly="True" x:Name="cmbName">
+                                <telerik:GridViewItemsSourceProvider.Columns>
+                                    <telerik:GridViewDataColumn IsReadOnly="True" Header="Codigo" DataMemberBinding="{Binding Codigo}" />
+                                    <telerik:GridViewDataColumn IsReadOnly="True" Header="Descripcion" DataMemberBinding="{Binding Descripcion}" />
+
+                                    <telerik:GridViewDataColumn IsReadOnly="True" Header="Ancho" DataMemberBinding="{Binding Ancho}" />
+                                    <telerik:GridViewDataColumn IsReadOnly="True" Header="Serie" DataMemberBinding="{Binding Serie}" />
+                                    <telerik:GridViewDataColumn IsReadOnly="True" Header="Rin" DataMemberBinding="{Binding Rin}" />
+                                    <telerik:GridViewDataColumn IsReadOnly="True" IsVisible="False" Header="NombrCompleto" DataMemberBinding="{Binding NombreCompleto}" />
+
+                                </telerik:GridViewItemsSourceProvider.Columns>
+                            </telerik:GridViewItemsSourceProvider>
+                        </telerik:RadMultiColumnComboBox.ItemsSourceProvider>
+                    </telerik:RadMultiColumnComboBox>
+                    <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" IsReadOnly="True"
+                             Margin="0,10,0,0" TextWrapping="Wrap" x:Name="descript"
+                             VerticalAlignment="Top" Width="200" FontSize="13"   materialDesign:HintAssist.Hint="Descripción"/>
+                    <ComboBox x:Name="radComboNivel" FontSize="16" SelectionChanged="nivel_SelectioChanged" 
+                                         materialDesign:HintAssist.Hint="Nivel"
+                                         HorizontalAlignment="Left" DisplayMemberPath="Nivel_De_Precios" Height="29"
+                                        Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom" Width="78" Margin="9,0,0,0"/>
+
+                    <TextBox x:Name="precioCodigo" Grid.Column="3" HorizontalAlignment="Left" IsReadOnly="True" Height="25" 
+                             TextWrapping="Wrap"   materialDesign:HintAssist.Hint="Precio" FontSize="15" VerticalAlignment="Top" Width="107" Margin="0,8,0,0" />
+                    <Label FontSize="15" TabIndex="0" x:Name="Total"  BorderBrush="#C1C1C1" 
+                           Height="28" VerticalAlignment="Center" VerticalContentAlignment="Bottom"
+                           Content="Total"  Grid.Column="5" Grid.ColumnSpan="2" Margin="2,8,70,1" />
+
+                    <Controls:UpDown NumberDecimalDigits="0"  x:Name="Cantidad"
+                                     ValueChanged="quantity_ValueChangedx"    MinValue="1"
+                                     Grid.Column="4" Value="{Binding Cantidad, Mode=TwoWay}" HorizontalAlignment="Left" 
+                                     VerticalAlignment="Top" Height="32" FontSize="15" Width="65" Margin="0,3,0,0"/>
+                    <Button  x:Name="AddButton" Click="Add"  Content="+" FontSize="20" Grid.Column="6"
+                Style="{StaticResource MaterialDesignRaisedDarkButton}" HorizontalAlignment="Right"
+                  Height="29" Width="65" VerticalAlignment="Center"
+                ToolTip="Agregue articulos a la orden de patio." Margin="0,4" />
+
 
                 </Grid>
                 <Grid Grid.Row="2" Background="White" x:Name="contentgrid" >
@@ -599,20 +636,20 @@
 
                     <Grid x:Name="encabezado" Grid.Row="0"  Background="#B3D1E8" >
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="82*"/>
-                            <ColumnDefinition Width="235*"/>
-                            <ColumnDefinition Width="90*"/>
-                            <ColumnDefinition Width="117*"/>
-                            <ColumnDefinition Width="60*"/>
-                            <ColumnDefinition Width="107*"/>
-                            <ColumnDefinition Width="116*"/>
+                            <ColumnDefinition Width="75*"/>
+                            <ColumnDefinition Width="236*"/>
+                            <ColumnDefinition Width="78*"/>
+                            <ColumnDefinition Width="102*"/>
+                            <ColumnDefinition Width="43*"/>
+                            <ColumnDefinition Width="108*"/>
+                            <ColumnDefinition Width="159*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="Codigo" TextAlignment="Left"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="26" Margin="4,12,10,8" />
-                        <TextBlock Grid.Column="1" Text="Descripción" TextAlignment="Left"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="26" Margin="0,12,0,8"/>
-                        <TextBlock Grid.Column="2" Text="Cantidad" TextAlignment="Center" HorizontalAlignment="Stretch"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="0,12,0,4"/>
-                        <TextBlock Grid.Column="3" Text="Precio de Lista" TextAlignment="Center" HorizontalAlignment="Right" VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="2,12,0,4"/>
-                        <TextBlock Grid.Column="4" Text="Nivel" TextAlignment="Center"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="2,12,11,4"/>
-                        <TextBlock Grid.Column="5" Text="Precio de Venta" TextAlignment="Center"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="32" Margin="6,12,5,2" RenderTransformOrigin="0.5,0.5">
+                        <TextBlock Grid.Column="0" Text="Codigo" TextAlignment="Left"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="26" Margin="4,8,10,5" />
+                        <TextBlock Grid.Column="1" Text="Descripción" TextAlignment="Left"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="26" Margin="0,8,0,5"/>
+                        <TextBlock Grid.Column="2" Text="Cantidad" TextAlignment="Center" HorizontalAlignment="Stretch"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="0,8,0,1"/>
+                        <TextBlock Grid.Column="3" Text="Precio de Lista" TextAlignment="Center" HorizontalAlignment="Right" VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="0,8,0,1" Width="89"/>
+                        <TextBlock Grid.Column="4" Text="Nivel" TextAlignment="Center"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="2,8,11,1"/>
+                        <TextBlock Grid.Column="5" Text="Precio de Venta" TextAlignment="Right"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="32" Margin="6,8,5,-1" RenderTransformOrigin="0.5,0.5">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -622,7 +659,7 @@
                                 </TransformGroup>
                             </TextBlock.RenderTransform>
                         </TextBlock>
-                        <TextBlock Grid.Column="6" Text="Precio Extendido" TextAlignment="Center"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="9,13,0,3" />
+                        <TextBlock Grid.Column="6" Text="Precio Extendido" TextAlignment="Left"  VerticalAlignment="Center"  FontFamily="Segoe UI" Foreground="#3F3F3F"  FontSize="14" Height="30" Margin="11,10,43,-1" />
 
                     </Grid>
                     <ScrollViewer Grid.Row="1" Height="{Binding InvoiceGrid.ActualHeight}" VerticalScrollBarVisibility="Auto" BorderBrush="AliceBlue">
@@ -643,11 +680,8 @@
                                 <ColumnDefinition Width="53*"/>
                                 <ColumnDefinition Width="105*"/>
                                 <ColumnDefinition Width="119*"/>
+                                <ColumnDefinition Width="53*"/>
                             </Grid.ColumnDefinitions>
-                            <Rectangle Grid.Row="0" Height="1"  StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
-                            <Rectangle Grid.Row="1" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
-                            <Rectangle Grid.Row="2" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
-                            <Rectangle Grid.Row="3" Height="1" StrokeThickness="0.75" VerticalAlignment="Bottom" Grid.ColumnSpan="7"  StrokeDashArray="4,4" Stroke="#FFCECECE"/>
 
                         </Grid>
 

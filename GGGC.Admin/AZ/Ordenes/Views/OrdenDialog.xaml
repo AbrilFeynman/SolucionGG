@@ -144,7 +144,7 @@
 
         </Controls:UpDown>
 
-        <Controls:DoubleTextBox FontSize="15" Visibility="Hidden" IsReadOnly="True" TextAlignment="Right" BorderBrush="#C1C1C1" Name="rate" Height="30" Margin="349,2,160,0" Grid.Row="4"/>
+        <Controls:DoubleTextBox FontSize="15" Visibility="Visible" IsReadOnly="True" TextAlignment="Right" BorderBrush="#C1C1C1" Name="rate" Height="30" Margin="349,2,160,0" Grid.Row="4"/>
         <!--<local:AddCompra HorizontalAlignment="Left" Height="100" Margin="222,10,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="100"/>-->
         <Label FontSize="15" TabIndex="0" x:Name="Total"  BorderBrush="#C1C1C1" Height="28" VerticalAlignment="Center" Margin="522,2,4,2"  Grid.Row="4" />
         <telerik:RadComboBox x:Name="radComboNivel" FontSize="16" SelectionChanged="nivel_SelectioChanged" HorizontalAlignment="Left" DisplayMemberPath="Nivel_De_Precios" Height="25" Margin="61,5,0,0" Grid.Row="4" VerticalAlignment="Top" Width="95"/>

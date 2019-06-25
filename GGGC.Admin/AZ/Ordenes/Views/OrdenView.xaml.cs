@@ -21,6 +21,7 @@ using System.Text.RegularExpressions;
 using Telerik.Windows.Controls;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
+using System.Collections.ObjectModel;
 
 namespace GGGC.Admin.AZ.Ordenes.Views
 {
@@ -29,8 +30,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
     /// </summary>
     public partial class OrdenView : UserControl
     {
-
-
+        bool onInit;
+        OrdenItem m_invoiceItem;
+        double rate = 0;
         #region Fields
         const int m_columnCount = 9;
         private double m_totalDue;
@@ -50,12 +52,9 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         string item_telefono = "";
         string item_direccion = "";
         string m_numerodefolio = "";
-        // Pendientes pendientes = new Pendientes();
-        // Pendientes.
-
-        //AddressDialog m_addressPopup;
-        //BillingInformation m_billInfo;
-        // ProductList m_productList;
+        bool paq = false;
+        string paq_code = "";
+        string nivelpaq = "";
         OrdenDialog m_producto;
         #endregion
         #region Properties
@@ -94,6 +93,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             InitializeComponent();
             Initialize();
             llenarcombos();
+            llenarcombazo();
         }
 
         private void llenarcombos()
@@ -101,34 +101,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             DateRecepcionH.SelectedTime = DateTime.Now;
             DateEntregaH.SelectedTime = DateTime.Now;
             CapturaH.SelectedTime = DateTime.Now;
-            //Marca.Items.Add("Nissan");
-            //Marca.Items.Add("Lambo");
-            //Marca.Items.Add("Luxe");
-            //Marca.Items.Add("Mattel");
-
-
-            //Modelo.Items.Add("Carry");
-            //Modelo.Items.Add("Tesla");
-            //Modelo.Items.Add("Nigg");
-            //Modelo.Items.Add("Boss");
-
-            //Ano.Items.Add("1990");
-            //Ano.Items.Add("1993");
-            //Ano.Items.Add("1800");
-            //Ano.Items.Add("2018");
-
-
-            //Placas.Items.Add("zzz");
-            //Placas.Items.Add("ttt");
-            //Placas.Items.Add("aaa");
-            //Placas.Items.Add("ggg");
-
-
-
-            //Kilometraje.Items.Add("100+");
-            //Kilometraje.Items.Add("1000+");
-            // Kilometraje.Items.Add("10000+");
-            //Kilometraje.Items.Add("100000+");
+          
 
         }
 
@@ -224,22 +197,152 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         }
 
-        private void Add(object sender, RoutedEventArgs e)
+        private int fncalllevel(string paquete, string nivel)
         {
-            m_fieldsPopup = new OrdenDialog();
-            //m_fieldsPopup = new CompraDialog(m_productList);
-            m_fieldsPopup.CloseRequested += myDialog_CloseRequested;
-            m_fieldsPopup.UpdateRequested += myDialog_UpdateRequested;
-            m_fieldsPopup.Activated += fieldsPopup_Opened;
-            m_fieldsPopup.Background = new SolidColorBrush(Colors.Red);
-            RootGrid.Opacity = 0.1;
-            m_fieldsPopup.Opacity = 1;
-            m_fieldsPopup.ShowDialog();
-            RootGrid.Opacity = 1;
-           // lblGas.
-           //chk
+            int noart = 0;
+            string conect = "SERVER = 192.168.200.10; DATABASE = Punto_De_venta; USER ID = sa; PASSWORD = dgo2007";
+            SqlConnection con = new SqlConnection(conect);
+
+            string cmd = " SELECT Paquetes_Contenido.Codigo_De_Articulo, Precios.Precio FROM" +
+           "  Paquetes_Contenido LEFT OUTER JOIN  Precios ON Paquetes_Contenido.Codigo_De_Articulo =" +
+           " Precios.Codigo_De_Articulo WHERE(Paquetes_Contenido.Codigo_De_Paquete = '"+paquete+"') AND (Precios.Nivel_De_Precios = '"+nivel+"')";
+
+            try { con.Open(); }
+            catch (SqlException ex) { MessageBox.Show("Revise su conexión a internet"); }
+
+            SqlDataAdapter sda = new SqlDataAdapter(cmd, conect);
+
+            DataSet dsPubs = new DataSet("Pubs");
+
+            sda.Fill(dsPubs, "LLantas");
+            DataTable DtblPaq = new DataTable();
+            DtblPaq = dsPubs.Tables["LLantas"];
+            con.Close();
+            noart = DtblPaq.Rows.Count;
+
+            return noart;
+
         }
 
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            
+           
+            //VALIDACIONES ANTES DE GUARDAR
+            if (combo.SelectedIndex > -1 && radComboNivel.SelectedIndex >-1)
+            {
+                var objPrecio = radComboNivel.SelectedItem;
+                nivelpaq = Convert.ToString(((System.Data.DataRowView)objPrecio).Row.ItemArray[1]);
+                if (paq == true)
+                {
+                    int noart = 0;
+                    int nopaqt = 0;
+                    noart = fncalllevel(paq_code, nivelpaq);
+                    //seleccionar toda la tabla 
+                    
+
+                    string conect = "SERVER = 192.168.200.10; DATABASE = Punto_De_venta; USER ID = sa; PASSWORD = dgo2007";
+                    SqlConnection con = new SqlConnection(conect);
+
+                    string cmd = "SELECT     Paquetes_Contenido.*, Articulos.Descripcion AS Descripcion " +
+                        "FROM Paquetes_Contenido INNER JOIN Articulos ON Paquetes_Contenido.Codigo_De_Articulo =" +
+                        " Articulos.Codigo_De_Articulo WHERE(Paquetes_Contenido.Codigo_De_Paquete = '" + paq_code + "')";
+                    try { con.Open(); }
+                    catch (SqlException ex) { MessageBox.Show("Revise su conexión a internet"); }
+
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd, conect);
+
+                    DataSet dsPubs = new DataSet("Pubs");
+
+                    sda.Fill(dsPubs, "LLantas");
+                    DataTable DtblPaq = new DataTable();
+                    DtblPaq = dsPubs.Tables["LLantas"];
+                    con.Close();
+                    nopaqt = DtblPaq.Rows.Count;
+                    //por cada elemento agregarlo a los renglones 
+
+                    if (noart<nopaqt)
+                    { MessageBox.Show("No todos los articulos contienen el nivel seleccionado"); }
+                    else
+                    {
+                        foreach (DataRow Registro in DtblPaq.Rows)
+                        {
+                            m_invoiceItem.Nivel = nivelpaq;
+                            m_invoiceItem.Cantidad = Convert.ToInt32(Registro[2]);
+                            m_invoiceItem.Codigo = Registro[1].ToString();
+                            m_invoiceItem.Descripcion = Registro[4].ToString();
+                            DataTable tblprecios = new DataTable();
+
+                            tblprecios = PaqPrecios(m_invoiceItem.Codigo);
+                            // string oso = tblprecios.Select("Nivel_De_Precios = PL").ToString();
+
+                            DataRow[] resultss = tblprecios.AsEnumerable().Where(row => row.Field<string>("Nivel_De_Precios").Contains("PL")).Select(row => row).ToArray<DataRow>();
+                            var ratex = Convert.ToInt32(resultss[0][2]);
+                            DataRow[] resultsx = tblprecios.AsEnumerable().Where(row => row.Field<string>("Nivel_De_Precios").Contains(nivelpaq)).Select(row => row).ToArray<DataRow>();
+                            var ratexc = Convert.ToInt32(resultsx[0][2]);
+
+                            m_invoiceItem.Preciolista = ratex;
+                            m_invoiceItem.Rate = ratexc;
+
+                            m_invoiceItem.Total = m_invoiceItem.Cantidad * m_invoiceItem.Rate;
+                            OrdenItem item = m_invoiceItem;
+                            AddItem(item, false);
+                            UpdateTotal();
+                            agreItem(item);
+                            clnart();
+
+                        }
+
+                        Cantidad.IsReadOnly = false;
+
+                    }
+
+                   
+
+                }
+                else
+                {
+                    OrdenItem item = m_invoiceItem;
+                    AddItem(item, false);
+                    UpdateTotal();
+                    agreItem(item);
+                    clnart();
+                }
+                
+              
+
+
+            }
+            else
+            {
+
+                MessageBox.Show("Llene todos los campos de articulo."); 
+
+            }
+
+            // m_fieldsPopup.Close();
+
+            //limpiar clase y controles
+
+
+
+
+
+
+
+        }
+        private void clnart()
+        {
+            combo.SelectedIndex = -1;
+            combo.SelectedValue = null;
+            descript.Text = "";
+            radComboNivel.SelectedIndex = -1;
+            precioCodigo.Text = "";
+            Cantidad.Value = 1;
+            Total.Content = "Total";
+
+            rate = 0.00;
+        }
         private void RadButton_Click(object sender, RoutedEventArgs e)
 
         {
@@ -335,8 +438,8 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         void myDialog_UpdateRequested(object sender, EventArgs e)
         {
-           
-            
+
+
             OrdenItem item = (e as FieldsUpdateEventArgs).UpdatedFields;
             AddItem(item, false);
             UpdateTotal();
@@ -394,7 +497,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                     return;
 
                 RemoveItem(m_selectedIndex);
-                this.DeleteButton.IsEnabled = false;
+                //this.DeleteButton.IsEnabled = false;
             }
             
            
@@ -425,14 +528,14 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
         private void InvoiceGrid_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            if (e.ClickCount == 2)
-            {
-                InvoiceGrid_DoubleTapped(sender, e);
-            }
-            else
-            {
-                InvoiceGrid_Tapped(sender, e);
-            }
+            //if (e.ClickCount == 2)
+            //{
+            //    InvoiceGrid_DoubleTapped(sender, e);
+            //}
+            //else
+            //{
+            //    InvoiceGrid_Tapped(sender, e);
+            //}
 
         }
 
@@ -441,7 +544,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         {
 
             FrameworkElement element = null;
-            this.DeleteButton.IsEnabled = true;
+           // this.DeleteButton.IsEnabled = true;
             if ((element = e.OriginalSource as FrameworkElement) != null)
             {
                 m_selectedIndex = Grid.GetRow(element);
@@ -541,6 +644,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             SetCell(rowIndex, 4, item.Nivel.ToString());
             SetCell(rowIndex, 5, "$" + item.Rate.ToString("#,###.00", CultureInfo.InvariantCulture));
             SetCell(rowIndex, 6, "$" + item.Total.ToString("#,###.00", CultureInfo.InvariantCulture));
+            SetCell(rowIndex, 7, item.Codigo.ToString());
             //SetCell(rowIndex, 7, "$" + item.Total.ToString("#,###.00", CultureInfo.InvariantCulture));
             //SetCell(rowIndex, 8, "$" + item.Iva.ToString("#,###.00", CultureInfo.InvariantCulture));
 
@@ -607,7 +711,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 TextBlock textBlockDollor = null;
                 textBlockDollor = new TextBlock();
                 textBlockDollor.Text = "$";
-                textBlockDollor.FontSize = 14;
+                textBlockDollor.FontSize = 12;
                 textBlockDollor.FontFamily = new FontFamily("Segoe UI");
                 textBlockDollor.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
                 //textBlockDollor.Foreground = new SolidColorBrush(Colors.Black);
@@ -624,7 +728,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 TextBlock textBlock = null;
                 textBlock = new TextBlock();
                 textBlock.Text = value.Trim('$');
-                textBlock.FontSize = 14;
+                textBlock.FontSize = 12;
                 textBlock.FontFamily = new FontFamily("Segoe UI");
                 textBlock.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
                 //HorizontalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F"
@@ -646,12 +750,12 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                 Grid.SetRow(textBlock, 0);
                 amountGrid.Children.Add(textBlock);
             }
-            else if (columnIndex == 2 || columnIndex == 4 )
+            else if (columnIndex == 2 || columnIndex == 4)
             {
                 TextBlock textBlock = null;
                 textBlock = new TextBlock();
                 textBlock.Text = value.Trim('$');
-                textBlock.FontSize = 14;
+                textBlock.FontSize = 12;
                 textBlock.FontFamily = new FontFamily("Segoe UI");
                 textBlock.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
                 //HorizontalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F"
@@ -670,13 +774,23 @@ namespace GGGC.Admin.AZ.Ordenes.Views
 
 
             }
+
+            else if (columnIndex == 7)
+            {
+                Button button1 = null;
+                button1 = new Button();
+                button1.Content = "X";
+                button1.Click += borrar;
+                SetCell1(rowIndex, columnIndex, button1);
+
+            }
             else
             {
                 //Data
                 TextBlock textBlock = null;
                 textBlock = new TextBlock();
                 textBlock.Text = value.Trim('$');
-                textBlock.FontSize = 14;
+                textBlock.FontSize = 12;
                 textBlock.FontFamily = new FontFamily("Segoe UI");
                 textBlock.Foreground = new SolidColorBrush(Color.FromArgb(255, 63, 63, 63));
                 //HorizontalAlignment="Center" FontWeight="Normal" FontFamily="Segoe UI" Foreground="#3F3F3F"
@@ -695,7 +809,45 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             }
         }
 
+        public void borrar(object sender, RoutedEventArgs e)
+        {
+            if (tabla.Rows.Count == 0)
+            {
+
+            }
+            else
+            {
+                FrameworkElement element = null;
+                //this.DeleteButton.IsEnabled = true;
+                if ((element = e.OriginalSource as FrameworkElement) != null)
+                {
+                    m_selectedIndex = Grid.GetRow(element);
+                }
+                
+
+
+
+
+
+
+
+                tabla.Rows[m_selectedIndex].Delete();
+                if (m_selectedIndex == -1)
+                    return;
+
+                RemoveItem(m_selectedIndex);
+                //this.DeleteButton.IsEnabled = false;
+            }
+
+        }
         private void SetCell(int rowIndex, int columnIndex, TextBlock textBlock)
+        {
+            Grid.SetColumn(textBlock, columnIndex);
+            Grid.SetRow(textBlock, rowIndex);
+            InvoiceGrid.Children.Add(textBlock);
+        }
+
+        private void SetCell1(int rowIndex, int columnIndex, Button textBlock)
         {
             Grid.SetColumn(textBlock, columnIndex);
             Grid.SetRow(textBlock, rowIndex);
@@ -880,7 +1032,15 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         {
             string trecepcion = DateRecepcionH.SelectedTime.Value.ToString("HH:mm:ss");
             string tEntrega = DateEntregaH.SelectedTime.Value.ToString("HH:mm:ss");
-            int rampa = Convert.ToInt32(Rampa.Text);
+            int rampa = 0;
+            if (string.IsNullOrWhiteSpace(Rampa.Text))
+            {  }
+            else
+            {
+             
+                rampa = Convert.ToInt32(Rampa.Text);
+            }
+            
             int bytExte1 = fncObtenExteriores1();
             if (tabla.Rows.Count > 0 && txtradial.Text.Length > 4 )
             {
@@ -1297,7 +1457,7 @@ namespace GGGC.Admin.AZ.Ordenes.Views
                     return;
 
                 RemoveItem(m_selectedIndex);
-                this.DeleteButton.IsEnabled = false;
+               // this.DeleteButton.IsEnabled = false;
             }
 
         }
@@ -1306,6 +1466,153 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         {
 
         }
+
+
+        DataTable dtbl = new DataTable();
+
+        private void llenarcombazo()
+        {
+            DataTable dtbl1 = new DataTable();
+
+            try
+            {
+
+                string conect = "SERVER = 192.168.200.10; DATABASE = Punto_De_venta; USER ID = sa; PASSWORD = dgo2007";
+                SqlConnection con = new SqlConnection(conect);
+
+                string cmd = "Select top 3 dbo.Articulos.Codigo_De_Articulo AS Codigo, dbo.Articulos.Descripcion, dbo.Articulos.Ancho,ISNULL(dbo.Articulos.Serie, 0 )As Serie," +
+                    "ISNULL(dbo.Articulos.Rin, 0) as Rin , dbo.Articulos.Descripcion AS NombreCompleto,dbo.Articulos.Descripcion + ' ' + dbo.Articulos.Ancho + ' ' + CONVERT(varchar(50)," +
+                    "ISNULL(dbo.Articulos.Serie, 0)) + ' ' + CONVERT(varchar(50), ISNULL(dbo.Articulos.Rin, 0)) AS Llanta from Articulos where " +
+                    "(Articulos.Marca in('BFG', 'HANK', 'MICH', 'TORN', 'UNIR', 'YOKO', 'TIG', 'GT', 'LAUF')) and Articulos.Baja_Logica = 0 ";
+                try { con.Open(); }
+                catch (SqlException ex) { MessageBox.Show("Revise su conexión a internet"); }
+
+                SqlDataAdapter sda = new SqlDataAdapter(cmd, conect);
+
+                DataSet dsPubs = new DataSet("Pubs");
+
+                sda.Fill(dsPubs, "LLantas");
+
+                dtbl1 = dsPubs.Tables["LLantas"];
+
+
+
+
+
+
+
+               // cmbName.ItemsSource = dsPubs.Tables["LLantas"].DefaultView;
+
+
+                con.Close();
+
+                DataTable tblpaquetes = Paquetes();
+
+
+                var query2 = from table1 in tblpaquetes.AsEnumerable()
+                             
+
+                    select new
+                             {
+                                Codigo = table1.Field<string>("Codigo_De_Paquete"),
+                                Descripcion = table1.Field<string>("Descripcion"),
+                                Ancho = "0",
+                                Serie = "0",
+                                Rin = "0",
+                                NombreCompleto = "0",
+                                Llanta = "0",
+                    };
+
+                DataTable nueva = new DataTable();
+                nueva.Columns.Add("Codigo", typeof(string));
+                nueva.Columns.Add("Descripcion", typeof(string));
+                nueva.Columns.Add("Ancho", typeof(string));
+                nueva.Columns.Add("Serie", typeof(Single));
+                nueva.Columns.Add("Rin", typeof(Single));
+                nueva.Columns.Add("NombreCompleto", typeof(string));
+                nueva.Columns.Add("Llanta", typeof(string));
+
+
+                foreach (var item in query2)
+                {
+
+                    nueva.Rows.Add(item.Codigo, item.Descripcion,item.Ancho,item.Serie,item.Rin,item.NombreCompleto,item.Llanta );
+                   
+                }
+
+                var test = new ObservableCollection<Test>();
+                foreach (DataRow row in dtbl.Rows)
+                {
+                    var obj = new Test()
+                    {
+                        id_test = (string)row.ItemArray[0],
+                        name = (string)row.ItemArray[1]
+
+                    };
+                    test.Add(obj);
+
+
+
+
+                }
+
+                dtbl1.Merge(nueva);
+                cmbName.ItemsSource = dtbl1.DefaultView;
+
+            }
+
+            catch (InvalidCastException e)
+            {
+                MessageBox.Show("No se pudo llenar los campos" + e.ToString());
+            }
+
+        }
+
+        static DataTable Paquetes()
+        {
+
+
+
+            string conect = "SERVER = 192.168.200.10; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
+
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+            DataTable tbl2 = new DataTable();
+
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT Paquetes.Codigo_De_Paquete, Articulos.Descripcion " +
+                "FROM         Articulos INNER JOIN Paquetes ON Articulos.Codigo_De_Articulo = Paquetes.Codigo_De_Paquete " +
+                "WHERE(Articulos.Baja_Logica = 0)", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "Vista");
+            
+            tbl2 = dsPubs.Tables["Vista"];
+            sqlconn.Close();
+
+            return tbl2;
+
+        }
+
+
+        public ObservableCollection<Test> test;
+
+        public class Test
+        {
+            public string id_test { get; set; }
+            public string name { get; set; }
+        }
+
+
 
         private void Exportar_Click(object sender, RoutedEventArgs e)
         {
@@ -1362,7 +1669,35 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             return dtbl;
         }
 
+        static DataTable PaqPrecios(string articulo)
+        {
+            string conect = "SERVER = 192.168.200.10; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007 ";
 
+            SqlConnection sqlconn = new SqlConnection(conect);
+            try
+            {
+                sqlconn.Open();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERROR DE CONEXION" + ex.Message);
+            }
+
+
+
+
+            //SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM OrderHeader WHERE OrderID = " + folio + " ", sqlconn);
+            SqlDataAdapter adapter = new SqlDataAdapter("Select * from Precios where Codigo_De_Articulo =  '" + articulo + "' ", sqlconn);
+            DataSet dsPubs = new DataSet("Pubs");
+            adapter.Fill(dsPubs, "OrderHeader");
+            DataTable dtbl = new DataTable();
+
+            dtbl = dsPubs.Tables["OrderHeader"];
+            sqlconn.Close();
+
+            return dtbl;
+        }
         static DataTable GetDetail(string folio)
         {
             string conect = "SERVER = gggctserver.database.windows.net; DATABASE = devArellantas; USER ID = sysadmin_gg_gc_sa_dgo_testing; PASSWORD = GRUPO.gu@di@n@.Grupo.Campos_#Staging_Test.2099 ";
@@ -1398,7 +1733,58 @@ namespace GGGC.Admin.AZ.Ordenes.Views
         {
 
         }
+        private void quantity_ValueChangedx(object sender, DependencyPropertyChangedEventArgs e)
+        {
 
+
+            if (onInit)
+                return;
+            if (rate != 0)
+            {
+
+                double value = rate;
+                {
+                    int quantityValue = GetQuantityAsInt();
+                    CalculateTax();
+                    UpdateTotalAmount();
+
+                    //rate.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 0, 64, 81));
+                    //  CalculateTax();
+
+                }
+            }
+        }
+        private void CalculateTax()
+        {
+            m_invoiceItem.Cantidad = GetQuantityAsInt();
+            double currentRate = (double)Cantidad.Value;
+
+            int currentQuantity = GetQuantityAsInt();
+            double precio = m_invoiceItem.Rate;
+            double totall = currentQuantity * precio;
+            m_invoiceItem.Total = totall;
+
+
+            Total.Content = "$" + totall.ToString("#,###.00", CultureInfo.InvariantCulture);
+
+
+
+        }
+        private void UpdateTotalAmount()
+        {
+
+            int quantityValue = GetQuantityAsInt();
+            double rateValue = rate;
+            
+            double calculatedTax = m_invoiceItem.Iva;
+            double taxedAmount = (quantityValue * rateValue) + calculatedTax;
+            //m_invoiceItem.Rate = taxedAmount;
+            this.Total.Content = "$" + taxedAmount.ToString("#,###.00", CultureInfo.InvariantCulture);
+        }
+        public int GetQuantityAsInt()
+        {
+            return (Cantidad.Value is double) ? (int)Cantidad.Value : (int)(double)Cantidad.Value;
+        }
         private void quantity_ValueChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (Cantidadd.Value > 0)
@@ -1425,6 +1811,197 @@ namespace GGGC.Admin.AZ.Ordenes.Views
             }
            
 
+        }
+        private void nivel_SelectioChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var objPrecio = radComboNivel.SelectedItem;
+            //((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString();
+            if (objPrecio != null)
+            {
+               double practual=Convert.ToDouble( ((System.Data.DataRowView)objPrecio).Row.ItemArray[2]);
+
+
+
+                string precioactual = ((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString();
+                precioCodigo.Text = "$" + practual.ToString("#,###.00", CultureInfo.InvariantCulture);
+                m_invoiceItem.Rate = Convert.ToDouble(((System.Data.DataRowView)objPrecio).Row.ItemArray[2].ToString());
+                m_invoiceItem.Nivel = ((System.Data.DataRowView)objPrecio).Row.ItemArray[1].ToString();
+                // m_invoiceItem.Preciolista =
+                m_invoiceItem.Cantidad = Convert.ToInt32(Cantidad.Value);
+                rate = Convert.ToDouble(precioactual);
+                double preciodelnivel = Convert.ToDouble(precioactual);
+                double quantity = Convert.ToDouble(Cantidad.Value);
+                double meactualizo = preciodelnivel * quantity;
+                Total.Content ="$" + meactualizo.ToString("#,###.00", CultureInfo.InvariantCulture);
+                Cantidad.Focus();
+            }
+            else
+            {
+                precioCodigo.Text = "";
+            }
+            //m_invoiceItem.Nivel = row_selected["Codigo"].ToString();
+        }
+        private void RadMultiColumnComboBox_SelectionChanged(object sender, SelectionChangeEventArgs e)
+        {
+            //read in sql 
+
+
+            m_invoiceItem = new OrdenItem();
+            var cour = combo.SelectedItem;
+           
+            if (cour!=null)
+            {
+                paq_code = ((System.Data.DataRowView)cour).Row.ItemArray[0].ToString();
+                paq = fncPaqueteEncontrado(paq_code);
+                if (paq == true)
+                {
+                    Cantidad.IsReadOnly = true;
+                    paq_code = ((System.Data.DataRowView)cour).Row.ItemArray[0].ToString();
+                  
+
+                   
+                    descript.Text = ((System.Data.DataRowView)cour).Row.ItemArray[1].ToString();
+                    string strigCodigo = ((System.Data.DataRowView)cour).Row.ItemArray[0].ToString();
+                    m_invoiceItem.Codigo = ((System.Data.DataRowView)cour).Row.ItemArray[0].ToString();
+                    m_invoiceItem.Descripcion = ((System.Data.DataRowView)cour).Row.ItemArray[5].ToString();
+                    llenarcombobox(strigCodigo);
+                    radComboNivel.Focus();
+                }
+                else
+                {
+                    descript.Text = ((System.Data.DataRowView)cour).Row.ItemArray[1].ToString();
+                    string strigCodigo = ((System.Data.DataRowView)cour).Row.ItemArray[0].ToString();
+                    m_invoiceItem.Codigo = ((System.Data.DataRowView)cour).Row.ItemArray[0].ToString();
+                    m_invoiceItem.Descripcion = ((System.Data.DataRowView)cour).Row.ItemArray[5].ToString();
+                    llenarcombobox(strigCodigo);
+                    radComboNivel.Focus();
+                }
+               
+
+            }
+            else
+            {
+                descript.Text = "";
+            }
+
+            //item_Copy.Text = ((System.Data.DataRowView)cour).Row.ItemArray[6].ToString();
+            //m_invoiceItem.Codigo = ((System.Data.DataRowView)cour).Row.ItemArray[0].ToString();
+            //m_invoiceItem.Descripcion = ((System.Data.DataRowView)cour).Row.ItemArray[6].ToString();
+
+            //string strigCodigo = ((System.Data.DataRowView)cour).Row.ItemArray[0].ToString();
+
+
+
+        }
+
+
+        private bool fncPaqueteEncontrado(string strCodigoDePaquete)
+        {
+            SqlConnection cn;
+            SqlCommand cmd;
+            SqlDataReader dr;
+
+            cn = new SqlConnection(GetOrigen());
+            cn.Open();
+
+            cmd= new SqlCommand("SELECT * FROM Paquetes WHERE Codigo_De_Paquete = '" + strCodigoDePaquete + "'", cn);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+               
+                return true;
+            }
+            else
+            {
+               
+                return false;
+            }
+        }
+        static string GetOrigen()
+        {
+            string conexion;
+
+            //string vpn = "B20";
+            //string server = getvpn(vpn);
+            conexion = "SERVER = 192.168.200.20; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007";
+            return conexion;
+
+        }
+        private void llenarcombobox(string codigo)
+        {
+
+            // xaxaxa var hat = codigo;
+
+            try
+            {
+
+                string conect = "SERVER = 192.168.200.10; DATABASE = Punto_De_Venta; USER ID = sa; PASSWORD = dgo2007";
+                SqlConnection con = new SqlConnection(conect);
+                try
+                {
+                    con.Open();
+
+                    string cmd = " SELECT Codigo_De_Articulo,Nivel_De_Precios,Precio FROM Precios where Codigo_De_Articulo = '" + codigo + "' ";
+
+
+
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd, conect);
+                    DataSet dsPubs = new DataSet("Pubs");
+                    sda.Fill(dsPubs, "Precios");
+                    DataTable dtblg = new DataTable();
+                    dtblg = dsPubs.Tables["Precios"];
+                    radComboNivel.ItemsSource = dsPubs.Tables["Precios"].DefaultView;
+                    var oso = dsPubs.Tables["Precios"].DefaultView;
+
+
+                    try
+                    {
+
+                        DataRow[] resultss = dtblg.AsEnumerable().Where(row => row.Field<string>("Nivel_De_Precios").Contains("PL")).Select(row => row).ToArray<DataRow>();
+                        var ratex = Convert.ToInt32(resultss[0][2]);
+                       
+                        m_invoiceItem.Preciolista = ratex;
+
+
+
+                        //string apollo = dtblg.Rows[0][2].ToString();
+                        //m_invoiceItem.Preciolista = Convert.ToDouble(apollo);
+                    }
+                    catch
+                    {
+                        Total.Content = "";
+                        //MessageBox.Show("Este codigo no tiene niveles registrados", "Articulo sin precio");
+                    }
+                    //dataGrid1.ItemsSource = dsPubs.Tables["Precios"].DefaultView;
+                    //dataGrid1.Columns[0].Visibility = false;
+                    //dataGrid1.Tables["LLantas"].Columns[0].ColumnMapping = MappingType.Hidden;
+                    con.Close();
+
+                }
+
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Revise su conexión a internet");
+                }
+
+
+
+            }
+            catch (InvalidCastException e)
+            {
+                MessageBox.Show("No se pudo llenar los campos" + e.ToString());
+            }
+        }
+
+        private void Combo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+
+
+                radComboNivel.Focus();
+
+            }
         }
     }
 
